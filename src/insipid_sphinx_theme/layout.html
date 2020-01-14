@@ -10,7 +10,13 @@
 {% endblock %}
 
 {% block body_tag %}
-  <body class="sidebar-visible">
+  <body class="sidebar-{% if render_sidebar %}visible{% else %}hidden{% endif %}">
+{% endblock %}
+
+{% block sidebarlogo %}
+{# We abuse this block to inject the sidebar-resize-handle #}
+      <div id="sidebar-resize-handle"></div>
+{{ super() }}
 {% endblock %}
 
 {#

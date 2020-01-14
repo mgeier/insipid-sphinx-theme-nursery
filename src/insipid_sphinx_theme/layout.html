@@ -1,0 +1,29 @@
+{%- extends "basic/layout.html" %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ pathto('_static/basic.css', 1) }}">
+    {{ super() }}
+{% endblock %}
+
+{% block extrahead %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+{% endblock %}
+
+{% block body_tag %}
+  <body class="sidebar-visible">
+{% endblock %}
+
+{#
+{% block header %}
+{% endblock %}
+
+{% block relbar1 %}{% endblock %}
+
+{% block content %}
+{% endblock %}
+
+{% block relbar2 %}{% endblock %}
+
+{% block footer %}
+{% endblock %}
+#}

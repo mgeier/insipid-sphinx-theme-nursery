@@ -1,0 +1,9 @@
+:root {
+    --bg: hsl(0, 0%, 100%);
+    --fg: #333333;
+    --font-main: {{ theme_font_main }};
+    --font-main-size: {{ theme_font_main_size|todim }};
+    --font-code: {{ theme_font_code }};
+    --font-code-size: {{ theme_font_code_size|todim }};
+    --sidebar-width: {{ theme_sidebarwidth|todim }};
+}

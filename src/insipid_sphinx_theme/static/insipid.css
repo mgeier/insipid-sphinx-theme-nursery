@@ -1,6 +1,18 @@
-:root {
-    /* TODO: use theme_sidebarwidth */
-    --sidebar-width: 300px;
+@import 'insipid-variables.css';
+
+/* TODO: scrollbar-color (from mdBook)? */
+html {
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-main);
+    font-size: var(--font-main-size);
+}
+
+/* TODO: separate settings for code and pre? */
+/* TODO: more specific than "pre"? */
+code, pre {
+    font-family: var(--font-code);
+    font-size: var(--font-code-size);
 }
 
 body {
@@ -12,7 +24,7 @@ body {
 
 div.sphinxsidebar {
     position: fixed;
-    left: calc(0px - var(--sidebar-width));
+    left: 0;
     top: 0;
     bottom: 0;
     width: var(--sidebar-width);
@@ -28,15 +40,34 @@ div.sphinxsidebar {
     margin-left: 0;
 }
 
-body.sidebar-visible {
-    transform: translateX(var(--sidebar-width));
+.sidebar-resizing {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
-.sidebar-hidden .sphinxsidebar {
-    transform: translateX(calc(0px - var(--sidebar-width)));
+body.js:not(.sidebar-resizing) {
+    transition: margin-left 0.3s ease, transform 0.3s ease;
+}
+.js:not(.sidebar-resizing) .sphinxsidebar {
+    transition: transform 0.3s; /* Animation: slide away */
+}
+/*
+.sphinxsidebar code {
+    line-height: 2em;
+}
+*/
+.sphinxsidebar .sphinxsidebarwrapper {
+    overflow-y: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 10px;
 }
 
-/*
-.sidebar .sidebar-resize-handle {
+#sidebar-resize-handle {
     position: absolute;
     cursor: col-resize;
     width: 0;
@@ -44,16 +75,32 @@ body.sidebar-visible {
     top: 0;
     bottom: 0;
 }
-.js .sidebar .sidebar-resize-handle {
-    cursor: col-resize;
+.js #sidebar-resize-handle {
     width: 5px;
 }
+
+.sidebar-hidden .sphinxsidebar {
+    transform: translateX(calc(0px - var(--sidebar-width)));
+}
+/*
+.sidebar::-webkit-scrollbar {
+    background: var(--sidebar-bg);
+}
+.sidebar::-webkit-scrollbar-thumb {
+    background: var(--scrollbar);
+}
 */
-#sidebar-resize-handle {
-    position: absolute;
-    cursor: col-resize;
-    width: 5px;
-    right: 0;
-    top: 0;
-    bottom: 0;
+
+.sidebar-hidden .sphinxsidebar {
+    transform: translateX(calc(0px - var(--sidebar-width)));
+}
+
+body.sidebar-visible {
+    transform: translateX(var(--sidebar-width));
+}
+@media only screen and (min-width: 620px) {
+    body.sidebar-visible {
+        transform: none;
+        margin-left: var(--sidebar-width);
+    }
 }

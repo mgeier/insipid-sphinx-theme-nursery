@@ -10,7 +10,23 @@
 {% endblock %}
 
 {% block body_tag %}
-  <body class="sidebar-{% if render_sidebar %}visible{% else %}hidden{% endif %}">
+  <body class="no-js sidebar-{% if render_sidebar %}visible{% else %}hidden{% endif %}">
+{% endblock %}
+
+{% block header %}
+    <script type="text/javascript">
+        document.body.classList.remove('no-js')
+        document.body.classList.add('js');
+
+        var sidebar = {% if render_sidebar %}'visible'{% else %}'hidden'{% endif %};
+        document.body.classList.remove("sidebar-" + sidebar);
+        if (document.body.clientWidth >= 1080) {
+            var stored_sidebar;
+            try { stored_sidebar = localStorage.getItem('insipid-sidebar'); } catch(e) { }
+            sidebar = stored_sidebar || sidebar;
+        }
+        document.body.classList.add("sidebar-" + sidebar);
+    </script>
 {% endblock %}
 
 {% block sidebarlogo %}
@@ -20,16 +36,14 @@
 {% endblock %}
 
 {#
-{% block header %}
-{% endblock %}
-
 {% block relbar1 %}{% endblock %}
 
 {% block content %}
 {% endblock %}
 
 {% block relbar2 %}{% endblock %}
+#}
 
 {% block footer %}
+    <script src="{{ pathto('_static/insipid.js', 1) }}" type="text/javascript" charset="utf-8"></script>
 {% endblock %}
-#}

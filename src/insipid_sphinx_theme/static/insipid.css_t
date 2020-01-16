@@ -44,9 +44,9 @@ div.sphinxsidebar {
     box-sizing: border-box;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior-y: contain;
-    background-color: var(--sidebar-bg);
     color: var(--sidebar-fg);
     */
+    background-color: {{ theme_sidebarbgcolor }};
     /* override basic.css */
     margin-left: 0;
 }
@@ -122,3 +122,7 @@ body.sidebar-visible {
         margin-left: var(--sidebar-width);
     }
 }
+
+{#
+vim:ft=css
+#}

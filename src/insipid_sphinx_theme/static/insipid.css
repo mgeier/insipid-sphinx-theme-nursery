@@ -7,7 +7,17 @@ html {
 /* TODO: scrollbar-color (from mdBook)? */
 }
 
-/* -- hyperlink styles ------------------------------------------------------ */
+body {
+    /*
+    margin: 0;
+    overflow-x: hidden;
+    */
+}
+
+div.bodywrapper {
+    /* Undo setting from "classic" theme */
+    margin: unset;
+}
 
 /* -- body styles ----------------------------------------------------------- */
 
@@ -20,13 +30,6 @@ code, pre {
     font-size: var(--font-code-size);
 }
 */
-
-body {
-    /*
-    margin: 0;
-    overflow-x: hidden;
-    */
-}
 
 /* -- sidebar --------------------------------------------------------------- */
 

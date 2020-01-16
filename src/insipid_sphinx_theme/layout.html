@@ -6,28 +6,28 @@
 {% endblock %}
 
 {% block body_tag %}
-  <body class="no-js sidebar-{% if render_sidebar %}visible{% else %}hidden{% endif %}">
+  <body class="no-js{% if render_sidebar %} sidebar-visible{% endif %}">
 {% endblock %}
 
 {% block header %}
     <script type="text/javascript">
         document.body.classList.remove('no-js')
         document.body.classList.add('js');
-
-        var sidebar = {% if render_sidebar %}'visible'{% else %}'hidden'{% endif %};
-        document.body.classList.remove("sidebar-" + sidebar);
-        if (document.body.clientWidth >= 1080) {
-            var stored_sidebar;
-            try { stored_sidebar = localStorage.getItem('insipid-sidebar'); } catch(e) { }
-            sidebar = stored_sidebar || sidebar;
-        }
-        document.body.classList.add("sidebar-" + sidebar);
+{% if render_sidebar %}
+        var sidebar;
+        try { sidebar = localStorage.getItem('sphinx-sidebar'); } catch(e) { }
+        sidebar = sidebar || 'visible';
+        document.body.classList.remove('sidebar-visible');
+        document.body.classList.add('sidebar-' + sidebar);
+{% endif %}
     </script>
 {% endblock %}
 
 {% block sidebarlogo %}
 {# We abuse this block to inject the sidebar-resize-handle #}
+{% if render_sidebar %}
       <div id="sidebar-resize-handle"></div>
+{% endif %}
 {{ super() }}
 {% endblock %}
 

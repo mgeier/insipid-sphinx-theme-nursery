@@ -12,19 +12,12 @@ html {
 /* TODO: scrollbar-color (from mdBook)? */
 }
 
-body {
-    /*
-    margin: 0;
-    overflow-x: hidden;
-    */
-}
-
 div.bodywrapper {
     /* Undo setting from "classic" theme */
     margin: unset;
 }
 
-/* -- body styles ----------------------------------------------------------- */
+/* -- code formatting ------------------------------------------------------- */
 
 /* TODO: separate settings for code and pre? */
 /* TODO: more specific than "pre"? */
@@ -126,7 +119,7 @@ body.js:not(.sidebar-resizing) {
 }
 
 .js:not(.sidebar-resizing) .sphinxsidebar {
-    transition: transform 0.3s; /* Animation: slide away */
+    transition: transform 0.3s;
 }
 
 /*
@@ -155,6 +148,7 @@ body.js:not(.sidebar-resizing) {
 }
 
 .js #sidebar-resize-handle {
+    background-color: {{ theme_sidebarbtncolor }};
     width: 5px;
 }
 

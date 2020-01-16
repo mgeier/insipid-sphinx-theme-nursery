@@ -1,3 +1,4 @@
+copyright = '2020, Matthias Geier'
 html_theme = 'insipid'
 html_theme_options = {
     #'body_min_width': 0,
@@ -8,9 +9,15 @@ html_theme_options = {
     'navigation_with_keys': True,
     #'nosidebar': True,
     #'sidebarwidth': 300,
+    #'sidebar_collapse': False,
+    #'sidebar_includehidden': False,
 }
 html_sidebars = {
-   '**': ['localtoc.html', 'relations.html', 'sourcelink.html', 'searchbox.html'],
-   # To demonstrate a page without a sidebar:
-   'nosidebar': [],
+   #'**': [
+   #    'localtoc.html',
+   #    'relations.html',
+   #    'sourcelink.html',
+   #    'searchbox.html',
+   #],
+   'nosidebar': [],  # To demonstrate a page without a sidebar
 }

@@ -47,6 +47,12 @@ Settings inherited from the ``classic`` theme::
     bodyfont = sans-serif
     headfont = 'Trebuchet MS', sans-serif
 
+    # TODO: settings from "classic" theme that are not working:
+    rightsidebar
+    stickysidebar?
+    collapsiblesidebar
+    ???
+
 Settings from ``insipid`` theme::
 
     # TODO:

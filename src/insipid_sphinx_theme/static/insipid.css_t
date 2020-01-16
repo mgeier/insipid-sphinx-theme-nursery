@@ -1,5 +1,10 @@
 @import 'classic.css';
-@import 'insipid-variables.css';
+
+/* -- variables ------------------------------------------------------------- */
+
+:root {
+    --sidebar-width: {{ theme_sidebarwidth|todim }};
+}
 
 /* -- page layout ----------------------------------------------------------- */
 

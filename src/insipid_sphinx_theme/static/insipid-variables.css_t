@@ -1,3 +1,0 @@
-:root {
-    --sidebar-width: {{ theme_sidebarwidth|todim }};
-}

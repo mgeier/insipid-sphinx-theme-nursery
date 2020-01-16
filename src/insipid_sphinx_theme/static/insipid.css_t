@@ -36,6 +36,64 @@ code, pre {
 }
 */
 
+/* -- admonitions ----------------------------------------------------------- */
+
+div.warning, div.note, div.seealso {
+    border: revert;
+}
+
+div.admonition {
+    background-color: #eee;
+    /* from "basic" theme */
+    padding: 7px;
+}
+
+div.admonition p.admonition-title {
+    color: #eee;
+    background-color: #ccc;
+}
+
+div.admonition.attention,
+div.admonition.caution,
+div.admonition.danger,
+div.admonition.error,
+div.admonition.important,
+div.admonition.warning {
+    background-color: #ffe4e4;
+}
+
+div.admonition.attention > p.admonition-title,
+div.admonition.caution > p.admonition-title,
+div.admonition.danger > p.admonition-title,
+div.admonition.error > p.admonition-title,
+div.admonition.important > p.admonition-title,
+div.admonition.warning > p.admonition-title {
+    color: #ffe4e4;
+    background-color: #f66;
+}
+
+div.admonition.seealso {
+    background-color: #ffc;
+}
+
+div.admonition.seealso > p.admonition-title {
+    color: unset;
+    background-color: #ff6;
+}
+
+div.admonition > p.admonition-title {
+    margin: -7px -7px 7px -7px;
+    padding: 4px 10px 4px 10px;
+}
+
+p.admonition-title {
+    display: revert;
+}
+
+p.admonition-title:after {
+    content: none;
+}
+
 /* -- sidebar --------------------------------------------------------------- */
 
 div.sphinxsidebar {

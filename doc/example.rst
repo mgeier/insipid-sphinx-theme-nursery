@@ -7,10 +7,10 @@ Text ``Monospace`` *Emphasis* **Bold**.
 
 .. code:: python
 
-   print('Hello, world!')
+    print('Hello, world!')
 
 Text
 
 .. code::
 
-   no highlighting
+    no highlighting

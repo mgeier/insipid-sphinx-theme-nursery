@@ -10,11 +10,13 @@ Theme Settings
 
 Settings inherited from the ``basic`` theme (like most Sphinx themes)::
 
-    'nosidebar': True,
-    'sidebarwidth': 230,
-    'body_min_width': 450,
-    'body_max_width': 800,  # None to disable
-    'navigation_with_keys': True,  # Use left and right arrow keys to turn pages
+    html_theme_options = {
+        'nosidebar': True,
+        'sidebarwidth': 230,
+        'body_min_width': 450,
+        'body_max_width': 800,  # None to disable
+        'navigation_with_keys': True,  # Use left and right arrow keys to turn pages
+    }
 
 Settings inherited from the ``classic`` theme::
 

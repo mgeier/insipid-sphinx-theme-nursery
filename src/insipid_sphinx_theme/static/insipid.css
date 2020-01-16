@@ -1,19 +1,25 @@
+@import 'classic.css';
 @import 'insipid-variables.css';
 
-/* TODO: scrollbar-color (from mdBook)? */
+/* -- page layout ----------------------------------------------------------- */
+
 html {
-    background-color: var(--bg);
-    color: var(--fg);
-    font-family: var(--font-main);
-    font-size: var(--font-main-size);
+/* TODO: scrollbar-color (from mdBook)? */
 }
+
+/* -- hyperlink styles ------------------------------------------------------ */
+
+/* -- body styles ----------------------------------------------------------- */
 
 /* TODO: separate settings for code and pre? */
 /* TODO: more specific than "pre"? */
+/* TODO: use theme_codefont? */
+/*
 code, pre {
     font-family: var(--font-code);
     font-size: var(--font-code-size);
 }
+*/
 
 body {
     /*
@@ -21,6 +27,8 @@ body {
     overflow-x: hidden;
     */
 }
+
+/* -- sidebar --------------------------------------------------------------- */
 
 div.sphinxsidebar {
     position: fixed;
@@ -46,17 +54,21 @@ div.sphinxsidebar {
     -ms-user-select: none;
     user-select: none;
 }
+
 body.js:not(.sidebar-resizing) {
     transition: margin-left 0.3s ease, transform 0.3s ease;
 }
+
 .js:not(.sidebar-resizing) .sphinxsidebar {
     transition: transform 0.3s; /* Animation: slide away */
 }
+
 /*
 .sphinxsidebar code {
     line-height: 2em;
 }
 */
+
 .sphinxsidebar .sphinxsidebarwrapper {
     overflow-y: auto;
     position: absolute;
@@ -75,6 +87,7 @@ body.js:not(.sidebar-resizing) {
     top: 0;
     bottom: 0;
 }
+
 .js #sidebar-resize-handle {
     width: 5px;
 }
@@ -82,10 +95,12 @@ body.js:not(.sidebar-resizing) {
 .sidebar-hidden .sphinxsidebar {
     transform: translateX(calc(0px - var(--sidebar-width)));
 }
+
 /*
 .sidebar::-webkit-scrollbar {
     background: var(--sidebar-bg);
 }
+
 .sidebar::-webkit-scrollbar-thumb {
     background: var(--scrollbar);
 }

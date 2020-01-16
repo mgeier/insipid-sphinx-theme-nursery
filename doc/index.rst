@@ -5,3 +5,4 @@
 
     usage
     example
+    nosidebar

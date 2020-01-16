@@ -83,10 +83,6 @@ p.admonition-title {
     display: revert;
 }
 
-p.admonition-title:after {
-    content: none;
-}
-
 /* -- sidebar --------------------------------------------------------------- */
 
 div.sphinxsidebar {

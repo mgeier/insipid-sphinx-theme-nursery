@@ -5,6 +5,12 @@ setup(
     version='0.0.0',
     package_dir={'': 'src'},
     packages=['insipid_sphinx_theme'],
+    package_data={'insipid_sphinx_theme': [
+        'insipid/theme.conf',
+        'insipid/*.html',
+        'insipid/static/*.css_t',
+        'insipid/static/*.js',
+    ]},
     python_requires='>=3',
     author='Matthias Geier',
     author_email='Matthias.Geier@gmail.com',

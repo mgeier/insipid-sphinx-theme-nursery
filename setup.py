@@ -1,8 +1,15 @@
 from setuptools import setup
 
+# "import" __version__
+__version__ = 'unknown'
+for line in open('src/insipid_sphinx_theme/__init__.py'):
+    if line.startswith('__version__'):
+        exec(line)
+        break
+
 setup(
     name='insipid-sphinx-theme',
-    version='0.0.0',
+    version=__version__,
     package_dir={'': 'src'},
     packages=['insipid_sphinx_theme'],
     package_data={'insipid_sphinx_theme': [

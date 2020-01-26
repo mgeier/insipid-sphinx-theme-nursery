@@ -13,11 +13,12 @@ html_theme_options = {
     #'sidebar_includehidden': False,
 }
 html_sidebars = {
-   #'**': [
-   #    'localtoc.html',
-   #    'relations.html',
-   #    'sourcelink.html',
-   #    'searchbox.html',
-   #],
+   '**': [
+       'globaltoc.html',
+       #'localtoc.html',
+       #'relations.html',
+       'sourcelink.html',
+       'searchbox.html',
+   ],
    'nosidebar': [],  # To demonstrate a page without a sidebar
 }

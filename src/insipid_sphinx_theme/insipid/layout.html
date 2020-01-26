@@ -21,6 +21,61 @@
         document.body.classList.add('sidebar-' + sidebar);
 {% endif %}
     </script>
+
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars">M</i>
+                            </button>
+                            {#{{#if search_enabled}}#}
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search">S</i>
+                            </button>
+                            {#{{/if}}#}
+                        </div>
+
+                        {# docstitle vs. shorttitle #}
+                        <h1 class="menu-title">{{ docstitle|e }}</h1>
+
+                        <div class="right-buttons">
+                            {#
+                            <a href="{{ path_to_root }}print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            #}
+                            {#{{#if git_repository_url}}#}
+                            {#
+                            <a href="{{git_repository_url}}" title="Git repository" aria-label="Git repository">
+                                <i id="git-repository-button" class="fa {{git_repository_icon}}"></i>
+                            </a>
+                            #}
+                            {#{{/if}}#}
+                        </div>
+                    </div>
+                </div>
+
+                {#{{#if search_enabled}}#}
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                {#{{/if}}#}
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
 {% endblock %}
 
 {% block sidebarlogo %}
@@ -42,6 +97,7 @@
 
 {% block footer %}
 {{ super() }}
+    <script src="{{ pathto('_static/menubar.js', 1) }}"></script>
 {% if render_sidebar %}
     <script src="{{ pathto('_static/sidebar.js', 1) }}"></script>
 {% endif %}

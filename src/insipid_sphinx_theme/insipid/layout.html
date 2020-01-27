@@ -25,9 +25,11 @@
                 <div id="menu-bar" class="menu-bar">
                     <div id="menu-bar-sticky-container">
                         <div class="left-buttons">
+{% if render_sidebar %}
                             <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                                 <i class="fa fa-bars">M</i>
                             </button>
+{% endif %}
                             {#{{#if search_enabled}}#}
                             <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
                                 <i class="fa fa-search">S</i>
@@ -89,6 +91,7 @@
 {% block footer %}
 {{ super() }}
 
+{% if render_sidebar %}
                 <!-- TODO: provide a re-usable function for this in .js file? -->
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
                 <script type="text/javascript">
@@ -101,8 +104,7 @@
                     */
                 </script>
 
-    <script src="{{ pathto('_static/menubar.js', 1) }}"></script>
-{% if render_sidebar %}
     <script src="{{ pathto('_static/sidebar.js', 1) }}"></script>
 {% endif %}
+    <script src="{{ pathto('_static/menubar.js', 1) }}"></script>
 {% endblock %}

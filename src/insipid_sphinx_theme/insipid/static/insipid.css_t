@@ -98,7 +98,7 @@ p.admonition-title {
 
 div.sphinxsidebar {
     position: fixed;
-    left: 0;
+    left: calc(0px - var(--sidebar-width));
     top: 0;
     bottom: 0;
     width: var(--sidebar-width);
@@ -112,6 +112,11 @@ div.sphinxsidebar {
     background-color: {{ theme_sidebarbgcolor }};
     /* override basic.css */
     margin-left: 0;
+}
+@media only screen and (min-width: 620px) {
+    div.sphinxsidebar {
+        left: 0;
+    }
 }
 
 .sidebar-resizing {
@@ -147,7 +152,6 @@ body.js:not(.sidebar-resizing) {
 
 #sidebar-resize-handle {
     position: absolute;
-    cursor: col-resize;
     width: 0;
     right: 0;
     top: 0;
@@ -155,6 +159,7 @@ body.js:not(.sidebar-resizing) {
 }
 
 .js #sidebar-resize-handle {
+    cursor: col-resize;
     background-color: {{ theme_sidebarbtncolor }};
     width: 5px;
 }
@@ -172,10 +177,6 @@ body.js:not(.sidebar-resizing) {
     background: var(--scrollbar);
 }
 */
-
-.sidebar-hidden .sphinxsidebar {
-    transform: translateX(calc(0px - var(--sidebar-width)));
-}
 
 body.sidebar-visible {
     transform: translateX(var(--sidebar-width));

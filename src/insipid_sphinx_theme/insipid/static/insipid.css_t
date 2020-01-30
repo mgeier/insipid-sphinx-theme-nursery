@@ -225,14 +225,20 @@ body.sidebar-visible {
     }
 }
 
+.icon-button svg {
+  /*display: inline-block;*/
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  /*margin: 0;*/
+  fill: currentColor;
+}
+
 .icon-button {
     border: none;
     background: none;
     padding: 0;
     color: inherit;
-}
-.icon-button i {
-    margin: 0;
 }
 
 .right-buttons {

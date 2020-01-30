@@ -17,6 +17,7 @@ setup(
         'insipid/*.html',
         'insipid/static/*.css_t',
         'insipid/static/*.js',
+        'insipid/icons/*.svg',
     ]},
     python_requires='>=3',
     author='Matthias Geier',

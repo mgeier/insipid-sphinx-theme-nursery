@@ -27,12 +27,12 @@
                         <div class="left-buttons">
 {% if render_sidebar %}
                             <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Sidebar" aria-label="Toggle Sidebar" aria-controls="sidebar">
-                                <i class="fa fa-bars">M</i>
+                              {% include 'icons/sidebar-toggle.svg' %}
                             </button>
 {% endif %}
                             {#{{#if search_enabled}}#}
                             <button id="search-toggle" class="icon-button" type="button" title="Search" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
-                                <i class="fa fa-search">S</i>
+                              {% include 'icons/search.svg' %}
                             </button>
                             {#{{/if}}#}
                         </div>
@@ -90,7 +90,6 @@
 
 {% block footer %}
 {{ super() }}
-
 {% if render_sidebar %}
                 <!-- TODO: provide a re-usable function for this in .js file? -->
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->

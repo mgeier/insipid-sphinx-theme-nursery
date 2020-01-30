@@ -30,11 +30,11 @@
                               {% include 'icons/sidebar-toggle.svg' %}
                             </button>
 {% endif %}
-                            {#{{#if search_enabled}}#}
+{% if pagename != "search" %}
                             <button id="search-toggle" class="icon-button" type="button" title="Search" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
                               {% include 'icons/search.svg' %}
                             </button>
-                            {#{{/if}}#}
+{% endif %}
                         </div>
 
                         {# docstitle vs. shorttitle #}
@@ -57,7 +57,7 @@
                     </div>
                 </div>
 
-                {#{{#if search_enabled}}#}
+{% if pagename != "search" %}
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
                         <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
@@ -68,7 +68,7 @@
                         </ul>
                     </div>
                 </div>
-                {#{{/if}}#}
+{% endif %}
 {% endblock %}
 
 {% block sidebarlogo %}

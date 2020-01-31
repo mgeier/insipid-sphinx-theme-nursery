@@ -305,6 +305,7 @@ html:not(.sidebar-visible) #menu-bar:not(:hover).folded > #menu-bar-sticky-conta
     left: 0;
     bottom: 0;
     width: calc(var(--sidebar-width) - {{ theme_sidebar_handle_width }});
+    max-width: revert;
     font-family: revert;
 }
 

@@ -327,18 +327,22 @@ html:not(.sidebar-visible) #menu-bar:not(:hover).folded > #menu-bar-sticky-conta
 }
 
 .injected .rst-versions.rst-badge .rst-other-versions {
-    line-height: 100%;
-    color: {{ theme_sidebartextcolor }};
-    background-color: {{ theme_sidebarbgcolor }};
+    line-height: 120%;
+    color: {{ theme_relbartextcolor }};
+    background-color: {{ theme_relbarbgcolor }};
 }
 
 .injected .rst-versions.rst-badge .rst-other-versions a {
-    color: {{ theme_sidebarlinkcolor }};
+    color: {{ theme_relbarlinkcolor }};
 }
 
 #flyout-search-form input {
     width: 100%;
     box-sizing: border-box;
+}
+
+.injected .rst-versions.rst-badge .rst-other-versions hr {
+  border-color: {{ theme_relbartextcolor }};
 }
 
 {#

@@ -286,6 +286,10 @@ html:not(.sidebar-visible) #menu-bar:not(:hover).folded > #menu-bar-sticky-conta
     cursor: pointer;
 }
 
+/* -- ??? ------------------------------------------------------------------- */
+
+/* TODO: is this needed? */
+
 .menu-bar,
 .menu-bar:visited,
 .nav-chapters,
@@ -303,6 +307,66 @@ html:not(.sidebar-visible) #menu-bar:not(:hover).folded > #menu-bar-sticky-conta
 .mobile-nav-chapters i:hover {
     color: var(--icons-hover);
 }
+
+/* -- navigation icons ------------------------------------------------------ */
+
+.nav-icon svg {
+    width: 2.5em;
+    height: 2.5em;
+    fill: currentColor;
+}
+
+.nav-icon {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    /* TODO: use --page-padding? */
+    margin: auto 1em;
+    width: 4em;
+    height: 4em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*flex-direction: column;*/
+
+    transition: color 0.5s, background-color 0.5s;
+}
+
+.nav-icon:hover {
+    /*text-decoration: none;*/
+    /*background-color: var(--theme-hover);*/
+    background-color: green;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.nav-icon.previous {
+}
+
+.nav-icon.next {
+    right: 0px;
+}
+
+/*
+@media only screen and (max-width: 1080px) {
+    .nav-wide-wrapper { display: none; }
+    .nav-wrapper { display: block; }
+}
+
+@media only screen and (max-width: 1380px) {
+    .sidebar-visible .nav-wide-wrapper { display: none; }
+    .sidebar-visible .nav-wrapper { display: block; }
+}
+*/
+
+
+
+
+
+
+
+
+
 
 {#
 vim:ft=css

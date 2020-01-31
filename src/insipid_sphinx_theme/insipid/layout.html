@@ -89,10 +89,27 @@
 
 {#
 {% block relbar1 %}{% endblock %}
+#}
 
 {% block content %}
+{{ super() }}
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+    {% if prev %}
+    {# TODO: only if "body_centered" is true! #}
+    {# TODO: display: none by default? #}
+                    <a href="{{ prev.link|e }}" class="nav-icon previous" title="{{ prev.title|striptags|e }}" aria-label="Previous page" aria-keyshortcuts="Left">
+                      {% include 'icons/previous.svg' %}
+                    </a>
+    {% endif %}
+    {% if next %}
+                    <a href="{{ next.link|e }}" class="nav-icon next" title="{{ next.title|striptags|e }}" aria-label="Next page" aria-keyshortcuts="Right">
+                      {% include 'icons/next.svg' %}
+                    </a>
+    {% endif %}
+            </nav>
 {% endblock %}
 
+{#
 {% block relbar2 %}{% endblock %}
 #}
 

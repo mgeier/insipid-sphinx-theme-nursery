@@ -294,6 +294,18 @@ html:not(.sidebar-visible) #menu-bar:not(:hover).folded > #menu-bar-sticky-conta
     color: var(--icons-hover);
 }
 
+/* -- version selector on readthedocs.org ----------------------------------- */
+
+/* TODO: only include when built on RTD? */
+
+.injected .rst-versions.rst-badge {
+    left: 0;
+    bottom: 0;
+    width: var(--sidebar-width);
+    max-width: 100%;
+    /*background-color: ;*/
+}
+
 {#
 vim:ft=css
 #}

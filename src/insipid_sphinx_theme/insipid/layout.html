@@ -1,6 +1,14 @@
 {# NB: classic/layout.html only adds its sidebar.js, which we override anyway  #}
 {% extends "basic/layout.html" %}
 
+{% block css %}
+{{ super() }}
+{# TODO: only include when built on RTD? #}
+{% if render_sidebar %}
+    <link rel="stylesheet" href="{{ pathto('_static/readthedocs-sidebar.css', 1) }}" type="text/css" />
+{% endif %}
+{% endblock %}
+
 {% block extrahead %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
 {% endblock %}

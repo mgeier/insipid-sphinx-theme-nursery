@@ -1,6 +1,9 @@
 version: 2
 build:
   image: latest
+submodules:
+  include:
+    - Font-Awesome
 python:
   version: 3
   install:

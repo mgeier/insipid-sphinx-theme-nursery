@@ -301,7 +301,7 @@ html:not(.sidebar-visible) #menu-bar:not(:hover).folded > #menu-bar-sticky-conta
 
 /* TODO: only include when built on RTD? */
 
-.js .injected .rst-versions.rst-badge {
+.sidebar-visible .injected .rst-versions.rst-badge {
     left: 0;
     bottom: 0;
     width: calc(var(--sidebar-width) - {{ theme_sidebar_handle_width }});
@@ -309,35 +309,35 @@ html:not(.sidebar-visible) #menu-bar:not(:hover).folded > #menu-bar-sticky-conta
     font-family: revert;
 }
 
-.js .injected .rst-versions.rst-badge .rst-current-version {
+.sidebar-visible .injected .rst-versions.rst-badge .rst-current-version {
     text-align: right;
     color: {{ theme_relbarlinkcolor }};
     background-color: {{ theme_relbarbgcolor }};
 }
 
-.js .injected .rst-versions.rst-badge .rst-current-version .fa {
+.sidebar-visible .injected .rst-versions.rst-badge .rst-current-version .fa {
     color: {{ theme_relbartextcolor }};
 }
 
-.js .injected .rst-versions.rst-badge .rst-current-version .fa-book {
+.sidebar-visible .injected .rst-versions.rst-badge .rst-current-version .fa-book {
     float: left;
 }
 
-.js .injected .rst-versions.rst-badge .rst-other-versions {
+.sidebar-visible .injected .rst-versions.rst-badge .rst-other-versions {
     color: {{ theme_footertextcolor }};
     background-color: {{ theme_footerbgcolor }};
 }
 
-.js .injected .rst-versions.rst-badge .rst-other-versions a {
+.sidebar-visible .injected .rst-versions.rst-badge .rst-other-versions a {
     color: {{ theme_footerlinkcolor }};
 }
 
-.js #flyout-search-form input {
+.sidebar-visible #flyout-search-form input {
     width: 100%;
     box-sizing: border-box;
 }
 
-.js .injected .rst-versions.rst-badge .rst-other-versions hr {
+.sidebar-visible .injected .rst-versions.rst-badge .rst-other-versions hr {
   border-color: {{ theme_footertextcolor }};
 }
 

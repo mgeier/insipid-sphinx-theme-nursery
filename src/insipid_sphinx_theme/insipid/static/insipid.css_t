@@ -161,7 +161,7 @@ body.js:not(.sidebar-resizing) {
 .js #sidebar-resize-handle {
     cursor: col-resize;
     background-color: {{ theme_sidebarbtncolor }};
-    width: 5px;
+    width: {{ theme_sidebar_handle_width }};
 }
 
 .sidebar-hidden .sphinxsidebar {
@@ -304,6 +304,28 @@ html:not(.sidebar-visible) #menu-bar:not(:hover).folded > #menu-bar-sticky-conta
     width: var(--sidebar-width);
     max-width: 100%;
     /*background-color: ;*/
+}
+
+.js .injected .rst-versions.rst-badge {
+    width: calc(var(--sidebar-width) - {{ theme_sidebar_handle_width }});
+}
+
+.injected .rst-versions.rst-badge .rst-current-version {
+  text-align: right;
+  color: {{ theme_relbarlinkcolor }};
+  background-color: {{ theme_relbarbgcolor }};
+}
+
+.injected .rst-versions.rst-badge .rst-current-version .fa {
+  color: {{ theme_relbartextcolor }};
+}
+
+.injected .rst-versions.rst-badge .rst-current-version .fa-book {
+  float: left;
+}
+
+#flyout-search-form {
+    width: 100%;
 }
 
 {#

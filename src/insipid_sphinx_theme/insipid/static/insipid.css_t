@@ -130,7 +130,9 @@ body.js:not(.sidebar-resizing) {
     transition: margin-left 0.3s ease, transform 0.3s ease;
 }
 
-.js:not(.sidebar-resizing) .sphinxsidebar {
+.js:not(.sidebar-resizing) .sphinxsidebar,
+.js:not(.sidebar-resizing) .injected .rst-versions.rst-badge,
+{
     transition: transform 0.3s;
 }
 
@@ -164,7 +166,8 @@ body.js:not(.sidebar-resizing) {
     width: {{ theme_sidebar_handle_width }};
 }
 
-.sidebar-hidden .sphinxsidebar {
+.sidebar-hidden .sphinxsidebar,
+.sidebar-hidden .injected .rst-versions.rst-badge {
     transform: translateX(calc(0px - var(--sidebar-width)));
 }
 
@@ -298,51 +301,43 @@ html:not(.sidebar-visible) #menu-bar:not(:hover).folded > #menu-bar-sticky-conta
 
 /* TODO: only include when built on RTD? */
 
-.injected .rst-versions.rst-badge {
+.js .injected .rst-versions.rst-badge {
     left: 0;
     bottom: 0;
-    width: var(--sidebar-width);
-    max-width: 100%;
-    /*background-color: ;*/
-}
-
-.js .injected .rst-versions.rst-badge {
-    font-family: revert;
     width: calc(var(--sidebar-width) - {{ theme_sidebar_handle_width }});
+    font-family: revert;
 }
 
-.injected .rst-versions.rst-badge .rst-current-version {
+.js .injected .rst-versions.rst-badge .rst-current-version {
     text-align: right;
-    /* TODO: separate link color? */
+    color: {{ theme_relbarlinkcolor }};
+    background-color: {{ theme_relbarbgcolor }};
+}
+
+.js .injected .rst-versions.rst-badge .rst-current-version .fa {
+    color: {{ theme_relbartextcolor }};
+}
+
+.js .injected .rst-versions.rst-badge .rst-current-version .fa-book {
+    float: left;
+}
+
+.js .injected .rst-versions.rst-badge .rst-other-versions {
     color: {{ theme_footertextcolor }};
     background-color: {{ theme_footerbgcolor }};
 }
 
-.injected .rst-versions.rst-badge .rst-current-version .fa {
-    color: {{ theme_footertextcolor }};
+.js .injected .rst-versions.rst-badge .rst-other-versions a {
+    color: {{ theme_footerlinkcolor }};
 }
 
-.injected .rst-versions.rst-badge .rst-current-version .fa-book {
-    float: left;
-}
-
-.injected .rst-versions.rst-badge .rst-other-versions {
-    line-height: 120%;
-    color: {{ theme_relbartextcolor }};
-    background-color: {{ theme_relbarbgcolor }};
-}
-
-.injected .rst-versions.rst-badge .rst-other-versions a {
-    color: {{ theme_relbarlinkcolor }};
-}
-
-#flyout-search-form input {
+.js #flyout-search-form input {
     width: 100%;
     box-sizing: border-box;
 }
 
-.injected .rst-versions.rst-badge .rst-other-versions hr {
-  border-color: {{ theme_relbartextcolor }};
+.js .injected .rst-versions.rst-badge .rst-other-versions hr {
+  border-color: {{ theme_footertextcolor }};
 }
 
 {#

@@ -6,6 +6,10 @@
     font-family: revert;
 }
 
+.injected .rst-versions.rst-badge a:hover {
+    text-decoration: revert;
+}
+
 .injected .rst-versions.rst-badge .rst-current-version {
     text-align: right;
     color: {{ theme_relbarlinkcolor }};

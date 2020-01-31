@@ -1,4 +1,5 @@
 copyright = '2020, Matthias Geier'
+master_doc = 'index'
 html_theme = 'insipid'
 html_theme_options = {
     #'body_min_width': 0,

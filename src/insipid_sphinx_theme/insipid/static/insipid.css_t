@@ -28,6 +28,13 @@ div.bodywrapper {
     margin: unset;
 }
 
+div.body {
+{% if theme_body_centered|tobool %}
+    margin-left: auto;
+    margin-right: auto;
+{% endif  %}
+}
+
 /* -- code formatting ------------------------------------------------------- */
 
 /* TODO: separate settings for code and pre? */
@@ -163,7 +170,7 @@ body.js:not(.sidebar-resizing) {
 .js #sidebar-resize-handle {
     cursor: col-resize;
     background-color: {{ theme_sidebarbtncolor }};
-    width: {{ theme_sidebar_handle_width }};
+    width: {{ theme_sidebar_handle_width|todim }};
 }
 
 .sidebar-hidden .sphinxsidebar,

@@ -4,6 +4,7 @@ html_theme = 'insipid'
 html_theme_options = {
     #'body_min_width': 0,
     #'body_max_width': None,
+    #'body_centered': False,
     #'bodyfont': 'serif',
     #'codefont': 'monospace',
     #'headfont': 'serif',

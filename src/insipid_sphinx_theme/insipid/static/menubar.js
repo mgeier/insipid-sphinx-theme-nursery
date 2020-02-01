@@ -1,6 +1,6 @@
 "use strict";
 
-(function scrollToTop () {
+(function scrollToTop() {
     var menuTitle = document.querySelector('.menu-title');
 
     menuTitle.addEventListener('click', function () {

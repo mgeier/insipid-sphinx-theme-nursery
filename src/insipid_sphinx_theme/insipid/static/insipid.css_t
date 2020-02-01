@@ -33,6 +33,8 @@ div.body {
     margin-left: auto;
     margin-right: auto;
 {% endif  %}
+    /* To be able to hide nav-icons */
+    position: relative;
 }
 
 /* -- code formatting ------------------------------------------------------- */
@@ -334,7 +336,6 @@ html:not(.sidebar-visible) #menu-bar:not(:hover).folded > #menu-bar-sticky-conta
 }
 
 .nav-icon:hover {
-    /*text-decoration: none;*/
     /*background-color: var(--theme-hover);*/
     background-color: green;
     transition: background-color 0.15s, color 0.15s;
@@ -346,27 +347,6 @@ html:not(.sidebar-visible) #menu-bar:not(:hover).folded > #menu-bar-sticky-conta
 .nav-icon.next {
     right: 0px;
 }
-
-/*
-@media only screen and (max-width: 1080px) {
-    .nav-wide-wrapper { display: none; }
-    .nav-wrapper { display: block; }
-}
-
-@media only screen and (max-width: 1380px) {
-    .sidebar-visible .nav-wide-wrapper { display: none; }
-    .sidebar-visible .nav-wrapper { display: block; }
-}
-*/
-
-
-
-
-
-
-
-
-
 
 {#
 vim:ft=css

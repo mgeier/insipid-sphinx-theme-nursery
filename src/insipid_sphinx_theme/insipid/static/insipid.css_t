@@ -21,6 +21,18 @@
 
 html {
 /* TODO: scrollbar-color (from mdBook)? */
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+div.document {
+    flex-grow: 1;
 }
 
 div.bodywrapper {
@@ -35,6 +47,11 @@ div.body {
 {% endif  %}
     /* To be able to hide nav-icons */
     position: relative;
+}
+
+
+div.footer {
+    background-color: var(--bg);
 }
 
 /* -- code formatting ------------------------------------------------------- */

@@ -6,15 +6,7 @@
 
 :root {
     --sidebar-width: {{ theme_sidebarwidth|todim }};
-
-    /* TODO: avoid these variables? */
     --menu-bar-height: 50px;
-    /*--bg: hsl(0, 0%, 100%);*/
-    --bg: {{ theme_footerbgcolor }};
-    /*--table-border-color: hsl(0, 0%, 95%);*/
-    --table-border-color: red;
-    --icons: #cccccc;
-    --icons-hover: #333333;
 }
 
 /* -- page layout ----------------------------------------------------------- */
@@ -32,6 +24,7 @@ body {
 }
 
 div.document {
+    /* To keep the footer at the bottom (on very short pages) */
     flex-grow: 1;
 }
 
@@ -51,7 +44,7 @@ div.body {
 
 
 div.footer {
-    background-color: var(--bg);
+    background-color: {{ theme_footerbgcolor }};
 }
 
 /* -- code formatting ------------------------------------------------------- */
@@ -220,6 +213,7 @@ body.sidebar-visible {
 /* -- menubar --------------------------------------------------------------- */
 
 #menu-bar {
+    color: {{ theme_footertextcolor }};
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -229,8 +223,8 @@ body.sidebar-visible {
 #menu-bar > #menu-bar-sticky-container {
     display: flex;
     flex-wrap: wrap;
-    background-color: var(--bg);
-    border-bottom-color: var(--bg);
+    background-color: {{ theme_footerbgcolor }};
+    border-bottom-color: {{ theme_footerbgcolor }};
     border-bottom-width: 1px;
     border-bottom-style: solid;
 }
@@ -238,9 +232,9 @@ body.sidebar-visible {
     transition: transform 0.5s;
 }
 #menu-bar.bordered > #menu-bar-sticky-container  {
-    border-bottom-color: var(--table-border-color);
+    border-bottom-color: red;
 }
-#menu-bar i, #menu-bar .icon-button {
+#menu-bar .icon-button {
     position: relative;
     padding: 0 8px;
     z-index: 10;
@@ -249,9 +243,13 @@ body.sidebar-visible {
     transition: color 0.5s;
 }
 @media only screen and (max-width: 420px) {
-    #menu-bar i, #menu-bar .icon-button {
+    #menu-bar .icon-button {
         padding: 0 5px;
     }
+}
+
+#menu-bar .icon-button:hover {
+    color: {{ theme_footerlinkcolor }};
 }
 
 .icon-button svg {
@@ -303,28 +301,6 @@ html:not(.sidebar-visible) #menu-bar:not(:hover).folded > #menu-bar-sticky-conta
 }
 .js .menu-title {
     cursor: pointer;
-}
-
-/* -- ??? ------------------------------------------------------------------- */
-
-/* TODO: is this needed? */
-
-.menu-bar,
-.menu-bar:visited,
-.nav-chapters,
-.nav-chapters:visited,
-.mobile-nav-chapters,
-.mobile-nav-chapters:visited,
-.menu-bar .icon-button,
-.menu-bar a i {
-    color: var(--icons);
-}
-
-.menu-bar i:hover,
-.menu-bar .icon-button:hover,
-.nav-chapters:hover,
-.mobile-nav-chapters i:hover {
-    color: var(--icons-hover);
 }
 
 {% if theme_body_max_width != None %}

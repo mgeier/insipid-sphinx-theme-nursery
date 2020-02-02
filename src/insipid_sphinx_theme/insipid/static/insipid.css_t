@@ -330,6 +330,11 @@ html:not(.sidebar-visible) #menu-bar:not(:hover).folded > #menu-bar-sticky-conta
 /* -- navigation icons ------------------------------------------------------ */
 
 .nav-icon svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -1.25em;
+    margin-left: -1.25em;
     width: 2.5em;
     height: 2.5em;
     fill: currentColor;
@@ -343,12 +348,6 @@ html:not(.sidebar-visible) #menu-bar:not(:hover).folded > #menu-bar-sticky-conta
     margin: auto 1em;
     width: 4em;
     height: 4em;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /*flex-direction: column;*/
-
     transition: color 0.5s, background-color 0.5s;
 }
 

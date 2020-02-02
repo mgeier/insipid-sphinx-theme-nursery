@@ -99,7 +99,7 @@
 
 {% block document %}
 {# TODO: config option to disable this? #}
-{# TODO: only if "body_max_width" is not None? #}
+{% if theme_body_max_width != None %}
             <nav aria-label="Page navigation">
     {% if prev %}
                     <a href="{{ prev.link|e }}" class="nav-icon previous" title="{{ prev.title|striptags|e }}" aria-label="Previous page" aria-keyshortcuts="Left">
@@ -112,6 +112,7 @@
                     </a>
     {% endif %}
             </nav>
+{% endif %}
 {{ super() }}
 {% endblock %}
 

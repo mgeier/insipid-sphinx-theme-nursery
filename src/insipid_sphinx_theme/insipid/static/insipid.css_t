@@ -327,6 +327,7 @@ html:not(.sidebar-visible) #menu-bar:not(:hover).folded > #menu-bar-sticky-conta
     color: var(--icons-hover);
 }
 
+{% if theme_body_max_width != None %}
 /* -- navigation icons ------------------------------------------------------ */
 
 .nav-icon svg {
@@ -365,6 +366,8 @@ html:not(.sidebar-visible) #menu-bar:not(:hover).folded > #menu-bar-sticky-conta
 .nav-icon.next {
     top: 50vh;
 }
+
+{% endif %}
 
 {#
 vim:ft=css

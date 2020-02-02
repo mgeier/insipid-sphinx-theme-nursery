@@ -261,11 +261,11 @@ body.sidebar-visible {
 
 /* -- topbar --------------------------------------------------------------- */
 
-#topbar-placeholder {
+.js #topbar-placeholder {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    /* To be above the main content */
+    /* To stay above the main content */
     z-index: 1;
 }
 

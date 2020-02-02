@@ -22,8 +22,9 @@
 {% endif %}
     </script>
 
-                <div id="menu-bar">
-                    <div id="menu-bar-sticky-container">
+            <div id="menu-bar-placeholder">
+                <div id="menu-bar-container">
+                    <div id="menu-bar">
                         <div class="left-buttons">
 {% if render_sidebar %}
                             <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Sidebar" aria-label="Toggle Sidebar" aria-controls="sidebar">
@@ -55,7 +56,6 @@
                             {#{{/if}}#}
                         </div>
                     </div>
-                </div>
 
 {% if pagename != "search" %}
                 <div id="search-wrapper" class="hidden">
@@ -68,6 +68,22 @@
                         </ul>
                     </div>
                 </div>
+
+<div id="searchbox2" role="search">
+  {#
+  <h3 id="searchlabel">{{ _('Quick search') }}</h3>
+  #}
+    <div class="searchformwrapper">
+    <form class="search" action="{{ pathto('search') }}" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="{{ _('Go') }}" />
+    </form>
+    </div>
+</div>
+
+
+            </div>
+        </div>
 {% endif %}
 {% endblock %}
 

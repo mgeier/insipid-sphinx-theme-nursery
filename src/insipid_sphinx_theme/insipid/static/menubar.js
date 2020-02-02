@@ -9,7 +9,7 @@
 })();
 
 (function autoHideMenu() {
-    var menu = document.getElementById('menu-bar');
+    var menu = document.getElementById('menu-bar-container');
 
     var previousScrollTop = document.scrollingElement.scrollTop;
 
@@ -19,17 +19,6 @@
         } else if (!menu.classList.contains('folded') && document.scrollingElement.scrollTop > previousScrollTop) {
             menu.classList.add('folded');
         }
-
-        /*
-        if (!menu.classList.contains('bordered') && document.scrollingElement.scrollTop > 0) {
-            menu.classList.add('bordered');
-        }
-
-        if (menu.classList.contains('bordered') && document.scrollingElement.scrollTop === 0) {
-            menu.classList.remove('bordered');
-        }
-        */
-
         previousScrollTop = Math.max(document.scrollingElement.scrollTop, 0);
     }, { passive: true });
 })();

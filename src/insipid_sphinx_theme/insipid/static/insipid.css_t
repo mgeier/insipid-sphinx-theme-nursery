@@ -262,35 +262,38 @@ body.sidebar-visible {
 /* -- menubar --------------------------------------------------------------- */
 
 #menu-bar {
-    color: {{ theme_footertextcolor }};
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    z-index: 101;
-    /*margin: auto calc(0px - var(--page-padding));*/
+    /*z-index: 101;*/
+    /* To be above the main content */
+    z-index: 1;
 }
+
 #menu-bar > #menu-bar-sticky-container {
     display: flex;
     flex-wrap: wrap;
+    color: {{ theme_footertextcolor }};
     background-color: {{ theme_footerbgcolor }};
+    /*
     border-bottom-color: {{ theme_footerbgcolor }};
     border-bottom-width: 1px;
     border-bottom-style: solid;
+    */
 }
+
 .js #menu-bar > #menu-bar-sticky-container {
-    transition: transform 0.5s;
+    transition: transform 0.7s;
 }
-#menu-bar.bordered > #menu-bar-sticky-container  {
-    border-bottom-color: red;
-}
+
 #menu-bar .icon-button {
     position: relative;
     padding: 0 8px;
     z-index: 10;
     line-height: var(--menu-bar-height);
     cursor: pointer;
-    /*transition: color 0.5s;*/
 }
+
 @media only screen and (max-width: 420px) {
     #menu-bar .icon-button {
         padding: 0 5px;
@@ -320,11 +323,14 @@ body.sidebar-visible {
 .right-buttons {
     margin: 0 15px;
 }
+
+/*
 .right-buttons a {
     text-decoration: none;
 }
+*/
 
-html:not(.sidebar-visible) #menu-bar:not(:hover).folded > #menu-bar-sticky-container {
+body:not(.sidebar-visible) #menu-bar:not(:hover).folded > #menu-bar-sticky-container {*/
     transform: translateY(calc(-10px - var(--menu-bar-height)));
 }
 

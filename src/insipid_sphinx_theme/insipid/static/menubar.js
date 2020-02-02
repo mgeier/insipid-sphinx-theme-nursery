@@ -20,6 +20,7 @@
             menu.classList.add('folded');
         }
 
+        /*
         if (!menu.classList.contains('bordered') && document.scrollingElement.scrollTop > 0) {
             menu.classList.add('bordered');
         }
@@ -27,6 +28,7 @@
         if (menu.classList.contains('bordered') && document.scrollingElement.scrollTop === 0) {
             menu.classList.remove('bordered');
         }
+        */
 
         previousScrollTop = Math.max(document.scrollingElement.scrollTop, 0);
     }, { passive: true });

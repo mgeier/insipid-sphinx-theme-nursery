@@ -259,36 +259,27 @@ body.sidebar-visible {
 
 {% endif %}
 
-/* -- menubar --------------------------------------------------------------- */
+/* -- topbar --------------------------------------------------------------- */
 
-#menu-bar-placeholder {
+#topbar-placeholder {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    /*z-index: 101;*/
     /* To be above the main content */
     z-index: 1;
+}
 
-
-    border-style: dashed;
-    border-color: red;
-
-
+#topbar-container {
+    color: {{ theme_footertextcolor }};
+    background-color: {{ theme_footerbgcolor }};
 }
 
 #menu-bar {
     display: flex;
     flex-wrap: wrap;
-    color: {{ theme_footertextcolor }};
-    background-color: {{ theme_footerbgcolor }};
-    /*
-    border-bottom-color: {{ theme_footerbgcolor }};
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    */
 }
 
-.js #menu-bar-container {
+.js #topbar-container {
     transition: transform 0.7s;
 }
 
@@ -337,7 +328,7 @@ body.sidebar-visible {
 */
 
 /* body:not(.sidebar-visible) */
-#menu-bar-placeholder:not(:hover) #menu-bar-container.folded {
+#topbar-placeholder:not(:hover) #topbar-container.folded {
     transform: translateY(-100%);
 }
 

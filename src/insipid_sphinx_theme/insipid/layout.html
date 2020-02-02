@@ -22,8 +22,8 @@
 {% endif %}
     </script>
 
-            <div id="menu-bar-placeholder">
-                <div id="menu-bar-container">
+            <div id="topbar-placeholder">
+                <div id="topbar-container">
                     <div id="menu-bar">
                         <div class="left-buttons">
 {% if render_sidebar %}
@@ -58,33 +58,32 @@
                     </div>
 
 {% if pagename != "search" %}
+                {#
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
                         <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
                     </form>
-                    <div id="searchresults-outer" class="searchresults-outer hidden">
-                        <div id="searchresults-header" class="searchresults-header"></div>
-                        <ul id="searchresults">
-                        </ul>
-                    </div>
                 </div>
+                #}
 
-<div id="searchbox2" role="search">
+<div id="searchbox" role="search">
   {#
   <h3 id="searchlabel">{{ _('Quick search') }}</h3>
+  -->
   #}
-    <div class="searchformwrapper">
     <form class="search" action="{{ pathto('search') }}" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <!--
+        aria-labelledby="searchlabel"
+      -->
+      <input type="search" name="q" placeholder="{{ _('Enter search terms ...') }}" />
       <input type="submit" value="{{ _('Go') }}" />
     </form>
-    </div>
 </div>
 
+{% endif %}
 
             </div>
         </div>
-{% endif %}
 {% endblock %}
 
 {% block sidebarlogo %}

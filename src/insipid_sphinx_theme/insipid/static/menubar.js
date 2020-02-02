@@ -8,8 +8,8 @@
     });
 })();
 
-(function autoHideMenu() {
-    var menu = document.getElementById('menu-bar-container');
+(function autoHideTopbar() {
+    var menu = document.getElementById('topbar-container');
 
     var previousScrollTop = document.scrollingElement.scrollTop;
 

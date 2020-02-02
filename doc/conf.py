@@ -20,7 +20,7 @@ html_sidebars = {
        #'localtoc.html',
        #'relations.html',
        'sourcelink.html',
-       'searchbox.html',
+       #'searchbox.html',
    ],
    'nosidebar': [],  # To demonstrate a page without a sidebar
 }

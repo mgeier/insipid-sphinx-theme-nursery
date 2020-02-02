@@ -22,3 +22,35 @@
         previousScrollTop = Math.max(document.scrollingElement.scrollTop, 0);
     }, { passive: true });
 })();
+
+(function search(search) {
+    var searchbox = document.getElementById('searchbox');
+    var searchbar = document.getElementById('searchbar');
+    var searchicon = document.getElementById('search-toggle');
+
+    searchicon.addEventListener('click', function(e) { searchIconClickHandler(); }, false);
+    
+    function showSearch(yes) {
+        if (yes) {
+            searchbox.classList.remove('hidden');
+            searchicon.setAttribute('aria-expanded', 'true');
+        } else {
+            searchbox.classList.add('hidden');
+            searchicon.setAttribute('aria-expanded', 'false');
+        }
+    }
+
+    function searchIconClickHandler() {
+        if (searchbox.classList.contains('hidden')) {
+            showSearch(true);
+            searchbar.select();
+        } else {
+            showSearch(false);
+        }
+    }
+
+    // Show search box if there are previous results
+    if ($.getQueryParameters().highlight) {
+        searchbox.classList.remove('hidden');
+    }
+})();

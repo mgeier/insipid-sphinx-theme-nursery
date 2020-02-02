@@ -1,5 +1,7 @@
 @import 'classic.css';
 
+.hidden { display: none; }
+
 /* -- variables ------------------------------------------------------------- */
 
 /* TODO: --page-padding? */

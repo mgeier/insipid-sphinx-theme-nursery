@@ -333,8 +333,7 @@ html:not(.sidebar-visible) #menu-bar:not(:hover).folded > #menu-bar-sticky-conta
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-top: -1.25em;
-    margin-left: -1.25em;
+    margin: -1.25em;
     width: 2.5em;
     height: 2.5em;
     fill: currentColor;
@@ -342,10 +341,9 @@ html:not(.sidebar-visible) #menu-bar:not(:hover).folded > #menu-bar-sticky-conta
 
 .nav-icon {
     position: fixed;
-    top: 0;
-    bottom: 0;
-    /* TODO: use --page-padding? */
-    margin: auto 1em;
+    right: 0;
+    /* TODO: use --page-padding for horizontal margin? */
+    margin: {% if theme_body_centered|tobool %}-2em{% else %}0{% endif %} 1em;
     width: 4em;
     height: 4em;
     transition: color 0.5s, background-color 0.5s;
@@ -358,10 +356,14 @@ html:not(.sidebar-visible) #menu-bar:not(:hover).folded > #menu-bar-sticky-conta
 }
 
 .nav-icon.previous {
+    bottom: 50vh;
+{% if theme_body_centered|tobool %}
+    right: unset;
+{% endif %}
 }
 
 .nav-icon.next {
-    right: 0px;
+    top: 50vh;
 }
 
 {#

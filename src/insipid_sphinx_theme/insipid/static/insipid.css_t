@@ -210,6 +210,55 @@ body.sidebar-visible {
     }
 }
 
+{% if READTHEDOCS %}
+/* -- sidebar adaptations for readthedocs.org ------------------------------- */
+
+.injected .rst-versions.rst-badge {
+    left: 0;
+    bottom: 0;
+    width: calc(var(--sidebar-width) - {{ theme_sidebar_handle_width }});
+    max-width: revert;
+    font-family: revert;
+}
+
+.injected .rst-versions.rst-badge a:hover {
+    text-decoration: revert;
+}
+
+.injected .rst-versions.rst-badge .rst-current-version {
+    text-align: right;
+    color: {{ theme_relbarlinkcolor }};
+    background-color: {{ theme_relbarbgcolor }};
+}
+
+.injected .rst-versions.rst-badge .rst-current-version .fa {
+    color: {{ theme_relbartextcolor }};
+}
+
+.injected .rst-versions.rst-badge .rst-current-version .fa-book {
+    float: left;
+}
+
+.injected .rst-versions.rst-badge .rst-other-versions {
+    color: {{ theme_footertextcolor }};
+    background-color: {{ theme_footerbgcolor }};
+}
+
+.injected .rst-versions.rst-badge .rst-other-versions a {
+    color: {{ theme_footerlinkcolor }};
+}
+
+#flyout-search-form input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.injected .rst-versions.rst-badge .rst-other-versions hr {
+  border-color: {{ theme_footertextcolor }};
+}
+
+{% endif %}
+
 /* -- menubar --------------------------------------------------------------- */
 
 #menu-bar {

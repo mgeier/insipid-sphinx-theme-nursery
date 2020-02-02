@@ -24,7 +24,7 @@
 })();
 
 (function search(search) {
-    var searchbox = document.getElementById('searchbox');
+    var searchform = document.getElementById('searchform');
     var searchbar = document.getElementById('searchbar');
     var searchicon = document.getElementById('search-toggle');
 
@@ -32,16 +32,16 @@
     
     function showSearch(yes) {
         if (yes) {
-            searchbox.classList.remove('hidden');
+            searchform.classList.remove('hidden');
             searchicon.setAttribute('aria-expanded', 'true');
         } else {
-            searchbox.classList.add('hidden');
+            searchform.classList.add('hidden');
             searchicon.setAttribute('aria-expanded', 'false');
         }
     }
 
     function searchIconClickHandler() {
-        if (searchbox.classList.contains('hidden')) {
+        if (searchform.classList.contains('hidden')) {
             showSearch(true);
             searchbar.select();
         } else {
@@ -49,8 +49,10 @@
         }
     }
 
+    /*
     // Show search box if there are previous results
     if ($.getQueryParameters().highlight) {
-        searchbox.classList.remove('hidden');
+        searchform.classList.remove('hidden');
     }
+    */
 })();

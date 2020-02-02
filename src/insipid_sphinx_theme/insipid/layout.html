@@ -66,7 +66,8 @@
                 </div>
                 #}
 
-<div id="searchbox" class="hidden" role="search">
+<div id="searchbox" role="search">
+  <div id="searchform" class="hidden">
   {#
   <h3 id="searchlabel">{{ _('Quick search') }}</h3>
   -->
@@ -78,6 +79,7 @@
       <input type="search" id="searchbar" name="q" placeholder="{{ _('Enter search terms ...') }}" />
       <input type="submit" value="{{ _('Go') }}" />
     </form>
+  </div>
 </div>
 
 {% endif %}

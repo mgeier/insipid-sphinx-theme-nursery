@@ -222,6 +222,10 @@ body.sidebar-visible {
     z-index: 1;
 }
 
+body.sidebar-visible #topbar-placeholder {
+    margin-left: calc(0px - var(--sidebar-width));
+}
+
 #topbar-container {
     color: {{ theme_footertextcolor }};
     background-color: {{ theme_footerbgcolor }};

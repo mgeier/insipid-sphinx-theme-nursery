@@ -171,6 +171,7 @@ body.js:not(.sidebar-resizing) {
     left: 0;
     right: 0;
     padding: 10px 10px;
+    padding-top: calc(var(--menu-bar-height) + 10px);
 }
 
 #sidebar-resize-handle {

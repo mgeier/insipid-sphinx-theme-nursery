@@ -19,3 +19,4 @@ Text
 .. toctree::
 
     admonitions
+    api-doc

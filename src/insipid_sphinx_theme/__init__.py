@@ -1,3 +1,4 @@
+"""An insipid Sphinx theme."""
 from os import path
 
 __version__ = '0.0.0'

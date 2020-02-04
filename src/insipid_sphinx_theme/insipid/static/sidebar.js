@@ -54,12 +54,33 @@
         window.addEventListener('mouseup', stopResize, false);
         document.body.classList.add('sidebar-resizing');
     }
+
     function resize(e) {
         document.documentElement.style.setProperty('--sidebar-width', (e.clientX - sidebar.offsetLeft) + 'px');
     }
+
     function stopResize(e) {
         document.body.classList.remove('sidebar-resizing');
         window.removeEventListener('mousemove', resize, false);
         window.removeEventListener('mouseup', stopResize, false);
+    }
+})();
+
+(function sidebarPaddingTop() {
+    if (window.ResizeObserver) {
+        const sidebarwrapper = document.querySelector(".sphinxsidebarwrapper");
+
+        const resizeObserver = new ResizeObserver(entries => {
+            for (let entry of entries) {
+                let height;
+                if(entry.borderBoxSize) {
+                    height = entry.borderBoxSize.blockSize;
+                } else {
+                    height = entry.contentRect.height;
+                }
+                sidebarwrapper.style['padding-top'] = height + 10 + 'px';
+            }
+        });
+        resizeObserver.observe(document.getElementById('topbar-placeholder'));
     }
 })();

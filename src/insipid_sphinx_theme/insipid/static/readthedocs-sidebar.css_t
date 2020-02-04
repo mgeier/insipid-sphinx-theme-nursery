@@ -43,3 +43,7 @@
 .injected .rst-versions.rst-badge .rst-other-versions hr {
   border-color: {{ theme_footertextcolor }};
 }
+
+{#
+vim:ft=css
+#}

@@ -140,7 +140,7 @@ div.sphinxsidebar {
     }
 }
 
-.sidebar-resizing {
+.js.sidebar-resizing {
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
@@ -190,9 +190,9 @@ body.js:not(.sidebar-resizing) {
 }
 
 {% if READTHEDOCS|tobool %}
-.sidebar-hidden .injected .rst-versions.rst-badge,
+.js.sidebar-hidden .injected .rst-versions.rst-badge,
 {% endif %}
-.sidebar-hidden .sphinxsidebar {
+.js.sidebar-hidden .sphinxsidebar {
     transform: translateX(calc(0px - var(--sidebar-width)));
 }
 
@@ -295,8 +295,7 @@ body.sidebar-visible #topbar-placeholder {
 }
 */
 
-/* body:not(.sidebar-visible) */
-#topbar-placeholder:not(:hover) #topbar-container.folded {
+.js #topbar-placeholder:not(:hover) #topbar-container.folded {
     transform: translateY(-100%);
 }
 
@@ -304,6 +303,8 @@ body.sidebar-visible #topbar-placeholder {
     display: flex;
     margin: 0 5px;
 }
+
+/* TODO: separate rules for individual buttons? */
 .no-js .left-buttons {
     display: none;
 }

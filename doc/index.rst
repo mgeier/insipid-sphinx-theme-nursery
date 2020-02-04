@@ -5,4 +5,3 @@
 
     usage
     example/index
-    nosidebar

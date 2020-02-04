@@ -24,7 +24,7 @@ html_sidebars = {
        'sourcelink.html',
        #'searchbox.html',
    ],
-   'nosidebar': [],  # To demonstrate a page without a sidebar
+   'example/nosidebar': [],  # To demonstrate a page without a sidebar
 }
 
 extensions = [

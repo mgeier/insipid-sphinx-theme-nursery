@@ -20,3 +20,4 @@ Text
 
     admonitions
     api-doc
+    nosidebar

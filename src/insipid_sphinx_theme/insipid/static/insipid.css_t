@@ -151,9 +151,10 @@ body.js:not(.sidebar-resizing) {
     transition: margin-left 0.3s ease, transform 0.3s ease;
 }
 
-.js:not(.sidebar-resizing) .sphinxsidebar,
+{% if READTHEDOCS|tobool %}
 .js:not(.sidebar-resizing) .injected .rst-versions.rst-badge,
-{
+{% endif %}
+.js:not(.sidebar-resizing) .sphinxsidebar {
     transition: transform 0.3s;
 }
 
@@ -188,8 +189,10 @@ body.js:not(.sidebar-resizing) {
     width: {{ theme_sidebar_handle_width|todim }};
 }
 
-.sidebar-hidden .sphinxsidebar,
-.sidebar-hidden .injected .rst-versions.rst-badge {
+{% if READTHEDOCS|tobool %}
+.sidebar-hidden .injected .rst-versions.rst-badge,
+{% endif %}
+.sidebar-hidden .sphinxsidebar {
     transform: translateX(calc(0px - var(--sidebar-width)));
 }
 
@@ -217,13 +220,14 @@ body.sidebar-visible {
 
 #topbar-placeholder {
     /* To stay above sidebar and main content */
-    z-index: 1;
+    z-index: 123;
 }
 
 .js #topbar-placeholder {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    transition: margin 0.3s;
 }
 
 body.sidebar-visible #topbar-placeholder {

@@ -3,7 +3,7 @@
 
 {% block css %}
 {{ super() }}
-{% if READTHEDOCS and render_sidebar %}
+{% if READTHEDOCS|tobool and render_sidebar %}
     <link rel="stylesheet" href="{{ pathto('_static/readthedocs-sidebar.css', 1) }}" type="text/css" />
 {% endif %}
 {% endblock %}

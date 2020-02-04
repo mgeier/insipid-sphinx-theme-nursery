@@ -1,23 +1,8 @@
-Example
-=======
-
-TODO
-
-Text ``Monospace`` *Emphasis* **Bold**.
-
-.. code:: python
-
-    print('Hello, world!')
-
-Text
-
-.. code::
-
-    no highlighting
-
-
 Admonitions
------------
+===========
+
+Specific Admonitions
+--------------------
 
 https://docutils.sourceforge.io/docs/ref/rst/directives.html#specific-admonitions
 
@@ -59,7 +44,9 @@ In many themes only ``note`` and ``warning`` are supported!
 
     Warning text.
 
-----
+
+Generic Admonitions
+-------------------
 
 https://docutils.sourceforge.io/docs/ref/rst/directives.html#generic-admonition
 
@@ -67,7 +54,9 @@ https://docutils.sourceforge.io/docs/ref/rst/directives.html#generic-admonition
 
     Admonition text.
 
-----
+
+Topic
+-----
 
 https://docutils.sourceforge.io/docs/ref/rst/directives.html#topic
 
@@ -75,7 +64,9 @@ https://docutils.sourceforge.io/docs/ref/rst/directives.html#topic
 
     Topic text.
 
-----
+
+Admonition-like Constructs
+--------------------------
 
 https://www.sphinx-doc.org/en/master/extdev/nodes.html#new-admonition-like-constructs
 
@@ -89,7 +80,7 @@ https://www.sphinx-doc.org/en/master/extdev/nodes.html#new-admonition-like-const
 
 
 Nesting
-^^^^^^^
+-------
 
 .. note::
 

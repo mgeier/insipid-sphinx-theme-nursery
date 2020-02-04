@@ -26,6 +26,9 @@ html_sidebars = {
 
 html_title = 'Insipid Sphinx Theme'
 html_short_title = 'insipid'
+html_last_updated_fmt = ''
+html_add_permalinks = '\N{LINK SYMBOL}'
+html_secnumber_suffix = ' '
 
 extensions = [
     'sphinx.ext.autodoc',

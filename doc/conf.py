@@ -8,7 +8,7 @@ html_theme_options = {
     #'bodyfont': 'serif',
     #'codefont': 'monospace',
     #'headfont': 'serif',
-    'navigation_with_keys': True,
+    #'navigation_with_keys': False,
     #'nosidebar': True,
     #'sidebarwidth': 300,
     #'sidebar_collapse': False,

@@ -1,6 +1,6 @@
 "use strict";
 
-(function sidebar() {
+$(document).ready(function () {
     var sidebar = document.querySelector(".sphinxsidebar");
     var sidebarToggleButton = document.getElementById("sidebar-toggle");
     var sidebarResizeHandle = document.getElementById("sidebar-resize-handle");
@@ -64,9 +64,7 @@
         window.removeEventListener('mousemove', resize, false);
         window.removeEventListener('mouseup', stopResize, false);
     }
-})();
 
-(function sidebarPaddingTop() {
     if (window.ResizeObserver) {
         const sidebarwrapper = document.querySelector(".sphinxsidebarwrapper");
 
@@ -83,4 +81,4 @@
         });
         resizeObserver.observe(document.getElementById('topbar-placeholder'));
     }
-})();
+});

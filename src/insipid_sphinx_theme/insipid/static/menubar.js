@@ -48,11 +48,4 @@
             showSearch(false);
         }
     }
-
-    /*
-    // Show search box if there are previous results
-    if ($.getQueryParameters().highlight) {
-        searchform.classList.remove('hidden');
-    }
-    */
 })();

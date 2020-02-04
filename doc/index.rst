@@ -1,7 +1,12 @@
 .. include:: ../README.rst
 
 .. toctree::
-    :numbered:
+    :caption: Part One
 
     usage
+
+.. toctree::
+    :caption: Part Two
+    :numbered:
+
     example/index

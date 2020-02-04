@@ -230,7 +230,7 @@ body.sidebar-visible {
 }
 
 .js:not(.sidebar-resizing) #topbar-placeholder {
-    transition: margin {{ theme_sidebar_transition }};
+    transition: margin-left {{ theme_sidebar_transition }};
 }
 
 body.sidebar-visible #topbar-placeholder {

@@ -560,9 +560,42 @@ body.sidebar-visible #topbar-placeholder {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 .js .menu-title {
     cursor: pointer;
 }
+
+/* -- search field in topbar ------------------------------------------------ */
+
+#topbar-container form {
+    /*margin-top: 10px;*/
+}
+
+#topbar-container input {
+    border: 1px solid #98dbcc;
+    /*font-family: sans-serif;*/
+    font-size: 1em;
+}
+
+#topbar-container #searchbox form.search {
+    /*overflow: hidden;*/
+}
+
+#topbar-container #searchbox input[type="search"] {
+    /*float: left;*/
+    width: 80%;
+    /*padding: 0.25em;*/
+    box-sizing: border-box;
+}
+
+#topbar-container #searchbox input[type="submit"] {
+    /*float: left;*/
+    /*width: 20%;*/
+    border-left: none;
+    /*padding: 0.25em;*/
+    box-sizing: border-box;
+}
+
 
 {% if theme_body_max_width != None %}
 /* -- navigation icons ------------------------------------------------------ */

@@ -1,6 +1,3 @@
-copyright = '2020, Matthias Geier'
-master_doc = 'index'
-
 html_theme = 'insipid'
 html_theme_options = {
     #'navigation_with_keys': False,
@@ -27,7 +24,17 @@ html_sidebars = {
    'example/nosidebar': [],  # To demonstrate a page without a sidebar
 }
 
+html_title = 'Insipid Sphinx Theme'
+html_short_title = 'insipid'
+
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.viewcode',
 ]
+
+#html_static_path = ['_static']
+
+copyright = '2020, Matthias Geier'
+
+# Since Sphinx version 2.0, 'index' is the default:
+master_doc = 'index'

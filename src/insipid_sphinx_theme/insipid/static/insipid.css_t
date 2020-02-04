@@ -148,14 +148,14 @@ div.sphinxsidebar {
 }
 
 body.js:not(.sidebar-resizing) {
-    transition: margin-left 0.3s ease, transform 0.3s ease;
+    transition: margin-left {{ theme_sidebar_transition }}, transform {{ theme_sidebar_transition }};
 }
 
 {% if READTHEDOCS|tobool %}
 .js:not(.sidebar-resizing) .injected .rst-versions.rst-badge,
 {% endif %}
 .js:not(.sidebar-resizing) .sphinxsidebar {
-    transition: transform 0.3s;
+    transition: transform {{ theme_sidebar_transition }};
 }
 
 /*
@@ -227,7 +227,10 @@ body.sidebar-visible {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    transition: margin 0.3s;
+}
+
+.js:not(.sidebar-resizing) #topbar-placeholder {
+    transition: margin {{ theme_sidebar_transition }};
 }
 
 body.sidebar-visible #topbar-placeholder {
@@ -245,7 +248,7 @@ body.sidebar-visible #topbar-placeholder {
 }
 
 .js #topbar-container {
-    transition: transform 0.7s;
+    transition: transform {{ theme_topbar_transition }};
 }
 
 #menu-bar .icon-button {

@@ -13,6 +13,8 @@ html_theme_options = {
     #'sidebarwidth': 300,
     #'sidebar_collapse': False,
     #'sidebar_includehidden': False,
+    #'topbar_transition': '0.7s ease-out',
+    #'sidebar_transition': '0.3s ease-out',
 }
 html_sidebars = {
    '**': [

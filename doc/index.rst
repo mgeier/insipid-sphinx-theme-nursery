@@ -4,6 +4,7 @@
     :caption: Part One
 
     usage
+    customization
 
 .. toctree::
     :caption: Part Two

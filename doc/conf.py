@@ -3,19 +3,18 @@ master_doc = 'index'
 
 html_theme = 'insipid'
 html_theme_options = {
-    #'body_min_width': 0,
-    #'body_max_width': None,
-    #'body_centered': False,
-    #'bodyfont': 'serif',
-    #'codefont': 'monospace',
-    #'headfont': 'serif',
     #'navigation_with_keys': False,
     #'nosidebar': True,
+    #'body_min_width': 0,
+    #'body_max_width': None,
     #'sidebarwidth': 300,
-    #'sidebar_collapse': False,
-    #'sidebar_includehidden': False,
+
+    #'body_centered': False,
     #'topbar_transition': '0.7s ease-out',
     #'sidebar_transition': '0.3s ease-out',
+
+    #'sidebar_collapse': False,
+    #'sidebar_includehidden': False,
 }
 html_sidebars = {
    '**': [

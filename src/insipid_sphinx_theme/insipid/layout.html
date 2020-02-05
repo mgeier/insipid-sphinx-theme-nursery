@@ -25,14 +25,20 @@
 
 {% block header %}
     <script type="text/javascript">
-        document.body.classList.remove('no-js')
-        document.body.classList.add('js');
+        var body = $(document.body);
+        body.removeClass('no-js');
+        body.addClass('js');
 {% if render_sidebar %}
-        var sidebar;
-        try { sidebar = localStorage.getItem('sphinx-sidebar'); } catch(e) { }
-        sidebar = sidebar || 'visible';
-        document.body.classList.remove('sidebar-visible');
-        document.body.classList.add('sidebar-' + sidebar);
+        try {
+            var sidebar = localStorage.getItem('sphinx-sidebar');
+            body.removeClass('sidebar-visible');
+            body.addClass('sidebar-' + sidebar);
+        } catch(e) {
+        }
+        try {
+            $(':root').css('--sidebar-width', localStorage.getItem('sphinx-sidebar-width'));
+        } catch(e) {
+        }
 {% endif %}
     </script>
 

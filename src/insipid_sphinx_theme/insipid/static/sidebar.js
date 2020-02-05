@@ -5,6 +5,13 @@ $(document).ready(function () {
     var sidebar = $('.sphinxsidebar');
     var sidebarToggle = $('#sidebar-toggle');
 
+    function store(key, value) {
+        try {
+            localStorage.setItem(key, value);
+        } catch (e) {
+        }
+    }
+
     sidebarToggle.on('click', function () {
         if (body.hasClass('sidebar-hidden')) {
             showSidebar();
@@ -23,7 +30,7 @@ $(document).ready(function () {
         */
         sidebarToggle.attr('aria-expanded', true);
         sidebar.attr('aria-hidden', false);
-        try { localStorage.setItem('sphinx-sidebar', 'visible'); } catch (e) { }
+        store('sphinx-sidebar', 'visible');
     }
 
     function hideSidebar() {
@@ -36,7 +43,7 @@ $(document).ready(function () {
         */
         sidebarToggle.attr('aria-expanded', false);
         sidebar.attr('aria-hidden', true);
-        try { localStorage.setItem('sphinx-sidebar', 'hidden'); } catch (e) { }
+        store('sphinx-sidebar', 'hidden');
     }
 
     $('#sidebar-resize-handle').on('mousedown', function (e) {
@@ -54,6 +61,7 @@ $(document).ready(function () {
         body.removeClass('sidebar-resizing');
         $(window).off('mousemove', resize);
         $(window).off('mouseup', stopResize);
+        store('sphinx-sidebar-width', root.css('--sidebar-width'));
     }
 
     // This is part of the sidebar code because it only affects the sidebar

@@ -65,9 +65,8 @@ $(document).ready(function () {
         window.removeEventListener('mouseup', stopResize, false);
     }
 
+    // This is part of the sidebar code because it only affects the sidebar
     if (window.ResizeObserver) {
-        const sidebarwrapper = document.querySelector(".sphinxsidebarwrapper");
-
         const resizeObserver = new ResizeObserver(entries => {
             for (let entry of entries) {
                 let height;
@@ -76,7 +75,7 @@ $(document).ready(function () {
                 } else {
                     height = entry.contentRect.height;
                 }
-                sidebarwrapper.style['padding-top'] = height + 10 + 'px';
+                document.documentElement.style.setProperty('--topbar-height', height + 'px');
             }
         });
         resizeObserver.observe(document.getElementById('topbar-placeholder'));

@@ -8,7 +8,7 @@
 
 :root {
     --sidebar-width: {{ theme_sidebarwidth|todim }};
-    --menu-bar-height: 50px;
+    --topbar-height: {{ theme_topbarheight|todim }};
 }
 
 /* -- page layout ----------------------------------------------------------- */
@@ -365,7 +365,7 @@ body.js:not(.sidebar-resizing) {
     left: 0;
     right: 0;
     padding: 10px 10px;
-    padding-top: calc(var(--menu-bar-height) + 10px);
+    padding-top: calc(var(--topbar-height) + 10px);
 }
 
 #sidebar-resize-handle {
@@ -494,7 +494,7 @@ body.sidebar-visible #topbar-placeholder {
     position: relative;
     padding: 0 8px;
     z-index: 10;
-    line-height: var(--menu-bar-height);
+    line-height: {{ theme_topbarheight|todim }};
     cursor: pointer;
 }
 
@@ -552,7 +552,7 @@ body.sidebar-visible #topbar-placeholder {
     display: inline-block;
     font-weight: 200;
     font-size: 2rem;
-    line-height: var(--menu-bar-height);
+    line-height: {{ theme_topbarheight|todim }};
     text-align: center;
     margin: 0;
     flex: 1;

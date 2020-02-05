@@ -4,12 +4,12 @@
     left: 0;
     bottom: 0;
     width: calc(var(--sidebar-width) - {{ theme_sidebar_handle_width }});
-    max-width: revert;
-    font-family: revert;
+    max-width: unset;
+    font-family: unset;
 }
 
 .injected .rst-versions.rst-badge a:hover {
-    text-decoration: revert;
+    text-decoration: unset;
 }
 
 .injected .rst-versions.rst-badge .rst-current-version {
@@ -27,8 +27,8 @@
 }
 
 .injected .rst-versions.rst-badge .rst-other-versions {
-    color: {{ theme_footertextcolor }};
-    background-color: {{ theme_footerbgcolor }};
+    color: #fff;
+    background-color: #11303d;
 }
 
 .injected .rst-versions.rst-badge .rst-other-versions a {
@@ -41,7 +41,7 @@
 }
 
 .injected .rst-versions.rst-badge .rst-other-versions hr {
-  border-color: {{ theme_footertextcolor }};
+  border-color: #fff;
 }
 
 {#

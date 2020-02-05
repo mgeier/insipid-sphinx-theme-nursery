@@ -257,7 +257,7 @@ code, pre {
 /* -- admonitions ----------------------------------------------------------- */
 
 div.warning, div.note, div.seealso {
-    border: revert;
+    border: unset;
 }
 
 div.admonition {
@@ -305,7 +305,7 @@ div.admonition > p.admonition-title {
 }
 
 p.admonition-title {
-    display: revert;
+    display: block;
 }
 
 /* -- sidebar --------------------------------------------------------------- */
@@ -316,7 +316,7 @@ div.sphinxsidebar {
     top: 0;
     bottom: 0;
     width: var(--sidebar-width);
-    margin-left: revert;  /* override basic.css */
+    margin-left: unset;  /* override basic.css */
     overflow: auto;
     /*
     font-size: 0.875em;

@@ -1,68 +1,58 @@
-"use strict";
-
 $(document).ready(function () {
-    var sidebar = document.querySelector(".sphinxsidebar");
-    var sidebarToggleButton = document.getElementById("sidebar-toggle");
-    var sidebarResizeHandle = document.getElementById("sidebar-resize-handle");
+    'use strict';
+    var root = $(':root');
+    var body = $(document.body);
+    var sidebar = $('.sphinxsidebar');
+    var sidebarToggle = $('#sidebar-toggle');
+
+    sidebarToggle.on('click', function () {
+        if (body.hasClass('sidebar-hidden')) {
+            showSidebar();
+        } else if (body.hasClass('sidebar-visible')) {
+            hideSidebar();
+        }
+    });
 
     function showSidebar() {
-        document.body.classList.remove('sidebar-hidden')
-        document.body.classList.add('sidebar-visible');
+        body.removeClass('sidebar-hidden');
+        body.addClass('sidebar-visible');
         /*
         Array.from(sidebarLinks).forEach(function (link) {
             link.setAttribute('tabIndex', 0);
         });
         */
-        sidebarToggleButton.setAttribute('aria-expanded', true);
-        sidebar.setAttribute('aria-hidden', false);
+        sidebarToggle.attr('aria-expanded', true);
+        sidebar.attr('aria-hidden', false);
         try { localStorage.setItem('sphinx-sidebar', 'visible'); } catch (e) { }
     }
 
     function hideSidebar() {
-        document.body.classList.remove('sidebar-visible')
-        document.body.classList.add('sidebar-hidden');
+        body.removeClass('sidebar-visible');
+        body.addClass('sidebar-hidden');
         /*
         Array.from(sidebarLinks).forEach(function (link) {
             link.setAttribute('tabIndex', -1);
         });
         */
-        sidebarToggleButton.setAttribute('aria-expanded', false);
-        sidebar.setAttribute('aria-hidden', true);
+        sidebarToggle.attr('aria-expanded', false);
+        sidebar.attr('aria-hidden', true);
         try { localStorage.setItem('sphinx-sidebar', 'hidden'); } catch (e) { }
     }
 
-    sidebarToggleButton.addEventListener('click', function sidebarToggle() {
-        if (document.body.classList.contains("sidebar-hidden")) {
-            showSidebar();
-        } else if (document.body.classList.contains("sidebar-visible")) {
-            hideSidebar();
-        /*
-        } else {
-            if (getComputedStyle(sidebar)['transform'] === 'none') {
-                hideSidebar();
-            } else {
-                showSidebar();
-            }
-        */
-        }
+    $('#sidebar-resize-handle').on('mousedown', function (e) {
+        $(window).on('mousemove', resize);
+        $(window).on('mouseup', stopResize);
+        body.addClass('sidebar-resizing');
     });
 
-    sidebarResizeHandle.addEventListener('mousedown', initResize, false);
-
-    function initResize(e) {
-        window.addEventListener('mousemove', resize, false);
-        window.addEventListener('mouseup', stopResize, false);
-        document.body.classList.add('sidebar-resizing');
-    }
-
     function resize(e) {
-        document.documentElement.style.setProperty('--sidebar-width', (e.clientX - sidebar.offsetLeft) + 'px');
+        root.css('--sidebar-width', (e.clientX - sidebar.offset().left) + 'px');
     }
 
     function stopResize(e) {
-        document.body.classList.remove('sidebar-resizing');
-        window.removeEventListener('mousemove', resize, false);
-        window.removeEventListener('mouseup', stopResize, false);
+        body.removeClass('sidebar-resizing');
+        $(window).off('mousemove', resize);
+        $(window).off('mouseup', stopResize);
     }
 
     // This is part of the sidebar code because it only affects the sidebar
@@ -75,7 +65,7 @@ $(document).ready(function () {
                 } else {
                     height = entry.contentRect.height;
                 }
-                document.documentElement.style.setProperty('--topbar-height', height + 'px');
+                root.css('--topbar-height', height + 'px');
             }
         });
         resizeObserver.observe(document.getElementById('topbar-placeholder'));

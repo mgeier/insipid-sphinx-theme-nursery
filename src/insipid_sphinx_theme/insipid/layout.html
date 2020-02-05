@@ -101,6 +101,22 @@
 
             </div>
         </div>
+
+{# TODO: config option to disable this? #}
+{% if theme_body_max_width != None %}
+            <nav aria-label="Page navigation">
+    {% if prev %}
+                    <a href="{{ prev.link|e }}" class="nav-icon previous" title="{{ prev.title|striptags|e }}" aria-label="Previous page" aria-keyshortcuts="Left">
+                      {% include 'icons/previous.svg' %}
+                    </a>
+    {% endif %}
+    {% if next %}
+                    <a href="{{ next.link|e }}" class="nav-icon next" title="{{ next.title|striptags|e }}" aria-label="Next page" aria-keyshortcuts="Right">
+                      {% include 'icons/next.svg' %}
+                    </a>
+    {% endif %}
+            </nav>
+{% endif %}
 {% endblock %}
 
 {% block sidebarlogo %}
@@ -121,24 +137,11 @@
 {% endblock %}
 #}
 
+{#
 {% block document %}
-{# TODO: config option to disable this? #}
-{% if theme_body_max_width != None %}
-            <nav aria-label="Page navigation">
-    {% if prev %}
-                    <a href="{{ prev.link|e }}" class="nav-icon previous" title="{{ prev.title|striptags|e }}" aria-label="Previous page" aria-keyshortcuts="Left">
-                      {% include 'icons/previous.svg' %}
-                    </a>
-    {% endif %}
-    {% if next %}
-                    <a href="{{ next.link|e }}" class="nav-icon next" title="{{ next.title|striptags|e }}" aria-label="Next page" aria-keyshortcuts="Right">
-                      {% include 'icons/next.svg' %}
-                    </a>
-    {% endif %}
-            </nav>
-{% endif %}
 {{ super() }}
 {% endblock %}
+#}
 
 {#
 {% block relbar2 %}{% endblock %}

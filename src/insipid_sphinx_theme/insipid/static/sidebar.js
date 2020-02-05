@@ -43,6 +43,7 @@ $(document).ready(function () {
         $(window).on('mousemove', resize);
         $(window).on('mouseup', stopResize);
         body.addClass('sidebar-resizing');
+        return false;  // Prevent unwanted text selection while resizing
     });
 
     function resize(e) {

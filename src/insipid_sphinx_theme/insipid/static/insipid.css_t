@@ -333,13 +333,6 @@ div.sphinxsidebar {
     }
 }
 
-.js.sidebar-resizing {
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
 body.js:not(.sidebar-resizing) {
     transition: margin-left {{ theme_sidebar_transition }}, transform {{ theme_sidebar_transition }};
 }

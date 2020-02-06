@@ -1,11 +1,13 @@
 {% extends "basic/layout.html" %}
 
+
 {% block css %}
 {{ super() }}
 {% if READTHEDOCS|tobool and render_sidebar %}
     <link rel="stylesheet" href="{{ pathto('_static/readthedocs-sidebar.css', 1) }}" type="text/css" />
 {% endif %}
 {% endblock %}
+
 
 {% block scripts %}
 {{ super() }}
@@ -15,13 +17,16 @@
 {% endif %}
 {% endblock %}
 
+
 {% block extrahead %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
 {% endblock %}
 
+
 {% block body_tag %}
   <body class="no-js{% if render_sidebar %} sidebar-visible{% endif %}">
 {% endblock %}
+
 
 {% block header %}
     <script type="text/javascript">
@@ -119,6 +124,7 @@
 {% endif %}
 {% endblock %}
 
+
 {% block sidebarlogo %}
 {# We abuse this block to inject the sidebar-resize-handle #}
 {% if render_sidebar %}
@@ -127,9 +133,11 @@
 {{ super() }}
 {% endblock %}
 
+
 {#
 {% block relbar1 %}{% endblock %}
 #}
+
 
 {#
 {% block content %}
@@ -137,15 +145,18 @@
 {% endblock %}
 #}
 
+
 {#
 {% block document %}
 {{ super() }}
 {% endblock %}
 #}
 
+
 {#
 {% block relbar2 %}{% endblock %}
 #}
+
 
 {% block footer %}
 {{ super() }}

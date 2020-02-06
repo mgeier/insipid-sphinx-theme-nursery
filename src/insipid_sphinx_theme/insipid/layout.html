@@ -47,6 +47,8 @@
 {% endif %}
     </script>
 
+    <div id="scroll-container">
+        <div id="main-column">
             <div id="topbar-placeholder">
                 <div id="topbar-container">
                     <div id="menu-bar">
@@ -160,6 +162,8 @@
 
 {% block footer %}
 {{ super() }}
+        </div>
+    </div>
 {% if render_sidebar %}
                 <!-- TODO: provide a re-usable function for this in .js file? -->
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->

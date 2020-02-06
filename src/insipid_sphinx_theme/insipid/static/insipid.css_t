@@ -13,26 +13,47 @@
 
 /* -- page layout ----------------------------------------------------------- */
 
+html, body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+
 html {
 /* TODO: scrollbar-color (from mdBook)? */
-    height: 100%;
+	overflow: hidden;
 
     /* https://github.com/sphinx-doc/sphinx/issues/1125 */
     background-color: #fff;
 }
 
 body {
-    min-height: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    margin: 0;
-    padding: 0;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+	overflow-y: hidden;
+	position: relative;  /* reference for sidebar */
 
     font-family: 'Open Sans', sans-serif;
     font-size: 100%;
     color: #000;
-    background-color: #11303d;
+    background-color: #1c4e63;
+}
+
+#scroll-container {
+	overflow-x: hidden;
+	overflow-y: auto;
+	flex: 1 0 auto;
+}
+
+#main-column {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.sidebar-visible #main-column {
+	margin-left: var(--sidebar-width);
 }
 
 div.document {
@@ -311,13 +332,16 @@ p.admonition-title {
 /* -- sidebar --------------------------------------------------------------- */
 
 div.sphinxsidebar {
-    position: fixed;
-    left: calc(0px - var(--sidebar-width));
-    top: 0;
-    bottom: 0;
+	position: absolute;
     width: var(--sidebar-width);
+	left: 0;
+	top: var(--topbar-height);
+	bottom: 0;
+	overflow-y: auto;
+    /*left: calc(0px - var(--sidebar-width));*/
+    float: unset;
     margin-left: unset;  /* override basic.css */
-    overflow: auto;
+    /*overflow: auto;*/
     /*
     font-size: 0.875em;
     box-sizing: border-box;
@@ -327,13 +351,8 @@ div.sphinxsidebar {
     */
     background-color: #1c4e63;
 }
-@media only screen and (min-width: 620px) {
-    div.sphinxsidebar {
-        left: 0;
-    }
-}
 
-body.js:not(.sidebar-resizing) {
+.js:not(.sidebar-resizing) #main-column {
     transition: margin-left {{ theme_sidebar_transition }}, transform {{ theme_sidebar_transition }};
 }
 
@@ -358,7 +377,6 @@ body.js:not(.sidebar-resizing) {
     left: 0;
     right: 0;
     padding: 10px 10px;
-    padding-top: calc(var(--topbar-height) + 10px);
 }
 
 #sidebar-resize-handle {
@@ -391,16 +409,6 @@ body.js:not(.sidebar-resizing) {
     background: var(--scrollbar);
 }
 */
-
-body.sidebar-visible {
-    transform: translateX(var(--sidebar-width));
-}
-@media only screen and (min-width: 620px) {
-    body.sidebar-visible {
-        transform: none;
-        margin-left: var(--sidebar-width);
-    }
-}
 
 div.sphinxsidebar h3 {
     font-family: {{ theme_headfont }};
@@ -451,13 +459,13 @@ div.sphinxsidebar input {
 /* -- topbar --------------------------------------------------------------- */
 
 #topbar-placeholder {
+    position: -webkit-sticky;
+    position: sticky;
     /* To stay above sidebar and main content */
     z-index: 123;
 }
 
 .js #topbar-placeholder {
-    position: -webkit-sticky;
-    position: sticky;
     top: 0;
 }
 
@@ -465,7 +473,7 @@ div.sphinxsidebar input {
     transition: margin-left {{ theme_sidebar_transition }};
 }
 
-body.sidebar-visible #topbar-placeholder {
+.sidebar-visible #topbar-placeholder {
     margin-left: calc(0px - var(--sidebar-width));
 }
 

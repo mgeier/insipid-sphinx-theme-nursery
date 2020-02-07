@@ -390,6 +390,8 @@ div.sphinxsidebar {
 div.sphinxsidebarwrapper {
     position: relative;  /* reference for sidebar-resize-handle */
     padding: 10px 10px;
+    min-height: 100%;
+    box-sizing: border-box;
 }
 
 

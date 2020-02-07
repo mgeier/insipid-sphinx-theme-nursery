@@ -358,15 +358,26 @@ div.sphinxsidebar {
     background-color: #1c4e63;
 }
 
+.js.topbar-folded div.sphinxsidebar {
+    top: 0;
+}
+
 .js:not(.sidebar-resizing) #main-column {
     transition: margin-left {{ theme_sidebar_transition }}, transform {{ theme_sidebar_transition }};
 }
 
 {% if READTHEDOCS|tobool %}
 .js:not(.sidebar-resizing) .injected .rst-versions.rst-badge,
-{% endif %}
-.js:not(.sidebar-resizing) .sphinxsidebar {
     transition: transform {{ theme_sidebar_transition }};
+}
+{% endif %}
+
+.js:not(.sidebar-resizing) .sphinxsidebar {
+    transition: transform {{ theme_sidebar_transition }}, top {{ theme_topbar_transition }};
+}
+
+.js.sidebar-resizing .sphinxsidebar {
+    transition: top {{ theme_topbar_transition }};
 }
 
 /*
@@ -383,6 +394,15 @@ div.sphinxsidebar {
     left: 0;
     right: 0;
     padding: 10px 10px;
+}
+
+
+.js.topbar-folded .sphinxsidebar .sphinxsidebarwrapper {
+    padding-top: calc(10px + var(--topbar-height));
+}
+
+.js .sphinxsidebar .sphinxsidebarwrapper {
+    transition: padding-top {{ theme_topbar_transition }};
 }
 
 #sidebar-resize-handle {
@@ -541,7 +561,7 @@ div.sphinxsidebar input {
 }
 */
 
-.js #topbar-placeholder:not(:hover) #topbar-container.folded {
+.js.topbar-folded #topbar-placeholder:not(:hover) #topbar-container {
     transform: translateY(-100%);
 }
 

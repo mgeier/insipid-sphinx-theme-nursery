@@ -1,7 +1,8 @@
 $(document).ready(function () {
     'use strict';
 
-    var scroller = document.scrollingElement;
+    var body = $(document.body);
+    var scroller = document.getElementById('scroll-container');
 
     // scroll to top
     $('.menu-title').on('click', function () {
@@ -9,13 +10,13 @@ $(document).ready(function () {
     });
 
     // auto-hide topbar
-    var menu = $('#topbar-container');
     var previous = scroller.scrollTop;
-    $(document).on('scroll', function () {
-        if (menu.hasClass('folded') && scroller.scrollTop < previous) {
-            menu.removeClass('folded');
-        } else if (!menu.hasClass('folded') && scroller.scrollTop > previous) {
-            menu.addClass('folded');
+    $(scroller).on('scroll', function (e) {
+        var folded = body.hasClass('topbar-folded');
+        if (folded && scroller.scrollTop < previous) {
+            body.removeClass('topbar-folded');
+        } else if (!folded && scroller.scrollTop > previous) {
+            body.addClass('topbar-folded');
         }
         previous = Math.max(scroller.scrollTop, 0);
     });

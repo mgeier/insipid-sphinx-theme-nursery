@@ -79,11 +79,4 @@ $(document).ready(function () {
         });
         resizeObserver.observe(document.getElementById('topbar-placeholder'));
     }
-
-    // TODO: use only on READTHEDOCS
-    // Scroll away readthedocs.org versions
-    var scrollee = $('#scroll-container');
-    $(document.body).on('scroll', function () {
-        $('.rst-versions.rst-badge').css('left', scrollee.offset().left + 'px');
-    });
 });

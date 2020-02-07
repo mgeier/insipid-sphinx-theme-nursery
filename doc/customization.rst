@@ -19,6 +19,10 @@ Settings inherited from the ``basic`` theme (like most Sphinx themes):
         'navigation_with_keys': True,  # Use left and right arrow keys to turn pages
     }
 
+TODO: some default values are overwritten
+
+TODO: body_min_width doesn't count padding, body_max_width does
+
 Settings from ``insipid`` theme::
 
     # TODO:

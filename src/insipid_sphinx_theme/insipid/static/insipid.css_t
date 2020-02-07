@@ -43,7 +43,11 @@ body {
 #scroll-container {
 	overflow-x: hidden;
 	overflow-y: auto;
-	flex: 1 0 auto;
+	flex: 1 0 {{ theme_body_min_width|todim }};
+}
+
+.sidebar-visible #scroll-container {
+	flex: 1 0 calc({{ theme_body_min_width|todim }} + var(--sidebar-width));
 }
 
 #main-column {
@@ -78,6 +82,8 @@ div.body {
     /* To be able to hide nav-icons */
     position: relative;
     padding: 0 20px 30px 20px;
+    /* Override "basic" theme, this is handled in #scroll-container */
+    min-width: unset;
 {% if theme_body_centered|tobool %}
     margin-left: auto;
     margin-right: auto;

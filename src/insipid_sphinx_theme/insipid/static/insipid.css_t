@@ -44,6 +44,7 @@ body {
 	overflow-x: hidden;
 	overflow-y: auto;
     /* TODO: are wide images horizontally scrollable? */
+    flex: 1;
 }
 
 .sidebar-visible #scroll-container {

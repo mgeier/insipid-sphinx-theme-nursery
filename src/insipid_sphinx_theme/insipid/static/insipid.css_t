@@ -43,7 +43,7 @@ body {
 #scroll-container {
 	overflow-x: hidden;
 	overflow-y: auto;
-	flex: 1 0 {{ theme_body_min_width|todim }};
+    /* TODO: are wide images horizontally scrollable? */
 }
 
 .sidebar-visible #scroll-container {

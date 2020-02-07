@@ -83,8 +83,7 @@ $(document).ready(function () {
     // TODO: use only on READTHEDOCS
     // Scroll away readthedocs.org versions
     var scrollee = $('#scroll-container');
-    var rtd_badge = $('.rst-versions.rst-badge');
     $(document.body).on('scroll', function (e) {
-        rtd_badge.offset().left = scrollee.offset().left;
+        $('.rst-versions.rst-badge').offset().left = scrollee.offset().left;
     });
 });

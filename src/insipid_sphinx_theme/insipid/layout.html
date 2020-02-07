@@ -129,9 +129,7 @@
 
 {% block sidebarlogo %}
 {# We abuse this block to inject the sidebar-resize-handle #}
-{% if render_sidebar %}
       <div id="sidebar-resize-handle"></div>
-{% endif %}
 {{ super() }}
 {% endblock %}
 

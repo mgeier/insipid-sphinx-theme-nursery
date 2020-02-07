@@ -13,6 +13,10 @@
 
 /* -- page layout ----------------------------------------------------------- */
 
+/* https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+
 html, body {
 	padding: 0;
 	margin: 0;
@@ -83,6 +87,8 @@ div.body {
     /* To be able to hide nav-icons */
     position: relative;
     padding: 0 20px 30px 20px;
+    /* Reset box-sizing in case some 3rd party CSS relies on default behavior */
+    box-sizing: initial;
     /* Override "basic" theme, this is handled in #scroll-container */
     min-width: unset;
 {% if theme_body_centered|tobool %}
@@ -391,7 +397,6 @@ div.sphinxsidebarwrapper {
     position: relative;  /* reference for sidebar-resize-handle */
     padding: 10px 10px;
     min-height: 100%;
-    box-sizing: border-box;
 }
 
 
@@ -610,7 +615,6 @@ div.sphinxsidebar input {
     /*float: left;*/
     width: 80%;
     /*padding: 0.25em;*/
-    box-sizing: border-box;
 }
 
 #topbar-container #searchbox input[type="submit"] {
@@ -618,7 +622,6 @@ div.sphinxsidebar input {
     /*width: 20%;*/
     border-left: none;
     /*padding: 0.25em;*/
-    box-sizing: border-box;
 }
 
 

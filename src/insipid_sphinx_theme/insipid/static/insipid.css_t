@@ -32,7 +32,7 @@ body {
 	flex-wrap: nowrap;
 	overflow-x: auto;
 	overflow-y: hidden;
-	position: relative;  /* reference for sidebar */
+	position: relative;  /* reference for sphinxsidebar */
 
     font-family: 'Open Sans', sans-serif;
     font-size: 100%;
@@ -387,13 +387,8 @@ div.sphinxsidebar {
 }
 */
 
-.sphinxsidebar .sphinxsidebarwrapper {
-    overflow-y: auto;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+div.sphinxsidebarwrapper {
+    position: relative;  /* reference for sidebar-resize-handle */
     padding: 10px 10px;
 }
 

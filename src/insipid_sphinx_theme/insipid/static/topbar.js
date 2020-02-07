@@ -11,7 +11,7 @@ $(document).ready(function () {
 
     // auto-hide topbar
     var previous = scroller.scrollTop;
-    $(scroller).on('scroll', function (e) {
+    $(scroller).on('scroll', function () {
         var folded = body.hasClass('topbar-folded');
         if (folded && scroller.scrollTop < previous) {
             body.removeClass('topbar-folded');

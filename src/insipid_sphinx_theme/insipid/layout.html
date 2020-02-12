@@ -47,8 +47,8 @@
 {% endif %}
     </script>
 
-    <div id="scroll-container">
-        <div id="main-column">
+    <div id="horizontally-scrolled">
+        <div id="vertically-scrolled">
             <div id="topbar-placeholder">
                 <div id="topbar-container">
                     <div id="menu-bar">
@@ -176,7 +176,7 @@
 
 {% if READTHEDOCS|tobool %}
     // Scroll away readthedocs.org versions
-    var scrollee = $('#scroll-container');
+    var scrollee = $('#horizontally-scrolled');
     $(document.body).on('scroll', function () {
         $('.rst-versions.rst-badge').css('left', scrollee.offset().left + 'px');
     });

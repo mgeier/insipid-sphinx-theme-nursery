@@ -47,24 +47,24 @@ body {
     background-color: #1c4e63;
 }
 
-#scroll-container {
+#horizontally-scrolled {
 	overflow-x: hidden;
 	overflow-y: auto;
     /* TODO: are wide images horizontally scrollable? */
     flex: 1;
 }
 
-.sidebar-visible #scroll-container {
+.sidebar-visible #horizontally-scrolled {
 	flex: 1 0 calc({{ theme_body_min_width|todim }} + var(--sidebar-width));
 }
 
-#main-column {
+#vertically-scrolled {
     display: flex;
     flex-direction: column;
     min-height: 100%;
 }
 
-.sidebar-visible #main-column {
+.sidebar-visible #vertically-scrolled {
 	margin-left: var(--sidebar-width);
 }
 
@@ -92,7 +92,7 @@ div.body {
     padding: 0 20px 30px 20px;
     /* Reset box-sizing in case some 3rd party CSS relies on default behavior */
     box-sizing: initial;
-    /* Override "basic" theme, this is handled in #scroll-container */
+    /* Override "basic" theme, this is handled in #horizontally-scrolled */
     min-width: unset;
 {% if theme_body_centered|tobool %}
     margin-left: auto;
@@ -371,7 +371,7 @@ div.sphinxsidebar {
     top: 0;
 }
 
-.js:not(.sidebar-resizing) #main-column {
+.js:not(.sidebar-resizing) #vertically-scrolled {
     transition: margin-left {{ theme_sidebar_transition }};
 }
 

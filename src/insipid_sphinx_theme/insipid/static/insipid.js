@@ -2,7 +2,7 @@ $(document).ready(function () {
     'use strict';
 
     var body = $(document.body);
-    var scroller = document.getElementById('scroll-container');
+    var scroller = document.getElementById('horizontally-scrolled');
 
     // scroll to top
     $('.menu-title').on('click', function () {

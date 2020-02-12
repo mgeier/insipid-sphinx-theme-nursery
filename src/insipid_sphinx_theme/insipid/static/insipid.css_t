@@ -69,6 +69,10 @@ body.js {
     /*min-height: 100%;*/
 }
 
+.js.topbar-folded #horizontally-scrolled {
+    padding-top: var(--topbar-height);
+}
+
 .sidebar-visible #horizontally-scrolled {
 	flex: 1 0 calc({{ theme_body_min_width|todim }} + var(--sidebar-width));
 }
@@ -365,12 +369,12 @@ div.sphinxsidebar {
     background-color: #1c4e63;
 }
 
-.js.topbar-folded div.sphinxsidebar {
-    top: 0;
+.js:not(.sidebar-resizing) #horizontally-scrolled {
+    transition: padding-left {{ theme_sidebar_transition }}, padding-top {{ theme_topbar_transition }};
 }
 
-.js:not(.sidebar-resizing) #horizontally-scrolled {
-    transition: padding-left {{ theme_sidebar_transition }};
+.js.sidebar-resizing #horizontally-scrolled {
+    transition: padding-top {{ theme_topbar_transition }};
 }
 
 {% if READTHEDOCS|tobool %}
@@ -380,11 +384,7 @@ div.sphinxsidebar {
 {% endif %}
 
 .js:not(.sidebar-resizing) .sphinxsidebar {
-    transition: transform {{ theme_sidebar_transition }}, top {{ theme_topbar_transition }};
-}
-
-.js.sidebar-resizing .sphinxsidebar {
-    transition: top {{ theme_topbar_transition }};
+    transition: transform {{ theme_sidebar_transition }};
 }
 
 /*

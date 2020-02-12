@@ -90,8 +90,8 @@ div.body {
     padding: 0 20px 30px 20px;
     /* Reset box-sizing in case some 3rd party CSS relies on default behavior */
     box-sizing: initial;
-    /* Override "basic" theme, this is handled in #horizontally-scrolled */
-    /*min-width: unset;*/
+    /* Override "basic" theme, min width is handled in #horizontally-scrolled */
+    min-width: unset;
 {% if theme_body_centered|tobool %}
     margin-left: auto;
     margin-right: auto;

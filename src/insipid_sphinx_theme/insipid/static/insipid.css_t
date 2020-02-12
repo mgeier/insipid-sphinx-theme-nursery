@@ -33,14 +33,17 @@ html {
 
 body {
     display: flex;
+    flex-direction: row;
 	flex-wrap: nowrap;
 	overflow-x: auto;
 	overflow-y: hidden;
 	position: relative;  /* reference for sphinxsidebar */
 
+    /*font-family: sans-serif;*/
     font-family: 'Open Sans', sans-serif;
-    font-size: 100%;
-    color: #000;
+    /*font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif;*/
+    /*font-size: 100%;*/
+    /*color: #000;*/
     background-color: #1c4e63;
 }
 
@@ -129,7 +132,7 @@ div.body h3,
 div.body h4,
 div.body h5,
 div.body h6 {
-    font-family: {{ theme_headfont }};
+    /*font-family: {{ theme_headfont }};*/
     background-color: {{ theme_headbgcolor }};
     font-weight: normal;
     color: {{ theme_headtextcolor }};
@@ -218,7 +221,7 @@ pre {
 code {
     background-color: #ecf0f3;
     padding: 0 1px 0 1px;
-    font-size: 0.95em;
+    /*font-size: 0.95em;*/
 }
 
 th, dl.field-list > dt {
@@ -281,12 +284,11 @@ div.footer a:visited {
 /* TODO: separate settings for code and pre? */
 /* TODO: more specific than "pre"? */
 /* TODO: use theme_codefont? */
-/*
 code, pre {
-    font-family: var(--font-code);
-    font-size: var(--font-code-size);
+    /*font-family: monospace;*/
+    /*font-family: 'Source Code Pro', Consolas, 'Ubuntu Mono', Menlo, 'DejaVu Sans Mono', monospace;*/
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
 }
-*/
 
 /* -- admonitions ----------------------------------------------------------- */
 
@@ -439,7 +441,7 @@ div.sphinxsidebarwrapper {
 */
 
 div.sphinxsidebar h3 {
-    font-family: {{ theme_headfont }};
+    /*font-family: {{ theme_headfont }};*/
     color: {{ theme_sidebartextcolor }};
     font-size: 1.4em;
     font-weight: normal;
@@ -452,7 +454,7 @@ div.sphinxsidebar h3 a {
 }
 
 div.sphinxsidebar h4 {
-    font-family: {{ theme_headfont }};
+    /*font-family: {{ theme_headfont }};*/
     color: {{ theme_sidebartextcolor }};
     font-size: 1.3em;
     font-weight: normal;
@@ -478,11 +480,13 @@ div.sphinxsidebar a {
     color: {{ theme_sidebarlinkcolor }};
 }
 
+/*
 div.sphinxsidebar input {
     border: 1px solid {{ theme_sidebarlinkcolor }};
     font-family: sans-serif;
     font-size: 1em;
 }
+*/
 
 /* -- topbar --------------------------------------------------------------- */
 

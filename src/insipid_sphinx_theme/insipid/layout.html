@@ -47,7 +47,6 @@
 {% endif %}
     </script>
 
-    <div id="horizontally-scrolled">
             <div id="topbar-placeholder">
                 <div id="topbar-container">
                     <div id="menu-bar">
@@ -108,6 +107,7 @@
             </div>
         </div>
 
+    <div id="horizontally-scrolled">
 {# TODO: config option to disable this? #}
 {% if theme_body_max_width != None %}
             <nav aria-label="Page navigation">
@@ -161,24 +161,24 @@
 {{ super() }}
     </div>
 {% if render_sidebar %}
-                <!-- TODO: provide a re-usable function for this in .js file? -->
-                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script type="text/javascript">
-                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
-                    document.querySelector('.sphinxsidebar').setAttribute('aria-hidden', sidebar !== 'visible');
-                    /*
-                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
-                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
-                    });
-                    */
+    <!-- TODO: provide a re-usable function for this in .js file? -->
+    <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+    <script type="text/javascript">
+      document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+      document.querySelector('.sphinxsidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+      /*
+      Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+          link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+      });
+      */
 
 {% if READTHEDOCS|tobool %}
-    // Scroll away readthedocs.org versions
-    var scrollee = $('#horizontally-scrolled');
-    $(document.body).on('scroll', function () {
-        $('.rst-versions.rst-badge').css('left', scrollee.offset().left + 'px');
-    });
+      // Scroll away readthedocs.org versions
+      var scrollee = $('#horizontally-scrolled');
+      $(document.body).on('scroll', function () {
+          $('.rst-versions.rst-badge').css('left', scrollee.offset().left + 'px');
+      });
 {% endif %}
-                </script>
+    </script>
 {% endif %}
 {% endblock %}

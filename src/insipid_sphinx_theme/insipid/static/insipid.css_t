@@ -20,10 +20,10 @@ html { box-sizing: border-box; }
 html, body {
 	padding: 0;
 	margin: 0;
-	height: 100%;
 }
 
 html {
+	height: 100%;
 /* TODO: scrollbar-color (from mdBook)? */
 	overflow: hidden;
 
@@ -37,7 +37,11 @@ body {
 	flex-wrap: nowrap;
 	overflow-x: auto;
 	overflow-y: hidden;
-	position: relative;  /* reference for sphinxsidebar */
+    position: absolute;  /* reference for sphinxsidebar */
+    left: 0;
+    right: 0;
+    top: var(--topbar-height);
+    bottom: 0;
 
     /*font-family: sans-serif;*/
     font-family: 'Open Sans', sans-serif;
@@ -45,6 +49,14 @@ body {
     /*font-size: 100%;*/
     /*color: #000;*/
     background-color: #1c4e63;
+}
+
+body.js.topbar-folded {
+    top: 0;
+}
+
+body.js {
+    transition: top {{ theme_topbar_transition }};
 }
 
 #horizontally-scrolled {
@@ -72,11 +84,6 @@ div.document {
     background-color: #1c4e63;
 }
 
-div.documentwrapper {
-    /*float: left;*/
-    /*width: 100%;*/
-}
-
 div.body {
     /* To be able to hide nav-icons */
     position: relative;
@@ -84,7 +91,7 @@ div.body {
     /* Reset box-sizing in case some 3rd party CSS relies on default behavior */
     box-sizing: initial;
     /* Override "basic" theme, this is handled in #horizontally-scrolled */
-    min-width: unset;
+    /*min-width: unset;*/
 {% if theme_body_centered|tobool %}
     margin-left: auto;
     margin-right: auto;
@@ -341,7 +348,7 @@ div.sphinxsidebar {
 	position: absolute;
     width: var(--sidebar-width);
 	left: 0;
-	top: var(--topbar-height);
+	top: 0;
 	bottom: 0;
 	overflow-y: auto;
     /*left: calc(0px - var(--sidebar-width));*/
@@ -482,22 +489,11 @@ div.sphinxsidebar input {
 /* -- topbar --------------------------------------------------------------- */
 
 #topbar-placeholder {
-    position: -webkit-sticky;
-    position: sticky;
-    /* To stay above sidebar and main content */
-    z-index: 123;
-}
-
-.js #topbar-placeholder {
+    position: fixed;
+    left: 0;
+    right: 0;
     top: 0;
-}
-
-.js:not(.sidebar-resizing) #topbar-placeholder {
-    transition: margin-left {{ theme_sidebar_transition }};
-}
-
-.sidebar-visible #topbar-placeholder {
-    margin-left: calc(0px - var(--sidebar-width));
+    z-index: 123;
 }
 
 #topbar-container {

@@ -36,12 +36,17 @@
 {% if render_sidebar %}
         try {
             var sidebar = localStorage.getItem('sphinx-sidebar');
-            body.removeClass('sidebar-visible');
-            body.addClass('sidebar-' + sidebar);
+            if (sidebar && sidebar !== 'visible') {
+                body.removeClass('sidebar-visible');
+                body.addClass('sidebar-' + sidebar);
+            }
         } catch(e) {
         }
         try {
-            $(':root').css('--sidebar-width', localStorage.getItem('sphinx-sidebar-width'));
+            var sidebar_width = localStorage.getItem('sphinx-sidebar-width');
+            if (sidebar_width) {
+                $(':root').css('--sidebar-width', sidebar_width);
+            }
         } catch(e) {
         }
 {% endif %}

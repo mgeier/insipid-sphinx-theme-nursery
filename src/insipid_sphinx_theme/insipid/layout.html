@@ -112,7 +112,6 @@
             </div>
         </div>
 
-    <div id="horizontally-scrolled">
 {# TODO: config option to disable this? #}
 {% if theme_body_max_width != None %}
             <nav aria-label="Page navigation">
@@ -164,7 +163,6 @@
 
 {% block footer %}
 {{ super() }}
-    </div>
 {% if render_sidebar %}
     <!-- TODO: provide a re-usable function for this in .js file? -->
     <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->

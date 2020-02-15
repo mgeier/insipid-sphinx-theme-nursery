@@ -148,6 +148,8 @@
 {% endblock %}
 #}
 
+{%- block sidebar1 %}{% endblock %}
+{%- block sidebar2 %}{% endblock %}
 
 {#
 {% block document %}
@@ -162,6 +164,8 @@
 
 
 {% block footer %}
+{# sidebar will appear here only if JavaScript is disabled #}
+{{ sidebar() }}
 {{ super() }}
 {% if render_sidebar %}
     <!-- TODO: provide a re-usable function for this in .js file? -->

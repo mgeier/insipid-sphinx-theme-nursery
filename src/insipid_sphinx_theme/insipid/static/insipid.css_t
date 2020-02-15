@@ -57,19 +57,10 @@ body.sidebar-visible {
 
 /* TODO: are wide images horizontally scrollable? */
 
-#horizontally-scrolled {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    /*min-height: 100%;*/
-}
 
-.sidebar-visible #horizontally-scrolled {
-	flex: 1 0 calc({{ theme_body_min_width|todim }} + var(--sidebar-width));
-}
-
-.sidebar-visible #horizontally-scrolled {
-	padding-left: var(--sidebar-width);
+div.body, div.related, div.footer {
+    /* To be able to hide nav-icons */
+    position: relative;
 }
 
 div.document {
@@ -80,8 +71,6 @@ div.document {
 }
 
 div.body {
-    /* To be able to hide nav-icons */
-    position: relative;
     padding: 0 20px 30px 20px;
     /* Reset box-sizing in case some 3rd party CSS relies on default behavior */
     box-sizing: initial;
@@ -370,12 +359,12 @@ body.js:not(.sidebar-resizing) {
 
 {% if READTHEDOCS|tobool %}
 .js:not(.sidebar-resizing) .rst-versions.rst-badge {
-    transition: transform {{ theme_sidebar_transition }};
+    transition: left {{ theme_sidebar_transition }};
 }
 {% endif %}
 
 .js:not(.sidebar-resizing) .sphinxsidebar {
-    transition: transform {{ theme_sidebar_transition }}, top {{ theme_topbar_transition }};
+    transition: left {{ theme_sidebar_transition }}, top {{ theme_topbar_transition }};
 }
 
 .js.sidebar-resizing .sphinxsidebar {
@@ -420,7 +409,7 @@ div.sphinxsidebarwrapper {
 .js.sidebar-hidden .rst-versions.rst-badge,
 {% endif %}
 .js.sidebar-hidden .sphinxsidebar {
-    transform: translateX(calc(0px - var(--sidebar-width)));
+    left: calc(0px - var(--sidebar-width));
 }
 
 /*
@@ -673,6 +662,25 @@ div.viewcode-block:target {
     border-top: 1px solid #ac9;
     border-bottom: 1px solid #ac9;
 }
+
+/* -- media queries (at the very end to make sure they override values) ----- */
+
+@media only screen and (max-width: calc({{ theme_sidebarwidth|todim }} + {{ theme_body_min_width|todim }})) {
+    body.sidebar-visible {
+        margin-left: 0;
+    }
+
+    .sidebar-visible #topbar-placeholder {
+        margin-left: 0;
+    }
+
+    .no-js .sphinxsidebar {
+        position: relative;  /* To be able to hide nav-icons */
+        top: unset;
+        width: unset;
+    }
+}
+
 
 /* -------------------------------------------------------------------------- */
 {#

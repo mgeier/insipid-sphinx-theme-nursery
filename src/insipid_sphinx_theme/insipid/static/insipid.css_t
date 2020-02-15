@@ -23,20 +23,16 @@ html, body {
 }
 
 html {
-	/*height: 100%;*/
-/* TODO: scrollbar-color (from mdBook)? */
-	/*overflow: hidden;*/
+	height: 100%;
+    /* TODO: scrollbar-color (from mdBook)? */
 
     /* https://github.com/sphinx-doc/sphinx/issues/1125 */
     background-color: #fff;
 }
 
 body {
-    /*
     display: flex;
-    flex-direction: row;
-	flex-wrap: nowrap;
-    */
+    flex-direction: column;
 	/*overflow: auto;*/
     /*position: absolute;*/  /* reference for sphinxsidebar */
     /*
@@ -45,7 +41,7 @@ body {
     top: var(--topbar-height);
     bottom: 0;
     */
-    /*max-height: 100%;*/  /* enable scrolling */
+    min-height: 100%;  /* necessary for flex-grow */
 
     /*font-family: sans-serif;*/
     font-family: 'Open Sans', sans-serif;
@@ -55,24 +51,17 @@ body {
     background-color: #1c4e63;
 }
 
-body.js.topbar-folded {
-    top: 0;
+body.sidebar-visible {
+    margin-left: var(--sidebar-width);
 }
 
-body.js {
-    transition: top {{ theme_topbar_transition }};
-}
+/* TODO: are wide images horizontally scrollable? */
 
 #horizontally-scrolled {
-    /* TODO: are wide images horizontally scrollable? */
     flex: 1;
     display: flex;
     flex-direction: column;
     /*min-height: 100%;*/
-}
-
-.js.topbar-folded #horizontally-scrolled {
-    padding-top: var(--topbar-height);
 }
 
 .sidebar-visible #horizontally-scrolled {
@@ -351,10 +340,10 @@ p.admonition-title {
 /* -- sidebar --------------------------------------------------------------- */
 
 div.sphinxsidebar {
-	position: absolute;
+	position: fixed;
     width: var(--sidebar-width);
 	left: 0;
-	top: 0;
+	top: var(--topbar-height);
 	bottom: 0;
 	overflow-y: auto;
     /*left: calc(0px - var(--sidebar-width));*/
@@ -371,12 +360,12 @@ div.sphinxsidebar {
     background-color: #1c4e63;
 }
 
-.js:not(.sidebar-resizing) #horizontally-scrolled {
-    transition: padding-left {{ theme_sidebar_transition }}, padding-top {{ theme_topbar_transition }};
+.topbar-folded .sphinxsidebar {
+    top: 0;
 }
 
-.js.sidebar-resizing #horizontally-scrolled {
-    transition: padding-top {{ theme_topbar_transition }};
+body.js:not(.sidebar-resizing) {
+    transition: margin-left {{ theme_sidebar_transition }};
 }
 
 {% if READTHEDOCS|tobool %}
@@ -386,7 +375,11 @@ div.sphinxsidebar {
 {% endif %}
 
 .js:not(.sidebar-resizing) .sphinxsidebar {
-    transition: transform {{ theme_sidebar_transition }};
+    transition: transform {{ theme_sidebar_transition }}, top {{ theme_topbar_transition }};
+}
+
+.js.sidebar-resizing .sphinxsidebar {
+    transition: top {{ theme_topbar_transition }};
 }
 
 /*
@@ -491,12 +484,19 @@ div.sphinxsidebar input {
 /* -- topbar --------------------------------------------------------------- */
 
 #topbar-placeholder {
-    position: fixed;
-    left: 0;
-    right: 0;
+    position: sticky;
     top: 0;
     z-index: 123;
 }
+
+.sidebar-visible #topbar-placeholder {
+    margin-left: calc(0px - var(--sidebar-width));
+}
+
+.js:not(.sidebar-resizing) #topbar-placeholder {
+    transition: margin-left {{ theme_sidebar_transition }};
+}
+
 
 #topbar-container {
     color: #fff;

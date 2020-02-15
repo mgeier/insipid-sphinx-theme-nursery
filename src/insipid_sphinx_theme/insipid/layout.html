@@ -174,14 +174,6 @@
           link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
       });
       */
-
-{% if READTHEDOCS|tobool %}
-      // Scroll away readthedocs.org versions
-      var scrollee = $('#horizontally-scrolled');
-      $(document.body).on('scroll', function () {
-          $('.rst-versions.rst-badge').css('left', scrollee.offset().left + 'px');
-      });
-{% endif %}
     </script>
 {% endif %}
 {% endblock %}

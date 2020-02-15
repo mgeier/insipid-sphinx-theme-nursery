@@ -339,6 +339,7 @@ div.sphinxsidebar {
     float: unset;
     margin-left: unset;  /* override basic.css */
     /*overflow: auto;*/
+    z-index: 99;
     /*
     font-size: 0.875em;
     box-sizing: border-box;
@@ -369,6 +370,17 @@ body.js:not(.sidebar-resizing) {
 
 .js.sidebar-resizing .sphinxsidebar {
     transition: top {{ theme_topbar_transition }};
+}
+
+.js #overlay {
+    position: fixed;
+    top: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity {{ theme_sidebar_transition }}, height 0s {{ theme_sidebar_transition }}, width 0s {{ theme_sidebar_transition }};
+    z-index: 42;
 }
 
 /*
@@ -672,6 +684,13 @@ div.viewcode-block:target {
 
     .sidebar-visible #topbar-placeholder {
         margin-left: 0;
+    }
+
+    .js.sidebar-visible #overlay {
+        height: 100%;
+        width: 100%;
+        opacity: 1;
+        transition: opacity {{ theme_sidebar_transition }}, height 0s, width 0s;
     }
 
     .no-js .sphinxsidebar {

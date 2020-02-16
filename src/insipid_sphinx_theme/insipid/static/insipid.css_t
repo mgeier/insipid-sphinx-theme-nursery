@@ -66,7 +66,7 @@ div.body {
     padding: 0 20px 30px 20px;
     /* Reset box-sizing in case some 3rd party CSS relies on default behavior */
     box-sizing: initial;
-    /* Override "basic" theme, min width is handled with media queries */
+    /* Override basic.css, min width is handled with media queries */
     min-width: unset;
 {% if theme_body_centered|tobool %}
     margin-left: auto;
@@ -132,11 +132,6 @@ a.headerlink {
 a.headerlink:hover {
     background-color: {{ theme_headlinkcolor }};
     color: white;
-}
-
-div.body p, div.body dd, div.body li, div.body blockquote {
-    text-align: justify;
-    line-height: 130%;
 }
 
 div.admonition p.admonition-title + p {
@@ -272,8 +267,6 @@ div.warning, div.note, div.seealso {
 
 div.admonition {
     background-color: #eee;
-    /* from "basic" theme */
-    padding: 7px;
 }
 
 div.admonition p.admonition-title {

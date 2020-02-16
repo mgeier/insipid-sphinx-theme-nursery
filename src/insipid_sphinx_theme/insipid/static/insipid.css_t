@@ -23,7 +23,8 @@ html, body {
 }
 
 html {
-	height: 100%;
+	height: 100%;  /* necessary for flex-grow */
+
     /* TODO: scrollbar-color (from mdBook)? */
 
     /* https://github.com/sphinx-doc/sphinx/issues/1125 */
@@ -33,19 +34,9 @@ html {
 body {
     display: flex;
     flex-direction: column;
-	/*overflow: auto;*/
-    /*position: absolute;*/  /* reference for sphinxsidebar */
-    /*
-    left: 0;
-    right: 0;
-    top: var(--topbar-height);
-    bottom: 0;
-    */
     min-height: 100%;  /* necessary for flex-grow */
 
-    /*font-family: sans-serif;*/
     font-family: 'Open Sans', sans-serif;
-    /*font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif;*/
     /*font-size: 100%;*/
     /*color: #000;*/
     background-color: #1c4e63;
@@ -55,17 +46,18 @@ body.sidebar-visible {
     margin-left: var(--sidebar-width);
 }
 
+body.js:not(.sidebar-resizing) {
+    transition: margin-left {{ theme_sidebar_transition }};
+}
+
 /* TODO: are wide images horizontally scrollable? */
 
-
 div.body, div.related, div.footer {
-    /* To be able to hide nav-icons */
-    position: relative;
+    position: relative;  /* To be able to hide nav-icon */
 }
 
 div.document {
-    /* To keep the footer at the bottom (on very short pages) */
-    flex-grow: 1;
+    flex-grow: 1;  /* To keep the footer at the bottom (on very short pages) */
 
     background-color: #1c4e63;
 }
@@ -74,7 +66,7 @@ div.body {
     padding: 0 20px 30px 20px;
     /* Reset box-sizing in case some 3rd party CSS relies on default behavior */
     box-sizing: initial;
-    /* Override "basic" theme, min width is handled in #horizontally-scrolled */
+    /* Override "basic" theme, min width is handled with media queries */
     min-width: unset;
 {% if theme_body_centered|tobool %}
     margin-left: auto;
@@ -335,27 +327,21 @@ div.sphinxsidebar {
 	top: var(--topbar-height);
 	bottom: 0;
 	overflow-y: auto;
-    /*left: calc(0px - var(--sidebar-width));*/
     float: unset;
     margin-left: unset;  /* override basic.css */
-    /*overflow: auto;*/
     z-index: 99;
     /*
     font-size: 0.875em;
-    box-sizing: border-box;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior-y: contain;
-    color: var(--sidebar-fg);
     */
+
     background-color: #1c4e63;
 }
 
-.topbar-folded .sphinxsidebar {
+.js.topbar-folded .sphinxsidebar,
+.no-js .sphinxsidebar {
     top: 0;
-}
-
-body.js:not(.sidebar-resizing) {
-    transition: margin-left {{ theme_sidebar_transition }};
 }
 
 {% if READTHEDOCS|tobool %}
@@ -395,7 +381,8 @@ div.sphinxsidebarwrapper {
     min-height: 100%;
 }
 
-.js.topbar-folded .sphinxsidebar .sphinxsidebarwrapper {
+.js.topbar-folded .sphinxsidebar .sphinxsidebarwrapper,
+.no-js .sphinxsidebar .sphinxsidebarwrapper {
     padding-top: calc(10px + var(--topbar-height));
 }
 
@@ -485,9 +472,12 @@ div.sphinxsidebar input {
 /* -- topbar --------------------------------------------------------------- */
 
 #topbar-placeholder {
+    z-index: 123;
+}
+
+.js #topbar-placeholder {
     position: sticky;
     top: 0;
-    z-index: 123;
 }
 
 .sidebar-visible #topbar-placeholder {
@@ -497,7 +487,6 @@ div.sphinxsidebar input {
 .js:not(.sidebar-resizing) #topbar-placeholder {
     transition: margin-left {{ theme_sidebar_transition }};
 }
-
 
 #topbar-container {
     color: #fff;
@@ -675,7 +664,7 @@ div.viewcode-block:target {
     border-bottom: 1px solid #ac9;
 }
 
-/* -- media queries (at the very end to make sure they override values) ----- */
+/* -- media queries --------------------------------------------------------- */
 
 @media only screen and (max-width: calc({{ theme_sidebarwidth|todim }} + {{ theme_body_min_width|todim }})) {
     body.sidebar-visible {
@@ -694,12 +683,11 @@ div.viewcode-block:target {
     }
 
     .no-js .sphinxsidebar {
-        position: relative;  /* To be able to hide nav-icons */
+        position: relative;  /* To be able to hide nav-icon */
         top: unset;
         width: unset;
     }
 }
-
 
 /* -------------------------------------------------------------------------- */
 {#

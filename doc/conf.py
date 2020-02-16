@@ -2,7 +2,7 @@ html_theme = 'insipid'
 html_theme_options = {
     #'navigation_with_keys': False,
     #'nosidebar': True,
-    #'body_min_width': 0,
+    #'body_min_width': 0,  # When smaller, body is covered by sidebar
     #'body_max_width': None,
     #'sidebarwidth': 300,
 

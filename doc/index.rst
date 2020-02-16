@@ -1,16 +1,23 @@
 .. include:: ../README.rst
 
+.. NB: "--" is not replaced in :caption:!
+
 .. toctree::
-    :caption: Part One
+    :caption: Part One – Documentation
 
     usage
     customization
 
 .. toctree::
-    :caption: Part Two
+    :caption: Part Two – Showcase
     :numbered:
 
-    example/index
+    showcase/text-formatting
+    showcase/code-blocks
+    showcase/admonitions
+    showcase/api-doc
+    showcase/no-sidebar
+    showcase/todo-list
 
 :ref:`genindex`
 

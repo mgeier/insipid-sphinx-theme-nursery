@@ -96,13 +96,19 @@ Nesting
 
 .. note::
 
-    .. code::
+    .. code-block::
 
         'code in note'
 
+    Some text.
+
+    .. code-block::
+
+        'some more code'
+
 .. warning::
 
-    .. code::
+    .. code-block::
 
         'code in warning'
 

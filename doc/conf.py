@@ -21,17 +21,18 @@ html_sidebars = {
        'sourcelink.html',
        #'searchbox.html',
    ],
-   'example/nosidebar': [],  # To demonstrate a page without a sidebar
+   'showcase/no-sidebar': [],  # To demonstrate a page without a sidebar
 }
 
 html_title = 'Insipid Sphinx Theme'
 html_short_title = 'insipid'
 html_last_updated_fmt = ''
 html_add_permalinks = '\N{LINK SYMBOL}'
-html_secnumber_suffix = ' '
+html_secnumber_suffix = '\N{FIGURE SPACE}'
 
 extensions = [
     'sphinx.ext.autodoc',
+    'sphinx.ext.todo',
     'sphinx.ext.viewcode',
 ]
 
@@ -41,3 +42,6 @@ copyright = '2020, Matthias Geier'
 
 # Since Sphinx version 2.0, 'index' is the default:
 master_doc = 'index'
+
+todo_include_todos = True
+todo_link_only = True

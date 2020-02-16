@@ -2,25 +2,29 @@ $(document).ready(function () {
     'use strict';
 
     var body = $(document.body);
-    var scroller = document.scrollingElement;
+    var main_scroller = document.scrollingElement;
+    var sidebar_scroller = document.querySelector('.sphinxsidebar');
 
     // scroll to top
     $('.menu-title').on('click', function () {
-        scroller.scrollTo({top: 0, behavior: 'smooth'});
+        main_scroller.scrollTo({top: 0, behavior: 'smooth'});
     });
 
     // auto-hide topbar
-    var previous = scroller.scrollTop;
-    $(document).on('scroll', function () {
-        console.log(scroller.scrollTop);
-        var folded = body.hasClass('topbar-folded');
-        if (folded && scroller.scrollTop < previous) {
-            body.removeClass('topbar-folded');
-        } else if (!folded && scroller.scrollTop > previous) {
-            body.addClass('topbar-folded');
-        }
-        previous = Math.max(scroller.scrollTop, 0);
-    });
+    function scroll_callback(scroller) {
+        var previous = scroller.scrollTop;
+        return function () {
+            var folded = body.hasClass('topbar-folded');
+            if (folded && scroller.scrollTop < previous) {
+                body.removeClass('topbar-folded');
+            } else if (!folded && scroller.scrollTop > previous) {
+                body.addClass('topbar-folded');
+            }
+            previous = Math.max(scroller.scrollTop, 0);
+        };
+    }
+    $(document).on('scroll', scroll_callback(main_scroller));
+    $(sidebar_scroller).on('scroll', scroll_callback(sidebar_scroller));
 
     // show search
     var form = $('#searchform');

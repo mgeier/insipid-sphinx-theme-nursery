@@ -140,26 +140,16 @@ a.headerlink:hover {
     color: white;
 }
 
-pre {
-    padding: 5px;
-    background-color: {{ theme_codebgcolor }};
-    color: {{ theme_codetextcolor }};
-    line-height: 120%;
-    border: 1px solid #ac9;
-    border-left: none;
-    border-right: none;
+/*
+blockquote {
+    margin: 20px 0;
+    padding: 0 20px;
+    color: red;
+    background-color: green;
+    border-top: .1em solid blue;
+    border-bottom: .1em solid blue;
 }
-
-code {
-    background-color: #ecf0f3;
-    padding: 0 1px 0 1px;
-    /*font-size: 0.95em;*/
-}
-
-div.code-block-caption {
-    color: #efefef;
-    background-color: #1c4e63;
-}
+*/
 
 /* -- hyperlink styles ------------------------------------------------------ */
 
@@ -200,6 +190,27 @@ div.footer a:visited {
 }
 
 /* -- code formatting ------------------------------------------------------- */
+
+pre {
+    padding: 5px;
+    background-color: {{ theme_codebgcolor }};
+    color: {{ theme_codetextcolor }};
+    line-height: 120%;
+    border: 1px solid #ac9;
+    border-left: none;
+    border-right: none;
+}
+
+code {
+    background-color: #ecf0f3;
+    padding: 0 1px 0 1px;
+    /*font-size: 0.95em;*/
+}
+
+div.code-block-caption {
+    color: #efefef;
+    background-color: #1c4e63;
+}
 
 /* TODO: separate settings for code and pre? */
 /* TODO: more specific than "pre"? */

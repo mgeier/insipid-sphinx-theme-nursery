@@ -15,6 +15,7 @@
     showcase/text-formatting
     showcase/code-blocks
     showcase/admonitions
+    showcase/tables
     showcase/api-doc
     showcase/no-sidebar
     showcase/todo-list

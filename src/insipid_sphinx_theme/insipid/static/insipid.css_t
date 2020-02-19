@@ -29,12 +29,14 @@ html {
 
     /* https://github.com/sphinx-doc/sphinx/issues/1125 */
     background-color: #fff;
+    /*text-size-adjust: none;*/
 }
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100%;  /* necessary for flex-grow */
+    /*overflow-x: hidden;*/
 
     font-family: 'Open Sans', sans-serif;
     /*font-size: 100%;*/
@@ -121,6 +123,10 @@ div.body h3 { font-size: 140%; }
 div.body h4 { font-size: 120%; }
 div.body h5 { font-size: 110%; }
 div.body h6 { font-size: 100%; }
+
+.js div.section {
+    scroll-margin-top: var(--topbar-height);
+}
 
 a.headerlink {
     color: {{ theme_headlinkcolor }};
@@ -469,6 +475,7 @@ div.sphinxsidebar input {
 }
 
 .js #topbar-placeholder {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
 }

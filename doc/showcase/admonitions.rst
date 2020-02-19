@@ -10,39 +10,39 @@ In many themes only ``note`` and ``warning`` are supported!
 
 .. attention::
 
-    Attention text.
+    Attention text and ``inline code``.
 
 .. caution::
 
-    Caution text.
+    Caution text and ``inline code``.
 
 .. danger::
 
-    Danger text.
+    Danger text and ``inline code``.
 
 .. error::
 
-    Error text.
+    Error text and ``inline code``.
 
 .. hint::
 
-    Hint text.
+    Hint text and ``inline code``.
 
 .. important::
 
-    Important text.
+    Important text and ``inline code``.
 
 .. note::
 
-    Note text.
+    Note text and ``inline code``.
 
 .. tip::
 
-    Tip text.
+    Tip text and ``inline code``.
 
 .. warning::
 
-    Warning text.
+    Warning text and ``inline code``.
 
 
 Generic Admonitions
@@ -52,7 +52,7 @@ https://docutils.sourceforge.io/docs/ref/rst/directives.html#generic-admonition
 
 .. admonition:: Admonition title with `link <Admonitions>`_
 
-    Admonition text.
+    Admonition text and ``inline code``.
 
 
 Topic
@@ -62,7 +62,7 @@ https://docutils.sourceforge.io/docs/ref/rst/directives.html#topic
 
 .. topic:: Topic title
 
-    Topic text.
+    Topic text and ``inline code``.
 
 
 Admonition-like Constructs
@@ -73,6 +73,7 @@ https://www.sphinx-doc.org/en/master/extdev/nodes.html#new-admonition-like-const
 .. seealso::
 
     https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-seealso
+    and ``some inline code``
 
 .. versionadded:: 3.14
 

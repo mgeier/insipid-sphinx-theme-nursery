@@ -140,49 +140,6 @@ a.headerlink:hover {
     color: white;
 }
 
-div.admonition p.admonition-title + p {
-    display: inline;
-}
-
-div.admonition p {
-    margin-bottom: 5px;
-}
-
-div.admonition pre {
-    margin-bottom: 5px;
-}
-
-div.admonition ul, div.admonition ol {
-    margin-bottom: 5px;
-}
-
-div.note {
-    background-color: #eee;
-    border: 1px solid #ccc;
-}
-
-div.seealso {
-    background-color: #ffc;
-    border: 1px solid #ff6;
-}
-
-div.topic {
-    background-color: #eee;
-}
-
-div.warning {
-    background-color: #ffe4e4;
-    border: 1px solid #f66;
-}
-
-p.admonition-title {
-    display: inline;
-}
-
-p.admonition-title:after {
-    content: ":";
-}
-
 pre {
     padding: 5px;
     background-color: {{ theme_codebgcolor }};
@@ -197,14 +154,6 @@ code {
     background-color: #ecf0f3;
     padding: 0 1px 0 1px;
     /*font-size: 0.95em;*/
-}
-
-.warning code {
-    background: #efc2c2;
-}
-
-.note code {
-    background: #d6d6d6;
 }
 
 div.code-block-caption {
@@ -263,8 +212,36 @@ code, pre {
 
 /* -- admonitions ----------------------------------------------------------- */
 
-div.warning, div.note, div.seealso {
-    border: unset;
+div.admonition p.admonition-title + p {
+    display: inline;
+}
+
+div.admonition p {
+    margin-bottom: 5px;
+}
+
+div.admonition pre {
+    margin-bottom: 5px;
+}
+
+div.admonition ul, div.admonition ol {
+    margin-bottom: 5px;
+}
+
+div.seealso {
+    background-color: #ffc;
+}
+
+div.topic {
+    background-color: #eee;
+}
+
+p.admonition-title {
+    display: inline;
+}
+
+p.admonition-title:after {
+    content: ":";
 }
 
 div.admonition {
@@ -274,6 +251,10 @@ div.admonition {
 div.admonition p.admonition-title {
     color: #eee;
     background-color: #ccc;
+}
+
+div.admonition code {
+    background: #d6d6d6;
 }
 
 div.admonition.attention,
@@ -293,6 +274,15 @@ div.admonition.important > p.admonition-title,
 div.admonition.warning > p.admonition-title {
     color: #ffe4e4;
     background-color: #f66;
+}
+
+div.admonition.attention code,
+div.admonition.caution code,
+div.admonition.danger code,
+div.admonition.error code,
+div.admonition.important code,
+div.admonition.warning code {
+    background: #efc2c2;
 }
 
 div.admonition.seealso {

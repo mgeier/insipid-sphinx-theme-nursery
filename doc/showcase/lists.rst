@@ -63,6 +63,38 @@ term 4 : classifier one : classifier two
     Definition 4.
 
 
+Glossary
+--------
+
+https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#glossary
+
+Example link: :term:`source directory` (term will be highlighted).
+
+.. glossary::
+
+   environment
+      A structure where information about all documents under the root is
+      saved, and used for cross-referencing.  The environment is pickled
+      after the parsing stage, so that successive runs only need to read
+      and parse new and changed documents.
+
+   source directory
+      The directory which, including its subdirectories, contains all
+      source files for one Sphinx project.
+
+.. glossary::
+
+   term 1
+   term 2
+      Definition of both terms.
+
+.. glossary::
+
+   term 3 : A
+   term 4 : B
+      Definition of both terms.
+
+
 Field Lists
 -----------
 
@@ -113,80 +145,18 @@ https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#option-lists
 /V         A VMS/DOS-style option.
 
 
-Block Quotes
-------------
+Grammars
+--------
 
-https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#block-quotes
+https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#grammar-production-displays
 
-This is an ordinary paragraph, introducing a block quote.
+Example link: :token:`try_stmt`.
 
-    "It is my business to know things.  That is my trade."
-
-    -- Sherlock Holmes
-
-* List item.
-
-..
-
-    Block quote.
-
-
-Line Blocks
------------
-
-https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#line-blocks
-
-| Lend us a couple of bob till Thursday.
-| I'm absolutely skint.
-| But I'm expecting a postal order and I can pay you back
-  as soon as it comes.
-| Love, Ewan.
-
-----
-
-Take it away, Eric the Orchestra Leader!
-
-    | A one, two, a one two three four
-    |
-    | Half a bee, philosophically,
-    |     must, *ipso facto*, half not be.
-    | But half the bee has got to be,
-    |     *vis a vis* its entity.  D'you see?
-    |
-    | But can a bee be said to be
-    |     or not to be an entire bee,
-    |         when half the bee is not a bee,
-    |             due to some ancient injury?
-    |
-    | Singing...
-
-
-Quoted Literal Blocks
----------------------
-
-https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#quoted-literal-blocks
-
-John Doe wrote::
-
->> Great idea!
->
-> Why didn't I think of that?
-
-You just did!  ;-)
-
-
-Doctest Blocks
---------------
-
-https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#doctest-blocks
-
-This is an ordinary paragraph.
-
->>> print 'this is a Doctest block'
-this is a Doctest block
-
-The following is a literal block::
-
-    >>> This is not recognized as a doctest block by
-    reStructuredText.  It *will* be recognized by the doctest
-    module, though!
+.. productionlist::
+    try_stmt: try1_stmt | try2_stmt
+    try1_stmt: "try" ":" `suite`
+             : ("except" [`expression` ["," `target`]] ":" `suite`)+
+             : ["else" ":" `suite`]
+             : ["finally" ":" `suite`]
+    try2_stmt: "try" ":" `suite`
+             : "finally" ":" `suite`

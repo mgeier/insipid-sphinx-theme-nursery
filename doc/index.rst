@@ -16,6 +16,7 @@
     showcase/code-blocks
     showcase/admonitions
     showcase/lists
+    showcase/quotes
     showcase/tables
     showcase/api-doc
     showcase/no-sidebar

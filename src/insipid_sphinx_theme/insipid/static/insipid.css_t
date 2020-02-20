@@ -124,7 +124,8 @@ div.body h4 { font-size: 120%; }
 div.body h5 { font-size: 110%; }
 div.body h6 { font-size: 100%; }
 
-.js div.section {
+.js div.section,
+.js dt {
     scroll-margin-top: var(--topbar-height);
 }
 
@@ -212,10 +213,10 @@ div.code-block-caption {
     background-color: #1c4e63;
 }
 
-/* TODO: separate settings for code and pre? */
+/* TODO: separate settings for code and pre and kbd? */
 /* TODO: more specific than "pre"? */
 /* TODO: use theme_codefont? */
-code, pre {
+code, pre, kbd {
     /*font-family: monospace;*/
     /*font-family: 'Source Code Pro', Consolas, 'Ubuntu Mono', Menlo, 'DejaVu Sans Mono', monospace;*/
     font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;

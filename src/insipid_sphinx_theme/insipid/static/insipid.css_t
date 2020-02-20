@@ -694,6 +694,10 @@ div.viewcode-block:target {
         margin-left: 0;
     }
 
+    body.js.sidebar-visible {
+        overflow: hidden;
+    }
+
     .js #overlay {
         position: fixed;
         top: 0;

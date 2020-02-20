@@ -23,7 +23,13 @@ $(document).ready(function () {
             previous = Math.max(scroller.scrollTop, 0);
         };
     }
-    $(document).on('scroll', scroll_callback(main_scroller));
+    var scroll_main = scroll_callback(main_scroller);
+    $(document).on('scroll', function () {
+        // Avoid hiding the topbar on small screens if sidebar is open
+        if (body.css('overflow-y') === 'visible') {
+            scroll_main();
+        }
+    });
     $(sidebar_scroller).on('scroll', scroll_callback(sidebar_scroller));
 
     // show search

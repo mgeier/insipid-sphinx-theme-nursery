@@ -31,6 +31,7 @@ $(document).ready(function () {
         sidebarToggle.attr('aria-expanded', true);
         sidebar.attr('aria-hidden', false);
         store('sphinx-sidebar', 'visible');
+        body.removeClass('topbar-folded');
     }
 
     function hideSidebar() {

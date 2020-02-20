@@ -20,6 +20,12 @@ $(document).ready(function () {
         }
     });
 
+    $('#overlay').on('click', function () {
+        if (body.hasClass('sidebar-visible')) {
+            hideSidebar();
+        }
+    });
+
     function showSidebar() {
         body.removeClass('sidebar-hidden');
         body.addClass('sidebar-visible');

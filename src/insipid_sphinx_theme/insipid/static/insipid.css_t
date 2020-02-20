@@ -387,17 +387,6 @@ div.sphinxsidebar {
     transition: top {{ theme_topbar_transition }};
 }
 
-.js #overlay {
-    position: fixed;
-    top: 0;
-    width: 0;
-    height: 0;
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: opacity {{ theme_sidebar_transition }}, height 0s {{ theme_sidebar_transition }}, width 0s {{ theme_sidebar_transition }};
-    z-index: 42;
-}
-
 /*
 .sphinxsidebar code {
     line-height: 2em;
@@ -705,11 +694,23 @@ div.viewcode-block:target {
         margin-left: 0;
     }
 
+    .js #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        visibility: hidden;
+        opacity: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: opacity {{ theme_sidebar_transition }}, visibility 0s {{ theme_sidebar_transition }};
+        z-index: 42;
+    }
+
     .js.sidebar-visible #overlay {
-        height: 100%;
-        width: 100%;
+        visibility: visible;
         opacity: 1;
-        transition: opacity {{ theme_sidebar_transition }}, height 0s, width 0s;
+        transition: opacity {{ theme_sidebar_transition }};
     }
 
     .no-js .sphinxsidebar {

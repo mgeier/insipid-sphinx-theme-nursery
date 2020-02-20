@@ -14,11 +14,15 @@ $(document).ready(function () {
     function scroll_callback(scroller) {
         var previous = scroller.scrollTop;
         return function () {
-            var folded = body.hasClass('topbar-folded');
-            if (folded && scroller.scrollTop < previous) {
+            const folded = body.hasClass('topbar-folded');
+            const diff = scroller.scrollTop - previous;
+            const max_jump = 100;
+            if (folded && diff < 0 && -diff < max_jump) {
                 body.removeClass('topbar-folded');
-            } else if (!folded && scroller.scrollTop > previous) {
+            } else if (!folded && diff > 0 && diff < max_jump) {
                 body.addClass('topbar-folded');
+            } else if (folded && scroller.scrollTop === 0) {
+                body.removeClass('topbar-folded');
             }
             previous = Math.max(scroller.scrollTop, 0);
         };

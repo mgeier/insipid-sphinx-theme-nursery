@@ -51,6 +51,9 @@ $(document).ready(function () {
         sidebarToggle.attr('aria-expanded', false);
         sidebar.attr('aria-hidden', true);
         store('sphinx-sidebar', 'hidden');
+        if (document.scrollingElement.scrollTop === 0) {
+            body.removeClass('topbar-folded');
+        }
     }
 
     $('#sidebar-resize-handle').on('mousedown', function (e) {

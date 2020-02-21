@@ -41,7 +41,6 @@ body {
     font-family: 'Open Sans', sans-serif;
     /*font-size: 100%;*/
     /*color: #000;*/
-    background-color: #1c4e63;
 }
 
 body.sidebar-visible {
@@ -60,8 +59,6 @@ div.body, div.related, div.footer {
 
 div.document {
     flex-grow: 1;  /* To keep the footer at the bottom (on very short pages) */
-
-    background-color: #1c4e63;
 }
 
 div.body {
@@ -488,8 +485,9 @@ div.sphinxsidebar input {
 }
 
 #topbar-container {
-    color: #fff;
-    background-color: #11303d;
+    border-bottom: #f2f2f2 solid 1px;
+    color: #ccc;
+    background-color: #fff;
 }
 
 #menu-bar {
@@ -516,7 +514,7 @@ div.sphinxsidebar input {
 }
 
 #menu-bar .icon-button:hover {
-    color: {{ theme_footerlinkcolor }};
+    color: #333;
 }
 
 .icon-button svg {

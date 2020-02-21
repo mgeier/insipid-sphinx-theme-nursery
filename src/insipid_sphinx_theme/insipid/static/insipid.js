@@ -5,6 +5,8 @@ $(document).ready(function () {
     var main_scroller = document.scrollingElement;
     var sidebar_scroller = document.querySelector('.sphinxsidebar');
 
+    body.removeClass('loading');
+
     // scroll to top
     $('.menu-title').on('click', function () {
         main_scroller.scrollTo({top: 0, behavior: 'smooth'});

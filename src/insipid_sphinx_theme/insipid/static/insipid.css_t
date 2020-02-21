@@ -2,6 +2,11 @@
 
 .hidden { display: none; }
 
+.loading {
+    /* Disable transitions during page load */
+    transition: none !important;
+}
+
 /* -- variables ------------------------------------------------------------- */
 
 /* TODO: --page-padding? */

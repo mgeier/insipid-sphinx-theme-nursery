@@ -31,6 +31,7 @@
 {% block header %}
     <script type="text/javascript">
         var body = $(document.body);
+        body.addClass('loading');
         body.removeClass('no-js');
         body.addClass('js');
 {% if render_sidebar %}

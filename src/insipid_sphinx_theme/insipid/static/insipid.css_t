@@ -152,6 +152,10 @@ blockquote {
 }
 */
 
+blockquote p.attribution {
+    /*text-align: end;*/
+}
+
 /* -- hyperlink styles ------------------------------------------------------ */
 
 a {

@@ -1,5 +1,5 @@
-Lists and Quote-like blocks
-===========================
+Lists
+=====
 
 https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#lists-and-quote-like-blocks
 

@@ -203,7 +203,7 @@ pre {
 }
 
 code {
-    background-color: #ecf0f3;
+    background-color: #e0e0e0;
     padding: 0 1px 0 1px;
     /*font-size: 0.95em;*/
 }
@@ -224,49 +224,42 @@ code, pre, kbd {
 
 /* -- admonitions ----------------------------------------------------------- */
 
-div.admonition p.admonition-title + p {
-    display: inline;
-}
-
-div.admonition p {
-    margin-bottom: 5px;
-}
-
-div.admonition pre {
-    margin-bottom: 5px;
-}
-
-div.admonition ul, div.admonition ol {
-    margin-bottom: 5px;
-}
-
-div.seealso {
-    background-color: #ffc;
-}
-
-div.topic {
-    background-color: #eee;
-}
-
 p.admonition-title {
-    display: inline;
+    font-weight: normal;
 }
 
 p.admonition-title:after {
     content: ":";
 }
 
-div.admonition {
+div.admonition > p.admonition-title {
+    margin: -7px -7px 7px -7px;
+    padding: 4px 10px 4px 10px;
+}
+
+div.admonition p.admonition-title + p {
+    display: inline;
+}
+
+div.admonition p,
+div.admonition pre,
+div.admonition ul,
+div.admonition ol {
+    margin-bottom: 5px;
+}
+
+div.topic {
     background-color: #eee;
 }
 
-div.admonition p.admonition-title {
-    color: #eee;
-    background-color: #ccc;
+div.admonition {
+    color: #666;
+    background-color: #e7f2fa;
 }
 
-div.admonition code {
-    background: #d6d6d6;
+div.admonition p.admonition-title {
+    color: #fff;
+    background-color: #6ab0de;
 }
 
 div.admonition.attention,
@@ -275,7 +268,7 @@ div.admonition.danger,
 div.admonition.error,
 div.admonition.important,
 div.admonition.warning {
-    background-color: #ffe4e4;
+    background-color: #fff2db;
 }
 
 div.admonition.attention > p.admonition-title,
@@ -284,35 +277,17 @@ div.admonition.danger > p.admonition-title,
 div.admonition.error > p.admonition-title,
 div.admonition.important > p.admonition-title,
 div.admonition.warning > p.admonition-title {
-    color: #ffe4e4;
-    background-color: #f66;
+    color: #fff;
+    background-color: #f0b37e;
 }
 
-div.admonition.attention code,
-div.admonition.caution code,
-div.admonition.danger code,
-div.admonition.error code,
-div.admonition.important code,
-div.admonition.warning code {
-    background: #efc2c2;
+div.admonition code {
+    {# TODO: use normal text color #}
+    color: #000;
 }
 
-div.admonition.seealso {
-    background-color: #ffc;
-}
-
-div.admonition.seealso > p.admonition-title {
-    color: unset;
-    background-color: #ff6;
-}
-
-div.admonition > p.admonition-title {
-    margin: -7px -7px 7px -7px;
-    padding: 4px 10px 4px 10px;
-}
-
-p.admonition-title {
-    display: block;
+div.admonition pre {
+    background-color: #fafafa;
 }
 
 /* -- tables ---------------------------------------------------------------- */

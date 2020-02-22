@@ -45,7 +45,7 @@ Footnote [#numbered]_ and [*]_
 
 https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#citations
 
-Here is a citation reference: [CIT2002]_.
+Here is a citation reference: :title-reference:`The Title` [CIT2002]_.
 
 .. [CIT2002] This is the citation.  It's just like a footnote,
     except the label is textual.

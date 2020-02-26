@@ -12,19 +12,27 @@ $(document).ready(function () {
         main_scroller.scrollTo({top: 0, behavior: 'smooth'});
     });
 
+    var hash_changed = false;
+
+    $(window).on('hashchange', function () {
+        hash_changed = true;
+    });
+
     // auto-hide topbar
     function scroll_callback(scroller) {
         var previous = scroller.scrollTop;
         return function () {
             const folded = body.hasClass('topbar-folded');
             const diff = scroller.scrollTop - previous;
-            const max_jump = 100;
-            if (folded && diff < 0 && -diff < max_jump) {
+            if (folded && scroller.scrollTop === 0) {
                 body.removeClass('topbar-folded');
-            } else if (!folded && diff > 0 && diff < max_jump) {
+            } else if (hash_changed) {
+                // Don't change folded state after jumping to a section
+                hash_changed = false;
+            } else if (folded && diff < 0) {
+                body.removeClass('topbar-folded');
+            } else if (!folded && diff > 0) {
                 body.addClass('topbar-folded');
-            } else if (folded && scroller.scrollTop === 0) {
-                body.removeClass('topbar-folded');
             }
             previous = Math.max(scroller.scrollTop, 0);
         };

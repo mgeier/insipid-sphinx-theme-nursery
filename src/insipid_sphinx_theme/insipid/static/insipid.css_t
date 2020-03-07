@@ -629,13 +629,18 @@ div.sphinxsidebar input {
     margin: {% if theme_body_centered|tobool %}-2em{% else %}0{% endif %} 1em;
     width: 4em;
     height: 4em;
-    transition: color 0.5s, background-color 0.5s;
+    /*transition: color 0.5s, background-color 0.5s;*/
+
+    color: #ccc;
 }
 
 .nav-icon:hover {
-    /*background-color: var(--theme-hover);*/
-    background-color: green;
-    transition: background-color 0.15s, color 0.15s;
+    background-color: #fafafa;
+    /*transition: background-color 0.15s, color 0.15s;*/
+}
+
+a.nav-icon:visited {
+    color: #ccc;
 }
 
 .nav-icon.previous {

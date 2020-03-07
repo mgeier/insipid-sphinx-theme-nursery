@@ -38,7 +38,7 @@ No language:
     print('Hello,')
     print('world!')
 
-``:ephasize-lines:``
+``:emphasize-lines:``
 
 .. code-block:: python
     :emphasize-lines: 3,5
@@ -49,7 +49,7 @@ No language:
         print('This one is not...')
         print('...but this one is.')
 
-``:ephasize-lines:`` and ``:linenos:``:
+``:emphasize-lines:`` and ``:linenos:``:
 
 .. code-block:: python
     :linenos:

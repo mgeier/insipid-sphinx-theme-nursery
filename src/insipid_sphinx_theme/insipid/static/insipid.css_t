@@ -469,6 +469,31 @@ div.sphinxsidebar input {
 }
 */
 
+{% if READTHEDOCS|tobool %}
+
+/* -- sidebar adaptations for readthedocs.org ------------------------------- */
+
+.injected .rst-versions.rst-badge {
+    left: 0;
+    bottom: 0;
+    width: var(--sidebar-width);
+    max-width: unset;
+}
+
+.injected .rst-versions.rst-badge .rst-current-version {
+    text-align: right;
+}
+
+.injected .rst-versions.rst-badge .rst-current-version .fa-book {
+    float: left;
+}
+
+#flyout-search-form input {
+    width: 100%;
+}
+
+{% endif %}
+
 /* -- topbar --------------------------------------------------------------- */
 
 #topbar-placeholder {

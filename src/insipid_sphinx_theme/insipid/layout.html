@@ -1,14 +1,6 @@
 {% extends "basic/layout.html" %}
 
 
-{% block css %}
-{{ super() }}
-{% if READTHEDOCS|tobool and render_sidebar %}
-    <link rel="stylesheet" href="{{ pathto('_static/readthedocs-sidebar.css', 1) }}" type="text/css" />
-{% endif %}
-{% endblock %}
-
-
 {% block scripts %}
 {{ super() }}
     <script defer src="{{ pathto('_static/insipid.js', 1) }}"></script>

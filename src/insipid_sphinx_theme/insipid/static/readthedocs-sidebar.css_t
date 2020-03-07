@@ -13,7 +13,7 @@
 }
 
 .injected .rst-versions.rst-badge .rst-current-version {
-    /*text-align: right;*/
+    text-align: right;
     /*color: {{ theme_relbarlinkcolor }};*/
     /*background-color: {{ theme_relbarbgcolor }};*/
 }
@@ -23,7 +23,7 @@
 }
 
 .injected .rst-versions.rst-badge .rst-current-version .fa-book {
-    /*float: left;*/
+    float: left;
 }
 
 .injected .rst-versions.rst-badge .rst-other-versions {

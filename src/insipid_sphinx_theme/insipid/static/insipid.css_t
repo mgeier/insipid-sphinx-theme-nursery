@@ -347,7 +347,7 @@ div.sphinxsidebar {
     overscroll-behavior-y: contain;
     */
 
-    background-color: #1c4e63;
+    background-color: #fafafa;
 }
 
 .js.topbar-folded .sphinxsidebar,
@@ -400,7 +400,7 @@ div.sphinxsidebarwrapper {
 
 .js #sidebar-resize-handle {
     cursor: col-resize;
-    background-color: #3c6e83;
+    /*background-color: #3c6e83;*/
     width: {{ theme_sidebar_handle_width|todim }};
 }
 
@@ -423,7 +423,7 @@ div.sphinxsidebarwrapper {
 
 div.sphinxsidebar h3 {
     /*font-family: {{ theme_headfont }};*/
-    color: {{ theme_sidebartextcolor }};
+    /*color: {{ theme_sidebartextcolor }};*/
     font-size: 1.4em;
     font-weight: normal;
     margin: 0;
@@ -431,12 +431,12 @@ div.sphinxsidebar h3 {
 }
 
 div.sphinxsidebar h3 a {
-    color: {{ theme_sidebartextcolor }};
+    /*color: {{ theme_sidebartextcolor }};*/
 }
 
 div.sphinxsidebar h4 {
     /*font-family: {{ theme_headfont }};*/
-    color: {{ theme_sidebartextcolor }};
+    /*color: {{ theme_sidebartextcolor }};*/
     font-size: 1.3em;
     font-weight: normal;
     margin: 5px 0 0 0;
@@ -444,7 +444,7 @@ div.sphinxsidebar h4 {
 }
 
 div.sphinxsidebar p {
-    color: {{ theme_sidebartextcolor }};
+    /*color: {{ theme_sidebartextcolor }};*/
 }
 
 div.sphinxsidebar p.topless {
@@ -454,11 +454,11 @@ div.sphinxsidebar p.topless {
 div.sphinxsidebar ul {
     margin: 10px;
     padding: 0;
-    color: {{ theme_sidebartextcolor }};
+    /*color: {{ theme_sidebartextcolor }};*/
 }
 
 div.sphinxsidebar a {
-    color: {{ theme_sidebarlinkcolor }};
+    /*color: {{ theme_sidebarlinkcolor }};*/
 }
 
 /*

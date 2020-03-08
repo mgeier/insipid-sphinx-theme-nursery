@@ -76,6 +76,7 @@ div.body {
     margin-left: auto;
     margin-right: auto;
 {% endif  %}
+    line-height: 1.5;
 
     background-color: #fff;
     color: #000;
@@ -202,15 +203,16 @@ pre {
     padding: 5px;
     background-color: {{ theme_codebgcolor }};
     color: {{ theme_codetextcolor }};
-    line-height: 120%;
+    line-height: normal;
     border: 1px solid #ac9;
     border-left: none;
     border-right: none;
+    font-size: 0.875em;
 }
 
 code {
     background-color: #e0e0e0;
-    padding: 0.2em 0.3em 0.1em 0.3em;
+    padding: 0.2em 0.2em 0.1em 0.2em;
 }
 
 div.code-block-caption {

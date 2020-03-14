@@ -27,7 +27,7 @@ https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#inline-markup
 
 Normal ``Inline Literal`` *Emphasis* **Strong Emphasis**.
 
-"double quotes", 'single quotes', normal-dash, en--dash, em---dash, ...
+https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#hyperlinks
 
 Internal_ link, external_ link.
 

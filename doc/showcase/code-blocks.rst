@@ -19,7 +19,7 @@ This is a code sample::
 
 https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-code-block
 
-.. code-block:: python
+.. code-block:: python3
     :name: code1
 
     print('Hello, world!')

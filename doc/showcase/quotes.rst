@@ -22,6 +22,37 @@ This is an ordinary paragraph, introducing a block quote.
     Block quote.
 
 
+Epigraphs
+---------
+
+https://docutils.sourceforge.io/docs/ref/rst/directives.html#epigraph
+
+.. epigraph::
+
+    No matter where you go, there you are.
+
+    -- Buckaroo Banzai
+
+
+Highlights
+----------
+
+https://docutils.sourceforge.io/docs/ref/rst/directives.html#highlights
+
+.. highlights::
+
+    These are the highlights.
+
+
+Pull-Quotes
+-----------
+
+https://docutils.sourceforge.io/docs/ref/rst/directives.html#pull-quote
+
+.. pull-quote::
+
+    This is the content of the pull quote.
+
 Line Blocks
 -----------
 

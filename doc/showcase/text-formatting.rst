@@ -1,6 +1,9 @@
 Text Formatting
 ===============
 
+Paragraphs
+----------
+
 http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#paragraphs
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -23,9 +26,17 @@ nunc.  Nullam arcu.  Aliquam consequat.  Curabitur augue lorem, dapibus quis,
 laoreet et, pretium ac, nisi.  Aenean magna nisl, mollis quis, molestie eu,
 feugiat in, orci.  In hac habitasse platea dictumst.
 
+
+Inline Markup
+-------------
+
 https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#inline-markup
 
 Normal ``Inline Literal`` *Emphasis* **Strong Emphasis**.
+
+
+Hyperlinks
+----------
 
 https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#hyperlinks
 
@@ -34,7 +45,16 @@ Internal_ link, external_ link.
 .. _internal: `Text Formatting`_
 .. _external: https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html
 
+Other page: :doc:`code-blocks`.
+
+Some file: :download:`insipid.png`.
+
+Footnotes
+---------
+
 .. todo:: Move footnotes and citations to separate page
+
+https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#footnotes
 
 https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#footnotes
 
@@ -42,6 +62,12 @@ Footnote [#numbered]_ and [*]_
 
 .. [#numbered] This is an auto-numbered footnote.
 .. [*] This is an auto-symbol footnote.
+
+
+Citations
+---------
+
+https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#citations
 
 https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#citations
 

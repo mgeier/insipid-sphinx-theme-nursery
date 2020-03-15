@@ -96,6 +96,15 @@ See also *[source]* link in :mod:`insipid_sphinx_theme`.
 .. todo:: Link directly to module source code?
 
 
+``parsed-literal`` Directive
+----------------------------
+
+https://docutils.sourceforge.io/docs/ref/rst/directives.html#parsed-literal
+
+.. parsed-literal::
+
+    Code block with *inline* markup.
+
 Doctest Blocks
 --------------
 

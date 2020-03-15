@@ -16,6 +16,7 @@
     showcase/images
     showcase/code-blocks
     showcase/admonitions
+    showcase/sections
     showcase/lists
     showcase/quotes
     showcase/tables

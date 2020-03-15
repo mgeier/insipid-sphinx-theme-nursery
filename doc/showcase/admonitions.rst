@@ -65,6 +65,19 @@ https://docutils.sourceforge.io/docs/ref/rst/directives.html#topic
     Topic text and ``inline code``.
 
 
+Sidebar
+-------
+
+https://docutils.sourceforge.io/docs/ref/rst/directives.html#sidebar
+
+.. sidebar:: Sidebar Title
+    :subtitle: Sidebar Subtitle
+
+    Sidebar text.
+
+Text after ``sidebar`` directive.
+
+
 Admonition-like Constructs
 --------------------------
 

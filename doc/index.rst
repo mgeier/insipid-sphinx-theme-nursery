@@ -13,6 +13,7 @@
     :numbered:
 
     showcase/text-formatting
+    showcase/images
     showcase/code-blocks
     showcase/admonitions
     showcase/lists

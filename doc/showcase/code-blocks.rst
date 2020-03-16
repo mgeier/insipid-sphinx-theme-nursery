@@ -120,20 +120,3 @@ The following is a literal block::
     >>> This is not recognized as a doctest block by
     reStructuredText.  It *will* be recognized by the doctest
     module, though!
-
-
-Grammars
---------
-
-https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#grammar-production-displays
-
-Example link: :token:`try_stmt`.
-
-.. productionlist::
-    try_stmt: try1_stmt | try2_stmt
-    try1_stmt: "try" ":" `suite`
-             : ("except" [`expression` ["," `target`]] ":" `suite`)+
-             : ["else" ":" `suite`]
-             : ["finally" ":" `suite`]
-    try2_stmt: "try" ":" `suite`
-             : "finally" ":" `suite`

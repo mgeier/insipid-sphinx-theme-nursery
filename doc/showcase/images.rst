@@ -39,7 +39,14 @@ Figure
 
 https://docutils.sourceforge.io/docs/ref/rst/directives.html#figure
 
+A link (needs numfig_): :numref:`fig-insipid`.
+
+.. _numfig: https://www.sphinx-doc.org/en/master/usage/
+    configuration.html#confval-numfig
+
+
 .. figure:: insipid.png
+    :name: fig-insipid
     :alt: Example image showing the text "insipid Sphinx theme"
 
     This is the caption of the figure.

@@ -143,3 +143,46 @@ https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#option-lists
                       arguments.
 
 /V         A VMS/DOS-style option.
+
+
+Separate Options
+----------------
+
+https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#directive-option
+
+A link: :option:`rm -r`.
+
+.. program:: rm
+
+.. option:: -r
+
+   Work recursively.
+
+
+Environment Variables
+---------------------
+
+https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#directive-envvar
+
+A link: :envvar:`ENV_VAR`.
+
+.. envvar:: ENV_VAR
+
+    Description of environment variable.
+
+
+Grammars
+--------
+
+https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#grammar-production-displays
+
+Example link: :token:`try_stmt`.
+
+.. productionlist::
+    try_stmt: try1_stmt | try2_stmt
+    try1_stmt: "try" ":" `suite`
+             : ("except" [`expression` ["," `target`]] ":" `suite`)+
+             : ["else" ":" `suite`]
+             : ["finally" ":" `suite`]
+    try2_stmt: "try" ":" `suite`
+             : "finally" ":" `suite`

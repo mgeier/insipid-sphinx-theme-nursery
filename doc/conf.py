@@ -47,3 +47,5 @@ todo_include_todos = True
 todo_link_only = True
 
 numfig = True
+
+manpages_url = 'https://manpages.debian.org/{path}'

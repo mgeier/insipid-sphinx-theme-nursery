@@ -20,6 +20,7 @@
     showcase/lists
     showcase/quotes
     showcase/tables
+    showcase/math
     showcase/api-doc
     showcase/no-sidebar
     showcase/todo-list

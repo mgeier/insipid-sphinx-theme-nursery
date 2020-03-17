@@ -49,6 +49,8 @@ Other page: :doc:`code-blocks`.
 
 Some file: :download:`insipid.png`.
 
+Math equation: :eq:`euler`.
+
 Footnotes
 ---------
 
@@ -75,3 +77,43 @@ Here is a citation reference: :title-reference:`The Title` [CIT2002]_.
 
 .. [CIT2002] This is the citation.  It's just like a footnote,
     except the label is textual.
+
+
+Other Semantic Markup
+---------------------
+
+https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#other-semantic-markup
+
+:abbr:`LIFO (last-in, first-out)`
+
+:command:`rm`
+
+:dfn:`term`
+
+:file:`name.{ext}`
+
+:guilabel:`&Cancel`
+
+:kbd:`Control-x Control-f`
+
+:mailheader:`Content-Type`
+
+:makevar:`AM_CFLAGS`
+
+:manpage:`ls(1)`, :manpage:`man`
+
+:menuselection:`Start --> &Programs`
+
+:mimetype:`text/plain`
+
+:newsgroup:`comp.lang.python`
+
+:program:`rm`
+
+:regexp:`a*`
+
+:samp:`print(1+{variable})` (as compared to :code:`print(1)`)
+
+:pep:`8`
+
+:rfc:`2822`

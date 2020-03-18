@@ -3,13 +3,25 @@ Math
 
 https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#math
 
-inline: :math:`a^2 + b^2 = c^2`
+Inline: :math:`a^2 + b^2 = c^2`
 
-block:
+https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#math
+
+Block:
+
 
 .. math::
 
-    a^2 + b^2 = c^2
+   (a + b)^2 = a^2 + 2ab + b^2
+
+   (a - b)^2 = a^2 - 2ab + b^2
+
+Another block:
+
+.. math::
+
+   (a + b)^2  &=  (a + b)(a + b) \\
+              &=  a^2 + 2ab + b^2
 
 https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#the-math-domain
 

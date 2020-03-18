@@ -83,14 +83,28 @@ Admonition-like Constructs
 
 https://www.sphinx-doc.org/en/master/extdev/nodes.html#new-admonition-like-constructs
 
+.. seealso:: https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-seealso
+    and ``some inline code``
+
 .. seealso::
 
-    https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-seealso
-    and ``some inline code``
+   Module :mod:`insipid_sphinx_theme`
+      Documentation of the :mod:`insipid_sphinx_theme` module.
+
+   `Sphinx Documentation <https://www.sphinx-doc.org/>`_
+      Documentation for Sphinx.
 
 .. versionadded:: 3.14
 
-    Added something: https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-versionadded
+    https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-versionadded
+
+.. versionchanged:: 3.14
+
+    https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-versionchanged
+
+.. deprecated:: 3.14
+
+    https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-deprecated
 
 
 Nesting

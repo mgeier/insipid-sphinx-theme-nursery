@@ -43,6 +43,20 @@ https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#enumerated-li
    b) Item 2b.
 
 
+hlist
+-----
+
+https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-hlist
+
+.. hlist::
+   :columns: 3
+
+   * A list of
+   * short items
+   * that should be
+   * displayed
+   * horizontally
+
 Definition Lists
 ----------------
 

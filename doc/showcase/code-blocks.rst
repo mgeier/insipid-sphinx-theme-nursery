@@ -1,6 +1,9 @@
 Code Blocks
 ===========
 
+https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#showing-code-examples
+
+
 Literal Blocks
 --------------
 
@@ -112,7 +115,7 @@ https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#doctest-block
 
 This is an ordinary paragraph.
 
->>> print 'this is a Doctest block'
+>>> print('this is a Doctest block')
 this is a Doctest block
 
 The following is a literal block::

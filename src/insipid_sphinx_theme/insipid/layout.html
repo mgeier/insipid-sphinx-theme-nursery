@@ -50,11 +50,13 @@
                     <div id="menu-bar">
                         <div class="left-buttons">
 {% if render_sidebar %}
-                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Sidebar" aria-label="Toggle Sidebar" aria-controls="sidebar">
+                            {# TODO: set "title" via JavaScript #}
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="{{ _('Collapse sidebar') }}" aria-label="Toggle Sidebar" aria-controls="sidebar">
                               {% include 'icons/sidebar-toggle.svg' %}
                             </button>
 {% endif %}
 {% if pagename != "search" %}
+                            {# TODO: set "title" via JavaScript #}
                             <button id="search-toggle" class="icon-button" type="button" title="{{ _('Search') }}" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
                               {% include 'icons/search.svg' %}
                             </button>

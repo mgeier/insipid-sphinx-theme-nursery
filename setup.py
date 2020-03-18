@@ -15,8 +15,10 @@ setup(
     package_data={'insipid_sphinx_theme': [
         'insipid/theme.conf',
         'insipid/*.html',
+        'insipid/static/*.css',
         'insipid/static/*.css_t',
         'insipid/static/*.js',
+        'insipid/static/*.js_t',
         'insipid/icons/*.svg',
     ]},
     python_requires='>=3',

@@ -34,6 +34,7 @@ $(document).ready(function () {
             link.setAttribute('tabIndex', 0);
         });
         */
+        sidebarToggle.attr('title', "{{ _('Collapse sidebar') }}");
         sidebarToggle.attr('aria-expanded', true);
         sidebar.attr('aria-hidden', false);
         store('sphinx-sidebar', 'visible');
@@ -48,6 +49,7 @@ $(document).ready(function () {
             link.setAttribute('tabIndex', -1);
         });
         */
+        sidebarToggle.attr('title', "{{ _('Expand sidebar') }}");
         sidebarToggle.attr('aria-expanded', false);
         sidebar.attr('aria-hidden', true);
         store('sphinx-sidebar', 'hidden');
@@ -90,3 +92,7 @@ $(document).ready(function () {
         resizeObserver.observe(document.getElementById('topbar-placeholder'));
     }
 });
+
+{#
+vim:ft=javascript
+#}

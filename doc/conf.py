@@ -29,6 +29,8 @@ html_short_title = 'insipid'
 html_last_updated_fmt = ''
 html_add_permalinks = '\N{LINK SYMBOL}'
 html_secnumber_suffix = '\N{FIGURE SPACE}'
+html_logo = 'showcase/insipid.png'
+html_favicon = 'favicon.ico'
 
 extensions = [
     'sphinx.ext.autodoc',

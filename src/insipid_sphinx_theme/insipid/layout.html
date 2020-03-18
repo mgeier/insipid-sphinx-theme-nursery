@@ -55,7 +55,7 @@
                             </button>
 {% endif %}
 {% if pagename != "search" %}
-                            <button id="search-toggle" class="icon-button" type="button" title="Search" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <button id="search-toggle" class="icon-button" type="button" title="{{ _('Search') }}" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
                               {% include 'icons/search.svg' %}
                             </button>
 {% endif %}
@@ -94,7 +94,7 @@
       <!--
         aria-labelledby="searchlabel"
       -->
-      <input type="search" id="searchbar" name="q" placeholder="{{ _('Enter search terms ...') }}" />
+      <input type="search" id="searchbar" name="q" placeholder="{{ _('Search') + ' ...' }}" />
       <input type="submit" value="{{ _('Go') }}" />
     </form>
   </div>
@@ -109,12 +109,12 @@
 {% if theme_body_max_width != None %}
             <nav aria-label="Page navigation">
     {% if prev %}
-                    <a href="{{ prev.link|e }}" class="nav-icon previous" title="{{ prev.title|striptags|e }}" aria-label="Previous page" aria-keyshortcuts="Left">
+                    <a href="{{ prev.link|e }}" class="nav-icon previous" title="{{ _('previous') + ':\n' + prev.title|striptags|e }}" aria-label="Previous page" aria-keyshortcuts="Left">
                       {% include 'icons/previous.svg' %}
                     </a>
     {% endif %}
     {% if next %}
-                    <a href="{{ next.link|e }}" class="nav-icon next" title="{{ next.title|striptags|e }}" aria-label="Next page" aria-keyshortcuts="Right">
+                    <a href="{{ next.link|e }}" class="nav-icon next" title="{{ _('next') + ':\n' + next.title|striptags|e }}" aria-label="Next page" aria-keyshortcuts="Right">
                       {% include 'icons/next.svg' %}
                     </a>
     {% endif %}

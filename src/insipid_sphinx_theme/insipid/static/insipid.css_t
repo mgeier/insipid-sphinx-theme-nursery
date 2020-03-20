@@ -34,7 +34,6 @@ html {
 
     /* https://github.com/sphinx-doc/sphinx/issues/1125 */
     background-color: #fff;
-    /*text-size-adjust: none;*/
 }
 
 body {
@@ -44,19 +43,7 @@ body {
     /*overflow-x: hidden;*/
 
     font-family: 'Open Sans', sans-serif;
-    /*font-size: 100%;*/
-    /*color: #000;*/
 }
-
-body.sidebar-visible {
-    margin-left: var(--sidebar-width);
-}
-
-body.js:not(.sidebar-resizing) {
-    transition: margin-left {{ theme_sidebar_transition }};
-}
-
-/* TODO: are wide images horizontally scrollable? */
 
 div.body, div.related, div.footer {
     position: relative;  /* To be able to hide nav-icon */
@@ -76,31 +63,15 @@ div.body {
     margin-left: auto;
     margin-right: auto;
 {% endif  %}
-    line-height: 1.5;
 
+    line-height: 1.5;
     background-color: #fff;
     color: #000;
 }
 
-div.related {
-    line-height: 30px;
-    color: #fff;
-    background-color: #133f52;
-}
-
-/* TODO: separate conf option? */
-div.related a {
-    color: #fff;
-}
-
-div.footer {
-    width: 100%;
-    padding: 9px 0 9px 0;
-
-    text-align: center;
-    font-size: 75%;
-    color: #fff;
-    background-color: #11303d;
+.js div.section,
+.js dt {
+    scroll-margin-top: var(--topbar-height);
 }
 
 /* -- body styles ----------------------------------------------------------- */
@@ -111,13 +82,7 @@ div.body h3,
 div.body h4,
 div.body h5,
 div.body h6 {
-    /*font-family: {{ theme_headfont }};*/
-    /*background-color: {{ theme_headbgcolor }};*/
-    /*font-weight: normal;*/
     color: #333;
-    /*border-bottom: 1px solid #ccc;*/
-    /*margin: 20px -20px 10px -20px;*/
-    /*padding: 3px 0 3px 10px;*/
 }
 
 div.body h1 { font-size: 200%; }
@@ -126,11 +91,6 @@ div.body h3 { font-size: 140%; }
 div.body h4 { font-size: 120%; }
 div.body h5 { font-size: 110%; }
 div.body h6 { font-size: 100%; }
-
-.js div.section,
-.js dt {
-    scroll-margin-top: var(--topbar-height);
-}
 
 a.headerlink {
     font-size: 0.8em;
@@ -145,16 +105,8 @@ a.headerlink:visited {
     /* TODO: no change in color? */
 }
 
-/*
 blockquote {
-    margin: 20px 0;
-    padding: 0 20px;
-    color: red;
-    background-color: green;
-    border-top: .1em solid blue;
-    border-bottom: .1em solid blue;
 }
-*/
 
 blockquote p.attribution {
     /*text-align: end;*/
@@ -205,12 +157,8 @@ div.footer a:visited {
 
 pre {
     padding: 5px;
-    background-color: #eeffcc;
-    color: #333333;
+
     line-height: normal;
-    border: 1px solid #ac9;
-    border-left: none;
-    border-right: none;
     font-size: 0.875em;
 }
 
@@ -220,16 +168,9 @@ code {
 }
 
 div.code-block-caption {
-    color: #efefef;
-    background-color: #1c4e63;
 }
 
-/* TODO: separate settings for code and pre and kbd? */
-/* TODO: more specific than "pre"? */
-/* TODO: use theme_codefont? */
 code, pre, kbd {
-    /*font-family: monospace;*/
-    /*font-family: 'Source Code Pro', Consolas, 'Ubuntu Mono', Menlo, 'DejaVu Sans Mono', monospace;*/
     font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
 }
 
@@ -307,32 +248,29 @@ th, dl.field-list > dt {
     background-color: #ede;
 }
 
-/*
-table {
-    margin: 0 auto;
-    border-collapse: collapse;
+/* -- relbar ---------------------------------------------------------------- */
+
+div.related {
+    line-height: 30px;
+    color: #fff;
+    background-color: #133f52;
 }
-table td {
-    padding: 3px 20px;
-    border: 1px var(--table-border-color) solid;
+
+div.related a {
+    color: #fff;
 }
-table thead {
-    background: var(--table-header-bg);
+
+/* -- footer ---------------------------------------------------------------- */
+
+div.footer {
+    width: 100%;
+    padding: 9px 0 9px 0;
+
+    text-align: center;
+    font-size: 75%;
+    color: #fff;
+    background-color: #11303d;
 }
-table thead td {
-    font-weight: 700;
-    border: none;
-}
-table thead th {
-    padding: 3px 20px;
-}
-table thead tr {
-    border: 1px var(--table-header-bg) solid;
-}
-table tbody tr:nth-child(2n) {
-    background: var(--table-alternate-bg);
-}
-*/
 
 /* -- sidebar --------------------------------------------------------------- */
 
@@ -355,6 +293,14 @@ div.sphinxsidebar {
     background-color: #fafafa;
 }
 
+body.sidebar-visible {
+    margin-left: var(--sidebar-width);
+}
+
+body.js:not(.sidebar-resizing) {
+    transition: margin-left {{ theme_sidebar_transition }};
+}
+
 .js.topbar-folded .sphinxsidebar,
 .no-js .sphinxsidebar {
     top: 0;
@@ -373,12 +319,6 @@ div.sphinxsidebar {
 .js.sidebar-resizing .sphinxsidebar {
     transition: top {{ theme_topbar_transition }};
 }
-
-/*
-.sphinxsidebar code {
-    line-height: 2em;
-}
-*/
 
 div.sphinxsidebarwrapper {
     position: relative;  /* reference for sidebar-resize-handle */
@@ -426,7 +366,6 @@ div.sphinxsidebarwrapper {
 */
 
 div.sphinxsidebar h3 {
-    /*font-family: {{ theme_headfont }};*/
     font-size: 1.4em;
     font-weight: normal;
     margin: 0;
@@ -437,7 +376,6 @@ div.sphinxsidebar h3 a {
 }
 
 div.sphinxsidebar h4 {
-    /*font-family: {{ theme_headfont }};*/
     font-size: 1.3em;
     font-weight: normal;
     margin: 5px 0 0 0;
@@ -459,16 +397,7 @@ div.sphinxsidebar ul {
 div.sphinxsidebar a {
 }
 
-/*
-div.sphinxsidebar input {
-    border: 1px solid {{ theme_sidebarlinkcolor }};
-    font-family: sans-serif;
-    font-size: 1em;
-}
-*/
-
 {% if READTHEDOCS|tobool %}
-
 /* -- sidebar adaptations for readthedocs.org ------------------------------- */
 
 .injected .rst-versions.rst-badge {
@@ -489,7 +418,6 @@ div.sphinxsidebar input {
 #flyout-search-form input {
     width: 100%;
 }
-
 {% endif %}
 
 /* -- topbar --------------------------------------------------------------- */
@@ -652,14 +580,12 @@ div.sphinxsidebar input {
     margin: {% if theme_body_centered|tobool %}-2em{% else %}0{% endif %} 1em;
     width: 4em;
     height: 4em;
-    /*transition: color 0.5s, background-color 0.5s;*/
 
     color: #ccc;
 }
 
 .nav-icon:hover {
     background-color: #fafafa;
-    /*transition: background-color 0.15s, color 0.15s;*/
 }
 
 a.nav-icon:visited {
@@ -680,13 +606,6 @@ a.nav-icon:visited {
 {% endif %}
 
 /* -- sphinx.ext.viewcode --------------------------------------------------- */
-
-/* not important: */
-/*
-.viewcode-back {
-    font-family: ???;
-}
-*/
 
 div.viewcode-block:target {
     background-color: #f4debf;
@@ -729,7 +648,7 @@ div.viewcode-block:target {
     }
 
     .no-js .sphinxsidebar {
-        position: relative;  /* To be able to hide nav-icon */
+        position: relative;
         top: unset;
         width: unset;
     }

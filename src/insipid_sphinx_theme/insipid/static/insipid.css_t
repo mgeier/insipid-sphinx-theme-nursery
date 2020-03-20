@@ -155,6 +155,10 @@ div.footer a:visited {
 
 /* -- code formatting ------------------------------------------------------- */
 
+code, pre, kbd {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+}
+
 pre {
     padding: 5px;
 
@@ -168,10 +172,19 @@ code {
 }
 
 div.code-block-caption {
+    color: #333;
+    background-color: #ddd;
 }
 
-code, pre, kbd {
-    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+div.document div.literal-block-wrapper {
+    padding: unset;
+    margin-top: .8em;
+    margin-bottom: .8em;
+}
+
+/* NB: This is used for code blocks with line numbers */
+table.highlighttable {
+    margin-left: unset;
 }
 
 /* -- admonitions ----------------------------------------------------------- */

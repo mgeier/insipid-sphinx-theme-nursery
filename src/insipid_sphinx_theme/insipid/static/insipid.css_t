@@ -69,6 +69,7 @@ div.body {
     color: #000;
 }
 
+.js div.literal-block-wrapper,
 .js div.section,
 .js dt {
     scroll-margin-top: var(--topbar-height);
@@ -160,7 +161,7 @@ code, pre, kbd {
 }
 
 pre {
-    padding: 5px;
+    padding: 0.5em;
 
     line-height: normal;
     font-size: 0.875em;
@@ -257,8 +258,16 @@ div.admonition pre {
 
 /* -- tables ---------------------------------------------------------------- */
 
-th, dl.field-list > dt {
+th {
     background-color: #ede;
+}
+
+dl.field-list > dt {
+    padding-left: unset;
+}
+
+dl.field-list > dd {
+    margin-bottom: 10px;
 }
 
 /* -- relbar ---------------------------------------------------------------- */

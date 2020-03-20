@@ -34,6 +34,7 @@ html_favicon = 'favicon.ico'
 
 extensions = [
     'sphinx.ext.autodoc',
+    'sphinx.ext.autosummary',
     'sphinx.ext.todo',
     'sphinx.ext.viewcode',
 ]

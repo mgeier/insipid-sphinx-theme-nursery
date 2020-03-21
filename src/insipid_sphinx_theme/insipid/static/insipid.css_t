@@ -328,6 +328,7 @@ dl.field-list > dd {
 
 /* -- relbar ---------------------------------------------------------------- */
 
+/*
 div.related {
     line-height: 30px;
     color: #fff;
@@ -336,6 +337,31 @@ div.related {
 
 div.related a {
     color: #fff;
+}
+*/
+
+.related {
+    line-height: 30px;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.related ul {
+    /*padding: 0;*/
+    /*margin: 0;*/
+    /*list-style: none;*/
+}
+
+.related li {
+    /*display: inline;*/
+}
+
+nav.rellinks {
+    float: right;
+}
+
+nav.rellinks li+li:before {
+    content: "|";
 }
 
 /* -- footer ---------------------------------------------------------------- */

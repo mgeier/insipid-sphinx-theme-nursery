@@ -131,34 +131,19 @@
 {% endblock %}
 
 
-{#
-{% block relbar1 %}{% endblock %}
-#}
+{% block relbar1 %}{% include 'relbar.html' %}{% endblock %}
 
 
-{#
-{% block content %}
-{{ super() }}
-{% endblock %}
-#}
-
-{%- block sidebar1 %}{% endblock %}
-{%- block sidebar2 %}{% endblock %}
-
-{#
-{% block document %}
-{{ super() }}
-{% endblock %}
-#}
+{% block sidebar1 %}{% endblock %}
 
 
-{#
-{% block relbar2 %}{% endblock %}
-#}
+{% block sidebar2 %}{% endblock %}
+
+
+{% block relbar2 %}{% include 'relbar.html' %}{% endblock %}
 
 
 {% block footer %}
-{# sidebar will appear here only if JavaScript is disabled #}
 {{ sidebar() }}
     <label id="overlay"></label>
 {{ super() }}

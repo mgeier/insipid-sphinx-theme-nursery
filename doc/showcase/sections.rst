@@ -18,7 +18,7 @@ https://docutils.sourceforge.io/docs/ref/rst/directives.html#compound-paragraph
 
 .. compound::
 
-   The 'rm' command is very dangerous.  If you are logged
+   The :command:`rm` command is very dangerous.  If you are logged
    in as root and enter ::
 
        cd /

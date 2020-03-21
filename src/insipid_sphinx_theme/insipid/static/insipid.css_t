@@ -253,7 +253,6 @@ div.admonition.attention,
 div.admonition.caution,
 div.admonition.danger,
 div.admonition.error,
-div.admonition.important,
 div.admonition.warning {
     background-color: #fff2db;
 }
@@ -262,7 +261,6 @@ div.admonition.attention > p.admonition-title,
 div.admonition.caution > p.admonition-title,
 div.admonition.danger > p.admonition-title,
 div.admonition.error > p.admonition-title,
-div.admonition.important > p.admonition-title,
 div.admonition.warning > p.admonition-title {
     color: #fff;
     background-color: #f0b37e;

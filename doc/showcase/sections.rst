@@ -33,3 +33,11 @@ https://docutils.sourceforge.io/docs/ref/rst/directives.html#compound-paragraph
 https://docutils.sourceforge.io/docs/ref/rst/directives.html#table-of-contents
 
 .. contents:: Table of Contents
+
+
+Nested ``toctree``
+------------------
+
+.. toctree::
+
+    nested-document

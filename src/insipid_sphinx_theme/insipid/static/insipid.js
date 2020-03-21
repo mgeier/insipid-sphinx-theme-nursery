@@ -7,6 +7,7 @@ $(document).ready(function () {
 
     body.removeClass('loading');
 
+    // TODO: only when in the middle of the page:
     // scroll to top
     $('.menu-title').on('click', function () {
         main_scroller.scrollTo({top: 0, behavior: 'smooth'});

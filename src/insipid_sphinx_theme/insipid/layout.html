@@ -64,7 +64,8 @@
                         </div>
 
                         {# TODO: docstitle vs. shorttitle #}
-                        <h1 class="menu-title">{{ docstitle|striptags|e }}</h1>
+                        {# TODO: use parent document instead of master_doc? #}
+                        <h1 class="menu-title"><a href="{{ pathto(master_doc) }}">{{ docstitle|e }}</a></h1>
 
                         <div class="right-buttons">
                             {#{{#if git_repository_url}}#}

@@ -53,6 +53,15 @@ No language:
     print('Hello,')
     print('world!')
 
+``:linenos:`` with ``:lineno-start:``:
+
+.. code-block:: python
+    :linenos:
+    :lineno-start: 12345
+
+    print('Hello,')
+    print('world!')
+
 ``:emphasize-lines:``
 
 .. code-block:: python

@@ -71,7 +71,8 @@ div.body {
 
 .js div.literal-block-wrapper,
 .js div.section,
-.js dt {
+.js dt,
+.js strong {
     scroll-margin-top: var(--topbar-height);
 }
 
@@ -165,9 +166,11 @@ pre {
 
     line-height: normal;
     font-size: 0.875em;
+    background-color: #f0f0f0;
 }
 
-code {
+code,
+h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
     background-color: rgba(27,31,35,.05);
     padding: 0.2em;
 }
@@ -262,12 +265,24 @@ th {
     background-color: #ede;
 }
 
+dl.field-list {
+    display: unset;
+}
+
 dl.field-list > dt {
     padding-left: unset;
+    padding-right: unset;
+}
+
+dl.field-list > dt::after {
+    content: unset;
 }
 
 dl.field-list > dd {
+    padding-left: 0;
+    margin-top: 3px;
     margin-bottom: 10px;
+    margin-left: 30px;
 }
 
 /* -- relbar ---------------------------------------------------------------- */

@@ -43,8 +43,8 @@ https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#enumerated-li
    b) Item 2b.
 
 
-hlist
------
+``hlist``
+---------
 
 https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-hlist
 

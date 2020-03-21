@@ -175,6 +175,10 @@ h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
     padding: 0.2em;
 }
 
+code.descname {
+    padding: unset;
+}
+
 div.code-block-caption {
     color: #333;
     background-color: #ddd;
@@ -261,8 +265,25 @@ div.admonition pre {
 
 /* -- tables ---------------------------------------------------------------- */
 
-th {
-    background-color: #ede;
+table.docutils {
+    border-collapse: separate;
+    border-spacing: 5px 0px;
+}
+
+table.docutils th {
+    font-weight: normal;
+    background-color: #f0f0f0;
+    border-bottom: 2px solid #000;
+}
+
+th > ul:first-child, td > ul:first-child,
+th > ol:first-child, td > ol:first-child {
+    margin-top: 0px;
+}
+
+th > ul:last-child, td > ul:last-child,
+th > ol:last-child, td > ol:last-child {
+    margin-bottom: 0px;
 }
 
 dl.field-list {

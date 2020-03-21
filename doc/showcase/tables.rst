@@ -63,6 +63,14 @@ col 1  col 2
        - Second item in bullet
          list (row 3, column 2).
 \      Row 4; column 1 will be empty.
+5      Second column of row 5.
+
+       - Bullet
+
+       Text after bullet.
+6      Numbered list:
+
+       #. item
 =====  =====
 
 

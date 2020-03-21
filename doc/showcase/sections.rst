@@ -1,6 +1,33 @@
 Sections
 ========
 
+Header Level 2
+--------------
+
+Header Level 3
+^^^^^^^^^^^^^^
+
+Header Level 4
+''''''''''''''
+
+Header Level 5
+~~~~~~~~~~~~~~
+
+Header Level 6
+++++++++++++++
+
+Only levels down to ``<h6>`` are typically supported.
+
+Header Level 7
+##############
+
+You shouldn't use such deep nesting.
+
+Header Level 8
+**************
+
+Really, you shouldn't.
+
 Rubric
 ------
 

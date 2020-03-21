@@ -4,8 +4,8 @@ API Documentation
 https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html
 
 
-Manual
-------
+Manual Definitions
+------------------
 
 https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#the-python-domain
 
@@ -14,7 +14,11 @@ A link: :func:`spam`.
 .. function:: spam(eggs)
               ham(eggs)
 
-   Spam or ham.
+    Spam or ham.
+
+.. data:: module.__name__
+
+    Name of the module.
 
 
 Info Field Lists
@@ -46,7 +50,6 @@ A link: :func:`insipid_sphinx_theme.setup`.
 
 .. automodule:: insipid_sphinx_theme
     :members:
-
 
 ``sphinx.ext.autosummary``
 --------------------------

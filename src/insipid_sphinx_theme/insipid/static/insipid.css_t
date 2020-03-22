@@ -356,7 +356,9 @@ div.related a {
 .related {
     line-height: 30px;
     width: 100%;
+
     font-size: 0.9rem;
+    color: #ccc;
 }
 
 .related ul {
@@ -507,11 +509,19 @@ div.sphinxsidebar p.topless {
 }
 
 div.sphinxsidebar ul {
-    margin: 10px;
-    padding: 0;
+    padding-left: 0;
+    margin-left: 10px;
+}
+
+div.sphinxsidebar li {
+    margin-top: 0.5em;
 }
 
 div.sphinxsidebar a {
+}
+
+div.sphinxsidebar ul ul {
+    list-style-type: none;
 }
 
 {% if READTHEDOCS|tobool %}

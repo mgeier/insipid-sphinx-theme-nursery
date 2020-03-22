@@ -29,7 +29,7 @@ https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#dire
 
 No language:
 
-.. code-block::
+.. code-block:: none
 
     ┌─┬┐  ╔═╦╗  ╓─╥╖  ╒═╤╕
     │ ││  ║ ║║  ║ ║║  │ ││

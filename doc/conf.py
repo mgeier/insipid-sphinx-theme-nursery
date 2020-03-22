@@ -15,6 +15,7 @@ html_theme_options = {
 }
 html_sidebars = {
    '**': [
+       'github-badge.html',
        'globaltoc.html',
        #'localtoc.html',
        #'relations.html',
@@ -42,6 +43,7 @@ extensions = [
 ]
 
 #html_static_path = ['_static']
+templates_path = ['_templates']
 
 copyright = '2020, Matthias Geier'
 

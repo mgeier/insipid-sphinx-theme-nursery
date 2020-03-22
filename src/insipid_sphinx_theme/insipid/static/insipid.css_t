@@ -59,6 +59,8 @@ div.body {
     box-sizing: initial;
     /* Override basic.css, min width is handled with media queries */
     min-width: unset;
+    /* Avoid scrolling content under the sidebar */
+    overflow-x: auto;
 {% if theme_body_centered|tobool %}
     margin-left: auto;
     margin-right: auto;

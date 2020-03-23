@@ -209,32 +209,9 @@ code.sig-prename {
     padding: unset;
 }
 
-dl.alias > dt,
-dl.attribute > dt,
-dl.class > dt,
-dl.classmethod > dt,
-dl.concept > dt,
-dl.data > dt,
-dl.directive > dt,
-dl.directive\:option > dt,
-dl.enum > dt,
-dl.enum-class > dt,
-dl.enum-struct > dt,
-dl.enumerator > dt,
-dl.exception > dt,
-dl.function > dt,
-dl.macro > dt,
-dl.member > dt,
-dl.method > dt,
-dl.role > dt,
-dl.struct > dt,
-dl.type > dt,
-dl.union > dt,
-dl.var > dt {
-    font-weight: unset;
+dl > dt {
     background-color: #f5f5f5;
-    padding: 0 0.3em;
-    margin-bottom: 10px;
+    padding: 4px 10px;
 }
 
 dl > dt:target {
@@ -327,6 +304,10 @@ th > ol:last-child, td > ol:last-child {
     margin-bottom: 0px;
 }
 
+dl {
+    margin: 10px 0;
+}
+
 dt {
     /*font-weight: bold;*/
 }
@@ -340,8 +321,7 @@ dl.field-list {
 }
 
 dl.field-list > dt {
-    padding-left: unset;
-    padding-right: unset;
+    font-weight: unset;
 }
 
 dl.field-list > dt::after {

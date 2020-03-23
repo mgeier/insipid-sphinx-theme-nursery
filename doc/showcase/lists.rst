@@ -159,32 +159,6 @@ https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#option-lists
 /V         A VMS/DOS-style option.
 
 
-Separate Options
-----------------
-
-https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#directive-option
-
-A link: :option:`rm -r`.
-
-.. program:: rm
-
-.. option:: -r
-
-   Work recursively.
-
-
-Environment Variables
----------------------
-
-https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#directive-envvar
-
-A link: :envvar:`ENV_VAR`.
-
-.. envvar:: ENV_VAR
-
-    Description of environment variable.
-
-
 Grammars
 --------
 

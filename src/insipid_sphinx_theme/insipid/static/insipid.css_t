@@ -328,7 +328,7 @@ th > ol:last-child, td > ol:last-child {
 }
 
 dt {
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 
 dl.glossary > dt {

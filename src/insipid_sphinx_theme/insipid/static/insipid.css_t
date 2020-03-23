@@ -209,9 +209,11 @@ code.sig-prename {
     padding: unset;
 }
 
-dl > dt {
-    background-color: #f5f5f5;
+dl > dt, dl.field-list > dt {
+    display: inline-block;
     padding: 4px 10px;
+
+    background-color: #f5f5f5;
 }
 
 dl > dt:target {
@@ -279,6 +281,11 @@ div.admonition code,
 div.admonition pre {
     {# TODO: use normal text color #}
     color: #000;
+}
+
+div.admonition dt {
+    background-color: unset;
+    font-weight: unset;
 }
 
 /* -- tables ---------------------------------------------------------------- */

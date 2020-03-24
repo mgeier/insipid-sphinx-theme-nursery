@@ -26,6 +26,9 @@ nunc.  Nullam arcu.  Aliquam consequat.  Curabitur augue lorem, dapibus quis,
 laoreet et, pretium ac, nisi.  Aenean magna nisl, mollis quis, molestie eu,
 feugiat in, orci.  In hac habitasse platea dictumst.
 
+----
+
+After the line.
 
 Inline Markup
 -------------

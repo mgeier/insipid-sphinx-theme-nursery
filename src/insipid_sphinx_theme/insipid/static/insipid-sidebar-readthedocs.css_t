@@ -1,5 +1,9 @@
 .injected .rst-versions.rst-badge {
+{% if theme_rightsidebar|tobool %}
+    right: 0;
+{% else %}
     left: 0;
+{% endif %}
     bottom: 0;
     width: var(--sidebar-width);
     max-width: unset;

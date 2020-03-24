@@ -129,6 +129,11 @@ div.body dl > dt:target {
     background-color: #ffc;
 }
 
+hr.docutils {
+    border: 0;
+    border-top: solid 1px #ccc;
+}
+
 /* -- hyperlink styles ------------------------------------------------------ */
 
 a {
@@ -558,7 +563,7 @@ div.sphinxsidebar code {
 }
 
 #topbar-container {
-    border-bottom: #f2f2f2 solid 1px;
+    border-bottom: #eee solid 1px;
     color: #ccc;
     background-color: #fff;
 }

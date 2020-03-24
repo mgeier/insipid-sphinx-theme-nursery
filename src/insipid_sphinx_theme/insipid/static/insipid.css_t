@@ -9,6 +9,8 @@
 
 /* -- variables ------------------------------------------------------------- */
 
+{% set sidebar_side = 'right' if theme_rightsidebar|tobool else 'left' %}
+
 /* TODO: --page-padding? */
 
 :root {
@@ -399,7 +401,7 @@ div.footer {
 div.sphinxsidebar {
     position: fixed;
     width: var(--sidebar-width);
-    left: 0;
+    {{ sidebar_side }}: 0;
     top: var(--topbar-height);
     bottom: 0;
     overflow-y: auto;
@@ -416,11 +418,11 @@ div.sphinxsidebar {
 }
 
 body.sidebar-visible {
-    margin-left: var(--sidebar-width);
+    margin-{{ sidebar_side }}: var(--sidebar-width);
 }
 
 body.js:not(.sidebar-resizing) {
-    transition: margin-left {{ theme_sidebar_transition }};
+    transition: margin-{{ sidebar_side }} {{ theme_sidebar_transition }};
 }
 
 .js.topbar-folded .sphinxsidebar,
@@ -430,12 +432,12 @@ body.js:not(.sidebar-resizing) {
 
 {% if READTHEDOCS|tobool %}
 .js:not(.sidebar-resizing) .rst-versions.rst-badge {
-    transition: left {{ theme_sidebar_transition }};
+    transition: {{ sidebar_side }} {{ theme_sidebar_transition }};
 }
 {% endif %}
 
 .js:not(.sidebar-resizing) .sphinxsidebar {
-    transition: left {{ theme_sidebar_transition }}, top {{ theme_topbar_transition }};
+    transition: {{ sidebar_side }} {{ theme_sidebar_transition }}, top {{ theme_topbar_transition }};
 }
 
 .js.sidebar-resizing .sphinxsidebar {
@@ -460,7 +462,11 @@ div.sphinxsidebarwrapper {
 #sidebar-resize-handle {
     position: absolute;
     width: 0;
+{% if theme_rightsidebar|tobool %}
+    left: 0;
+{% else %}
     right: 0;
+{% endif %}
     top: 0;
     bottom: 0;
 }
@@ -474,7 +480,7 @@ div.sphinxsidebarwrapper {
 .js.sidebar-hidden .rst-versions.rst-badge,
 {% endif %}
 .js.sidebar-hidden .sphinxsidebar {
-    left: calc(0px - var(--sidebar-width));
+    {{ sidebar_side }}: calc(0px - var(--sidebar-width));
 }
 
 /*
@@ -545,11 +551,11 @@ div.sphinxsidebar code {
 }
 
 .sidebar-visible #topbar-placeholder {
-    margin-left: calc(0px - var(--sidebar-width));
+    margin-{{ sidebar_side }}: calc(0px - var(--sidebar-width));
 }
 
 .js:not(.sidebar-resizing) #topbar-placeholder {
-    transition: margin-left {{ theme_sidebar_transition }};
+    transition: margin-{{ sidebar_side }} {{ theme_sidebar_transition }};
 }
 
 #topbar-container {
@@ -712,6 +718,7 @@ div.sphinxsidebar code {
 .nav-icon.previous {
     bottom: 50vh;
 {% if theme_body_centered|tobool %}
+    left: 0;
     right: unset;
 {% endif %}
 }
@@ -719,6 +726,25 @@ div.sphinxsidebar code {
 .nav-icon.next {
     top: 50vh;
 }
+
+{% if theme_rightsidebar|tobool %}
+.sidebar-visible .nav-icon {
+    right: var(--sidebar-width);
+}
+{% if not theme_body_centered|tobool %}
+.js:not(.sidebar-resizing) .nav-icon.previous,
+{% endif %}
+.js:not(.sidebar-resizing) .nav-icon.next {
+    transition: right {{ theme_sidebar_transition }};
+}
+{% elif theme_body_centered|tobool %}
+.sidebar-visible .nav-icon.previous {
+    left: var(--sidebar-width);
+}
+.js:not(.sidebar-resizing) .nav-icon.previous {
+    transition: left {{ theme_sidebar_transition }};
+}
+{% endif %}
 
 {% endif %}
 
@@ -735,11 +761,11 @@ div.viewcode-block:target {
 
 @media only screen and (max-width: calc({{ theme_sidebarwidth|todim }} + {{ theme_body_min_width|todim }})) {
     body.sidebar-visible {
-        margin-left: 0;
+        margin-{{ sidebar_side }}: 0;
     }
 
     .sidebar-visible #topbar-placeholder {
-        margin-left: 0;
+        margin-{{ sidebar_side }}: 0;
     }
 
     body.js.sidebar-visible {

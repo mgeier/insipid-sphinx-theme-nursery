@@ -2,11 +2,12 @@ html_theme = 'insipid'
 html_theme_options = {
     #'navigation_with_keys': False,
     #'nosidebar': True,
+    'rightsidebar': True,
     #'body_min_width': 0,  # When smaller, body is covered by sidebar
     #'body_max_width': None,
     #'sidebarwidth': 300,
 
-    #'body_centered': False,
+    'body_centered': False,
     #'topbar_transition': '0.7s ease-out',
     #'sidebar_transition': '0.3s ease-out',
 

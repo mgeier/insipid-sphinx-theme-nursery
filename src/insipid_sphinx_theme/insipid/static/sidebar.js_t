@@ -120,7 +120,7 @@ $(document).ready(function () {
                 resizeObserver.observe(badge);
             }
         };
-        setResizeObserver();
+        window.requestAnimationFrame(setResizeObserver);
     }
 {% endif %}
 });

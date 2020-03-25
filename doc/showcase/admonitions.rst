@@ -50,7 +50,7 @@ Generic Admonitions
 
 https://docutils.sourceforge.io/docs/ref/rst/directives.html#generic-admonition
 
-.. admonition:: Admonition title with `link <Admonitions>`_
+.. admonition:: Admonition title with `link <Admonitions>`_ and ``code``
 
     Admonition text and ``inline code``.
 
@@ -88,11 +88,13 @@ https://www.sphinx-doc.org/en/master/extdev/nodes.html#new-admonition-like-const
 
 .. seealso::
 
-   Module :mod:`insipid_sphinx_theme`
-      Documentation of the :mod:`insipid_sphinx_theme` module.
+    Text.
 
-   `Sphinx Documentation <https://www.sphinx-doc.org/>`_
-      Documentation for Sphinx.
+    Module :mod:`insipid_sphinx_theme`
+        Documentation of the :mod:`insipid_sphinx_theme` module.
+ 
+    `Sphinx Documentation <https://www.sphinx-doc.org/>`_
+        Documentation for Sphinx.
 
 .. versionadded:: 3.14
 

@@ -76,6 +76,9 @@ term 3 : classifier
 term 4 : classifier one : classifier two
     Definition 4.
 
+term with ``code``
+    Definition with ``code``.
+
 
 Glossary
 --------
@@ -86,27 +89,22 @@ Example link: :term:`source directory` (term will be highlighted).
 
 .. glossary::
 
-   environment
-      A structure where information about all documents under the root is
-      saved, and used for cross-referencing.  The environment is pickled
-      after the parsing stage, so that successive runs only need to read
-      and parse new and changed documents.
+    environment
+        A structure where information about all documents under the root is
+        saved, and used for cross-referencing.  The environment is pickled
+        after the parsing stage, so that successive runs only need to read
+        and parse new and changed documents.
 
-   source directory
-      The directory which, including its subdirectories, contains all
-      source files for one Sphinx project.
+    source directory
+        The directory which, including its subdirectories, contains all
+        source files for one Sphinx project.
 
-.. glossary::
+    term 1
+    term 2
+        Definition of both terms.
 
-   term 1
-   term 2
-      Definition of both terms.
-
-.. glossary::
-
-   term 3 : A
-   term 4 : B
-      Definition of both terms.
+    term with ``code``
+        Definition with ``code``.
 
 
 Field Lists

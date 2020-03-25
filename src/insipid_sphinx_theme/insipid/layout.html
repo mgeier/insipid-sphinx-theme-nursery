@@ -167,30 +167,6 @@
           link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
       });
       */
-
-      {% if READTHEDOCS|tobool %}
-      // This has to run after readthedocs has executed its JS code:
-      $(document).ready(function () {
-          'use strict';
-      
-          if (window.ResizeObserver) {
-              const resizeObserver = new ResizeObserver(entries => {
-                  for (let entry of entries) {
-                      let height;
-                      if(entry.borderBoxSize) {
-                          height = entry.borderBoxSize.blockSize;
-                      } else {
-                          height = entry.contentRect.height;
-                      }
-                      root.css('--readthedocs-badge-height', height + 'px');
-                  }
-              });
-              resizeObserver.observe(document.querySelector(
-                  '.rst-versions.rst-badge'));
-          }
-      });
-      {% endif %}
-
     </script>
 {% endif %}
 {% endblock %}

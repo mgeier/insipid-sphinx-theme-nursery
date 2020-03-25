@@ -97,6 +97,32 @@ $(document).ready(function () {
         });
         resizeObserver.observe(document.getElementById('topbar-placeholder'));
     }
+
+{% if READTHEDOCS|tobool %}
+    if (window.ResizeObserver) {
+        function setResizeObserver() {
+            var badge = document.querySelector('.rst-versions.rst-badge');
+            if (badge === null) {
+                console.log('waiting for readthedocs.org badge');
+                window.requestAnimationFrame(setResizeObserver);
+            } else {
+                const resizeObserver = new ResizeObserver(entries => {
+                    for (let entry of entries) {
+                        let height;
+                        if(entry.borderBoxSize) {
+                            height = entry.borderBoxSize.blockSize;
+                        } else {
+                            height = entry.contentRect.height;
+                        }
+                        root.css('--readthedocs-badge-height', height + 'px');
+                    }
+                });
+                resizeObserver.observe(badge);
+            }
+        };
+        setResizeObserver();
+    }
+{% endif %}
 });
 
 {#

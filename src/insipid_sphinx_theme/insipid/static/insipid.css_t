@@ -594,10 +594,6 @@ div.sphinxsidebar code {
     color: inherit;
 }
 
-.right-buttons {
-    margin: 0 15px;
-}
-
 /*
 .right-buttons a {
     text-decoration: none;
@@ -608,7 +604,7 @@ div.sphinxsidebar code {
     transform: translateY(-100%);
 }
 
-.left-buttons {
+.left-buttons, .right-buttons {
     display: flex;
     margin: 0 5px;
 }

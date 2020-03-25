@@ -761,7 +761,7 @@ div.viewcode-block:target {
         bottom: 0;
         visibility: hidden;
         opacity: 0;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(100%, 100%, 100%, 80%);
         transition: opacity {{ theme_sidebar_transition }}, visibility 0s {{ theme_sidebar_transition }};
         z-index: 42;
     }

@@ -164,17 +164,6 @@ a.external:visited {
     border-bottom: 1px dotted #355f7c;
 }
 
-div.footer a {
-    color: #fff;
-    text-decoration: underline;
-}
-
-div.footer a:hover {
-}
-
-div.footer a:visited {
-}
-
 /* -- code formatting ------------------------------------------------------- */
 
 code, pre, kbd {
@@ -391,13 +380,12 @@ nav.rellinks li+li:before {
 /* -- footer ---------------------------------------------------------------- */
 
 div.footer {
-    width: 100%;
     padding: 9px 0 9px 0;
+    border-top: #eee solid 1px;
 
     text-align: center;
     font-size: 75%;
-    color: #fff;
-    background-color: #11303d;
+    color: #333;
 }
 
 /* -- sidebar --------------------------------------------------------------- */

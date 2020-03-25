@@ -121,7 +121,7 @@ blockquote p.attribution {
 
 div.body dl > dt, dl.field-list > dt {
     display: table;
-    padding: 4px 10px;
+    padding: 3px 7px;
 
     background-color: #f5f5f5;
 }

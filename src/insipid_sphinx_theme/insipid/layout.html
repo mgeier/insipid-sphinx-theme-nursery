@@ -41,9 +41,6 @@
                 body.removeClass('sidebar-hidden');
                 body.addClass('sidebar-visible');
             }
-        } catch(e) {
-        }
-        try {
             var sidebar_width = localStorage.getItem('sphinx-sidebar-width');
             if (sidebar_width) {
                 $(':root').css('--sidebar-width', sidebar_width);

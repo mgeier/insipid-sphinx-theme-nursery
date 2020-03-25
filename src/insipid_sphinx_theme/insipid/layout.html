@@ -154,9 +154,10 @@
 
 {% block footer %}
 {{ sidebar() }}
-    <label id="overlay"></label>
 {{ super() }}
 {% if render_sidebar %}
+    <label id="overlay"></label>
+
     <!-- TODO: provide a re-usable function for this in .js file? -->
     <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
     <script type="text/javascript">

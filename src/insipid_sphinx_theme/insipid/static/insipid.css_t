@@ -332,34 +332,12 @@ dl.field-list > dd {
 
 /* -- relbar ---------------------------------------------------------------- */
 
-/*
 div.related {
-    line-height: 30px;
-    color: #fff;
-    background-color: #133f52;
-}
-
-div.related a {
-    color: #fff;
-}
-*/
-
-.related {
-    line-height: 30px;
-    width: 100%;
-
-    font-size: 0.9rem;
     color: #ccc;
 }
 
-.related ul {
-    /*padding: 0;*/
-    /*margin: 0;*/
-    /*list-style: none;*/
-}
-
-.related li {
-    /*display: inline;*/
+div.related ul {
+    padding: 0;
 }
 
 nav.rellinks {
@@ -576,7 +554,7 @@ div.sphinxsidebar code {
     color: #333;
 }
 
-.icon-button svg {
+.icon-button svg, .related svg {
   /*display: inline-block;*/
   width: 1em;
   height: 1em;

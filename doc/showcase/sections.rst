@@ -1,3 +1,5 @@
+Some text before the first section title.
+
 Sections
 ========
 

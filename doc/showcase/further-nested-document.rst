@@ -1,3 +1,6 @@
+Some text before section title.
+
+
 Further Nested Document
 =======================
 

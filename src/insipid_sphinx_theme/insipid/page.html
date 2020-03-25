@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+
+    {# TODO: option to disable breadcrumbs #}
+
+    {% if parents %}
+    <div class="related" role="navigation" aria-label="related navigation">
+      <ul>
+        {% block rootrellink %}
+        {# TODO: tooltip with {{ shorttitle|e }}? #}
+        <li class="nav-item nav-item-0"><a href="{{ pathto(master_doc) }}">{% include 'icons/home.svg' %}</a>{{ reldelim1 }}</li>
+        {% endblock %}
+        {% for parent in parents %}
+          <li class="nav-item nav-item-{{ loop.index }}"><a href="{{ parent.link|e }}">{{ parent.title }}</a>{{ reldelim1 }}</li>
+        {% endfor %}
+        {% block relbaritems %} {% endblock %}
+      </ul>
+    </div>
+    {% endif %}
+{{ body }}
+{% endblock %}

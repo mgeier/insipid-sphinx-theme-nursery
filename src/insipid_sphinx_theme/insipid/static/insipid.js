@@ -3,7 +3,6 @@ $(document).ready(function () {
 
     var body = $(document.body);
     var main_scroller = document.scrollingElement;
-    var sidebar_scroller = document.querySelector('.sphinxsidebar');
 
     body.removeClass('loading');
 
@@ -38,14 +37,13 @@ $(document).ready(function () {
             previous = Math.max(scroller.scrollTop, 0);
         };
     }
-    var scroll_main = scroll_callback(main_scroller);
-    $(document).on('scroll', function () {
-        // Avoid hiding the topbar on small screens if sidebar is open
-        if (body.css('overflow-y') === 'visible') {
-            scroll_main();
-        }
-    });
-    $(sidebar_scroller).on('scroll', scroll_callback(sidebar_scroller));
+
+    $(document).on('scroll', scroll_callback(main_scroller));
+
+    var sidebar_scroller = document.querySelector('.sphinxsidebar');
+    if (sidebar_scroller) {
+        $(sidebar_scroller).on('scroll', scroll_callback(sidebar_scroller));
+    }
 
     // show search
     var form = $('#searchform');

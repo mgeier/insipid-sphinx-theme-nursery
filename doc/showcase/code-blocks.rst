@@ -115,7 +115,7 @@ https://docutils.sourceforge.io/docs/ref/rst/directives.html#parsed-literal
 
 .. parsed-literal::
 
-    Code block with *inline* markup.
+    Code block with *inline* markup, e.g. ``code``.
 
 Doctest Blocks
 --------------

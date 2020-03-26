@@ -204,6 +204,12 @@ div.document div.literal-block-wrapper {
     margin-bottom: .8em;
 }
 
+.highlight .hll {
+    display: block;
+    padding: 0 0.5em;
+    margin: 0 -0.5em;
+}
+
 /* NB: This is used for code blocks with line numbers */
 table.highlighttable {
     margin-left: unset;

@@ -1,6 +1,6 @@
 {% if render_sidebar %}
-                            {# TODO: set "title" via JavaScript #}
-                            <button id="sidebar-toggle" class="icon-button" type="button" title="{{ _('Collapse sidebar') }}" aria-label="Toggle Sidebar" aria-controls="sidebar">
-                              {% include 'icons/sidebar-toggle.svg' %}
-                            </button>
+{# TODO: set "title" via JavaScript #}
+<button id="sidebar-toggle" class="icon-button" type="button" title="{{ _('Collapse sidebar') }}" aria-label="Toggle Sidebar" aria-controls="sidebar">
+{% include 'icons/sidebar-toggle.svg' %}
+</button>
 {% endif %}

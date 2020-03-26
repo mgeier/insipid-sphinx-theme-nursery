@@ -523,8 +523,18 @@ div.sphinxsidebar code {
 
 #topbar-container {
     border-bottom: #eee solid 1px;
-    color: #ccc;
     background-color: #fff;
+}
+
+#menu-bar,
+#menu-bar a,
+#menu-bar a:visited {
+    color: #ccc;
+}
+
+#menu-bar button:hover,
+#menu-bar a:hover {
+    color: #333;
 }
 
 #menu-bar {
@@ -532,13 +542,11 @@ div.sphinxsidebar code {
     flex-wrap: wrap;
 }
 
-.js #topbar-container {
-    transition: transform {{ theme_topbar_transition }};
-}
-
-#menu-bar .icon-button {
+#menu-bar .left-buttons > *,
+#menu-bar .right-buttons > * {
     position: relative;
     padding: 0 8px;
+    margin: 0;
     z-index: 10;
     line-height: {{ theme_topbarheight|todim }};
     cursor: pointer;
@@ -550,11 +558,9 @@ div.sphinxsidebar code {
     }
 }
 
-#menu-bar .icon-button:hover {
-    color: #333;
-}
-
-.icon-button svg, .related svg {
+#topbar-container button svg,
+#topbar-container a svg,
+.related svg {
   /*display: inline-block;*/
   width: 1em;
   height: 1em;
@@ -578,6 +584,10 @@ div.sphinxsidebar code {
 
 .js.topbar-folded #topbar-placeholder:not(:hover) #topbar-container {
     transform: translateY(-100%);
+}
+
+.js #topbar-container {
+    transition: transform {{ theme_topbar_transition }};
 }
 
 .left-buttons, .right-buttons {

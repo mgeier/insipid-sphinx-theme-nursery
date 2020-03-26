@@ -1,6 +1,14 @@
 {% extends "basic/layout.html" %}
 
 
+{% if theme_left_buttons is string and theme_left_buttons %}
+{% set theme_left_buttons = theme_left_buttons.split(',')|map('trim') %}
+{% endif %}
+{% if theme_right_buttons is string and theme_right_buttons %}
+{% set theme_right_buttons = theme_right_buttons.split(',')|map('trim') %}
+{% endif %}
+
+
 {% block css %}
 {{ super() }}
 {% if READTHEDOCS|tobool and render_sidebar %}
@@ -57,12 +65,9 @@
 {% if not theme_rightsidebar|tobool %}
 {% include 'sidebar-button.html' %}
 {% endif %}
-{% if pagename != "search" %}
-                            {# TODO: set "title" via JavaScript #}
-                            <button id="search-toggle" class="icon-button" type="button" title="{{ _('Search') }}" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
-                              {% include 'icons/search.svg' %}
-                            </button>
-{% endif %}
+{% for buttontemplate in theme_left_buttons %}
+{% include buttontemplate %}
+{% endfor %}
                         </div>
 
                         {# TODO: docstitle vs. shorttitle #}
@@ -77,6 +82,9 @@
                             </a>
                             #}
                             {#{{/if}}#}
+{% for buttontemplate in theme_right_buttons %}
+{% include buttontemplate %}
+{% endfor %}
 {% if theme_rightsidebar|tobool %}
 {% include 'sidebar-button.html' %}
 {% endif %}

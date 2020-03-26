@@ -585,8 +585,8 @@ div.sphinxsidebar code {
     margin: 0 5px;
 }
 
-/* TODO: separate rules for individual buttons? */
-.no-js .left-buttons {
+.no-js #sidebar-toggle,
+.no-js #search-toggle {
     display: none;
 }
 

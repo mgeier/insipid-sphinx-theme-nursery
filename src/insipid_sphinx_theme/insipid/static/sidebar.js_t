@@ -58,7 +58,7 @@ $(document).ready(function () {
         }
     }
 
-    $('#sidebar-resize-handle').on('mousedown', function (e) {
+    $('.sidebar-resize-handle').on('mousedown', function (e) {
         $(window).on('mousemove', resize);
         $(window).on('mouseup', stopResize);
         body.addClass('sidebar-resizing');

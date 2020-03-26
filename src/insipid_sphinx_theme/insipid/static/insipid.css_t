@@ -37,6 +37,7 @@ html {
 }
 
 body {
+    position: relative;  /* reference for sidebar-resize-handle */
     display: flex;
     flex-direction: column;
     min-height: 100%;  /* necessary for flex-grow */
@@ -422,19 +423,26 @@ div.sphinxsidebarwrapper {
     transition: padding-top {{ theme_topbar_transition }};
 }
 
-#sidebar-resize-handle {
+.sidebar-resize-handle {
     position: absolute;
     width: 0;
-{% if theme_rightsidebar|tobool %}
-    left: 0;
-{% else %}
-    right: 0;
-{% endif %}
     top: 0;
     bottom: 0;
 }
 
-.js #sidebar-resize-handle {
+.sphinxsidebar .sidebar-resize-handle {
+    {% if theme_rightsidebar|tobool %}
+    left: 0;
+    {% else %}
+    right: 0;
+    {% endif %}
+}
+
+.js.sidebar-visible > .sidebar-resize-handle {
+    {{ sidebar_side }}: 0;
+}
+
+.js .sidebar-resize-handle {
     cursor: col-resize;
     width: 10px;
 }

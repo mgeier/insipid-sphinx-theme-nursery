@@ -140,7 +140,7 @@
 
 
 {% block sidebarlogo %}
-      <div id="sidebar-resize-handle"></div>
+      <div class="sidebar-resize-handle"></div>
 {{ super() }}
 {% endblock %}
 
@@ -161,6 +161,7 @@
 {{ sidebar() }}
 {{ super() }}
 {% if render_sidebar %}
+    <div class="sidebar-resize-handle"></div>
     <label id="overlay"></label>
 
     <!-- TODO: provide a re-usable function for this in .js file? -->

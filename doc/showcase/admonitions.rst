@@ -149,3 +149,13 @@ Nesting
 .. note::
 
     #. ordered list item in admonition
+
+.. note::
+
+    ..
+
+        Block quote in note.
+
+    Normal text in note.
+
+        Another block quote.

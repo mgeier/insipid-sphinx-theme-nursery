@@ -73,6 +73,15 @@ col 1  col 2
        #. item
 =====  =====
 
+Adjacent tables (is there a vertical space between them?):
+
++-------+-------+
+| col 1 | col 2 |
++-------+-------+
+
+=====  =====
+col 1  col 2
+=====  =====
 
 CSV Tables
 ----------

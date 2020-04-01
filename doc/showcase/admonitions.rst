@@ -75,6 +75,10 @@ https://docutils.sourceforge.io/docs/ref/rst/directives.html#sidebar
 
     Sidebar text.
 
+    .. rubric:: A rubric
+
+    More text.
+
 Text after ``sidebar`` directive.
 
 
@@ -92,7 +96,7 @@ https://www.sphinx-doc.org/en/master/extdev/nodes.html#new-admonition-like-const
 
     Module :mod:`insipid_sphinx_theme`
         Documentation of the :mod:`insipid_sphinx_theme` module.
- 
+
     `Sphinx Documentation <https://www.sphinx-doc.org/>`_
         Documentation for Sphinx.
 
@@ -154,8 +158,17 @@ Nesting
 
     ..
 
-        Block quote in note.
+        A block quote in note.
 
-    Normal text in note.
+A table in a note:
 
-        Another block quote.
+.. note::
+
+    =====  =====  =======
+      A      B    A and B
+    =====  =====  =======
+    False  False  False
+    True   False  False
+    False  True   False
+    True   True   True
+    =====  =====  =======

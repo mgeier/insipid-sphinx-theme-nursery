@@ -30,6 +30,23 @@ feugiat in, orci.  In hac habitasse platea dictumst.
 
 After the line.
 
+
+Compound Paragraphs
+-------------------
+
+https://docutils.sourceforge.io/docs/ref/rst/directives.html#compound-paragraph
+
+.. compound::
+
+   The :command:`rm` command is very dangerous.  If you are logged
+   in as root and enter ::
+
+       cd /
+       rm -rf *
+
+   you will erase the entire contents of your file system.
+
+
 Inline Markup
 -------------
 
@@ -63,11 +80,16 @@ https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#footnote
 
 https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#footnotes
 
-Footnote [#numbered]_ and [*]_
+Footnote [#numbered]_ and [*]_.
+And some more:
+[#popular-label]_,
+[#popular-label]_,
+[#popular-label]_,
+[#popular-label]_.
 
 .. [#numbered] This is an auto-numbered footnote.
+.. [#popular-label] Auto-numbered, multiple mentions.
 .. [*] This is an auto-symbol footnote.
-
 
 Citations
 ---------
@@ -77,10 +99,13 @@ https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#citation
 https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#citations
 
 Here is a citation reference: :title-reference:`The Title` [CIT2002]_.
+And another citation reference: [CIT2020]_.
+Another mention of the same citation: [CIT2020]_.
 
 .. [CIT2002] This is the citation.  It's just like a footnote,
     except the label is textual.
 
+.. [CIT2020] A literature reference with multiple back-links.
 
 Other Semantic Markup
 ---------------------

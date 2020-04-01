@@ -40,22 +40,6 @@ https://docutils.sourceforge.io/docs/ref/rst/directives.html#rubric
 Some text.
 
 
-Compound Paragraphs
--------------------
-
-https://docutils.sourceforge.io/docs/ref/rst/directives.html#compound-paragraph
-
-.. compound::
-
-   The :command:`rm` command is very dangerous.  If you are logged
-   in as root and enter ::
-
-       cd /
-       rm -rf *
-
-   you will erase the entire contents of your file system.
-
-
 (Local) Table of Contents
 -------------------------
 

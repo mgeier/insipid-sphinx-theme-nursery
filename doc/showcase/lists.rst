@@ -42,6 +42,29 @@ https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#enumerated-li
 2. a) Item 2a.
    b) Item 2b.
 
+#. Arabic numerals.
+
+   a) lower alpha)
+
+      (i) (lower roman)
+
+          A. upper alpha.
+
+             I) upper roman)
+
+#. Lists that don't start at 1:
+
+   3. Three
+
+   4. Four
+
+   C. C
+
+   D. D
+
+   iii. iii
+
+   iv. iv
 
 ``hlist``
 ---------

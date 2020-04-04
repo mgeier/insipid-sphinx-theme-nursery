@@ -233,6 +233,8 @@ kbd.docutils {
 /* -- admonitions ----------------------------------------------------------- */
 
 div.admonition {
+    clear: both;
+
     color: #666;
     background-color: #e7f2fa;
 }

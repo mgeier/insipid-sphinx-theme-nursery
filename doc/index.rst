@@ -1,5 +1,7 @@
 .. include:: ../README.rst
 
+----
+
 .. NB: "--" is not replaced in :caption:!
 
 .. toctree::
@@ -8,6 +10,8 @@
     usage
     customization
     showcases
+
+----
 
 .. toctree::
     :caption: Part Two – Showcase

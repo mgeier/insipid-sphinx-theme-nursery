@@ -7,6 +7,7 @@
 
     usage
     customization
+    showcases
 
 .. toctree::
     :caption: Part Two – Showcase

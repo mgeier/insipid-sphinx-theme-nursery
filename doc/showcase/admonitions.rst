@@ -154,12 +154,6 @@ Nesting
 
     #. ordered list item in admonition
 
-.. note::
-
-    ..
-
-        A block quote in note.
-
 A table in a note:
 
 .. note::

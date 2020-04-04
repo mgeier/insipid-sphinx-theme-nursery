@@ -17,15 +17,33 @@ This is a code sample::
     print('Hello, world!')
 
 
+Quoted Literal Blocks
+---------------------
+
+https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#quoted-literal-blocks
+
+Supported initial characters:
+``! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _ ` { | } ~``::
+
+! every line
+! must
+! start with the same character
+
+
 ``code-block`` Directive
 ------------------------
 
 https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-code-block
 
-.. code-block:: python3
+.. code-block:: python
     :name: code1
 
-    print('Hello, world!')
+    print('Hello,')
+    print('wooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooorld!')
+
+.. code-block:: python
+
+    # another code block
 
 No language:
 
@@ -51,7 +69,12 @@ No language:
     :linenos:
 
     print('Hello,')
-    print('world!')
+    print('wooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooorld!')
+
+.. code-block:: python
+    :linenos:
+
+    # another code block
 
 ``:linenos:`` with ``:lineno-start:``:
 

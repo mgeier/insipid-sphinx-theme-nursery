@@ -21,6 +21,24 @@ This is an ordinary paragraph, introducing a block quote.
 
     Block quote.
 
+.. sidebar:: Block quote in sidebar
+
+    ..
+
+        Block quote.
+
+.. topic:: Block quote in topic
+
+    ..
+
+        Block quote.
+
+.. note::
+
+    ..
+
+        Block quote in an :doc:`admonition <admonitions>`.
+
 
 Epigraphs
 ---------
@@ -81,17 +99,3 @@ Take it away, Eric the Orchestra Leader!
     |             due to some ancient injury?
     |
     | Singing...
-
-
-Quoted Literal Blocks
----------------------
-
-https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#quoted-literal-blocks
-
-John Doe wrote::
-
->> Great idea!
->
-> Why didn't I think of that?
-
-You just did!  ;-)

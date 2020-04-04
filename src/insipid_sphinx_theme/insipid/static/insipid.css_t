@@ -111,7 +111,8 @@ a.headerlink:visited {
 blockquote {
     padding: 10px 20px;
     margin: 0;
-    border-left: 5px solid #eee;
+    border: 1px solid #0001;
+    border-left-width: 6px;
 }
 
 blockquote p.attribution {
@@ -179,7 +180,7 @@ code, pre, kbd {
 }
 
 pre {
-    padding: 0.5em;
+    padding: 7px;
 
     line-height: normal;
     font-size: 0.875em;
@@ -218,9 +219,46 @@ div.document div.literal-block-wrapper {
     margin: 0 -0.5em;
 }
 
-/* NB: This is used for code blocks with line numbers */
+/* NB: .highlighttable is used for code blocks with line numbers */
+
 table.highlighttable {
-    margin-left: unset;
+    display: block;
+    /*margin-left: unset;*/
+    margin: 1em 0;
+}
+
+div.code-block-caption + div > table.highlighttable {
+    margin-top: 0;
+}
+
+table.highlighttable tbody {
+    display: block;
+}
+
+table.highlighttable tr {
+    display: flex;
+}
+
+table.highlighttable td {
+    padding: 0;
+}
+
+table.highlighttable td.linenos {
+    user-select: none;
+}
+
+table.highlighttable td.linenos pre {
+    padding: 7px;
+}
+
+table.highlighttable pre {
+    /*margin: 0;*/
+    margin: unset;
+}
+
+table.highlighttable .code {
+    flex: 1;
+    overflow: hidden;
 }
 
 kbd.docutils {
@@ -232,9 +270,11 @@ kbd.docutils {
 
 /* -- admonitions ----------------------------------------------------------- */
 
-div.admonition {
+div.admonition, div.topic {
     clear: both;
+}
 
+div.admonition {
     color: #666;
     background-color: #e7f2fa;
 }

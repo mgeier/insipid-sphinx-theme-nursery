@@ -409,12 +409,13 @@ div.related ul {
 }
 
 nav.rellinks {
-    float: right;
 }
 
+/*
 nav.rellinks li+li:before {
     content: "|";
 }
+*/
 
 /* -- footer ---------------------------------------------------------------- */
 

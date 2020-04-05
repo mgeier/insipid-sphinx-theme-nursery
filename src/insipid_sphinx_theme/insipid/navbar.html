@@ -2,22 +2,22 @@
       <h3>{{ _('Navigation') }}</h3>
       <nav class="rellinks">
         <ul>
-          {%- if prev %}
+          {% if prev %}
           <li>
             <a href="{{ prev.link|e }}" title="{{ _('Previous topic') }}">{% include 'icons/previous.svg' %}
               {{ _('previous') }}
               {{ prev.title }}
             </a>
           </li>
-          {%- endif %}
-          {%- if next %}
+          {% endif %}
+          {% if next %}
           <li>
             <a href="{{ next.link|e }}" title="{{ _('Next topic') }}">{% include 'icons/next.svg' %}
               {{ _('next') }}
               {{ next.title }}
             </a>
           </li>
-          {%- endif %}
+          {% endif %}
         </ul>
       </nav>
     </div>

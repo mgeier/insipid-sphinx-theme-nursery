@@ -120,22 +120,6 @@
 
             </div>
         </div>
-
-{# TODO: config option to disable this? #}
-{% if theme_body_max_width != None %}
-            <nav aria-label="Page navigation">
-    {% if prev %}
-                    <a href="{{ prev.link|e }}" class="nav-icon previous" title="{{ _('previous') + ':\n' + prev.title|striptags|e }}" aria-label="Previous page" aria-keyshortcuts="Left">
-                      {% include 'icons/previous.svg' %}
-                    </a>
-    {% endif %}
-    {% if next %}
-                    <a href="{{ next.link|e }}" class="nav-icon next" title="{{ _('next') + ':\n' + next.title|striptags|e }}" aria-label="Next page" aria-keyshortcuts="Right">
-                      {% include 'icons/next.svg' %}
-                    </a>
-    {% endif %}
-            </nav>
-{% endif %}
 {% endblock %}
 
 
@@ -145,17 +129,17 @@
 {% endblock %}
 
 
-{# TODO: separate options for top/bottom relbar? #}
-{% block relbar1 %}{% include 'relbar.html' %}{% endblock %}
+{# TODO: separate options for top/bottom navbar? #}
+{% block relbar1 %}{% include 'navbar.html' %}{% endblock %}
 
 
-{% block sidebar1 %}{% endblock %}
+{% block sidebar1 %}{% include 'nav-buttons.html' %}{% endblock %}
 
 
 {% block sidebar2 %}{% endblock %}
 
 
-{% block relbar2 %}{% include 'relbar.html' %}{% endblock %}
+{% block relbar2 %}{% include 'navbar.html' %}{% endblock %}
 
 
 {% block footer %}

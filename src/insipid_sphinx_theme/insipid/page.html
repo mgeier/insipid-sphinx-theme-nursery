@@ -2,28 +2,20 @@
 
 
 {% block body %}
-
-    {# TODO: option to disable breadcrumbs #}
-
-    {# TODO: use <nav class="crumbs">? <ol> 
-        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav #}
-
-    {# TODO: use aria-labelledby? #}
-
-    {% if parents %}
-    {# TODO: option to always show "home", even if there are no parents? #}
-    <div class="related" role="navigation" aria-label="related navigation">
-      <ul>
-        {% block rootrellink %}
-        {# TODO: tooltip with {{ shorttitle|e }}? #}
-        <li class="nav-item nav-item-0"><a href="{{ pathto(master_doc) }}">{% include 'icons/home.svg' %}</a>{{ reldelim1 }}</li>
-        {% endblock %}
-        {% for parent in parents %}
-          <li class="nav-item nav-item-{{ loop.index }}"><a href="{{ parent.link|e }}">{{ parent.title }}</a>{{ reldelim1 }}</li>
-        {% endfor %}
-        {% block relbaritems %} {% endblock %}
-      </ul>
-    </div>
-    {% endif %}
+{#- TODO: option to disable breadcrumbs #}
+{%- if parents %}
+{#- TODO: option to always show "home", even if there are no parents? #}
+<nav class="crumbs">
+  <ul>
+    {%- block rootrellink %}
+    <li><a href="{{ pathto(master_doc) }}" aria-label="{{ docstitle }}">{% include 'icons/home.svg' %}</a>{{ reldelim1 }}</li>
+    {%- endblock %}
+    {%- for parent in parents %}
+    <li><a href="{{ parent.link|e }}">{{ parent.title }}</a>{{ reldelim1 }}</li>
+    {%- endfor %}
+    {%- block relbaritems %} {% endblock %}
+  </ul>
+</nav>
+{%- endif %}
 {{ body }}
-{% endblock %}
+{%- endblock %}

@@ -9,31 +9,84 @@
 {% endif %}
 
 
+{% macro navbar() %}
+    <nav>
+      {%- if prev %}
+      <a class="navbar previous" href="{{ prev.link|e }}" title="{{ _('Previous topic') }}" {{ accesskey('P') }}>
+        {% include 'icons/previous.svg' %}
+        {{ _('previous') }}
+        {{ prev.title }}
+      </a>
+      {%- endif %}
+      {%- if next %}
+      <a class="navbar next" href="{{ next.link|e }}" title="{{ _('Next topic') }}" {{ accesskey('N') }}>
+        {% include 'icons/next.svg' %}
+        {{ _('next') }}
+        {{ next.title }}
+      </a>
+      {%- endif %}
+    </nav>
+{#-
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+          {% if prev %}
+            <a href="{{ prev.link|e }}" title="Material"
+               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
+               rel="prev">
+              <div class="md-flex__cell md-flex__cell--shrink">
+                <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+              </div>
+              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+                <span class="md-flex__ellipsis">
+                  <span
+                      class="md-footer-nav__direction"> Previous </span> {{ prev.title }} </span>
+              </div>
+            </a>
+          {% endif %}
+          {% if next %}
+            <a href="{{ next.link|e }}" title="Admonition"
+               class="md-flex md-footer-nav__link md-footer-nav__link--next"
+               rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
+                class="md-flex__ellipsis"> <span
+                class="md-footer-nav__direction"> Next </span> {{ next.title }} </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink"><i
+                class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          {% endif %}
+        </a>
+      </nav>
+    </div>
+#}
+{%- endmacro %}
+
+
 {% block css %}
-{{ super() }}
-{% if READTHEDOCS|tobool and render_sidebar %}
+{{- super() }}
+{%- if READTHEDOCS|tobool and render_sidebar %}
     <link rel="stylesheet" href="{{ pathto('_static/insipid-sidebar-readthedocs.css', 1) }}" type="text/css" />
-{% endif %}
-{% endblock %}
+{%- endif %}
+{%- endblock %}
 
 
 {% block scripts %}
 {{ super() }}
     <script defer src="{{ pathto('_static/insipid.js', 1) }}"></script>
-{% if render_sidebar %}
+{%- if render_sidebar %}
     <script defer src="{{ pathto('_static/sidebar.js', 1) }}"></script>
-{% endif %}
-{% endblock %}
+{%- endif %}
+{%- endblock %}
 
 
 {% block extrahead %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
-{% endblock %}
+{%- endblock %}
 
 
 {% block body_tag %}
   <body class="no-js{% if render_sidebar %} sidebar-visible{% endif %}">
-{% endblock %}
+{%- endblock %}
 
 
 {% block header %}
@@ -42,7 +95,7 @@
         body.addClass('loading');
         body.removeClass('no-js');
         body.addClass('js');
-{% if render_sidebar %}
+{%- if render_sidebar %}
         body.removeClass('sidebar-visible');
         body.addClass('sidebar-hidden');
         try {
@@ -57,100 +110,95 @@
             }
         } catch(e) {
         }
-{% endif %}
+{%- endif %}
     </script>
-
-            <div id="topbar-placeholder">
-                <div id="topbar-container">
-                    <div id="menu-bar">
-                        <div class="left-buttons">
-{% if not theme_rightsidebar|tobool %}
-{% include 'sidebar-button.html' %}
-{% endif %}
-{% for buttontemplate in theme_left_buttons %}
-{% include buttontemplate %}
-{% endfor %}
-                        </div>
-
-                        {# TODO: docstitle vs. shorttitle #}
-                        {# TODO: use parent document instead of master_doc? #}
-                        <h1 class="menu-title"><a href="{{ pathto(master_doc) }}">{{ docstitle|e }}</a></h1>
-
-                        <div class="right-buttons">
-                            {#{{#if git_repository_url}}#}
-                            {#
-                            <a href="{{git_repository_url}}" title="Git repository" aria-label="Git repository">
-                                <i id="git-repository-button" class="fa {{git_repository_icon}}"></i>
-                            </a>
-                            #}
-                            {#{{/if}}#}
-{% for buttontemplate in theme_right_buttons %}
-{% include buttontemplate %}
-{% endfor %}
-{% if theme_rightsidebar|tobool %}
-{% include 'sidebar-button.html' %}
-{% endif %}
-                        </div>
-                    </div>
-
-{% if pagename != "search" %}
-                {#
+    <div id="topbar-placeholder">
+      <div id="topbar-container">
+        <div id="menu-bar">
+          <div class="left-buttons">
+{%- if not theme_rightsidebar|tobool %}
+{%- include 'sidebar-button.html' %}
+{%- endif %}
+{%- for buttontemplate in theme_left_buttons %}
+{%- include buttontemplate %}
+{%- endfor %}
+          </div>
+          {#- TODO: docstitle vs. shorttitle #}
+          {#- TODO: use parent document instead of master_doc? #}
+          <h1 class="menu-title"><a href="{{ pathto(master_doc) }}">{{ docstitle|e }}</a></h1>
+          <div class="right-buttons">
+{%- for buttontemplate in theme_right_buttons %}
+{%- include buttontemplate %}
+{%- endfor %}
+{%- if theme_rightsidebar|tobool %}
+{%- include 'sidebar-button.html' %}
+{%- endif %}
+          </div>
+        </div>
+{%- if pagename != "search" %}
+                {#-
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
                         <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
                     </form>
                 </div>
                 #}
-
-<div id="searchbox" role="search">
-  <div id="searchform" class="hidden">
-  {#
-  <h3 id="searchlabel">{{ _('Quick search') }}</h3>
-  -->
-  #}
-    <form class="search" action="{{ pathto('search') }}" method="get">
-      <!--
-        aria-labelledby="searchlabel"
-      -->
-      <input type="search" id="searchbar" name="q" placeholder="{{ _('Search') + ' ...' }}" />
-      <input type="submit" value="{{ _('Go') }}" />
-    </form>
-  </div>
-</div>
-
-{% endif %}
-
-            </div>
+        <div id="searchbox" role="search">
+          <div id="searchform" class="hidden">
+          {#-
+          <h3 id="searchlabel">{{ _('Quick search') }}</h3>
+          #}
+            <form class="search" action="{{ pathto('search') }}" method="get">
+              <!--
+                aria-labelledby="searchlabel"
+              -->
+              <input type="search" id="searchbar" name="q" placeholder="{{ _('Search') + ' ...' }}" />
+              <input type="submit" value="{{ _('Go') }}" />
+            </form>
+          </div>
         </div>
-{% endblock %}
-
-
-{% block sidebarlogo %}
-      <div class="sidebar-resize-handle"></div>
-{{ super() }}
-{% endblock %}
+{%- endif %}
+      </div>
+    </div>
+{%- endblock %}
 
 
 {# TODO: separate options for top/bottom navbar? #}
-{% block relbar1 %}{% include 'navbar.html' %}{% endblock %}
+{% block relbar1 %}{{ navbar() }}{% endblock %}
 
 
-{% block sidebar1 %}{% include 'nav-buttons.html' %}{% endblock %}
+{% block sidebar1 %}
+{#- TODO: config option to disable the nav buttons? #}
+{%- if theme_body_max_width != None %}
+    <nav>
+{%- if prev %}
+      <a href="{{ prev.link|e }}" class="nav-icon previous" title="{{ _('previous') }}:&#13;{{ prev.title|striptags }}" aria-label="{{ _('Previous topic') }}" {{ accesskey('P') }}>
+        {% include 'icons/previous.svg' %}
+      </a>
+{%- endif %}
+{%- if next %}
+      <a href="{{ next.link|e }}" class="nav-icon next" title="{{ _('next') }}:&#13;{{ next.title|striptags }}" aria-label="{{ _('Next topic') }}" {{ accesskey('N') }}>
+        {% include 'icons/next.svg' %}
+      </a>
+{%- endif %}
+    </nav>
+{%- endif %}
+{%- endblock %}
 
 
 {% block sidebar2 %}{% endblock %}
 
 
-{% block relbar2 %}{% include 'navbar.html' %}{% endblock %}
+{# TODO: separate options for top/bottom navbar? #}
+{% block relbar2 %}{{ navbar() }}{% endblock %}
 
 
 {% block footer %}
 {{ sidebar() }}
 {{ super() }}
-{% if render_sidebar %}
+{%- if render_sidebar %}
     <div class="sidebar-resize-handle"></div>
     <label id="overlay"></label>
-
     <!-- TODO: provide a re-usable function for this in .js file? -->
     <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
     <script type="text/javascript">
@@ -162,5 +210,11 @@
       });
       */
     </script>
-{% endif %}
+{%- endif %}
+{%- endblock %}
+
+
+{% block sidebarlogo %}
+          <div class="sidebar-resize-handle"></div>
+{{ super() }}
 {% endblock %}

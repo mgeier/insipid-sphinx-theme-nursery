@@ -46,7 +46,7 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-div.body, div.related, div.footer {
+div.body, div.navbar, div.footer {
     position: relative;  /* To be able to hide nav-icon */
 }
 
@@ -398,14 +398,27 @@ td.label {
 }
 {% endif %}
 
-/* -- relbar ---------------------------------------------------------------- */
+/* -- navbar ---------------------------------------------------------------- */
 
-div.related {
+/* TODO: combine with topbar/titlebar? */
+.navbar {
     color: #ccc;
 }
 
-div.related ul {
+/* -- relbar ---------------------------------------------------------------- */
+
+nav.crumbs {
+    color: #ccc;
+    font-size: 90%;
+}
+
+nav.crumbs ul {
     padding: 0;
+    list-style: none;
+}
+
+nav.crumbs ul li {
+    display: inline;
 }
 
 nav.rellinks {
@@ -636,7 +649,8 @@ div.sphinxsidebar code {
 
 #topbar-container button svg,
 #topbar-container a svg,
-.related svg {
+.navbar svg,
+.crumbs svg {
   /*display: inline-block;*/
   width: 1em;
   height: 1em;

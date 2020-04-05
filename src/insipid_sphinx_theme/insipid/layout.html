@@ -32,7 +32,7 @@
 
 
 {% block body_tag %}
-  <body class="no-js{% if render_sidebar %} sidebar-hidden{% endif %}">
+  <body class="no-js{% if render_sidebar %} sidebar-visible{% endif %}">
 {% endblock %}
 
 
@@ -43,6 +43,8 @@
         body.removeClass('no-js');
         body.addClass('js');
 {% if render_sidebar %}
+        body.removeClass('sidebar-visible');
+        body.addClass('sidebar-hidden');
         try {
             var sidebar = localStorage.getItem('sphinx-sidebar');
             if (sidebar === 'visible') {

@@ -1,9 +1,7 @@
-Nested Document
-===============
+Nested Document With a Very, Very, Very, Very, Very, Very, Very, Very Long Title
+================================================================================
 
 This is a nested document.
-
-Its parent document is :doc:`sections`.
 
 .. toctree::
 

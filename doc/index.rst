@@ -7,6 +7,7 @@
 .. toctree::
     :caption: Part One – Documentation
 
+    intro
     usage
     customization
     showcases

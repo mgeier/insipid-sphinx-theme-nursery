@@ -770,7 +770,7 @@ div.sphinxsidebar code {
 }
 
 #menu-title .top,
-.scrolled #menu-title .home {
+.scrolled #menu-title .parent {
     display: none;
 }
 
@@ -927,7 +927,7 @@ div.viewcode-block:target {
         width: unset;
     }
 
-    .js.sidebar-visible #menu-title .home {
+    .js.sidebar-visible #menu-title .parent {
         display: unset;
     }
 

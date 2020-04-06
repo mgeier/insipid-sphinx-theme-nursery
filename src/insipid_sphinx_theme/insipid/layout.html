@@ -102,11 +102,15 @@
 {%- include buttontemplate %}
 {%- endfor %}
           </div>
-          {#- TODO: use parent document instead of master_doc? #}
-          {#- TODO: no link if already on main page? #}
           <h1 id="menu-title">
-            <a class="home" href="{{ pathto(master_doc) }}">{{ docstitle }}</a>
-            <button class="top" type="button" onclick="document.scrollingElement.scrollTo({top: 0, behavior: 'smooth'})">{{ title }}</button>
+            {%- if parents %}
+            <a class="parent" href="{{ parents[-1].link }}">{{ parents[-1].title }}</a>
+            {%- elif pagename == master_doc %}
+            {{ docstitle }}
+            {%- else %}
+            <a class="parent" href="{{ pathto(master_doc) }}">{{ docstitle }}</a>
+            {%- endif %}
+            <button class="top" type="button" onclick="document.scrollingElement.scrollTo({top: 0, behavior: 'smooth'}); document.scrollingElement.focus()">{{ title }}</button>
           </h1>
           <div class="right-buttons">
 {%- for buttontemplate in theme_right_buttons %}

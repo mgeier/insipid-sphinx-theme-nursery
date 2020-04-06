@@ -104,11 +104,11 @@
           </div>
           <h1 id="menu-title">
             {%- if parents %}
-            <a class="parent" href="{{ parents[-1].link }}">{{ parents[-1].title }}</a>
+            <a class="parent" href="{{ parents[-1].link|e }}">{{ parents[-1].title }}</a>
             {%- elif pagename == master_doc %}
-            {{ docstitle }}
+            {{ docstitle|e }}
             {%- else %}
-            <a class="parent" href="{{ pathto(master_doc) }}">{{ docstitle }}</a>
+            <a class="parent" href="{{ pathto(master_doc)|e }}">{{ docstitle|e }}</a>
             {%- endif %}
             <button class="top" type="button" onclick="document.scrollingElement.scrollTo({top: 0, behavior: 'smooth'}); document.scrollingElement.focus()">{{ title }}</button>
           </h1>
@@ -150,12 +150,12 @@
 {%- if theme_body_max_width != None %}
     <nav>
 {%- if prev %}
-      <a href="{{ prev.link|e }}" class="nav-icon previous" title="{{ _('previous') }}:&#13;{{ prev.title|striptags }}" aria-label="{{ _('Previous topic') }}" {{ accesskey('P') }}>
+      <a href="{{ prev.link|e }}" class="nav-icon previous" title="{{ _('previous') }}:&#13;{{ prev.title|striptags|e }}" aria-label="{{ _('Previous topic') }}" {{ accesskey('P') }}>
         {% include 'icons/angle-left.svg' %}
       </a>
 {%- endif %}
 {%- if next %}
-      <a href="{{ next.link|e }}" class="nav-icon next" title="{{ _('next') }}:&#13;{{ next.title|striptags }}" aria-label="{{ _('Next topic') }}" {{ accesskey('N') }}>
+      <a href="{{ next.link|e }}" class="nav-icon next" title="{{ _('next') }}:&#13;{{ next.title|striptags|e }}" aria-label="{{ _('Next topic') }}" {{ accesskey('N') }}>
         {% include 'icons/angle-right.svg' %}
       </a>
 {%- endif %}

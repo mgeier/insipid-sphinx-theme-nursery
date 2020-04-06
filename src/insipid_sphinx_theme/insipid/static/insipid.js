@@ -6,12 +6,6 @@ $(document).ready(function () {
 
     body.removeClass('loading');
 
-    // TODO: only when in the middle of the page:
-    // scroll to top
-    $('.menu-title').on('click', function () {
-        main_scroller.scrollTo({top: 0, behavior: 'smooth'});
-    });
-
     var scroll_timeout;
     var ignore_scroll = true;
 
@@ -25,12 +19,10 @@ $(document).ready(function () {
             } else if (ignore_scroll) {
                 // We ignore single jumps
                 ignore_scroll = false;
+            } else if (scroller.scrollTop - previous > 0) {
+                body.addClass('topbar-folded');
             } else {
-                if (scroller.scrollTop - previous > 0) {
-                    body.addClass('topbar-folded');
-                } else {
-                    body.removeClass('topbar-folded');
-                }
+                body.removeClass('topbar-folded');
             }
             previous = Math.max(scroller.scrollTop, 0);
             scroll_timeout = setTimeout(function() {
@@ -45,6 +37,21 @@ $(document).ready(function () {
     if (sidebar_scroller) {
         $(sidebar_scroller).on('scroll', scroll_callback(sidebar_scroller));
     }
+
+    var title = $('#menu-title');
+    var div_body = document.querySelector('div.body');
+    var first_section = document.querySelector('div.body .section');
+
+    $(document).on('scroll', function () {
+        if (window.pageYOffset >= div_body.offsetTop + first_section.offsetTop) {
+            body.addClass('scrolled');
+        } else {
+            body.removeClass('scrolled');
+        }
+    });
+
+    // Force #menu-title update
+    $(document).scroll();
 
     // show search
     var form = $('#searchform');

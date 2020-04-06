@@ -102,9 +102,12 @@
 {%- include buttontemplate %}
 {%- endfor %}
           </div>
-          {#- TODO: docstitle vs. shorttitle #}
           {#- TODO: use parent document instead of master_doc? #}
-          <h1 class="menu-title"><a href="{{ pathto(master_doc) }}">{{ docstitle|e }}</a></h1>
+          {#- TODO: no link if already on main page? #}
+          <h1 id="menu-title">
+            <a class="home" href="{{ pathto(master_doc) }}">{{ docstitle }}</a>
+            <button class="top" type="button" onclick="document.scrollingElement.scrollTo({top: 0, behavior: 'smooth'})">{{ title }}</button>
+          </h1>
           <div class="right-buttons">
 {%- for buttontemplate in theme_right_buttons %}
 {%- include buttontemplate %}

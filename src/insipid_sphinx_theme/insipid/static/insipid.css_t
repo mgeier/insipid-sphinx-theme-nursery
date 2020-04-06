@@ -700,17 +700,15 @@ div.sphinxsidebar code {
     margin: 0;
     z-index: 10;
     line-height: {{ theme_topbarheight|todim }};
-    cursor: pointer;
 }
 
 @media only screen and (max-width: 420px) {
-    #menu-bar .icon-button {
+    #menu-bar button {
         padding: 0 5px;
     }
 }
 
-#topbar-container button svg,
-#topbar-container a svg,
+#topbar-container svg,
 .navbar svg,
 .crumbs svg {
   /*display: inline-block;*/
@@ -721,18 +719,24 @@ div.sphinxsidebar code {
   fill: currentColor;
 }
 
-.icon-button {
+#menu-bar button {
     border: none;
     background: none;
     padding: 0;
     color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
 }
 
-/*
-.right-buttons a {
+
+.js #menu-bar button {
+    cursor: pointer;
+}
+
+
+#topbar-container a {
     text-decoration: none;
 }
-*/
 
 .js.topbar-folded #topbar-placeholder:not(:hover) #topbar-container {
     transform: translateY(-100%);
@@ -752,7 +756,7 @@ div.sphinxsidebar code {
     display: none;
 }
 
-.menu-title {
+#menu-title {
     display: inline-block;
     font-weight: 200;
     font-size: 2rem;
@@ -765,8 +769,13 @@ div.sphinxsidebar code {
     text-overflow: ellipsis;
 }
 
-.js .menu-title {
-    cursor: pointer;
+#menu-title .top,
+.scrolled #menu-title .home {
+    display: none;
+}
+
+.scrolled #menu-title .top {
+    display: unset;
 }
 
 /* -- search field in topbar ------------------------------------------------ */
@@ -917,9 +926,16 @@ div.viewcode-block:target {
         top: unset;
         width: unset;
     }
+
+    .js.sidebar-visible #menu-title .home {
+        display: unset;
+    }
+
+    .js.sidebar-visible #menu-title .top {
+        display: none;
+    }
 }
 
-/* -------------------------------------------------------------------------- */
-{#
+{#-
 vim:ft=css
 #}

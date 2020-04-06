@@ -12,29 +12,30 @@ $(document).ready(function () {
         main_scroller.scrollTo({top: 0, behavior: 'smooth'});
     });
 
-    var hash_changed = false;
-
-    $(window).on('hashchange', function () {
-        hash_changed = true;
-    });
+    var scroll_timeout;
+    var ignore_scroll = true;
 
     // auto-hide topbar
     function scroll_callback(scroller) {
         var previous = scroller.scrollTop;
         return function () {
-            const folded = body.hasClass('topbar-folded');
-            const diff = scroller.scrollTop - previous;
-            if (folded && scroller.scrollTop === 0) {
+            window.clearTimeout(scroll_timeout);
+            if (scroller.scrollTop === 0) {
                 body.removeClass('topbar-folded');
-            } else if (hash_changed) {
-                // Don't change folded state after jumping to a section
-                hash_changed = false;
-            } else if (folded && diff < 0) {
-                body.removeClass('topbar-folded');
-            } else if (!folded && diff > 0) {
-                body.addClass('topbar-folded');
+            } else if (ignore_scroll) {
+                // We ignore single jumps
+                ignore_scroll = false;
+            } else {
+                if (scroller.scrollTop - previous > 0) {
+                    body.addClass('topbar-folded');
+                } else {
+                    body.removeClass('topbar-folded');
+                }
             }
             previous = Math.max(scroller.scrollTop, 0);
+            scroll_timeout = setTimeout(function() {
+                ignore_scroll = true;
+            }, 66);
         };
     }
 

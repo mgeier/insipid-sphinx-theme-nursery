@@ -54,3 +54,21 @@ Nested ``toctree``
 .. toctree::
 
     nested-document
+
+
+Another Top-Level Section
+=========================
+
+It is uncommon
+-- and a bit weird --
+to have multiple top-level sections in the same source file.
+
+
+Subsection
+----------
+
+Another nested document:
+
+.. toctree::
+
+    another-nested-document

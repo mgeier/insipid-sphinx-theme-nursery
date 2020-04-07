@@ -9,11 +9,11 @@ Goals
 boring
     no-nonsense, content first ...
 
-mobile-friendly
-    not *mobile-first* though ...
-
 configurable
     See :doc:`customization`.
+
+mobile-friendly
+    not *mobile-first* though ...
 
 accessible
     help needed!
@@ -23,6 +23,9 @@ translatable
 
     .. _language: https://www.sphinx-doc.org/en/master/usage/
         configuration.html#confval-language
+
+support for right-to-left languages
+    help needed!
 
 optional JavaScript
     ...

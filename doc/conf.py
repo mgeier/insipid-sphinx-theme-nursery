@@ -33,7 +33,6 @@ project = 'Insipid Sphinx Theme'
 #html_title = 'Insipid Sphinx Theme'
 html_short_title = 'insipid'
 #html_show_sourcelink = False
-html_last_updated_fmt = ''
 html_add_permalinks = '\N{LINK SYMBOL}'
 html_secnumber_suffix = '\N{FIGURE SPACE}'
 html_logo = 'showcase/insipid.png'
@@ -44,6 +43,7 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.todo',
     'sphinx.ext.viewcode',
+    'sphinx_last_updated_by_git',
 ]
 
 #html_static_path = ['_static']

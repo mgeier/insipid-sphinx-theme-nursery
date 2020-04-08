@@ -138,7 +138,10 @@ https://docutils.sourceforge.io/docs/ref/rst/directives.html#parsed-literal
 
 .. parsed-literal::
 
-    Code block with *inline* markup, e.g. ``code``.
+    Code block with *inline* **markup**, e.g. ``literal text``\ [*]_.
+
+.. [*] Having ``literal text`` within more literal text
+    probably doesn't make a lot of sense.
 
 Doctest Blocks
 --------------

@@ -121,17 +121,25 @@ blockquote p.attribution {
 
 div.body dl > dt, dl.field-list > dt {
     display: table;
-    padding: 3px 7px;
+}
 
+div.body dl > dt:not(.label), dl.field-list > dt {
     background-color: #f5f5f5;
+}
+
+div.body dl > dt:not(.label), dl.field-list > dt,
+div.admonition dl > dt:target,
+div.body a:target {
+    padding: 3px 7px;
+}
+
+div.body dl > dt:target,
+div.body a:target {
+    background-color: #ffc;
 }
 
 dl.footnote > dt, dl.citation > dt {
     float: unset;
-}
-
-div.body dl > dt:target {
-    background-color: #ffc;
 }
 
 hr.docutils {

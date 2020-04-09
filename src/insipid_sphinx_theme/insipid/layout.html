@@ -104,11 +104,11 @@
           </div>
           <h1 id="menu-title">
             {%- if parents %}
-            <a class="parent" href="{{ parents[-1].link|e }}">{{ parents[-1].title }}</a>
+            <a class="parent" href="{{ parents[-1].link|e }}" {{ accesskey('U') }}>{{ parents[-1].title }}</a>
             {%- elif pagename == master_doc %}
             <span class="parent">{{ docstitle|e }}</span>
             {%- else %}
-            <a class="parent" href="{{ pathto(master_doc)|e }}">{{ docstitle|e }}</a>
+            <a class="parent" href="{{ pathto(master_doc)|e }}" {{ accesskey('U') }}>{{ docstitle|e }}</a>
             {%- endif %}
             <button class="top" type="button" onclick="$(document.scrollingElement).animate({scrollTop: 0}, 400).focus()">{{ title }}</button>
           </h1>

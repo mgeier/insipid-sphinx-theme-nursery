@@ -164,8 +164,11 @@
 {%- endblock %}
 
 
-{# TODO: separate options for top/bottom navbar? #}
-{% block relbar1 %}{{ navbar() }}{% endblock %}
+{% block relbar1 %}
+{%- if theme_navbar_top|tobool %}
+{{ navbar() }}
+{%- endif %}
+{%- endblock %}
 
 
 {% block sidebar1 %}{% endblock %}
@@ -174,8 +177,11 @@
 {% block sidebar2 %}{% endblock %}
 
 
-{# TODO: separate options for top/bottom navbar? #}
-{% block relbar2 %}{{ navbar() }}{% endblock %}
+{% block relbar2 %}
+{%- if theme_navbar_bottom|tobool %}
+{{ navbar() }}
+{%- endif %}
+{%- endblock %}
 
 
 {% block footer %}

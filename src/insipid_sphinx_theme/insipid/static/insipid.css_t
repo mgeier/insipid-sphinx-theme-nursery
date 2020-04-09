@@ -498,6 +498,10 @@ nav.crumbs ul li {
     display: inline;
 }
 
+nav.crumbs a:visited {
+    color: #1565c0;
+}
+
 nav.rellinks {
 }
 

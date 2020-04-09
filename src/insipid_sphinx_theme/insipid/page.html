@@ -2,9 +2,7 @@
 
 
 {% block body %}
-{#- TODO: option to disable breadcrumbs #}
-{%- if parents %}
-{#- TODO: option to always show "home", even if there are no parents? #}
+{%- if theme_breadcrumbs|tobool %}
 <nav class="crumbs">
   <ul>
     {%- block rootrellink %}

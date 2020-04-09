@@ -6,6 +6,7 @@ html_theme_options = {
     #'body_min_width': 0,  # When smaller, body is covered by sidebar
     #'body_max_width': None,
     #'sidebarwidth': 300,
+    #'breadcrumbs': True,
 
     #'left_buttons': [
     #    'home-button.html',
@@ -17,9 +18,6 @@ html_theme_options = {
     'body_centered': False,
     #'topbar_transition': '0.7s ease-out',
     #'sidebar_transition': '0.3s ease-out',
-
-    #'sidebar_collapse': False,
-    #'sidebar_includehidden': False,
 }
 html_sidebars = {
    '**': [

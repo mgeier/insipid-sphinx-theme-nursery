@@ -18,4 +18,4 @@ License
 
     The SVG icons are from `Font Awesome`_, CC BY 4.0.
 
-.. _Font Awesome: https://fontawesome.com/
+    .. _Font Awesome: https://fontawesome.com/

@@ -408,19 +408,21 @@ td.label {
 
 /* -- navbar ---------------------------------------------------------------- */
 
-.navbar {
-    padding: 20px;
-}
-
 /* TODO: combine with topbar/titlebar? */
 .navbar {
     color: #ccc;
     background-color: #fff;
 }
 
+.navbar {
+    padding: 10px;
+}
+
 .navbar > a {
-    display: table;
     width: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
 
     color: inherit;
     text-decoration: none;
@@ -428,6 +430,10 @@ td.label {
 
 .navbar > a:hover {
     color: #333;
+}
+
+.navbar > a:hover .direction {
+    color: #ccc;
 }
 
 .navbar > a.previous {
@@ -440,38 +446,40 @@ td.label {
 }
 
 .navbar .icon {
-    display: table-cell;
-    position: relative;
-    width: 0;
-    vertical-align: top;
+}
+
+.navbar .previous .icon {
+    margin-right: 1em;
+}
+
+.navbar .next .icon {
+    margin-left: 1em;
 }
 
 .navbar .title {
     position: relative;
-    padding: 0 1rem;
-    font-size: .9rem;
-    line-height: 2.4rem;
-
-    display: table;
-    width: 100%;
-    table-layout: fixed;
-}
-
-.navbar .title .text {
-    display: table-cell;
+    flex: 1;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+
+    font-size: 1.5em;
+    font-weight: 200;
+}
+
+.navbar .title .text {
+    line-height: 2em;
 }
 
 .navbar .title .text .direction {
     position: absolute;
     right: 0;
     left: 0;
-    margin-top: -1rem;
-    padding: 0 1rem;
-    /*color: hsla(0,0%,100%,.7);*/
-    font-size: .75rem;
+    top: 0;
+
+    font-size: 50%;
+    line-height: 0.5em;
+    font-weight: normal;
 }
 
 /* -- relbar ---------------------------------------------------------------- */

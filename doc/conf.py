@@ -7,8 +7,12 @@ html_theme_options = {
     #'body_max_width': None,
     #'sidebarwidth': 300,
 
-    #'left_buttons': ['home-button.html', 'search-button.html'],
-    #'right_buttons': [],
+    #'left_buttons': [
+    #    'home-button.html',
+    #],
+    #'right_buttons': [
+    #    'search-button.html',
+    #],
 
     'body_centered': False,
     #'topbar_transition': '0.7s ease-out',

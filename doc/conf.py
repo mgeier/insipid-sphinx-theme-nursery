@@ -25,7 +25,8 @@ html_sidebars = {
    '**': [
        'github-badge.html',
        'globaltoc.html',
-       'relations.html',
+       'separator.html',
+       'indices.html',
        'sourcelink.html',
        #'searchbox.html',
    ],

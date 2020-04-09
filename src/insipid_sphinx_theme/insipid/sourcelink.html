@@ -1,0 +1,5 @@
+{%- if show_source and has_source and sourcename %}
+<ul>
+<li class="toctree-l1">{{ _('This Page') }}: <a class="reference internal" href="{{ pathto('_sources/' + sourcename, 1)|e }}" rel="nofollow">{{ _('Show Source') }}</a></li>
+</ul>
+{%- endif %}

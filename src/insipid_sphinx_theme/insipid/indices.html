@@ -1,12 +1,12 @@
 <ul>
-{%- if hasdoc('genindex') %}
+{%- if hasdoc('genindex') and pagename != 'genindex' %}
 <li class="toctree-l1"><a class="reference internal" href="{{ pathto('genindex') }}" accesskey="I">{{ _('General Index') }}</a></li>
 {%- endif %}
-{%- if hasdoc('modindex') %}
+{%- if hasdoc('modindex') and pagename != 'modindex' %}
 <li class="toctree-l1"><a class="reference internal" href="{{ pathto('modindex') }}">{{ _('Global Module Index') }}</a></li>
 {%- endif %}
 {#- hasdoc('py-modindex') doesn't seem to work #}
-{%- if pathto('py-modindex') %}
+{%- if pathto('py-modindex') and pagename != 'py-modindex' %}
 <li class="toctree-l1"><a class="reference internal" href="{{ pathto('py-modindex') }}">{{ _('Python Module Index') }}</a></li>
 {%- endif %}
 </ul>

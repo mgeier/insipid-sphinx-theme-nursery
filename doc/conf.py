@@ -37,6 +37,7 @@ release = '0.0.0'
 project = 'Insipid Sphinx Theme'
 #html_title = 'Insipid Sphinx Theme'
 html_short_title = 'insipid'
+html_copy_source = False
 #html_show_sourcelink = False
 html_add_permalinks = '\N{LINK SYMBOL}'
 html_secnumber_suffix = '\N{FIGURE SPACE}'

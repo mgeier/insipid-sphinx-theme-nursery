@@ -1,5 +1,10 @@
-{%- if show_source and has_source and sourcename %}
+{%- if show_source %}
 <ul>
+{%- if has_source and sourcename %}
 <li class="toctree-l1">{{ _('This Page') }}: <a class="reference internal" href="{{ pathto('_sources/' + sourcename, 1)|e }}" rel="nofollow">{{ _('Show Source') }}</a></li>
+{%- endif %}
+{%- if display_github|tobool and sourcename and github_user and github_repo and commit and conf_py_path %}
+<li class="toctree-l1">{{ _('This Page') }}: <a class="reference internal" href="https://github.com/{{ github_user }}/{{ github_repo }}/blob/{{ commit }}{{ conf_py_path|e }}{{ pagename|e + page_source_suffix }}" rel="nofollow">{{ _('Show Source') }} (Github)</a></li>
+{%- endif %}
 </ul>
 {%- endif %}

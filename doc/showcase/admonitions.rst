@@ -130,24 +130,6 @@ Nesting
 
 .. note::
 
-    ::
-
-        'code in note'
-
-    Some text.
-
-    ::
-
-        'some more code'
-
-.. warning::
-
-    ::
-
-        'code in warning'
-
-.. note::
-
     * bullet point in admonition
 
 .. note::

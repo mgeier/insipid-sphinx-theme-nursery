@@ -329,12 +329,6 @@ div.admonition.warning > p.admonition-title {
     background-color: #f0b37e;
 }
 
-div.admonition code,
-div.admonition pre {
-    {# TODO: use normal text color #}
-    color: #000;
-}
-
 div.admonition dl > dt {
     display: unset;
     padding: unset;

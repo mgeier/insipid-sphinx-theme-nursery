@@ -65,3 +65,14 @@ todo_link_only = True
 numfig = True
 
 #language = 'es'
+
+
+def setup(app):
+    app.add_object_type(
+        'confval', 'confval',
+        objname='Sphinx configuration value',
+        indextemplate='pair: %s; Sphinx configuration value')
+    app.add_object_type(
+        'option', 'option',
+        objname='Theme option',
+        indextemplate='pair: %s; Theme option')

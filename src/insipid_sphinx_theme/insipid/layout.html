@@ -186,7 +186,7 @@
 
 {% block footer %}
 {{ sidebar() }}
-{{ super() }}
+{% include 'footer.html' %}
 {%- if render_sidebar %}
     <div class="sidebar-resize-handle"></div>
     <label id="overlay"></label>

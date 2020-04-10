@@ -55,6 +55,8 @@ https://docutils.sourceforge.io/docs/ref/rst/directives.html#generic-admonition
     Admonition text and ``inline code``.
 
 
+.. _topic:
+
 Topic
 -----
 
@@ -64,6 +66,8 @@ https://docutils.sourceforge.io/docs/ref/rst/directives.html#topic
 
     Topic text and ``inline code``.
 
+
+.. _sidebar:
 
 Sidebar
 -------

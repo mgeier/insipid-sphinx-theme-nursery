@@ -91,21 +91,22 @@ And some more:
 .. [#popular-label] Auto-numbered, multiple mentions.
 .. [*] This is an auto-symbol footnote.
 
-.. admonition:: Admonition title with footnote [#admonition-title]_
+.. admonition:: :doc:`Admonition <admonitions>` title
+    with footnote [#admonition-title]_
 
     Footnote [*]_ in admonition text.
 
     .. [*] This is probably not used very often.
     .. [#admonition-title] This probably even less.
 
-.. topic:: Topic title with footnote [#topic-title]_
+.. topic:: :ref:`Topic` title with footnote [#topic-title]_
 
     Footnote [*]_ in topic text.
 
     .. [*] See above.
     .. [#topic-title] See above.
 
-.. sidebar:: Sidebar title with footnote [#sidebar-title]_
+.. sidebar:: :ref:`Sidebar` title with footnote [#sidebar-title]_
 
     Footnote [*]_ in sidebar text.
 

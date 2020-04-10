@@ -28,7 +28,6 @@ html_sidebars = {
        'globaltoc.html',
        'separator.html',
        'indices.html',
-       'sourcelink.html',
        #'searchbox.html',
    ],
    'showcase/no-sidebar': [],  # To demonstrate a page without a sidebar

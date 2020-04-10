@@ -20,6 +20,7 @@ html_theme_options = {
     'body_centered': False,
     #'topbar_transition': '0.7s ease-out',
     #'sidebar_transition': '0.3s ease-out',
+    #'show_theme_link': False,
 }
 html_sidebars = {
    '**': [
@@ -39,6 +40,8 @@ project = 'Insipid Sphinx Theme'
 html_short_title = 'insipid'
 html_copy_source = False
 #html_show_sourcelink = False
+#html_show_copyright = False
+#html_show_sphinx = False
 html_add_permalinks = '\N{LINK SYMBOL}'
 html_secnumber_suffix = '\N{FIGURE SPACE}'
 html_logo = 'showcase/insipid.png'

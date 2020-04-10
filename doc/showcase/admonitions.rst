@@ -130,19 +130,19 @@ Nesting
 
 .. note::
 
-    .. code-block::
+    ::
 
         'code in note'
 
     Some text.
 
-    .. code-block::
+    ::
 
         'some more code'
 
 .. warning::
 
-    .. code-block::
+    ::
 
         'code in warning'
 

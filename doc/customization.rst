@@ -6,7 +6,7 @@ Theme Settings
 
 :confval:`html_theme_options`
 
-.. code-block::
+.. code-block:: python
     :caption: A simple ``conf.py``
 
     html_theme_options = {

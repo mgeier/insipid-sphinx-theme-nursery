@@ -64,6 +64,34 @@ For default values, see
 Sphinx Settings
 ---------------
 
+.. confval:: html_context
+
+    :confval:`sphinx:html_context`
+
+.. confval:: html_copy_source
+
+    :confval:`sphinx:html_copy_source`
+
+.. confval:: html_show_sourcelink
+
+    :confval:`sphinx:html_show_sourcelink`
+
+    Bitbucket/Gitlab/Github support if :confval:`html_copy_source` is ``False``.
+
+    Should work automatically on https://readthedocs.org/.
+
+    For manual use:
+
+    ::
+
+        html_context = {
+            'display_gitlab': True,
+            'gitlab_repo': 'myrepo',
+            'gitlab_user': 'myuser',
+            'conf_py_path': '/path/to/doc/',
+            'commit': '123abc',
+        }
+
 .. confval:: html_sidebars
 
     :confval:`sphinx:html_sidebars`

@@ -46,10 +46,13 @@ html_favicon = 'favicon.ico'
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
+    'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.viewcode',
     'sphinx_last_updated_by_git',
 ]
+
+intersphinx_mapping = {'sphinx': ('https://www.sphinx-doc.org', None)}
 
 #html_static_path = ['_static']
 templates_path = ['_templates']

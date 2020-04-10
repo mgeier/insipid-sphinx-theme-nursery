@@ -44,7 +44,7 @@ Settings inherited from the ``basic`` theme (like most Sphinx themes):
 
     ...
 
-https://www.sphinx-doc.org/en/master/usage/theming.html#builtin-themes
+:ref:`builtin-themes`
 
 https://github.com/sphinx-doc/sphinx/blob/master/sphinx/themes/basic/theme.conf
 
@@ -66,14 +66,8 @@ Sphinx Settings
 
 .. confval:: html_sidebars
 
-    html_sidebars_
-
-    .. _html_sidebars: https://www.sphinx-doc.org/en/master/
-        usage/configuration.html#confval-html_sidebars
+    :confval:`sphinx:html_sidebars`
 
 .. confval:: html_theme_options
 
-    html_theme_options_
-
-    .. _html_theme_options: https://www.sphinx-doc.org/en/master/
-        usage/configuration.html#confval-html_theme_options
+    :confval:`sphinx:html_theme_options`

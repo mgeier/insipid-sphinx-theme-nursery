@@ -88,7 +88,7 @@ CSV Tables
 
 https://docutils.sourceforge.io/docs/ref/rst/directives.html#csv-table
 
-.. csv-table:: Frozen Delights!
+.. csv-table:: Frozen ``Delights``!
    :header: "Treat", "Quantity", "Description"
    :widths: 15, 10, 30
 
@@ -103,7 +103,7 @@ List Tables
 
 https://docutils.sourceforge.io/docs/ref/rst/directives.html#list-table
 
-.. list-table:: Frozen Delights!
+.. list-table:: Frozen ``Delights``!
    :widths: 15 10 30
    :header-rows: 1
 

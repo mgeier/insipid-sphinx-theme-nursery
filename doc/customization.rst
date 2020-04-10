@@ -7,7 +7,7 @@ Theme Settings
 :confval:`html_theme_options`
 
 .. code-block::
-    :caption: conf.py
+    :caption: A simple ``conf.py``
 
     html_theme_options = {
         'body_centered': False,
@@ -57,7 +57,7 @@ For default values, see
 
 .. literalinclude:: ../src/insipid_sphinx_theme/insipid/theme.conf
     :name: theme-conf
-    :caption: theme.conf
+    :caption: ``insipid/theme.conf``
     :language: ini
 
 
@@ -126,7 +126,7 @@ Derive Your Own Theme
 
 .. code-block:: ini
     :name: derived-theme-conf
-    :caption: theme.conf
+    :caption: Starting point for your own ``theme.conf``
 
     [theme]
     inherit = insipid

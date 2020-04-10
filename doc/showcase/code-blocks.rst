@@ -111,7 +111,7 @@ No language:
 ``:caption:``:
 
 .. code-block:: python
-    :caption: This is a caption
+    :caption: This is a ``:caption:``
     :name: code2
 
     print('Hello, world!')
@@ -119,7 +119,7 @@ No language:
 ``:caption:`` and ``:linenos:``:
 
 .. code-block:: python
-    :caption: This is another caption
+    :caption: This is another ``:caption:``
     :name: code3
     :linenos:
 

@@ -196,7 +196,8 @@ pre {
 }
 
 code, code.xref, a code, div.admonition dl > dt code,
-h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
+h1 code, h2 code, h3 code, h4 code, h5 code, h6 code,
+div.code-block-caption code {
     background-color: rgba(27,31,35,.05);
     padding: 0.1em 0.2em;
 }
@@ -211,8 +212,8 @@ code.xref, a code {
 }
 
 div.code-block-caption {
-    color: #333;
-    background-color: #eee;
+    text-align: center;
+    font-size: unset;
 }
 
 div.document div.literal-block-wrapper {

@@ -154,7 +154,7 @@ p.sidebar-subtitle {
 /* -- hyperlink styles ------------------------------------------------------ */
 
 a {
-    color: #1565c0;
+    color: #0e84b5;
     text-decoration: none;
 }
 
@@ -163,12 +163,12 @@ a:hover {
 }
 
 a:visited {
-    color: #185395;
+    color: #235388;
 }
 
 a.external {
     text-decoration: none;
-    border-bottom: 1px dotted #355f7c;
+    border-bottom: 1px dotted #0e84b5;
 }
 
 a.external:hover {
@@ -178,7 +178,7 @@ a.external:hover {
 
 a.external:visited {
     text-decoration: none;
-    border-bottom: 1px dotted #355f7c;
+    border-bottom: 1px dotted #235388;
 }
 
 /* -- code formatting ------------------------------------------------------- */

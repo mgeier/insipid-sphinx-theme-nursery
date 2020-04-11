@@ -294,7 +294,7 @@ div.admonition > p.admonition-title {
 
     font-weight: normal;
     color: #fff;
-    background-color: #6ab0de;
+    background-color: #60add5;
 }
 
 div.admonition > p.admonition-title + p {

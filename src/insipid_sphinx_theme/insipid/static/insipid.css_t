@@ -478,7 +478,6 @@ td.label {
 
     font-size: 50%;
     line-height: 0.5em;
-    font-weight: normal;
 }
 
 /* -- relbar ---------------------------------------------------------------- */

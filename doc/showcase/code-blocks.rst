@@ -196,6 +196,12 @@ Nesting
             print('This one is not...')
             print('...but this one is.')
 
+..
+
+    ::
+
+        'code in quote'
+
 .. sidebar:: Sidebar
 
     .. code-block:: python
@@ -208,8 +214,23 @@ Nesting
             print('This one is not...')
             print('...but this one is.')
 
-..
+.. code-block:: reST
 
-    ::
+    Code After Sidebar
+    ==================
 
-        'code in quote'
+    .
+
+    .
+
+    .
+
+    .
+
+    .
+
+    .
+
+    .
+
+    A long long long long long long long long long long long long long line.

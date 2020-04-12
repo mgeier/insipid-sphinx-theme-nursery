@@ -284,7 +284,7 @@ kbd.docutils {
 
 /* -- admonitions ----------------------------------------------------------- */
 
-div.admonition, div.topic, div.sidebar {
+div.admonition, div.topic, div.sidebar, pre {
     clear: both;
     overflow-x: auto;
 }

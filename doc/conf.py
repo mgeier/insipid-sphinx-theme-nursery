@@ -17,7 +17,7 @@ html_theme_options = {
     #    'search-button.html',
     #],
 
-    'body_centered': False,
+    #'body_centered': False,
     #'topbar_transition': '0.7s ease-out',
     #'sidebar_transition': '0.3s ease-out',
     #'show_theme_link': False,

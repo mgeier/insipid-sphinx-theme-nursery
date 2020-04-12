@@ -5,4 +5,4 @@ This is a nested document.
 
 .. toctree::
 
-    further<nested"document
+    further<br>nested"document

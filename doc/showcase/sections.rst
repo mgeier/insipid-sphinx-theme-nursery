@@ -65,7 +65,7 @@ Nested ``toctree``
 
 .. toctree::
 
-    nested-document
+    nested document
 
 
 Another Top-Level Section

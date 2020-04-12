@@ -776,6 +776,7 @@ div.sphinxsidebar code {
 
 .left-buttons, .right-buttons {
     display: flex;
+    align-items: center;
     margin: 0 5px;
 }
 

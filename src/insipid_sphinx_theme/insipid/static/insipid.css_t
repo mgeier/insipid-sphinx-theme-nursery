@@ -283,6 +283,10 @@ div.admonition, div.topic {
     clear: both;
 }
 
+div.admonition, div.topic, div.sidebar {
+    overflow-x: auto;
+}
+
 div.admonition {
     color: #666;
     background-color: #e7f2fa;
@@ -329,7 +333,8 @@ div.admonition.warning > p.admonition-title {
     background-color: #f0b37e;
 }
 
-div.admonition dl > dt {
+/* More specific selector to override previous defintions */
+div.body div.admonition dl > dt {
     display: unset;
     padding: unset;
     background-color: unset;

@@ -50,7 +50,7 @@ Generic Admonitions
 
 https://docutils.sourceforge.io/docs/ref/rst/directives.html#generic-admonition
 
-.. admonition:: Admonition title with `link <Admonitions>`_ and ``code``
+.. admonition:: Admonition title with :doc:`a link <admonitions>` and ``code``
 
     Admonition text and ``inline code``.
 
@@ -77,9 +77,9 @@ https://docutils.sourceforge.io/docs/ref/rst/directives.html#sidebar
 .. sidebar:: Sidebar Title
     :subtitle: Sidebar Subtitle
 
-    Sidebar text.
+    ``sidebar`` text.
 
-    .. rubric:: A rubric
+    .. rubric:: A ``rubric``
 
     More text.
 
@@ -152,3 +152,31 @@ A table in a note:
     False  True   False
     True   True   True
     =====  =====  =======
+
+
+Overflow
+--------
+
+.. admonition:: A long long long long long long long long long long long long
+    long long long long long long long long long long long long long long long
+    admonition title
+
+    = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+    x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x
+    = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+.. topic:: A long long long long long long long long long long long long
+    long long long long long long long long long long long long long long long
+    topic title
+
+    = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+    x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x
+    = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+.. sidebar:: A long long long long long long long long long long long long
+    long long long long long long long long long long long long long long long
+    sidebar title
+
+    = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+    x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x
+    = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =

@@ -207,3 +207,9 @@ Nesting
             print('This line is highlighted.')
             print('This one is not...')
             print('...but this one is.')
+
+..
+
+    ::
+
+        'code in quote'

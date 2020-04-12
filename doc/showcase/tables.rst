@@ -120,3 +120,31 @@ https://docutils.sourceforge.io/docs/ref/rst/directives.html#list-table
    * - Gannet Ripple
      - 1.99
      - On a stick!
+
+
+Nesting
+-------
+
+.. admonition:: Table in admonition
+
+    +--------+
+    | Header |
+    +========+
+    |  text  |
+    +--------+
+
+.. topic:: Table in topic
+
+    +--------+
+    | Header |
+    +========+
+    |  text  |
+    +--------+
+
+.. sidebar:: Table in sidebar
+
+    +--------+
+    | Header |
+    +========+
+    |  text  |
+    +--------+

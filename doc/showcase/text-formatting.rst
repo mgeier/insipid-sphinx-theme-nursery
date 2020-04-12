@@ -47,6 +47,15 @@ https://docutils.sourceforge.io/docs/ref/rst/directives.html#compound-paragraph
    you will erase the entire contents of your file system.
 
 
+Line Blocks
+-----------
+
+https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#line-blocks
+
+| Manual
+| line breaks.
+
+
 Inline Markup
 -------------
 

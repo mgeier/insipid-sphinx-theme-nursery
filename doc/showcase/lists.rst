@@ -28,6 +28,18 @@ https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#bullet-lists
 
 This paragraph is not part of the list.
 
+.. admonition:: Admonition
+
+    * bullet point in admonition
+
+.. topic:: Topic
+
+    * bullet point in topic
+
+.. sidebar:: Sidebar
+
+    * bullet point in sidebar
+
 
 Enumerated Lists
 ----------------
@@ -66,19 +78,60 @@ https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#enumerated-li
 
    iv. iv
 
+.. admonition:: Admonition
+
+    #. enumerated list item in admonition
+
+.. topic:: Topic
+
+    #. enumerated list item in topic
+
+.. sidebar:: Sidebar
+
+    #. enumerated list item in sidebar
+
+
 ``hlist``
 ---------
 
 https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-hlist
 
 .. hlist::
-   :columns: 3
+    :columns: 3
 
-   * A list of
-   * short items
-   * that should be
-   * displayed
-   * horizontally
+    * A list of
+    * short items
+    * that should be
+    * displayed
+    * horizontally
+
+.. admonition:: Admonition
+
+    .. hlist::
+        :columns: 3
+
+        * ``hlist``
+        * in
+        * admonition
+
+.. topic:: Topic
+
+    .. hlist::
+        :columns: 3
+
+        * ``hlist``
+        * in
+        * topic
+
+.. sidebar:: Sidebar
+
+    .. hlist::
+        :columns: 3
+
+        * ``hlist``
+        * in
+        * sidebar
+
 
 Definition Lists
 ----------------
@@ -101,6 +154,21 @@ term 4 : classifier one : classifier two
 
 term with ``code``
     Definition with ``code``.
+
+.. admonition:: Admonition
+
+    term
+        in admonition
+
+.. topic:: Topic
+
+    term
+        in topic
+
+.. sidebar:: Sidebar
+
+    term
+        in sidebar
 
 
 Glossary
@@ -129,6 +197,30 @@ Example link: :term:`source directory` (term will be highlighted).
     term with ``code``
         Definition with ``code``.
 
+.. admonition:: Admonition
+
+    .. glossary::
+        term in admonition
+            definition
+
+:term:`term in admonition`
+
+.. topic:: Topic
+
+    .. glossary::
+        term in topic
+            definition
+
+:term:`term in topic`
+
+.. sidebar:: Sidebar
+
+    .. glossary::
+        term in sidebar
+            definition
+
+:term:`term in sidebar`
+
 
 Field Lists
 -----------
@@ -147,6 +239,18 @@ https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#field-lists
    with the first line, but they must be indented relative to the
    field name marker, and they must line up with each other.
 :Parameter i: integer
+
+.. admonition:: Admonition
+
+    :field: value
+
+.. topic:: Topic
+
+    :field: value
+
+.. sidebar:: Sidebar
+
+    :field: value
 
 
 Option Lists
@@ -178,6 +282,18 @@ https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#option-lists
                       arguments.
 
 /V         A VMS/DOS-style option.
+
+.. admonition:: Admonition
+
+    --flag  Description.
+
+.. topic:: Topic
+
+    --flag  Description.
+
+.. sidebar:: Sidebar
+
+    --flag  Description.
 
 
 Grammars

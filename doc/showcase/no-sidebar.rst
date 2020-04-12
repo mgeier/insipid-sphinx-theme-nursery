@@ -3,7 +3,7 @@ Page Without Sidebar
 
 This page has no sidebar.
 
-See ``html_sidebars`` in :download:`conf.py <../conf.py>`.
+See :confval:`html_sidebars` in :download:`conf.py <../conf.py>`:
 
 .. literalinclude:: ../conf.py
     :name: conf-py-html-sidebars

@@ -116,7 +116,7 @@ blockquote {
 }
 
 blockquote p.attribution {
-    /*text-align: end;*/
+    text-align: end;
 }
 
 div.body dl > dt, dl.field-list > dt {
@@ -185,6 +185,11 @@ a.external:visited {
 
 code, pre, kbd {
     font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+}
+
+/* disable Pygments background */
+div.highlight {
+    background: unset;
 }
 
 pre {
@@ -279,11 +284,8 @@ kbd.docutils {
 
 /* -- admonitions ----------------------------------------------------------- */
 
-div.admonition, div.topic {
-    clear: both;
-}
-
 div.admonition, div.topic, div.sidebar {
+    clear: both;
     overflow-x: auto;
 }
 

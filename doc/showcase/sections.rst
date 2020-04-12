@@ -39,6 +39,18 @@ https://docutils.sourceforge.io/docs/ref/rst/directives.html#rubric
 
 Some text.
 
+.. note::
+
+    .. rubric:: Rubric in admonition
+
+.. topic:: Topic
+
+    .. rubric:: Rubric in topic
+
+.. sidebar:: Sidebar
+
+    .. rubric:: Rubric in sidebar
+
 
 (Local) Table of Contents
 -------------------------

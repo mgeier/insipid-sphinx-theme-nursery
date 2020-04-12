@@ -79,11 +79,17 @@ https://docutils.sourceforge.io/docs/ref/rst/directives.html#sidebar
 
     ``sidebar`` text.
 
-    .. rubric:: A ``rubric``
+Text after ``sidebar`` directive.
+
+.. sidebar:: Second Sidebar
 
     More text.
 
-Text after ``sidebar`` directive.
+Text after second ``sidebar`` directive.
+
+    Block quote after sidebar.
+
+    --Anonymous
 
 
 Admonition-like Constructs
@@ -132,26 +138,37 @@ Nesting
 
         This is the warning again.
 
-.. note::
 
-    * bullet point in admonition
+.. topic:: Topic
 
-.. note::
+    .. note::
 
-    #. ordered list item in admonition
+        Topic within admonition is not allowed!
+        Topic within topic neither!
 
-A table in a note:
+.. sidebar:: Sidebar
 
-.. note::
+    .. note::
 
-    =====  =====  =======
-      A      B    A and B
-    =====  =====  =======
-    False  False  False
-    True   False  False
-    False  True   False
-    True   True   True
-    =====  =====  =======
+        Note in sidebar.
+
+.. sidebar:: Sidebar
+
+    .. topic:: Topic
+
+        Topic in sidebar.
+
+.. seealso::
+
+    .. note::
+
+        Note text.
+
+..
+
+    .. note::
+
+        Admonition in a block quote.
 
 
 Overflow

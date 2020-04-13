@@ -78,6 +78,8 @@ https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#enumerated-li
 
    iv. iv
 
+   999. More than four
+
 .. admonition:: Admonition
 
     #. enumerated list item in admonition

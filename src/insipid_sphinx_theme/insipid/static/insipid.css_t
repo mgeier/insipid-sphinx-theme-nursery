@@ -151,6 +151,21 @@ p.sidebar-subtitle {
     font-style: italic;
 }
 
+ol, ul {
+    padding-left: 1.2em;
+    line-height: 1.7;
+}
+
+.toctree-wrapper ul,
+.contents ul {
+    list-style: none;
+}
+
+.toctree-wrapper > ul,
+.contents > ul {
+    padding-left: unset;
+}
+
 /* -- hyperlink styles ------------------------------------------------------ */
 
 a {

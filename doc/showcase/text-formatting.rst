@@ -97,6 +97,8 @@ And some more:
 [#popular-label]_.
 
 .. [#numbered] This is an auto-numbered footnote.
+    There is a lot of additional text, so there will be a line break
+    and we will see how the second line is indented.
 .. [#popular-label] Auto-numbered, multiple mentions.
 .. [*] This is an auto-symbol footnote.
 
@@ -139,6 +141,8 @@ Another mention of the same citation: [CIT2020]_.
     except the label is textual.
 
 .. [CIT2020] A literature reference with multiple back-links.
+    There is a lot of description text here,
+    which will probably lead to a line break.
 
 Other Semantic Markup
 ---------------------

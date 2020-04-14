@@ -249,6 +249,7 @@ div.document div.literal-block-wrapper {
     margin-bottom: .8em;
 }
 
+/* highlighted line (:emphasize-lines:) */
 .highlight .hll {
     display: block;
     padding: 0 0.5em;

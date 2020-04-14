@@ -199,7 +199,7 @@ a.external:visited {
 /* -- code formatting ------------------------------------------------------- */
 
 code, pre, kbd {
-    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+    font-family: 'DejaVu Sans Mono', Menlo, monospace;
 }
 
 /* disable Pygments background */

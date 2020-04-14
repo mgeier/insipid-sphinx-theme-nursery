@@ -115,6 +115,13 @@ blockquote {
     border-left-width: 6px;
 }
 
+blockquote.pull-quote p:not(.attribution),
+blockquote.epigraph p:not(.attribution) {
+    font-size: 135%;
+    font-style: italic;
+    color: #666;
+}
+
 blockquote p.attribution {
     text-align: end;
 }
@@ -348,6 +355,15 @@ div.admonition.error > p.admonition-title,
 div.admonition.warning > p.admonition-title {
     color: #fff;
     background-color: #f0b37e;
+}
+
+div.admonition.seealso {
+    background-color: #ffe;
+}
+
+div.admonition.seealso > p.admonition-title {
+    color: #000;
+    background-color: #ffc;
 }
 
 /* More specific selector to override previous defintions */

@@ -9,15 +9,47 @@ Block Quotes
 
 https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#block-quotes
 
-This is an ordinary paragraph, introducing a block quote.
+    A block quote may end with an attribution:
+    a text block beginning with ``--``, ``---``, or a true em-dash,
+    flush left within the block quote.
+    If the attribution consists of multiple lines,
+    the left edges of the second and subsequent lines must align.
 
-    "It is my business to know things.  That is my trade."
+    -- ``docutils`` documentation
 
-    -- Sherlock Holmes
+    Multiple block quotes may occur consecutively
+    if terminated with attributions::
 
-..
+        Unindented paragraph.
 
-    Another block quote.
+            Block quote 1.
+
+            --Attribution 1
+
+            Block quote 2.
+
+    Empty comments may be used to explicitly terminate preceding constructs
+    that would otherwise consume a block quote::
+
+        * List item.
+
+        ..
+
+            Block quote 3.
+
+    Empty comments may also be used to separate block quotes::
+
+            Block quote 4.
+
+        ..
+
+            Block quote 5.
+
+    Blank lines are required before and after a block quote,
+    but these blank lines are not included as part of the block quote.
+
+    -- ``docutils`` documentation
+
 
 .. sidebar:: Block quote in sidebar
 
@@ -58,10 +90,8 @@ https://docutils.sourceforge.io/docs/ref/rst/directives.html#highlights
 
 .. highlights::
 
-    Highlights summarize the main points of a document or section,
-    often consisting of a list.
-
-    -- ``docutils`` documentation
+    * summarize the main points of a document or section
+    * often consisting of a list
 
 
 Pull-Quotes

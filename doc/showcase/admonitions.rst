@@ -79,7 +79,7 @@ https://docutils.sourceforge.io/docs/ref/rst/directives.html#sidebar
 
     ``sidebar`` text.
 
-Text after ``sidebar`` directive.
+Text after first ``sidebar`` directive.
 
 .. sidebar:: Second Sidebar
 

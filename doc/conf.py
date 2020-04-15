@@ -47,6 +47,10 @@ html_logo = 'showcase/insipid.png'
 html_favicon = 'favicon.ico'
 #smartquotes = False
 
+#html_domain_indices = False
+#html_use_index = False
+#html_split_index = True
+
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',

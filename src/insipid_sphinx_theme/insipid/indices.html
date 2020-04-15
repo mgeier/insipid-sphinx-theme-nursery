@@ -1,12 +1,11 @@
 <ul>
-{%- if hasdoc('genindex') and pagename != 'genindex' %}
-<li class="toctree-l1"><a class="reference internal" href="{{ pathto('genindex') }}" accesskey="I">{{ _('General Index') }}</a></li>
-{%- endif %}
-{%- if hasdoc('modindex') and pagename != 'modindex' %}
-<li class="toctree-l1"><a class="reference internal" href="{{ pathto('modindex') }}">{{ _('Global Module Index') }}</a></li>
-{%- endif %}
-{#- hasdoc('py-modindex') doesn't seem to work #}
-{%- if pathto('py-modindex') and pagename != 'py-modindex' %}
-<li class="toctree-l1"><a class="reference internal" href="{{ pathto('py-modindex') }}">{{ _('Python Module Index') }}</a></li>
-{%- endif %}
+  {%- for rellink in rellinks %}
+  {%- if rellink[0] == 'genindex' and pagename != 'genindex' %}
+  <li class="toctree-l1"><a class="reference internal" href="{{ pathto('genindex') }}" accesskey="I">{{ _('General Index') }}</a></li>
+  {%- elif rellink[0] == 'modindex' and pagename != 'modindex' %}
+  <li class="toctree-l1"><a class="reference internal" href="{{ pathto('modindex') }}">{{ _('Global Module Index') }}</a></li>
+  {%- elif rellink[0] == 'py-modindex' and pagename != 'py-modindex' %}
+  <li class="toctree-l1"><a class="reference internal" href="{{ pathto('py-modindex') }}">{{ _('Python Module Index') }}</a></li>
+  {%- endif %}
+  {%- endfor %}
 </ul>

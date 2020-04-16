@@ -33,12 +33,14 @@ html_sidebars = {
    'showcase/no-sidebar': [],  # To demonstrate a page without a sidebar
 }
 
-release = '0.0.0'
 project = 'Insipid Sphinx Theme'
+copyright = '2020, Matthias Geier'
+
 #html_title = 'Insipid Sphinx Theme'
 html_short_title = 'insipid'
 html_copy_source = False
 #html_show_sourcelink = False
+#html_sourcelink_suffix = ''
 #html_show_copyright = False
 #html_show_sphinx = False
 html_add_permalinks = '\N{LINK SYMBOL}'
@@ -50,6 +52,8 @@ html_favicon = 'favicon.ico'
 #html_domain_indices = False
 #html_use_index = False
 #html_split_index = True
+
+highlight_language = 'none'
 
 extensions = [
     'sphinx.ext.autodoc',
@@ -65,8 +69,6 @@ intersphinx_mapping = {'sphinx': ('https://www.sphinx-doc.org', None)}
 #html_static_path = ['_static']
 templates_path = ['_templates']
 
-copyright = '2020, Matthias Geier'
-
 # Since Sphinx version 2.0, 'index' is the default:
 master_doc = 'index'
 
@@ -77,6 +79,16 @@ numfig = True
 
 #language = 'es'
 
+# -- Get version information from Git -------------------------------------
+
+try:
+    from subprocess import check_output
+    release = check_output(['git', 'describe', '--tags', '--always'])
+    release = release.decode().strip()
+except Exception:
+    release = '<unknown>'
+
+# -- Define custom directives/roles ---------------------------------------
 
 def setup(app):
     app.add_object_type(

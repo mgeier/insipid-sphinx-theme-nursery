@@ -715,6 +715,20 @@ div.sphinxsidebar code {
     padding: 0;
 }
 
+div.sphinxsidebar li {
+    position: relative
+}
+
+div.sphinxsidebar li.toctree-l1.current > a::before {
+    content: "\2022";
+    display: inline-block;
+    position: absolute;
+    left: -15px;
+    top: -0.3em;
+    font-size: 1.375rem;
+    color: #ee4c2c;
+}
+
 /* -- topbar ---------------------------------------------------------------- */
 
 #topbar-placeholder {

@@ -30,9 +30,3 @@
     showcase/api-doc
     showcase/no-sidebar
     showcase/todo-list
-
-:ref:`genindex`
-
-:ref:`modindex`
-
-:ref:`search`

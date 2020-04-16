@@ -186,6 +186,10 @@ ol, ul {
     padding-left: unset;
 }
 
+dl.citation > dt {
+    font-weight: bold;
+}
+
 /* -- hyperlink styles ------------------------------------------------------ */
 
 a {

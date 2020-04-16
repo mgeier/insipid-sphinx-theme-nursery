@@ -121,7 +121,7 @@
 {%- endif %}
           </div>
         </div>
-{%- if pagename != "search" %}
+{%- if pagename != "search" and 'searchbox.html' not in sidebars %}
                 {#-
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">

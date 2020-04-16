@@ -25,10 +25,10 @@ html_theme_options = {
 html_sidebars = {
    '**': [
        'github-badge.html',
+       #'searchbox.html',
        'globaltoc.html',
        'separator.html',
        'indices.html',
-       #'searchbox.html',
    ],
    'showcase/no-sidebar': [],  # To demonstrate a page without a sidebar
 }

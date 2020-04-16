@@ -1,4 +1,4 @@
-{%- if pagename != "search" %}
+{%- if pagename != "search" and 'searchbox.html' not in sidebars %}
 {#- TODO: set "title" via JavaScript #}
             <button id="search-toggle" type="button" title="{{ _('Search') }}" aria-label="Toggle Searchbar" aria-expanded="false" aria-controls="searchbar">
               {% include 'icons/search.svg' %}

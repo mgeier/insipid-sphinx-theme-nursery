@@ -126,27 +126,32 @@ blockquote p.attribution {
     text-align: end;
 }
 
-div.body dl > dt, dl.field-list > dt {
+div.body dl > dt,
+dl.field-list > dt {
     display: table;
 }
 
-div.body dl > dt:not(.label), dl.field-list > dt {
+div.body dl > dt:not(.label),
+dl.field-list > dt {
     background-color: #f5f5f5;
 }
 
-div.body dl > dt:not(.label), dl.field-list > dt,
-div.admonition dl > dt:target,
+div.body dl > dt:not(.label),
+div.body dl > dt:target,
+dl.field-list > dt,
+div.body div.admonition dl > dt:target,
 div.body a:target {
     padding: 3px 7px;
 }
 
 div.body dl > dt:target,
+div.body div.admonition dl > dt:target,
 div.body a:target {
     background-color: #ffc;
 }
 
-dl.footnote > dt, dl.citation > dt {
-    float: unset;
+dl > dt.label {
+    clear: left;
 }
 
 hr.docutils {

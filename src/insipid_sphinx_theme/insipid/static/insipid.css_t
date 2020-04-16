@@ -695,6 +695,10 @@ div.sphinxsidebar h4 {
     padding: 0;
 }
 
+div.sphinxsidebar p.caption {
+    text-transform: uppercase;
+}
+
 div.sphinxsidebar p {
 }
 

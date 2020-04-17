@@ -477,10 +477,6 @@ td.label {
     padding: 10px;
 }
 
-.navbar .section-number {
-    display: none;
-}
-
 .navbar > a {
     width: 50%;
     padding: 10px;
@@ -869,10 +865,6 @@ div.sphinxsidebar li.current a.current {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-
-#menu-title .section-number {
-    display: none;
 }
 
 #menu-title .top,

@@ -9,9 +9,24 @@
 {% endif %}
 
 
-{% block htmltitle %}
-    <title>{{ title.split('</span>')|last|e }}{{ titlesuffix }}</title>
-{%- endblock %}
+{# Remove section numbers from title/next/previous/up/breadcrumbs links #}
+{% set title = title.split('</span>')|last %}
+{% if next %}
+{% set next = namespace(next) %}
+{% set next.title = next.title.split('</span>')|last %}
+{% endif %}
+{% if prev %}
+{% set prev = namespace(prev) %}
+{% set prev.title = prev.title.split('</span>')|last %}
+{% endif %}
+{% set new_parents = [] %}
+{% for parent in parents %}
+{% set parent = namespace(parent) %}
+{% set parent.title = parent.title.split('</span>')|last %}
+{# Dummy assignment to be able to call append() #}
+{% set _ = new_parents.append(parent) %}
+{% endfor %}
+{% set parents = new_parents %}
 
 
 {% macro navbar() %}
@@ -155,12 +170,12 @@
 {%- if theme_body_max_width != None %}
     <nav>
 {%- if prev %}
-      <a href="{{ prev.link|e }}" class="nav-icon previous" title="{{ _('previous') }}:&#13;{{ prev.title.split('</span>')|last }}" aria-label="{{ _('Previous topic') }}" {{ accesskey('P') }}>
+      <a href="{{ prev.link|e }}" class="nav-icon previous" title="{{ _('previous') }}:&#13;{{ prev.title }}" aria-label="{{ _('Previous topic') }}" {{ accesskey('P') }}>
         {% include 'icons/angle-left.svg' %}
       </a>
 {%- endif %}
 {%- if next %}
-      <a href="{{ next.link|e }}" class="nav-icon next" title="{{ _('next') }}:&#13;{{ next.title.split('</span>')|last }}" aria-label="{{ _('Next topic') }}" {{ accesskey('N') }}>
+      <a href="{{ next.link|e }}" class="nav-icon next" title="{{ _('next') }}:&#13;{{ next.title }}" aria-label="{{ _('Next topic') }}" {{ accesskey('N') }}>
         {% include 'icons/angle-right.svg' %}
       </a>
 {%- endif %}

@@ -71,7 +71,7 @@ A link: :func:`hello_world`.
         Nobody knows what that does.
 
     .. py:attribute:: data
-    
+
         Where all the important stuff is stored
 
     .. py:decoratormethod:: decorate
@@ -231,15 +231,15 @@ https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#cpp-dom
 
     Proxy to an element of a notional sequence that can be compared,
     indirected, or incremented.
- 
+
     **Notation**
- 
+
     .. cpp:var:: It r
- 
+
        An lvalue.
- 
+
     **Valid Expressions**
- 
+
     - :cpp:expr:`*r`, when :cpp:expr:`r` is dereferenceable.
     - :cpp:expr:`++r`, with return type :cpp:expr:`It&`, when
       :cpp:expr:`r` is incrementable.
@@ -324,7 +324,7 @@ https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#the-res
     Directive.
 
     .. rst:directive:option:: caption: caption of ToC
-        
+
         Option.
 
     .. rst:directive:option:: glob
@@ -377,7 +377,7 @@ Generic Objects
 
 .. object:: SCISSORS
 
-    Destroy the aforementioned object.
+    Destroys the aforementioned object.
 
 
 ``sphinx.ext.automodule``

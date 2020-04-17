@@ -30,6 +30,12 @@ support for right-to-left languages
 optional JavaScript
     ...
 
+support for *all* Sphinx features
+    The largest part of this documentation is a showcase of (hopefully) all
+    things that can be generated with Sphinx (aside from arbitrary "raw" HTML).
+    If you find something that isn't supported (or not shown in the docs),
+    please let us know!
+
 support for RTD
     https://readthedocs.org/
 

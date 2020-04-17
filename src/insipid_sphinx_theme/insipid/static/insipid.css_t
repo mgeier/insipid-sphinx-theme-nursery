@@ -176,6 +176,14 @@ ol, ul {
     line-height: 1.7;
 }
 
+li > p:first-child {
+    margin-top: revert;
+}
+
+li > p:last-child {
+    margin-bottom: revert;
+}
+
 .toctree-wrapper ul,
 .contents ul {
     list-style: none;

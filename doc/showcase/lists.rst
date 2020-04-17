@@ -205,7 +205,7 @@ Example link: :term:`source directory` (term will be highlighted).
         term in admonition
             definition
 
-:term:`term in admonition`
+link: :term:`term in admonition`
 
 .. topic:: Topic
 
@@ -213,7 +213,7 @@ Example link: :term:`source directory` (term will be highlighted).
         term in topic
             definition
 
-:term:`term in topic`
+link: :term:`term in topic`
 
 .. sidebar:: Sidebar
 
@@ -221,7 +221,7 @@ Example link: :term:`source directory` (term will be highlighted).
         term in sidebar
             definition
 
-:term:`term in sidebar`
+link: :term:`term in sidebar`
 
 
 Field Lists

@@ -16,7 +16,7 @@ Theme Settings
 
 Settings from ``insipid`` theme:
 
-.. option:: rightsidebar
+.. theme-option:: rightsidebar
 
     ...
 
@@ -24,23 +24,23 @@ Settings from ``insipid`` theme:
 
 Settings inherited from the ``basic`` theme (like most Sphinx themes):
 
-.. option:: body_max_width
+.. theme-option:: body_max_width
 
     ``None`` to disable
 
-.. option:: body_min_width
+.. theme-option:: body_min_width
 
     ...
 
-.. option:: navigation_with_keys
+.. theme-option:: navigation_with_keys
 
     Use left and right arrow keys to turn pages
 
-.. option:: nosidebar
+.. theme-option:: nosidebar
 
     ...
 
-.. option:: sidebarwidth
+.. theme-option:: sidebarwidth
 
     ...
 

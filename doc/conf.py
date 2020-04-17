@@ -33,7 +33,7 @@ html_sidebars = {
    'showcase/no-sidebar': [],  # To demonstrate a page without a sidebar
 }
 
-project = 'Insipid Sphinx Theme'
+project = 'insipid-sphinx-theme'
 copyright = '2020, Matthias Geier'
 
 #html_title = 'Insipid Sphinx Theme'
@@ -50,6 +50,8 @@ html_secnumber_suffix = '\N{FIGURE SPACE}'
 html_logo = 'showcase/insipid.png'
 html_favicon = 'favicon.ico'
 #smartquotes = False
+
+html_baseurl = 'https://insipid-sphinx-theme-nursery.readthedocs.io/'
 
 #html_domain_indices = False
 #html_use_index = False
@@ -98,6 +100,6 @@ def setup(app):
         objname='Sphinx configuration value',
         indextemplate='pair: %s; Sphinx configuration value')
     app.add_object_type(
-        'option', 'option',
+        'theme-option', 'theme-option',
         objname='Theme option',
         indextemplate='pair: %s; Theme option')

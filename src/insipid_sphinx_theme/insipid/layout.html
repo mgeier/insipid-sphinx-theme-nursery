@@ -9,6 +9,11 @@
 {% endif %}
 
 
+{% block htmltitle %}
+    <title>{{ title.split('</span>')|last|e }}{{ titlesuffix }}</title>
+{%- endblock %}
+
+
 {% macro navbar() %}
     <nav class="navbar">
       {%- if prev %}

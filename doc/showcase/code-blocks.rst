@@ -1,5 +1,5 @@
-Code Blocks
-===========
+``Code`` Blocks
+===============
 
 https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#showing-code-examples
 

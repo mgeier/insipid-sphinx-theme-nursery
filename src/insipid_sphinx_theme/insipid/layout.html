@@ -1,6 +1,7 @@
 {% extends "basic/layout.html" %}
 
 
+{# Turn comma-separated list into proper list #}
 {% if theme_left_buttons is string and theme_left_buttons %}
 {% set theme_left_buttons = theme_left_buttons.split(',')|map('trim') %}
 {% endif %}
@@ -10,19 +11,26 @@
 
 
 {# Remove section numbers from title/next/previous/up/breadcrumbs links #}
-{% set title = title.split('</span>')|last %}
+{% macro stripsectionnumber(title) %}
+{%- if title.startswith('<span class="section-number">') %}
+{{- title.split('</span>', 1)|last }}
+{%- else %}
+{{- title }}
+{%- endif %}
+{%- endmacro %}
+{% set title = stripsectionnumber(title) %}
 {% if next %}
 {% set next = namespace(next) %}
-{% set next.title = next.title.split('</span>')|last %}
+{% set next.title = stripsectionnumber(next.title) %}
 {% endif %}
 {% if prev %}
 {% set prev = namespace(prev) %}
-{% set prev.title = prev.title.split('</span>')|last %}
+{% set prev.title = stripsectionnumber(prev.title) %}
 {% endif %}
 {% set new_parents = [] %}
 {% for parent in parents %}
 {% set parent = namespace(parent) %}
-{% set parent.title = parent.title.split('</span>')|last %}
+{% set parent.title = stripsectionnumber(parent.title) %}
 {# Dummy assignment to be able to call append() #}
 {% set _ = new_parents.append(parent) %}
 {% endfor %}

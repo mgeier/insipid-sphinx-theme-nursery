@@ -11,6 +11,7 @@
     {%- for parent in parents %}
     <li><a href="{{ parent.link|e }}">{{ parent.title }}</a>{{ reldelim1 }}</li>
     {%- endfor %}
+    <li><a href="{{ link|e }}">{{ title }}</a></li>
     {%- block relbaritems %} {% endblock %}
   </ul>
 </nav>

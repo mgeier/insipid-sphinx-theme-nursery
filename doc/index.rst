@@ -22,11 +22,11 @@
     showcase/images
     showcase/code-blocks
     showcase/admonitions
-    showcase/sections
     showcase/lists
     showcase/quotes
     showcase/tables
     showcase/math
     showcase/api-doc
+    showcase/sections
     showcase/no-sidebar
     showcase/todo-list

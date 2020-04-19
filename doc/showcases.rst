@@ -19,3 +19,5 @@ https://sphinx-themes.org/
 https://bashtage.github.io/sphinx-material/specimen.html
 
 https://pydata-sphinx-theme.readthedocs.io/en/latest/demo/index.html
+
+https://sphinx-typlog-theme.readthedocs.io/en/latest/markup.html

@@ -20,15 +20,31 @@ Header Level 6
 
 Only levels down to ``<h6>`` are typically supported.
 
-Header Level 7
-##############
+Header Level 2
+--------------
 
-You shouldn't use such deep nesting.
+Text.
 
-Header Level 8
-**************
+Header Level 3
+^^^^^^^^^^^^^^
 
-Really, you shouldn't.
+Text.
+
+Header Level 4
+''''''''''''''
+
+Text.
+
+Header Level 5
+~~~~~~~~~~~~~~
+
+Text.
+
+Header Level 6
+++++++++++++++
+
+Text.
+
 
 Rubric
 ------

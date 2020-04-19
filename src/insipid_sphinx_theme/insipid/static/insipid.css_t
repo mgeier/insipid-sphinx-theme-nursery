@@ -394,7 +394,6 @@ div.admonition.seealso > p.admonition-title {
 
 /* More specific selector to override previous defintions */
 div.body div.admonition dl > dt {
-    display: unset;
     padding: unset;
     background-color: unset;
     font-weight: unset;

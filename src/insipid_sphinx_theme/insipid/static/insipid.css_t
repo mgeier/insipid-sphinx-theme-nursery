@@ -977,6 +977,11 @@ div.sphinxsidebar li.current a.current {
 
 /* -- sphinx.ext.viewcode --------------------------------------------------- */
 
+.viewcode-link {
+    font-size: 90%;
+    margin-left: 1em;
+}
+
 div.viewcode-block:target {
     margin: -0.5em;
     padding: 0.5em;

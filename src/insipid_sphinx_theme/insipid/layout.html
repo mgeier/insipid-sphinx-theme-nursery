@@ -10,7 +10,6 @@
 {% endif %}
 
 
-{# Remove section numbers from title/next/previous/up/breadcrumbs links #}
 {% macro stripsectionnumber(title) %}
 {%- if title.startswith('<span class="section-number">') %}
 {{- title.split('</span>', 1)|last }}
@@ -18,6 +17,10 @@
 {{- title }}
 {%- endif %}
 {%- endmacro %}
+
+
+{# Remove section numbers from title/next/previous/up/breadcrumbs links #}
+{% if theme_strip_section_numbers %}
 {% set title = stripsectionnumber(title) %}
 {% if next %}
 {% set next = namespace(next) %}
@@ -35,6 +38,7 @@
 {% set _ = new_parents.append(parent) %}
 {% endfor %}
 {% set parents = new_parents %}
+{% endif %}
 
 
 {% macro navbar() %}

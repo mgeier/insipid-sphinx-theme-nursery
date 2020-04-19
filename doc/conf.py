@@ -5,6 +5,7 @@ html_theme_options = {
     'rightsidebar': True,
     #'navbar_top': False,
     #'navbar_bottom': False,
+    #'strip_section_numbers': False,
     #'body_min_width': 0,  # When smaller, body is covered by sidebar
     #'body_max_width': None,
     #'sidebarwidth': 300,

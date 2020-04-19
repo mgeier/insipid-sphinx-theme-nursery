@@ -1,7 +1,6 @@
-{#- To be used in footer.html #}
 {%- if show_sphinx %}
       {% trans sphinx_version=sphinx_version|e %}Created using <a class="reference external" href="http://sphinx-doc.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
-{%- if theme_show_theme_link|tobool %}
+{%- if theme_show_insipid|tobool %}
       <a class="reference external" href="https://insipid-sphinx-theme.readthedocs.io/">Insipid Theme</a>.
 {%- endif %}
 {%- endif %}

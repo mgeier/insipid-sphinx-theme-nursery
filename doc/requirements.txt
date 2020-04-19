@@ -1,1 +1,2 @@
+sphinx-copybutton
 sphinx-last-updated-by-git

@@ -64,6 +64,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.viewcode',
+    'sphinx_copybutton',
     'sphinx_last_updated_by_git',
 ]
 

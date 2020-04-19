@@ -1,3 +1,5 @@
+{% set sidebar_side = 'right' if theme_rightsidebar|tobool else 'left' %}
+
 :root {
     --readthedocs-badge-height: 0px;
 }
@@ -7,11 +9,7 @@ div.sphinxsidebar {
 }
 
 .injected .rst-versions.rst-badge {
-{% if theme_rightsidebar|tobool %}
-    right: 0;
-{% else %}
-    left: 0;
-{% endif %}
+    {{ sidebar_side }}: 0;
     bottom: 0;
     width: var(--sidebar-width);
     max-width: unset;
@@ -27,6 +25,11 @@ div.sphinxsidebar {
 
 #flyout-search-form input {
     width: 100%;
+}
+
+.sidebar-visible .ethical-fixedfooter {
+    {{ sidebar_side }}: var(--sidebar-width);
+    width: unset;
 }
 
 {#

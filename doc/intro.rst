@@ -1,7 +1,33 @@
 Introduction
 ============
 
-inspired by (i.o.w. ripped off of) ...
+This Sphinx_ theme was very much inspired by (i.o.w. ripped off of) mdBook_
+and -- to a lesser extent --
+the similar-looking bookdown_ and (the legacy theme of) GitBook_.
+
+Some ideas were taken from the Sphinx themes
+sphinx_typlog_theme_ (https://readthedocs.org/ badge),
+sphinx_material_ (previous/next arrows in navbar)
+sphinx_rtd_theme_ (admonitions)
+as well as websites like
+Github_,
+MDN_,
+and many others.
+
+A somewhat large list of freely available Sphinx themes can be found at
+https://sphinx-themes.org/.
+
+
+.. _Sphinx: https://www.sphinx-doc.org/
+.. _mdBook: https://rust-lang.github.io/mdBook/
+.. _bookdown: https://bookdown.org/
+.. _GitBook: https://github.com/GitbookIO/theme-default/
+.. _sphinx_typlog_theme: https://sphinx-typlog-theme.readthedocs.io/
+.. _sphinx_material: https://github.com/bashtage/sphinx-material/
+.. _sphinx_rtd_theme: https://sphinx-rtd-theme.readthedocs.io/
+.. _Github: https://github.com/
+.. _MDN: https://developer.mozilla.org/en-US/docs/Web
+
 
 Goals
 -----

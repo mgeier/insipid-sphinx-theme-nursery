@@ -1,5 +1,7 @@
-An Insipid Sphinx Theme
-=======================
+An Insipid Sphinx_ Theme
+========================
+
+.. _Sphinx: https://www.sphinx-doc.org/
 
 Quick Start:
     #. Install the Python package ``insipid-sphinx-theme``

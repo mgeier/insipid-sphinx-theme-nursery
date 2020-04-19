@@ -30,3 +30,9 @@
     showcase/sections
     showcase/no-sidebar
     showcase/todo-list
+
+----
+
+:ref:`General Index <genindex>`
+
+:ref:`py-modindex`

@@ -62,7 +62,7 @@ Topic
 
 https://docutils.sourceforge.io/docs/ref/rst/directives.html#topic
 
-.. topic:: Topic title
+.. topic:: Topic title with :doc:`a link <admonitions>` and ``code``
 
     Topic text and ``inline code``.
 
@@ -74,7 +74,7 @@ Sidebar
 
 https://docutils.sourceforge.io/docs/ref/rst/directives.html#sidebar
 
-.. sidebar:: Sidebar Title
+.. sidebar:: Sidebar Title with :doc:`a link <admonitions>` and ``code``
     :subtitle: Sidebar Subtitle
 
     ``sidebar`` text.

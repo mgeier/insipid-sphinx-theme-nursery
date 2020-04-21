@@ -55,7 +55,7 @@ div.document {
 }
 
 div.body {
-    padding: 0 20px 30px 20px;
+    padding: 20px;
     /* Reset box-sizing in case some 3rd party CSS relies on default behavior */
     box-sizing: initial;
     /* Override basic.css, min width is handled with media queries */

@@ -50,6 +50,7 @@ html_secnumber_suffix = '\N{FIGURE SPACE}'
 html_logo = 'showcase/insipid.png'
 html_favicon = 'favicon.ico'
 #smartquotes = False
+#html_last_updated_fmt = '%Y-%m-%d'
 
 html_baseurl = 'https://insipid-sphinx-theme-nursery.readthedocs.io/'
 
@@ -83,6 +84,14 @@ todo_link_only = True
 numfig = True
 
 #language = 'es'
+
+# -- Set time zone for "last updated" info --------------------------------
+
+import os
+import time
+
+os.environ['TZ'] = 'Europe/Berlin'
+time.tzset()
 
 # -- Get version information from Git -------------------------------------
 

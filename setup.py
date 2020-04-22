@@ -21,7 +21,7 @@ setup(
         'insipid/static/*.js_t',
         'insipid/icons/*.svg',
     ]},
-    python_requires='>=3',
+    python_requires='>=3.6',
     author='Matthias Geier',
     author_email='Matthias.Geier@gmail.com',
     description='An insipid Sphinx theme',

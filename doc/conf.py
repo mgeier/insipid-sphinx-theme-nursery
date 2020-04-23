@@ -85,14 +85,6 @@ numfig = True
 
 #language = 'es'
 
-# -- Set time zone for "last updated" info --------------------------------
-
-import os
-import time
-
-os.environ['TZ'] = 'Europe/Berlin'
-time.tzset()
-
 # -- Get version information from Git -------------------------------------
 
 try:

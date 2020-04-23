@@ -79,6 +79,17 @@ div.body {
 
 /* -- body styles ----------------------------------------------------------- */
 
+div.body .section {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+div.body .section::after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
 div.body h1,
 div.body h2,
 div.body h3,
@@ -90,10 +101,26 @@ p.rubric {
     color: #333;
 }
 
+div.body h1,
+div.body h2,
+div.body h3,
+div.body h4,
+div.body h5,
+div.body h6 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
 div.body h1 { font-size: 200%; }
+div.body h1 { font-size: 2em; }
 div.body h2 { font-size: 160%; }
+div.body h2 { font-size: 1.75em; }
 div.body h3 { font-size: 140%; }
+div.body h3 { font-size: 1.5em; }
 div.body h4 { font-size: 120%; }
+div.body h4 { font-size: 1.25em; }
 div.body h5 { font-size: 110%; }
 div.body h6 { font-size: 100%; }
 
@@ -128,6 +155,10 @@ blockquote.epigraph p:not(.attribution) {
     font-size: 135%;
     font-style: italic;
     color: #666;
+}
+
+blockquote:not(.pull-quote):not(.epigraph) p.attribution {
+    font-style: italic;
 }
 
 blockquote p.attribution {
@@ -356,7 +387,7 @@ div.sidebar > p.sidebar-title {
 }
 
 div.admonition {
-    color: #666;
+    /*color: #666;*/
     background-color: #e7f2fa;
 }
 

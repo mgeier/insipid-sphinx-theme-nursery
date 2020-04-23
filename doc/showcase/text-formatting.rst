@@ -149,36 +149,20 @@ Other Semantic Markup
 
 https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#other-semantic-markup
 
-:abbr:`LIFO (last-in, first-out)`
-
-:command:`rm`
-
-:dfn:`term`
-
-:file:`name.{ext}`
-
-:guilabel:`&Cancel`
-
-:kbd:`Control-x Control-f`
-
-:mailheader:`Content-Type`
-
-:makevar:`AM_CFLAGS`
-
-:manpage:`ls(1)`, :manpage:`man`
-
-:menuselection:`Start --> &Programs`
-
-:mimetype:`text/plain`
-
-:newsgroup:`comp.lang.python`
-
-:program:`rm`
-
-:regexp:`a*`
-
-:samp:`print(1+{variable})` (as compared to :code:`print(1)`)
-
-:pep:`8`
-
-:rfc:`2822`
+abbr: :abbr:`LIFO (last-in, first-out)` --
+command: :command:`rm` --
+dfn: :dfn:`term` --
+file: :file:`name.{ext}` --
+guilabel: :guilabel:`&Cancel` --
+kbd: :kbd:`Control-x Control-f` --
+mailheader: :mailheader:`Content-Type` --
+makevar: :makevar:`AM_CFLAGS` --
+manpage: :manpage:`ls(1)`, :manpage:`man` --
+menuselection: :menuselection:`Start --> &Programs` --
+mimetype: :mimetype:`text/plain` --
+newsgroup: :newsgroup:`comp.lang.python` --
+program: :program:`rm` --
+regexp: :regexp:`a*` --
+samp: :samp:`print(1+{variable})` (as compared to :code:`print(1)`) --
+pep: :pep:`8` --
+rfc: :rfc:`2822`

@@ -7,12 +7,14 @@ This Documentation
 The documentation pages you are just reading are meant to be a showcase for how
 certain Sphinx features look with this insipid theme.
 
-The following sections try to show all HTML constucts that can be created with
+The following pages try to show all HTML constucts that can be created with
 Sphinx.
 
 
 Other Showcases
 ---------------
+
+https://docutils.sourceforge.io/docs/user/rst/demo.html
 
 https://sphinx-themes.org/
 
@@ -20,6 +22,7 @@ https://sphinx-themes.org/
 - sphinx_material_
 - sphinx_rtd_theme_
 - sphinx_typlog_theme_
+- t3SphinxThemeRtd_
 
 .. _pydata_sphinx_theme: https://pydata-sphinx-theme.readthedocs.io/en/latest/
     demo/
@@ -28,3 +31,5 @@ https://sphinx-themes.org/
     demo/structure.html
 .. _sphinx_typlog_theme: https://sphinx-typlog-theme.readthedocs.io/en/latest/
     markup.html
+.. _t3SphinxThemeRtd: https://docs.typo3.org/m/typo3/demo-t3SphinxThemeRtd/
+    master/en-us/

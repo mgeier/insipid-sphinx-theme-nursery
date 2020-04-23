@@ -44,7 +44,6 @@ html_copy_source = False
 html_show_copyright = False
 #html_show_sphinx = False
 #html_add_permalinks = '\N{LINK SYMBOL}'
-#html_add_permalinks = '\N{PILCROW SIGN}'
 html_add_permalinks = '\N{SECTION SIGN}'
 html_secnumber_suffix = '\N{FIGURE SPACE}'
 html_logo = 'showcase/insipid.png'

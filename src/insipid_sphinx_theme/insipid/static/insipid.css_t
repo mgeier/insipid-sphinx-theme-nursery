@@ -119,16 +119,9 @@ div.body h5 { font-size: 110%; }
 div.body h6 { font-size: 100%; }
 
 a.headerlink {
-    font-size: 0.8em;
     padding: 0 4px 0 4px;
-}
-
-a.headerlink:hover {
-    text-decoration: none;
-}
-
-a.headerlink:visited {
-    /* TODO: no change in color? */
+    font-size: 1rem;
+    font-weight: normal;
 }
 
 .toctree-wrapper .caption,
@@ -140,7 +133,7 @@ p.rubric {
 blockquote {
     clear: both;
     padding: 10px 20px;
-    margin: 0;
+    margin: 10px 0;
     border: 1px solid #0001;
     border-left-width: 6px;
 }

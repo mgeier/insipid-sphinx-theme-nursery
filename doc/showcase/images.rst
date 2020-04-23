@@ -42,6 +42,24 @@ Some more text. Some more text.
 Some more text. Some more text.
 
 
+.. admonition:: Image in admonition
+
+    .. image:: insipid.png
+        :alt: Example image showing the text "insipid Sphinx theme"
+
+
+.. topic:: Image in topic
+
+    .. image:: insipid.png
+        :alt: Example image showing the text "insipid Sphinx theme"
+
+
+.. sidebar:: Image in sidebar
+
+    .. image:: insipid.png
+        :alt: Example image showing the text "insipid Sphinx theme"
+
+
 Figure
 ------
 
@@ -71,10 +89,6 @@ Some more text. Some more text.
     This is the caption of the figure.
 
 Text after left-aligned figure.
-Some more text.
-Some more text.
-Some more text.
-Some more text.
 
 .. figure:: insipid.png
     :align: right
@@ -86,3 +100,42 @@ Some more text.
 Some more text.
 Some more text.
 Some more text.
+Some more text.
+Some more text.
+Some more text.
+Some more text.
+Some more text.
+Some more text.
+Some more text.
+Some more text.
+Some more text.
+Some more text.
+Some more text.
+Some more text.
+
+    Quoted figure:
+
+    .. figure:: insipid.png
+        :align: left
+    
+        This is the caption of the figure.
+
+.. admonition:: Figure in admonition
+
+    .. figure:: insipid.png
+        :align: right
+    
+        This is the caption of the figure.
+
+.. topic:: Figure in topic
+
+    .. figure:: insipid.png
+        :align: left
+    
+        This is the caption of the figure.
+
+.. sidebar:: Figure in sidebar
+
+    .. figure:: insipid.png
+    
+        This is the caption of the figure.

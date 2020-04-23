@@ -127,24 +127,24 @@ Nesting
 
 .. admonition:: Table in admonition
 
-    +--------+
-    | Header |
-    +========+
-    |  text  |
-    +--------+
+    +----------------------+
+    | Header with ``code`` |
+    +======================+
+    |  Text with ``code``  |
+    +----------------------+
 
 .. topic:: Table in topic
 
-    +--------+
-    | Header |
-    +========+
-    |  text  |
-    +--------+
+    +----------------------+
+    | Header with ``code`` |
+    +======================+
+    |  Text with ``code``  |
+    +----------------------+
 
 .. sidebar:: Table in sidebar
 
-    +--------+
-    | Header |
-    +========+
-    |  text  |
-    +--------+
+    +----------------------+
+    | Header with ``code`` |
+    +======================+
+    |  Text with ``code``  |
+    +----------------------+

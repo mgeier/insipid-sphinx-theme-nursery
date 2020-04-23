@@ -84,12 +84,6 @@ div.body .section {
     margin-bottom: 2.5rem;
 }
 
-div.body .section::after {
-    display: block;
-    clear: both;
-    content: '';
-}
-
 div.body h1,
 div.body h2,
 div.body h3,
@@ -144,6 +138,7 @@ p.rubric {
 }
 
 blockquote {
+    clear: both;
     padding: 10px 20px;
     margin: 0;
     border: 1px solid #0001;
@@ -306,6 +301,8 @@ div.document div.literal-block-wrapper {
     display: block;
     padding: 0 0.5em;
     margin: 0 -0.5em;
+
+    background-color: #ffc;
 }
 
 /* NB: .highlighttable is used for code blocks with line numbers */
@@ -359,8 +356,11 @@ kbd.docutils {
 
 /* -- admonitions ----------------------------------------------------------- */
 
-div.admonition, div.topic, div.sidebar, pre {
+div.admonition, div.topic, div.sidebar, pre, div[class|="highlight"] {
     clear: both;
+}
+
+div.admonition, div.topic, div.sidebar, blockquote {
     overflow-x: auto;
 }
 
@@ -418,21 +418,19 @@ div.topic {
 }
 
 div.topic > p.topic-title {
-    color: unset;
-    /*color: #fff;*/
+    color: #333;
     background-color: #ccc;
 }
 
 div.sidebar,
 div.admonition.seealso {
     color: unset;
-    /*color: #666;*/
     background-color: #ffe;
 }
 
 div.sidebar > p.sidebar-title,
 div.admonition.seealso > p.admonition-title {
-    color: unset;
+    color: #333;
     background-color: #ffc;
 }
 

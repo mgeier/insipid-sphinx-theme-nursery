@@ -46,12 +46,14 @@ Some more text. Some more text.
 
     .. image:: insipid.png
         :alt: Example image showing the text "insipid Sphinx theme"
+        :align: right
 
 
 .. topic:: Image in topic
 
     .. image:: insipid.png
         :alt: Example image showing the text "insipid Sphinx theme"
+        :align: left
 
 
 .. sidebar:: Image in sidebar
@@ -59,6 +61,13 @@ Some more text. Some more text.
     .. image:: insipid.png
         :alt: Example image showing the text "insipid Sphinx theme"
 
+..
+
+    Quoted image:
+
+    .. image:: insipid.png
+        :alt: Example image showing the text "insipid Sphinx theme"
+        :align: left
 
 Figure
 ------
@@ -84,6 +93,7 @@ Some more text. Some more text.
 Some more text. Some more text.
 
 .. figure:: insipid.png
+    :alt: Example image showing the text "insipid Sphinx theme"
     :align: left
 
     This is the caption of the figure.
@@ -91,6 +101,7 @@ Some more text. Some more text.
 Text after left-aligned figure.
 
 .. figure:: insipid.png
+    :alt: Example image showing the text "insipid Sphinx theme"
     :align: right
 
     This is the caption of the figure.
@@ -113,16 +124,10 @@ Some more text.
 Some more text.
 Some more text.
 
-    Quoted figure:
-
-    .. figure:: insipid.png
-        :align: left
-    
-        This is the caption of the figure.
-
 .. admonition:: Figure in admonition
 
     .. figure:: insipid.png
+        :alt: Example image showing the text "insipid Sphinx theme"
         :align: right
     
         This is the caption of the figure.
@@ -130,6 +135,7 @@ Some more text.
 .. topic:: Figure in topic
 
     .. figure:: insipid.png
+        :alt: Example image showing the text "insipid Sphinx theme"
         :align: left
     
         This is the caption of the figure.
@@ -137,5 +143,16 @@ Some more text.
 .. sidebar:: Figure in sidebar
 
     .. figure:: insipid.png
+        :alt: Example image showing the text "insipid Sphinx theme"
+    
+        This is the caption of the figure.
+
+..
+
+    Quoted figure:
+
+    .. figure:: insipid.png
+        :alt: Example image showing the text "insipid Sphinx theme"
+        :align: left
     
         This is the caption of the figure.

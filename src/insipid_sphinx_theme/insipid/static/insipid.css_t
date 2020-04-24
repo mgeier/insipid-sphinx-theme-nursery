@@ -128,7 +128,8 @@ a.headerlink {
 .toctree-wrapper .caption,
 p.rubric {
     margin-top: 30px;
-    font-weight: bold;
+    /*font-weight: bold;*/
+    font-weight: 600;
 }
 
 blockquote {
@@ -211,7 +212,8 @@ li > p:last-child {
 }
 
 dl.citation > dt {
-    font-weight: bold;
+    /*font-weight: bold;*/
+    font-weight: 600;
 }
 
 /* -- hyperlink styles ------------------------------------------------------ */
@@ -346,6 +348,10 @@ kbd.docutils {
     color: #fff;
     background-color: #333;
     border-radius: 3px;
+}
+
+kbd {
+    /*font-weight: normal;*/
 }
 
 /* -- admonitions ----------------------------------------------------------- */
@@ -486,6 +492,7 @@ dt {
 
 dl.glossary > dt {
     font-size: unset;
+    font-weight: 600;
 }
 
 dl.field-list {

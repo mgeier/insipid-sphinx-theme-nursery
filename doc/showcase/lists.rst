@@ -154,8 +154,8 @@ term 3 : classifier
 term 4 : classifier one : classifier two
     Definition 4.
 
-term with ``code``
-    Definition with ``code``.
+term with ``code`` and **bold**
+    Definition with ``code`` and **bold**.
 
 .. admonition:: Admonition
 
@@ -196,8 +196,8 @@ Example link: :term:`source directory` (term will be highlighted).
     term 2
         Definition of both terms.
 
-    term with ``code``
-        Definition with ``code``.
+    term with ``code`` and **bold**
+        Definition with ``code`` and **bold**.
 
 .. admonition:: Admonition
 

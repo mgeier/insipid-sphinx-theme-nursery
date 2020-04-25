@@ -138,7 +138,8 @@
             {%- if parents %}
             <a class="parent" href="{{ parents[-1].link|e }}" {{ accesskey('U') }}>{{ parents[-1].title }}</a>
             {%- elif pagename == master_doc %}
-            <span class="parent">{{ docstitle|e }}</span>
+            {#- NB: In the "singlehtml" builder docstitle is None #}
+            <span class="parent">{{ docstitle|e if docstitle != None else title|e }}</span>
             {%- else %}
             <a class="parent" href="{{ pathto(master_doc)|e }}" {{ accesskey('U') }}>{{ docstitle|e }}</a>
             {%- endif %}

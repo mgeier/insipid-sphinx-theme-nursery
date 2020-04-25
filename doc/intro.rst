@@ -1,11 +1,9 @@
 Introduction
 ============
 
-This Sphinx_ theme was very much inspired by (i.o.w. ripped off of) mdBook_
-and -- to a lesser extent --
-the similar-looking bookdown_ and (the legacy theme of) GitBook_.
+This Sphinx_ theme was very much inspired by (i.o.w. ripped off of) mdBook_.
 
-Some ideas were taken from the Sphinx themes
+Some minor ideas were taken from the Sphinx themes
 sphinx_typlog_theme_ (https://readthedocs.org/ badge),
 sphinx_material_ (previous/next arrows in navbar)
 sphinx_rtd_theme_ (admonitions)

@@ -26,9 +26,6 @@ html {
     height: 100%;  /* necessary for flex-grow */
 
     /* TODO: scrollbar-color (from mdBook)? */
-
-    /* https://github.com/sphinx-doc/sphinx/issues/1125 */
-    background-color: #fff;
 }
 
 body {
@@ -36,7 +33,6 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100%;  /* necessary for flex-grow */
-    /*overflow-x: hidden;*/
 
     font-family: 'Open Sans', sans-serif;
 }
@@ -62,10 +58,7 @@ div.body {
     margin-right: auto;
 {% endif  %}
 
-    /*line-height: 1.5;*/
     line-height: 1.618;
-    background-color: #fff;
-    color: #000;
 }
 
 .js div.body * {

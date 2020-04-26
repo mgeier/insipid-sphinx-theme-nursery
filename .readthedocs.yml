@@ -2,8 +2,7 @@ version: 2
 build:
   image: latest
 submodules:
-  include:
-    - Font-Awesome
+  include: all
 python:
   version: 3
   install:

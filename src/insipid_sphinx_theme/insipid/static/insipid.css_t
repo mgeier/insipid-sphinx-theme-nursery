@@ -22,11 +22,6 @@
 html { box-sizing: border-box; }
 *, *:before, *:after { box-sizing: inherit; }
 
-html, body {
-    padding: 0;
-    margin: 0;
-}
-
 html {
     height: 100%;  /* necessary for flex-grow */
 

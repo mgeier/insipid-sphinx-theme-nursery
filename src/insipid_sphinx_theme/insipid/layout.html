@@ -1,4 +1,4 @@
-{% extends "basic/layout.html" %}
+{%- extends "basic/layout.html" %}
 
 
 {# Turn comma-separated list into proper list #}
@@ -41,38 +41,6 @@
 {% endif %}
 
 
-{% macro navbar() %}
-    <nav class="navbar">
-      {%- if prev %}
-      <a class="previous" href="{{ prev.link|e }}" title="{{ _('Previous topic') }}" {{ accesskey('P') }}>
-        <div class="icon">
-          {% include 'icons/arrow-left.svg' %}
-        </div>
-        <div class="title">
-          <span class="text">
-            <span class="direction">{{ _('previous') }}</span>
-            {{ prev.title }}
-          </span>
-        </div>
-      </a>
-      {%- endif %}
-      {%- if next %}
-      <a class="next" href="{{ next.link|e }}" title="{{ _('Next topic') }}" {{ accesskey('N') }}>
-        <div class="title">
-          <span class="text">
-            <span class="direction">{{ _('next') }}</span>
-            {{ next.title }}
-          </span>
-        </div>
-        <div class="icon">
-          {% include 'icons/arrow-right.svg' %}
-        </div>
-      </a>
-      {%- endif %}
-    </nav>
-{%- endmacro %}
-
-
 {% block css %}
 {{- super() }}
 {%- if READTHEDOCS|tobool and render_sidebar %}
@@ -103,23 +71,23 @@
 {% block header %}
     <script type="text/javascript">
         var body = $(document.body);
-        body.addClass('loading');
         body.removeClass('no-js');
         body.addClass('js');
 {%- if render_sidebar %}
-        body.removeClass('sidebar-visible');
-        body.addClass('sidebar-hidden');
+        body.addClass('loading');
         try {
             var sidebar = localStorage.getItem('sphinx-sidebar');
-            if (sidebar === 'visible') {
-                body.removeClass('sidebar-hidden');
-                body.addClass('sidebar-visible');
+            if (sidebar === 'hidden') {
+                body.removeClass('sidebar-visible');
+                body.addClass('sidebar-hidden');
             }
             var sidebar_width = localStorage.getItem('sphinx-sidebar-width');
             if (sidebar_width) {
                 $(':root').css('--sidebar-width', sidebar_width);
             }
         } catch(e) {
+            body.removeClass('sidebar-visible');
+            body.addClass('sidebar-hidden');
         }
 {%- endif %}
     </script>
@@ -195,6 +163,38 @@
     </nav>
 {%- endif %}
 {%- endblock %}
+
+
+{% macro navbar() %}
+    <nav class="navbar">
+      {%- if prev %}
+      <a class="previous" href="{{ prev.link|e }}" title="{{ _('Previous topic') }}" {{ accesskey('P') }}>
+        <div class="icon">
+          {% include 'icons/arrow-left.svg' %}
+        </div>
+        <div class="title">
+          <span class="text">
+            <span class="direction">{{ _('previous') }}</span>
+            {{ prev.title }}
+          </span>
+        </div>
+      </a>
+      {%- endif %}
+      {%- if next %}
+      <a class="next" href="{{ next.link|e }}" title="{{ _('Next topic') }}" {{ accesskey('N') }}>
+        <div class="title">
+          <span class="text">
+            <span class="direction">{{ _('next') }}</span>
+            {{ next.title }}
+          </span>
+        </div>
+        <div class="icon">
+          {% include 'icons/arrow-right.svg' %}
+        </div>
+      </a>
+      {%- endif %}
+    </nav>
+{%- endmacro %}
 
 
 {% block relbar1 %}

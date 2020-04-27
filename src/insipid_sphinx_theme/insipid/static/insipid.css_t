@@ -13,7 +13,7 @@
 
 :root {
     --sidebar-width: {{ theme_sidebarwidth|todim }};
-    --topbar-height: {{ theme_topbarheight|todim }};
+    --topbar-height: 3rem;
 }
 
 /* -- page layout ----------------------------------------------------------- */
@@ -637,7 +637,7 @@ div.sphinxsidebar {
     position: fixed;
     width: var(--sidebar-width);
     {{ sidebar_side }}: 0;
-    top: var(--topbar-height);
+    top: 0;
     bottom: 0;
     overflow-y: auto;
     float: unset;
@@ -661,38 +661,18 @@ body.js:not(.sidebar-resizing) {
     transition: margin-{{ sidebar_side }} {{ theme_sidebar_transition }};
 }
 
-.js.topbar-folded .sphinxsidebar,
-.no-js .sphinxsidebar {
-    top: 0;
-}
-
 {% if READTHEDOCS|tobool %}
-.js:not(.sidebar-resizing) .rst-versions.rst-badge {
-    transition: {{ sidebar_side }} {{ theme_sidebar_transition }};
-}
+.js:not(.sidebar-resizing) .rst-versions.rst-badge,
 {% endif %}
-
 .js:not(.sidebar-resizing) .sphinxsidebar {
-    transition: {{ sidebar_side }} {{ theme_sidebar_transition }}, top {{ theme_topbar_transition }};
-}
-
-.js.sidebar-resizing .sphinxsidebar {
-    transition: top {{ theme_topbar_transition }};
+    transition: {{ sidebar_side }} {{ theme_sidebar_transition }};
 }
 
 div.sphinxsidebarwrapper {
     position: relative;  /* reference for sidebar-resize-handle */
+    margin-top: var(--topbar-height);
     padding: 10px 10px;
     min-height: 100%;
-}
-
-.js.topbar-folded .sphinxsidebar .sphinxsidebarwrapper,
-.no-js .sphinxsidebar .sphinxsidebarwrapper {
-    padding-top: calc(10px + var(--topbar-height));
-}
-
-.js .sphinxsidebar .sphinxsidebarwrapper {
-    transition: padding-top {{ theme_topbar_transition }};
 }
 
 .sidebar-resize-handle {
@@ -841,11 +821,8 @@ div.sphinxsidebar li.current a.current {
 
 #menu-bar .left-buttons > *,
 #menu-bar .right-buttons > * {
-    /*position: relative;*/
     padding: 8px;
     margin: 0;
-    /*z-index: 10;*/
-    /*line-height: {{ theme_topbarheight|todim }};*/
 }
 
 @media only screen and (max-width: 420px) {
@@ -906,7 +883,7 @@ div.sphinxsidebar li.current a.current {
     display: inline-block;
     font-weight: 200;
     font-size: 2rem;
-    line-height: {{ theme_topbarheight|todim }};
+    line-height: 3rem;
     text-align: center;
     margin: 0;
     flex: 1;

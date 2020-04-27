@@ -30,5 +30,7 @@ With label (since Sphinx 1.8):
 .. math:: e^{i\pi} + 1 = 0
    :label: euler
 
+----
+
 Euler's identity, equation :eq:`euler`, was elected one of the
 most beautiful mathematical formulas.

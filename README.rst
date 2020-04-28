@@ -18,9 +18,6 @@ License
     BSD-2-Clause (same as Sphinx itself),
     for more information take a look at the ``LICENSE`` file.
 
-    Uses MIT-licensed normalize.css_.
-
     SVG icons from `Font Awesome`_, CC BY 4.0.
 
-    .. _normalize.css: https://github.com/necolas/normalize.css
     .. _Font Awesome: https://fontawesome.com/

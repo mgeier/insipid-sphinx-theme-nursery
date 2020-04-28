@@ -29,10 +29,6 @@ button:-moz-focusring {
 
 /* -- page layout ----------------------------------------------------------- */
 
-/* https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-html { box-sizing: border-box; }
-*, *:before, *:after { box-sizing: inherit; }
-
 html, body {
     /*padding: 0;*/
     /*margin: 0;*/
@@ -64,8 +60,6 @@ div.document {
 
 div.body {
     padding: 20px;
-    /* Reset box-sizing in case some 3rd party CSS relies on default behavior */
-    box-sizing: initial;
     /* Override basic.css, min width is handled with media queries */
     min-width: unset;
     /* Avoid horizontally scrolling <body> */
@@ -553,6 +547,7 @@ td.label {
 }
 
 .navbar > a {
+    box-sizing: border-box;
     width: 50%;
     padding: 10px;
     display: flex;

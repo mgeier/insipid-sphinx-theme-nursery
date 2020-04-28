@@ -849,6 +849,8 @@ div.sphinxsidebar li.current a.current {
 }
 
 #titlebar .buttons {
+    display: flex;
+    align-items: baseline;
     margin: 0 5px;
 }
 

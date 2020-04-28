@@ -92,9 +92,9 @@
 {%- endif %}
     </script>
     <div id="topbar-placeholder">
-      <div id="topbar-container">
-        <div id="menu-bar">
-          <div class="left-buttons">
+      <div id="topbar">
+        <div id="titlebar">
+          <div class="buttons">
 {%- if not theme_rightsidebar|tobool %}
 {%- include 'sidebar-button.html' %}
 {%- endif %}
@@ -102,7 +102,7 @@
 {%- include buttontemplate %}
 {%- endfor %}
           </div>
-          <h1 id="menu-title">
+          <h1>
             {%- if parents %}
             <a class="parent" href="{{ parents[-1].link|e }}" {{ accesskey('U') }}>{{ parents[-1].title }}</a>
             {%- elif pagename == master_doc %}
@@ -113,7 +113,7 @@
             {%- endif %}
             <button class="top" type="button" onclick="$(document.scrollingElement).animate({scrollTop: 0}, 400).focus()">{{ title }}</button>
           </h1>
-          <div class="right-buttons">
+          <div class="buttons">
 {%- for buttontemplate in theme_right_buttons %}
 {%- include buttontemplate %}
 {%- endfor %}

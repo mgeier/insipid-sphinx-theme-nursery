@@ -33,11 +33,6 @@ button:-moz-focusring {
 html { box-sizing: border-box; }
 *, *:before, *:after { box-sizing: inherit; }
 
-html {
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-}
-
 html, body {
     /*padding: 0;*/
     /*margin: 0;*/
@@ -825,41 +820,39 @@ div.sphinxsidebar li.current a.current {
     transition: margin-{{ sidebar_side }} {{ theme_sidebar_transition }};
 }
 
-#topbar-container {
+#topbar {
     border-bottom: #eee solid 1px;
     background-color: #fff;
 }
 
-#menu-bar,
-#menu-bar a,
-#menu-bar a:visited {
+#titlebar,
+#titlebar a,
+#titlebar a:visited {
     color: #ccc;
 }
 
-#menu-bar button:hover,
-#menu-bar a:hover {
+#titlebar button:hover,
+#titlebar a:hover {
     color: #333;
 }
 
-#menu-bar {
+#titlebar {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    min-height: 3rem;
 }
 
-#menu-bar .left-buttons > *,
-#menu-bar .right-buttons > * {
+#titlebar .buttons > * {
     padding: 8px;
     margin: 0;
 }
 
-@media only screen and (max-width: 420px) {
-    #menu-bar button {
-        padding: 0 5px;
-    }
+#titlebar .buttons {
+    margin: 0 5px;
 }
 
-#topbar-container svg,
+#topbar svg,
 .navbar svg,
 .crumbs svg {
   /*display: inline-block;*/
@@ -870,7 +863,7 @@ div.sphinxsidebar li.current a.current {
   fill: currentColor;
 }
 
-#menu-bar button {
+#titlebar button {
     border: none;
     padding: 0;
     color: inherit;
@@ -878,28 +871,21 @@ div.sphinxsidebar li.current a.current {
     font: inherit;
 }
 
-
-.js #menu-bar button {
+.js #titlebar button {
     cursor: pointer;
 }
 
 
-#topbar-container a {
+#topbar a {
     text-decoration: none;
 }
 
-.js.topbar-folded #topbar-placeholder:not(:hover) #topbar-container {
+.js.topbar-folded #topbar-placeholder:not(:hover) #topbar {
     transform: translateY(-100%);
 }
 
-.js #topbar-container {
+.js #topbar {
     transition: transform {{ theme_topbar_transition }};
-}
-
-.left-buttons, .right-buttons {
-    display: flex;
-    align-items: baseline;
-    margin: 0 5px;
 }
 
 .no-js #sidebar-toggle,
@@ -907,11 +893,9 @@ div.sphinxsidebar li.current a.current {
     display: none;
 }
 
-#menu-title {
-    display: inline-block;
+#titlebar h1 {
     font-weight: 200;
     font-size: 2rem;
-    line-height: 3rem;
     text-align: center;
     margin: 0;
     flex: 1;
@@ -920,45 +904,45 @@ div.sphinxsidebar li.current a.current {
     text-overflow: ellipsis;
 }
 
-#menu-title .top,
-.scrolled #menu-title .parent {
+#titlebar h1 .top,
+.scrolled #titlebar h1 .parent {
     display: none;
 }
 
-.scrolled #menu-title .top {
+.scrolled #titlebar h1 .top {
     display: unset;
 }
 
 /* -- search field in topbar ------------------------------------------------ */
 
-#topbar-container form {
+#topbar form {
     /*margin-top: 10px;*/
 }
 
-#topbar-container input {
+#topbar input {
     border: 1px solid #98dbcc;
     /*font-family: sans-serif;*/
     font-size: 1em;
 }
 
-#topbar-container #searchbox form.search {
+#topbar #searchbox form.search {
     /*overflow: hidden;*/
 }
 
-#topbar-container #searchbox input[type="search"] {
+#topbar #searchbox input[type="search"] {
     /*float: left;*/
     width: 80%;
     /*padding: 0.25em;*/
 }
 
-#topbar-container #searchbox input[type="submit"] {
+#topbar #searchbox input[type="submit"] {
     /*float: left;*/
     /*width: 20%;*/
     border-left: none;
     /*padding: 0.25em;*/
 }
 
-#topbar-container #searchbox .highlight-link a {
+#topbar #searchbox .highlight-link a {
     background-color: #fbe54e;
 }
 
@@ -1083,11 +1067,11 @@ div.viewcode-block:target {
         width: unset;
     }
 
-    .js.sidebar-visible #menu-title .parent {
+    .js.sidebar-visible #titlebar h1 .parent {
         display: unset;
     }
 
-    .js.sidebar-visible #menu-title .top {
+    .js.sidebar-visible #titlebar h1 .top {
         display: none;
     }
 }

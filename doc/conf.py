@@ -2,7 +2,7 @@
 
 html_theme = 'insipid'
 
-# -- Recommended changes from Sphinx defaults -----------------------------
+# -- Recommended changes of Sphinx defaults -------------------------------
 
 html_add_permalinks = '\N{SECTION SIGN}'
 
@@ -19,7 +19,7 @@ html_copy_source = False
 html_theme_options = {
     #'body_centered': False,
     #'body_max_width': None,
-    #'body_min_width': 0,  # When narrower, main text is covered by sidebar
+    #'body_min_width': 0,
     #'breadcrumbs': True,
     #'globaltoc_collapse': False,
     #'globaltoc_includehidden': True,

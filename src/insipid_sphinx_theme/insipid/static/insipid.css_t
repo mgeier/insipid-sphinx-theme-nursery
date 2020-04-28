@@ -290,7 +290,9 @@ div.body dl > dt code {
     padding: unset;
 }
 
-code.xref, a code {
+code.descname,
+code.xref,
+a code {
     font-weight: unset;
 }
 

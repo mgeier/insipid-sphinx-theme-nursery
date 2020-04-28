@@ -10,7 +10,6 @@
     intro
     usage
     customization
-    showcases
 
 ----
 
@@ -18,6 +17,7 @@
     :caption: Part Two – Showcase
     :numbered:
 
+    showcase/index
     showcase/text-formatting
     showcase/images
     showcase/code-blocks

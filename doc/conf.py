@@ -1,28 +1,46 @@
-html_theme = 'insipid'
-html_theme_options = {
-    #'navigation_with_keys': False,
-    #'nosidebar': True,
-    'rightsidebar': True,
-    #'navbar_top': False,
-    #'navbar_bottom': False,
-    #'strip_section_numbers': False,
-    #'body_min_width': 0,  # When smaller, body is covered by sidebar
-    #'body_max_width': None,
-    #'sidebarwidth': 300,
-    #'breadcrumbs': True,
+# -- One required setting -------------------------------------------------
 
+html_theme = 'insipid'
+
+# -- Recommended changes from Sphinx defaults -----------------------------
+
+html_add_permalinks = '\N{SECTION SIGN}'
+
+# Use 'none' when you don't want the default 'python'
+highlight_language = 'none'
+
+# -- Recommended settings for readthedocs.org -----------------------------
+
+# If False, source links to Bitbucket/Github/GitLab are shown
+html_copy_source = False
+
+# -- ??? ------------------------------------------------------------------
+
+html_theme_options = {
+    #'body_centered': False,
+    #'body_max_width': None,
+    #'body_min_width': 0,  # When narrower, main text is covered by sidebar
+    #'breadcrumbs': True,
+    #'globaltoc_collapse': False,
+    #'globaltoc_includehidden': True,
     #'left_buttons': [
     #    'home-button.html',
     #],
+    #'navbar_top': False,
+    #'navbar_bottom': False,
+    #'navigation_with_keys': False,
+    #'nosidebar': True,
     #'right_buttons': [
     #    'search-button.html',
     #],
-
-    #'body_centered': False,
-    #'topbar_transition': '0.7s ease-out',
-    #'sidebar_transition': '0.3s ease-out',
+    #'rightsidebar': True,
     #'show_insipid': False,
+    #'sidebar_transition': '0.3s ease-out',
+    #'sidebarwidth': 300,
+    #'strip_section_numbers': False,
+    #'topbar_transition': '0.7s ease-out',
 }
+
 html_sidebars = {
    '**': [
        'github-badge.html',
@@ -38,13 +56,10 @@ project = 'insipid-sphinx-theme'
 
 #html_title = 'Insipid Sphinx Theme'
 html_short_title = 'insipid'
-html_copy_source = False
 #html_show_sourcelink = False
 #html_sourcelink_suffix = ''
 html_show_copyright = False
 #html_show_sphinx = False
-#html_add_permalinks = '\N{LINK SYMBOL}'
-html_add_permalinks = '\N{SECTION SIGN}'
 html_secnumber_suffix = '\N{FIGURE SPACE}'
 html_logo = 'showcase/insipid.png'
 html_favicon = 'favicon.ico'
@@ -56,8 +71,6 @@ html_baseurl = 'https://insipid-sphinx-theme-nursery.readthedocs.io/'
 #html_domain_indices = False
 #html_use_index = False
 #html_split_index = True
-
-highlight_language = 'none'
 
 extensions = [
     'sphinx.ext.autodoc',

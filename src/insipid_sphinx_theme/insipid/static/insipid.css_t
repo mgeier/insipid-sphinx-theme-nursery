@@ -781,6 +781,7 @@ div.sphinxsidebar li {
 }
 
 div.sphinxsidebar a {
+    color: #235388;
 }
 
 div.sphinxsidebar ul ul {
@@ -796,12 +797,12 @@ div.sphinxsidebar li {
     position: relative
 }
 
-div.sphinxsidebar li[class^="toctree-"].current {
-    list-style: circle;
+div.sphinxsidebar li.current {
+    background-color: #fff;
 }
 
 div.sphinxsidebar li.current a.current {
-    color: #000;
+    /*color: #000;*/
 }
 
 /* -- topbar ---------------------------------------------------------------- */

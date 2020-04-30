@@ -9,6 +9,7 @@
 
     intro
     usage
+    configuration
     customization
 
 ----

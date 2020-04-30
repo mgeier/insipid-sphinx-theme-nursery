@@ -1087,12 +1087,18 @@ div.viewcode-block:target {
     display: none;
 }
 
-#fullscreen .disable:not(:fullscreen) {
+.js #fullscreen .disable {
     display: none;
 }
 
-#fullscreen .enable:fullscreen {
-    display: none;
+@media all and (display-mode: fullscreen) {
+    .js #fullscreen .enable {
+        display: none;
+    }
+
+    .js #fullscreen .disable {
+        display: unset;
+    }
 }
 
 {#-

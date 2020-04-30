@@ -34,10 +34,18 @@ html, body {
     /*margin: 0;*/
 }
 
+::-webkit-scrollbar {
+    background: #fff;
+}
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+}
+html {
+    scrollbar-color: #ccc #fff;
+}
+
 html {
     height: 100%;  /* necessary for flex-grow */
-
-    /* TODO: scrollbar-color (from mdBook)? */
 }
 
 body {
@@ -663,6 +671,7 @@ div.sphinxsidebar {
     float: unset;
     margin-left: unset;  /* override basic.css */
     z-index: 99;
+
     /*
     font-size: 0.875em;
     -webkit-overflow-scrolling: touch;
@@ -671,6 +680,14 @@ div.sphinxsidebar {
 
     color: #333;
     background-color: #f5f5f5;
+}
+
+div.sphinxsidebar::-webkit-scrollbar {
+    width: 5px;
+}
+
+div.sphinxsidebar {
+    scrollbar-width: thin;
 }
 
 body.sidebar-visible {
@@ -725,16 +742,6 @@ div.sphinxsidebarwrapper {
 .js.sidebar-hidden .sphinxsidebar {
     {{ sidebar_side }}: calc(0px - var(--sidebar-width));
 }
-
-/*
-.sidebar::-webkit-scrollbar {
-    background: var(--sidebar-bg);
-}
-
-.sidebar::-webkit-scrollbar-thumb {
-    background: var(--scrollbar);
-}
-*/
 
 div.sphinxsidebar h3 {
     font-size: 1.4em;

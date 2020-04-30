@@ -66,4 +66,16 @@ $(document).ready(function () {
             icon.attr('aria-expanded', 'false');
         }
     });
+
+    if (document.fullscreenEnabled) {
+        $('#fullscreen').click(function() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            } else {
+                document.exitFullscreen();
+            }
+        });
+    } else {
+        $('#fullscreen').remove();
+    }
 });

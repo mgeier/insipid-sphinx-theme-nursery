@@ -1083,6 +1083,18 @@ div.viewcode-block:target {
     }
 }
 
+.no-js #fullscreen {
+    display: none;
+}
+
+#fullscreen .disable:not(:fullscreen) {
+    display: none;
+}
+
+#fullscreen .enable:fullscreen {
+    display: none;
+}
+
 {#-
 vim:ft=css
 #}

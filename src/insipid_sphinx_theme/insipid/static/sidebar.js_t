@@ -34,7 +34,7 @@ $(document).ready(function () {
             link.setAttribute('tabIndex', 0);
         });
         */
-        sidebar_toggle.attr('title', "{{ _('Collapse sidebar') }}");
+        sidebar_toggle.attr('title', "{{ _('Collapse sidebar') }} (M)");
         sidebar_toggle.attr('aria-expanded', true);
         sidebar.attr('aria-hidden', false);
         store('sphinx-sidebar', 'visible');
@@ -50,7 +50,7 @@ $(document).ready(function () {
             link.setAttribute('tabIndex', -1);
         });
         */
-        sidebar_toggle.attr('title', "{{ _('Expand sidebar') }}");
+        sidebar_toggle.attr('title', "{{ _('Expand sidebar') }} (M)");
         sidebar_toggle.attr('aria-expanded', false);
         sidebar.attr('aria-hidden', true);
         store('sphinx-sidebar', 'hidden');

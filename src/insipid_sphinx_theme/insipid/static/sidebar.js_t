@@ -1,9 +1,9 @@
 $(document).ready(function () {
     'use strict';
-    var root = $(':root');
-    var body = $(document.body);
-    var sidebar = $('.sphinxsidebar');
-    var sidebar_toggle = $('#sidebar-toggle');
+    var $root = $(':root');
+    var $body = $(document.body);
+    var sidebar = document.querySelector('.sphinxsidebar');
+    var $sidebar_toggle = $('#sidebar-toggle');
 
     function store(key, value) {
         try {
@@ -12,63 +12,66 @@ $(document).ready(function () {
         }
     }
 
-    sidebar_toggle.on('click', function () {
-        if (body.hasClass('sidebar-hidden')) {
+    $sidebar_toggle.on('click', function () {
+        if ($body.hasClass('sidebar-hidden')) {
             showSidebar();
-        } else if (body.hasClass('sidebar-visible')) {
+        } else if ($body.hasClass('sidebar-visible')) {
+            $sidebar_toggle.blur();
             hideSidebar();
         }
     });
 
     $('#overlay').on('click', function () {
-        if (body.hasClass('sidebar-visible')) {
+        if ($body.hasClass('sidebar-visible')) {
             hideSidebar();
         }
     });
 
     function showSidebar() {
-        body.removeClass('sidebar-hidden');
-        body.addClass('sidebar-visible');
+        $body.removeClass('sidebar-hidden');
+        $body.addClass('sidebar-visible');
         /*
         Array.from(sidebarLinks).forEach(function (link) {
             link.setAttribute('tabIndex', 0);
         });
         */
-        sidebar_toggle.attr('title', "{{ _('Collapse sidebar') }} (M)");
-        sidebar_toggle.attr('aria-expanded', true);
-        sidebar.attr('aria-hidden', false);
+        $sidebar_toggle.attr('title', "{{ _('Collapse sidebar') }} (M)");
+        $sidebar_toggle.attr('aria-expanded', true);
+        $(sidebar).attr('aria-hidden', false);
         store('sphinx-sidebar', 'visible');
-        body.removeClass('topbar-folded');
-        sidebar.focus();
+        $body.removeClass('topbar-folded');
+        sidebar.focus({preventScroll: true});
+        sidebar.blur();
     }
 
     function hideSidebar() {
-        body.removeClass('sidebar-visible');
-        body.addClass('sidebar-hidden');
+        $body.removeClass('sidebar-visible');
+        $body.addClass('sidebar-hidden');
         /*
         Array.from(sidebarLinks).forEach(function (link) {
             link.setAttribute('tabIndex', -1);
         });
         */
-        sidebar_toggle.attr('title', "{{ _('Expand sidebar') }} (M)");
-        sidebar_toggle.attr('aria-expanded', false);
-        sidebar.attr('aria-hidden', true);
+        $sidebar_toggle.attr('title', "{{ _('Expand sidebar') }} (M)");
+        $sidebar_toggle.attr('aria-expanded', false);
+        $(sidebar).attr('aria-hidden', true);
         store('sphinx-sidebar', 'hidden');
         if (document.scrollingElement.scrollTop === 0) {
-            body.removeClass('topbar-folded');
+            $body.removeClass('topbar-folded');
         }
-        document.scrollingElement.focus();
+        document.scrollingElement.focus({preventScroll: true});
+        document.scrollingElement.blur();
     }
 
     $('.sidebar-resize-handle').on('mousedown', function (e) {
         $(window).on('mousemove', resize);
         $(window).on('mouseup', stopResize);
-        body.addClass('sidebar-resizing');
+        $body.addClass('sidebar-resizing');
         return false;  // Prevent unwanted text selection while resizing
     });
 
     function resize(e) {
-        root.css('--sidebar-width', (
+        $root.css('--sidebar-width', (
         {% if theme_rightsidebar|tobool %}
             $(window).width() - e.clientX
         {% else %}
@@ -78,10 +81,10 @@ $(document).ready(function () {
     }
 
     function stopResize(e) {
-        body.removeClass('sidebar-resizing');
+        $body.removeClass('sidebar-resizing');
         $(window).off('mousemove', resize);
         $(window).off('mouseup', stopResize);
-        store('sphinx-sidebar-width', root.css('--sidebar-width'));
+        store('sphinx-sidebar-width', $root.css('--sidebar-width'));
     }
 
     // This is part of the sidebar code because it only affects the sidebar
@@ -94,7 +97,7 @@ $(document).ready(function () {
                 } else {
                     height = entry.contentRect.height;
                 }
-                root.css('--topbar-height', height + 'px');
+                $root.css('--topbar-height', height + 'px');
             }
         });
         resizeObserver.observe(document.getElementById('topbar-placeholder'));
@@ -116,7 +119,7 @@ $(document).ready(function () {
                         } else {
                             height = entry.contentRect.height;
                         }
-                        root.css('--readthedocs-badge-height', height + 'px');
+                        $root.css('--readthedocs-badge-height', height + 'px');
                     }
                 });
                 resizeObserver.observe(badge);

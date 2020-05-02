@@ -63,6 +63,43 @@ $(document).ready(function () {
         document.scrollingElement.blur();
     }
 
+    var touchstart;
+
+    document.addEventListener('touchstart', function (e) {
+        if (e.touches.length > 1) { return; }
+        var touch = e.touches[0];
+        // TODO: right sidebar
+        if (touch.clientX <= $(sidebar).width()) {
+            touchstart = {
+                x: touch.clientX,
+                y: touch.clientY,
+                t: Date.now(),
+            };
+        }
+    });
+
+    document.addEventListener('touchend', function (e) {
+        if (!touchstart) { return; }
+        if (e.touches.length > 0 || e.changedTouches.length > 1) {
+            touchstart = null;
+            return;
+        }
+        var touch = e.changedTouches[0];
+        var x = touch.clientX;
+        var y = touch.clientY;
+        var x_diff = x - touchstart.x;
+        var y_diff = y - touchstart.y;
+        var t_diff = Date.now() - touchstart.t;
+        if (t_diff < 400 && Math.abs(x_diff) > Math.max(100, Math.abs(y_diff))) {
+            if (x_diff > 0 && $body.hasClass('sidebar-hidden')) {
+                showSidebar();
+            } else if (x_diff < 0 && $body.hasClass('sidebar-visible')) {
+                hideSidebar();
+            }
+        }
+        touchstart = null;
+    });
+
     $('.sidebar-resize-handle').on('mousedown', function (e) {
         $(window).on('mousemove', resize);
         $(window).on('mouseup', stopResize);

@@ -177,6 +177,18 @@ $(document).ready(function () {
     }
 {%- endif %}
 
+    // Sphinx has a different opinion what "current" means:
+    $('.sphinxsidebar li.current:not(:has(> a[href^="#"]))').removeClass('current');
+    var current = $('.sphinxsidebar li:has(> a[href^="#"])');
+    current.addClass('current');
+    if (current.length) {
+        var top = current.offset().top;
+        var height = current.height();
+        var topbar_height = $('#topbar').height();
+        if (top < topbar_height || top + height > sidebar.clientHeight) {
+            current[0].scrollIntoView(true);
+        }
+    }
 });
 
 {#

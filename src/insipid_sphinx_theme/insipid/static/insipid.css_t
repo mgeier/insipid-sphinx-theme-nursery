@@ -82,7 +82,7 @@ div.body {
     background-color: #fff;
 }
 
-.js div.body * {
+.js * {
     scroll-margin-top: var(--topbar-height);
     scroll-snap-margin-top: var(--topbar-height);  /* Safari */
 }

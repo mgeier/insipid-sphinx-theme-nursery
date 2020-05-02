@@ -68,8 +68,11 @@ $(document).ready(function () {
     document.addEventListener('touchstart', function (e) {
         if (e.touches.length > 1) { return; }
         var touch = e.touches[0];
-        // TODO: right sidebar
+        {%- if theme_rightsidebar|tobool %}
+        if (touch.clientX >= $(window).width() - $(sidebar).width()) {
+        {%- else %}
         if (touch.clientX <= $(sidebar).width()) {
+        {%- endif %}
             touchstart = {
                 x: touch.clientX,
                 y: touch.clientY,
@@ -91,10 +94,18 @@ $(document).ready(function () {
         var y_diff = y - touchstart.y;
         var t_diff = Date.now() - touchstart.t;
         if (t_diff < 400 && Math.abs(x_diff) > Math.max(100, Math.abs(y_diff))) {
-            if (x_diff > 0 && $body.hasClass('sidebar-hidden')) {
-                showSidebar();
-            } else if (x_diff < 0 && $body.hasClass('sidebar-visible')) {
-                hideSidebar();
+            {%- if theme_rightsidebar|tobool %}
+            if (x_diff < 0) {
+            {%- else %}
+            if (x_diff > 0) {
+            {%- endif %}
+                if ($body.hasClass('sidebar-hidden')) {
+                    showSidebar();
+                }
+            } else {
+                if ($body.hasClass('sidebar-visible')) {
+                    hideSidebar();
+                }
             }
         }
         touchstart = null;
@@ -109,11 +120,11 @@ $(document).ready(function () {
 
     function resize(e) {
         $root.css('--sidebar-width', (
-        {% if theme_rightsidebar|tobool %}
+        {%- if theme_rightsidebar|tobool %}
             $(window).width() - e.clientX
-        {% else %}
+        {%- else %}
             e.clientX
-        {% endif %}
+        {%- endif %}
         ) + 'px');
     }
 
@@ -140,7 +151,7 @@ $(document).ready(function () {
         resizeObserver.observe(document.getElementById('topbar-placeholder'));
     }
 
-{% if READTHEDOCS|tobool %}
+{%- if READTHEDOCS|tobool %}
     if (window.ResizeObserver) {
         function setResizeObserver() {
             var badge = document.querySelector('.rst-versions.rst-badge');
@@ -164,7 +175,8 @@ $(document).ready(function () {
         };
         window.requestAnimationFrame(setResizeObserver);
     }
-{% endif %}
+{%- endif %}
+
 });
 
 {#

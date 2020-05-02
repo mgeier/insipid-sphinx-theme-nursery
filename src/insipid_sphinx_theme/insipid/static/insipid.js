@@ -39,16 +39,17 @@ $(document).ready(function () {
 
     var div_body = document.querySelector('div.body');
     var first_section = document.querySelector('div.body .section');
+    if (first_section) {
+        $(document).on('scroll', function () {
+            if (window.pageYOffset >= div_body.offsetTop + first_section.offsetTop) {
+                $body.addClass('scrolled');
+            } else {
+                $body.removeClass('scrolled');
+            }
+        });
+        $(document).scroll();
+    }
 
-    $(document).on('scroll', function () {
-        if (window.pageYOffset >= div_body.offsetTop + first_section.offsetTop) {
-            $body.addClass('scrolled');
-        } else {
-            $body.removeClass('scrolled');
-        }
-    });
-
-    $(document).scroll();
 
     // show search
     var $form = $('#searchform');

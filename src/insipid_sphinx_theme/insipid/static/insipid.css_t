@@ -192,16 +192,28 @@ dl.field-list > dt {
 }
 
 div.body dl > dt:not(.label),
-div.body dl > dt:target,
-dl.field-list > dt,
-div.body div.admonition dl > dt:target,
-div.body a:target {
+dl.field-list > dt {
     padding: 3px 7px;
+}
+
+div.body dl > dt.label:target,
+div.body div.admonition dl > dt:target {
+    padding: 3px 7px;
+    margin-top: -3px;
+    margin-bottom: -3px;
+    margin-left: -7px;
+}
+
+div.body a:target,
+strong:target {
+    padding: 3px;
+    margin: -3px;
 }
 
 div.body dl > dt:target,
 div.body div.admonition dl > dt:target,
-div.body a:target {
+div.body a:target,
+strong:target {
     background-color: #ffc;
 }
 

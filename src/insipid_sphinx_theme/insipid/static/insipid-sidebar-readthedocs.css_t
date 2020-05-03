@@ -27,15 +27,14 @@ div.sphinxsidebar {
     width: 100%;
 }
 
-.sidebar-visible .ethical-fixedfooter {
-    {%- if theme_rightsidebar|tobool %}
+.ethical-fixedfooter {
     left: 0;
-    right: var(--sidebar-width);
-    {%- else %}
-    left: var(--sidebar-width);
     right: 0;
-    {%- endif %}
     width: unset;
+}
+
+.sidebar-visible .ethical-fixedfooter {
+    {{ sidebar_side }}: var(--sidebar-width);
 }
 
 {#

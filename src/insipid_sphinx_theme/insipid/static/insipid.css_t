@@ -35,13 +35,21 @@ html, body {
 }
 
 ::-webkit-scrollbar {
-    background: #fff;
+    background: transparent;
 }
 ::-webkit-scrollbar-thumb {
     background: #ccc;
 }
 html {
-    scrollbar-color: #ccc #fff;
+    scrollbar-color: #ccc transparent;
+}
+
+div.body *::-webkit-scrollbar {
+    width: 5px;
+}
+
+div.body * {
+    scrollbar-width: thin;
 }
 
 html {
@@ -698,7 +706,6 @@ div.sphinxsidebar::-webkit-scrollbar {
 
 div.sphinxsidebar {
     scrollbar-width: thin;
-    scrollbar-color: #ccc #f5f5f5;
 }
 
 body.sidebar-visible {

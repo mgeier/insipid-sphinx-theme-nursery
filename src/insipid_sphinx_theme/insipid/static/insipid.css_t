@@ -698,10 +698,6 @@ body.js:not(.sidebar-resizing) {
     transition: margin-{{ sidebar_side }} {{ theme_sidebar_transition }};
 }
 
-{% if READTHEDOCS|tobool %}
-.js:not(.sidebar-resizing) .rst-versions.rst-badge,
-.js:not(.sidebar-resizing) .ethical-fixedfooter,
-{% endif %}
 .js:not(.sidebar-resizing) .sphinxsidebar {
     transition: {{ sidebar_side }} {{ theme_sidebar_transition }};
 }
@@ -737,9 +733,6 @@ div.sphinxsidebarwrapper {
     width: 10px;
 }
 
-{% if READTHEDOCS|tobool %}
-.js.sidebar-hidden .rst-versions.rst-badge,
-{% endif %}
 .js.sidebar-hidden .sphinxsidebar {
     {{ sidebar_side }}: calc(0px - var(--sidebar-width));
 }

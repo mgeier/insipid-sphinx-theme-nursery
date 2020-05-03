@@ -15,6 +15,10 @@ div.sphinxsidebar {
     max-width: unset;
 }
 
+.js.sidebar-hidden .injected .rst-versions.rst-badge {
+    {{ sidebar_side }}: calc(0px - var(--sidebar-width));
+}
+
 .injected .rst-versions.rst-badge .rst-current-version {
     text-align: right;
 }
@@ -42,6 +46,11 @@ div.sphinxsidebar {
     right: 0;
     {%- endif %}
     width: unset;
+}
+
+.js:not(.sidebar-resizing) .rst-versions.rst-badge,
+.js:not(.sidebar-resizing) .ethical-fixedfooter {
+    transition: {{ sidebar_side }} {{ theme_sidebar_transition }};
 }
 
 {#

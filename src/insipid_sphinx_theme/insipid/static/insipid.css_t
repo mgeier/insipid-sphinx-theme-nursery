@@ -700,6 +700,7 @@ body.js:not(.sidebar-resizing) {
 
 {% if READTHEDOCS|tobool %}
 .js:not(.sidebar-resizing) .rst-versions.rst-badge,
+.js:not(.sidebar-resizing) .ethical-fixedfooter,
 {% endif %}
 .js:not(.sidebar-resizing) .sphinxsidebar {
     transition: {{ sidebar_side }} {{ theme_sidebar_transition }};

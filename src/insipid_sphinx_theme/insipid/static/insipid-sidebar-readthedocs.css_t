@@ -27,7 +27,7 @@ div.sphinxsidebar {
     width: 100%;
 }
 
-.ethical-fixedfooter {
+.sidebar-hidden .ethical-fixedfooter {
     left: 0;
     right: 0;
     width: unset;

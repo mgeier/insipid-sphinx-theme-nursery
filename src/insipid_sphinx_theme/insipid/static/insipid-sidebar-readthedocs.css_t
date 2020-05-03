@@ -35,6 +35,7 @@ div.sphinxsidebar {
 
 .sidebar-visible .ethical-fixedfooter {
     {{ sidebar_side }}: var(--sidebar-width);
+    width: unset;
 }
 
 {#

@@ -428,6 +428,18 @@ div.sidebar > p.sidebar-title {
     font-size: unset;
 }
 
+div.admonition > p.admonition-title + *,
+div.topic > p.topic-title + *,
+div.sidebar > p.sidebar-title + * {
+    margin-top: 0;
+}
+
+div.admonition > *:last-child,
+div.topic > *:last-child,
+div.sidebar > *:last-child {
+    margin-bottom: 0;
+}
+
 div.admonition {
     /*color: #666;*/
     background-color: #e7f2fa;
@@ -483,14 +495,14 @@ p.sidebar-subtitle {
 div.admonition > p.admonition-title + p,
 div.topic > p.topic-title + p,
 div.sidebar > p.sidebar-title + p {
-    display: inline;
+    /*display: inline;*/
 }
 
 div.admonition p,
 div.admonition pre,
 div.admonition ul,
 div.admonition ol {
-    margin-bottom: 5px;
+    /*margin-bottom: 5px;*/
 }
 
 /* More specific selector to override previous defintions */

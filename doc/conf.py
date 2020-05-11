@@ -16,6 +16,8 @@ html_copy_source = False
 
 # -- ??? ------------------------------------------------------------------
 
+#pygments_style = 'sphinx'
+
 html_theme_options = {
     #'body_centered': False,
     #'body_max_width': None,

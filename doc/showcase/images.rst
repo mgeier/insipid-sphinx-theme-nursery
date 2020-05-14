@@ -69,6 +69,14 @@ Some more text. Some more text.
         :alt: Example image showing the text "insipid Sphinx theme"
         :align: left
 
+
+Scaled Image
+------------
+
+.. image:: insipid.png
+    :scale: 300%
+
+
 Figure
 ------
 
@@ -156,3 +164,12 @@ Some more text.
         :align: left
     
         This is the caption of the figure.
+
+
+Scaled Figure
+-------------
+
+.. figure:: insipid.png
+    :scale: 300%
+
+    This is the caption of the figure.

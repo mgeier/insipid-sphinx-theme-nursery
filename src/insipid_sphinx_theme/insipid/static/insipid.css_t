@@ -254,6 +254,10 @@ dl.citation > dt {
     font-weight: 600;
 }
 
+img {
+    max-width: unset;
+}
+
 /* -- hyperlink styles ------------------------------------------------------ */
 
 a {
@@ -402,7 +406,7 @@ div.admonition, div.topic, div.sidebar, pre, div[class|="highlight"] {
     clear: both;
 }
 
-div.admonition, div.topic, div.sidebar, blockquote {
+div.admonition, div.topic, div.sidebar, blockquote, div.figure {
     overflow-x: auto;
 }
 

@@ -783,6 +783,10 @@ div.sphinxsidebarwrapper {
     {{ sidebar_side }}: calc(0px - var(--sidebar-width));
 }
 
+div.sphinxsidebar img {
+    max-width: 100%;
+}
+
 div.sphinxsidebar h3 {
     font-size: 1.4em;
     font-weight: normal;

@@ -55,12 +55,12 @@ $(document).ready(function () {
     var $form = $('#searchform');
     var $icon = $('#search-toggle');
     $icon.on('click', function () {
-        if ($form.hasClass('hidden')) {
-            $form.removeClass('hidden');
+        if ($form.is(':hidden')) {
+            $form.show();
             $icon.attr('aria-expanded', 'true');
             $('#searchbar').focus();
         } else {
-            $form.addClass('hidden');
+            $form.hide();
             $icon.attr('aria-expanded', 'false');
         }
     });

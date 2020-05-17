@@ -133,18 +133,10 @@
                 </div>
                 #}
         <div id="searchbox" role="search">
-          <div id="searchform" class="hidden">
-          {#-
-          <h3 id="searchlabel">{{ _('Quick search') }}</h3>
-          #}
-            <form class="search" action="{{ pathto('search') }}" method="get">
-              <!--
-                aria-labelledby="searchlabel"
-              -->
-              <input type="search" id="searchbar" name="q" placeholder="{{ _('Search') + ' ...' }}" />
-              <input type="submit" value="{{ _('Go') }}" />
-            </form>
-          </div>
+          <form id="searchform" style="display: none" action="{{ pathto('search') }}" method="get">
+            <input type="search" id="searchbar" name="q" placeholder="{{ _('Search') + ' ...' }}" />
+            <button>{{ _('Go') }}</button>
+          </form>
         </div>
 {%- endif %}
       </div>

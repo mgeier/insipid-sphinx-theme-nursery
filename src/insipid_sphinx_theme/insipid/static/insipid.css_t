@@ -1,7 +1,5 @@
 @import 'basic.css';
 
-.hidden { display: none; }
-
 .loading {
     /* Disable transitions during page load */
     transition: none !important;
@@ -929,13 +927,13 @@ div.sphinxsidebar li.current a.current {
     background-color: #fff;
 }
 
-#titlebar,
+#topbar,
 #titlebar a,
 #titlebar a:visited {
     color: #ccc;
 }
 
-#titlebar button:hover,
+#topbar button:hover,
 #titlebar a:hover {
     color: #333;
 }
@@ -947,7 +945,8 @@ div.sphinxsidebar li.current a.current {
     min-height: 3rem;
 }
 
-#titlebar .buttons > * {
+#titlebar .buttons > *,
+#topbar #searchform button {
     padding: 8px;
     margin: 0;
 }
@@ -958,7 +957,7 @@ div.sphinxsidebar li.current a.current {
     margin: 0 5px;
 }
 
-#topbar svg,
+#titlebar svg,
 .navbar svg,
 .crumbs svg {
   /*display: inline-block;*/
@@ -969,18 +968,14 @@ div.sphinxsidebar li.current a.current {
   fill: currentColor;
 }
 
-#titlebar button {
+#topbar button {
     border: none;
     padding: 0;
     color: inherit;
     background: none;
     font: inherit;
-}
-
-.js #titlebar button {
     cursor: pointer;
 }
-
 
 #topbar a {
     text-decoration: none;
@@ -1021,34 +1016,30 @@ div.sphinxsidebar li.current a.current {
 
 /* -- search field in topbar ------------------------------------------------ */
 
-#topbar form {
-    /*margin-top: 10px;*/
+#topbar #searchbox form {
+    display: flex;
+    align-items: stretch;
+    margin: 5px;
 }
 
-#topbar input {
-    border: 1px solid #98dbcc;
-    /*font-family: sans-serif;*/
-    font-size: 1em;
+#topbar #searchbox input {
+    flex-grow: 1;
+    border: 1px solid #ccc;
+    padding: 7px;
+    color: #333;
 }
 
-#topbar #searchbox form.search {
-    /*overflow: hidden;*/
+#topbar #searchbox button {
+    /*margin: 8px;*/
 }
 
-#topbar #searchbox input[type="search"] {
-    /*float: left;*/
-    width: 80%;
-    /*padding: 0.25em;*/
+#topbar #searchbox p.highlight-link {
+    text-align: center;
+    margin: 8px;
 }
 
-#topbar #searchbox input[type="submit"] {
-    /*float: left;*/
-    /*width: 20%;*/
-    border-left: none;
-    /*padding: 0.25em;*/
-}
-
-#topbar #searchbox .highlight-link a {
+#topbar #searchbox p.highlight-link a {
+    padding: 0 4px;
     background-color: #fbe54e;
 }
 

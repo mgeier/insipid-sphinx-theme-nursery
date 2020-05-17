@@ -6,17 +6,28 @@ html_theme = 'insipid'
 
 html_add_permalinks = '\N{SECTION SIGN}'
 
-# Use 'none' when you don't want the default 'python'
-highlight_language = 'none'
-
 # -- Recommended settings for readthedocs.org -----------------------------
 
 # If False, source links to Bitbucket/Github/GitLab are shown
 html_copy_source = False
 
-# -- ??? ------------------------------------------------------------------
+# -- Settings for source code ---------------------------------------------
 
-#pygments_style = 'sphinx'
+# Use 'none' when you don't want the default 'python'
+#highlight_language = 'none'
+
+# Style of syntax highlighting
+#pygments_style = 'monokai'
+
+# -- Page footer ----------------------------------------------------------
+
+html_show_copyright = False
+#html_last_updated_fmt = '%Y-%m-%d'
+#html_show_sphinx = False
+#html_show_sourcelink = False
+#html_sourcelink_suffix = ''
+
+# -- Theme configuration --------------------------------------------------
 
 html_theme_options = {
     #'body_centered': False,
@@ -37,10 +48,10 @@ html_theme_options = {
     #],
     #'rightsidebar': True,
     #'show_insipid': False,
-    #'sidebar_transition': '0.3s ease-out',
+    #'sidebar_transition': '1s ease-out',
     #'sidebarwidth': 300,
     #'strip_section_numbers': False,
-    #'topbar_transition': '0.7s ease-out',
+    #'topbar_transition': '1.5s ease-out',
 }
 
 html_sidebars = {
@@ -54,25 +65,30 @@ html_sidebars = {
    'showcase/no-sidebar': [],  # To demonstrate a page without a sidebar
 }
 
-project = 'insipid-sphinx-theme'
+# -- Project information --------------------------------------------------
 
+project = 'insipid-sphinx-theme'
 #html_title = 'Insipid Sphinx Theme'
 html_short_title = 'insipid'
-#html_show_sourcelink = False
-#html_sourcelink_suffix = ''
-html_show_copyright = False
-#html_show_sphinx = False
-html_secnumber_suffix = '\N{FIGURE SPACE}'
 html_logo = 'showcase/insipid.png'
+#copyright = '<insert year and copyright holder>'
+
+#version = '???'
+#release = '???'
+
+# -- ??? ------------------------------------------------------------------
+
+html_secnumber_suffix = '\N{FIGURE SPACE}'
 html_favicon = 'favicon.ico'
 #smartquotes = False
-#html_last_updated_fmt = '%Y-%m-%d'
 
 html_baseurl = 'https://insipid-sphinx-theme-nursery.readthedocs.io/'
 
 #html_domain_indices = False
 #html_use_index = False
 #html_split_index = True
+
+# -- Extensions -----------------------------------------------------------
 
 extensions = [
     'sphinx.ext.autodoc',
@@ -86,14 +102,16 @@ extensions = [
 
 intersphinx_mapping = {'sphinx': ('https://www.sphinx-doc.org', None)}
 
+todo_include_todos = True
+todo_link_only = True
+
+# -- ??? ------------------------------------------------------------------
+
 #html_static_path = ['_static']
 templates_path = ['_templates']
 
 # Since Sphinx version 2.0, 'index' is the default:
 master_doc = 'index'
-
-todo_include_todos = True
-todo_link_only = True
 
 numfig = True
 

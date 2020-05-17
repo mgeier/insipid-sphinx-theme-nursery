@@ -12,12 +12,13 @@ Online documentation (and example of use):
     https://insipid-sphinx-theme.readthedocs.io/
 
 Source code repository (and issue tracker):
-    https://github.com/???/insipid-sphinx-theme/
+    https://github.com/mgeier/insipid-sphinx-theme/
 
 License
     BSD-2-Clause (same as Sphinx itself),
     for more information take a look at the ``LICENSE`` file.
 
-    SVG icons from `Font Awesome`_, CC BY 4.0.
+    SVG icons from `Font Awesome`__, `CC BY 4.0`__.
 
-    .. _Font Awesome: https://fontawesome.com/
+    __ https://fontawesome.com/
+    __ https://creativecommons.org/licenses/by/4.0/

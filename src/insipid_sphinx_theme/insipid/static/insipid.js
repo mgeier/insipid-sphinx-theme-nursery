@@ -55,6 +55,11 @@ $(document).ready(function () {
     var $form = $('#searchform');
     var $icon = $('#search-toggle');
     $icon.on('click', function () {
+        try {
+            // https://readthedocs-sphinx-search.readthedocs.io/
+            showSearchModal();
+            return;
+        } catch(e) {}
         if ($form.is(':hidden')) {
             $form.show();
             $icon.attr('aria-expanded', 'true');

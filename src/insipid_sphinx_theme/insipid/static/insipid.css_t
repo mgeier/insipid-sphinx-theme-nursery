@@ -898,6 +898,10 @@ div.sphinxsidebar li.current-page {
     background-color: #fff;
 }
 
+div.sphinxsidebar li.current-page {
+    transition: background-color {{ theme_sidebar_transition }};
+}
+
 div.sphinxsidebar li.current a.current {
     /*color: #000;*/
 }

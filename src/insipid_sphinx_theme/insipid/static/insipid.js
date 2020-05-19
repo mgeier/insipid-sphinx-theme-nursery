@@ -1,6 +1,9 @@
 $(document).ready(function () {
     'use strict';
 
+    // make sure all scripts are re-executed when navigating to cached page
+    window.onunload = function () {};
+
     var $body = $(document.body);
 
     $body.removeClass('loading');

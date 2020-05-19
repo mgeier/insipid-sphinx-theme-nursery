@@ -177,14 +177,14 @@ $(document).ready(function () {
     }
 {%- endif %}
 
-    var current = $('.sphinxsidebar li:has(> a[href^="#"])');
-    current.addClass('current-page');
-    if (current.length) {
-        var top = current.offset().top;
-        var height = current.height();
+    var $current = $('.sphinxsidebar li:has(> a[href^="#"])');
+    $current.addClass('current-page');
+    if ($current.length) {
+        var top = $current.offset().top;
+        var height = $current.height();
         var topbar_height = $('#topbar').height();
-        if (top < topbar_height || top + height > sidebar.clientHeight) {
-            current[0].scrollIntoView(true);
+        if (top < topbar_height || top + height > $(sidebar).height()) {
+            $current[0].scrollIntoView(true);
         }
     }
 });

@@ -839,9 +839,15 @@ div.sphinxsidebar li {
     /*position: relative;*/
 }
 
+div.sphinxsidebar h3,
 div.sphinxsidebar li[class^="toctree-"] {
     margin-right: -10px;
     padding-right: 10px;
+}
+
+div.sphinxsidebar h3 {
+    margin-left: -20px;
+    padding-left: 20px;
 }
 
 div.sphinxsidebar li.toctree-l1 {
@@ -894,16 +900,12 @@ div.sphinxsidebar li.toctree-l10 {
     padding-left: 200px;
 }
 
-div.sphinxsidebar li.current-page {
+div.sphinxsidebar .current-page:not(.logo) {
     background-color: #fff;
 }
 
-div.sphinxsidebar li.current-page {
+div.sphinxsidebar .current-page {
     transition: background-color {{ theme_sidebar_transition }};
-}
-
-div.sphinxsidebar li.current a.current {
-    /*color: #000;*/
 }
 
 /* -- topbar ---------------------------------------------------------------- */

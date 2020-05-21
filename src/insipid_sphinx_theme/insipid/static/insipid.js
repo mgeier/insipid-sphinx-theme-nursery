@@ -8,25 +8,35 @@ $(document).ready(function () {
 
     $body.removeClass('loading');
 
-    var scroll_timeout;
-    var ignore_scroll = true;
+    var $topbar = $('#topbar');
+
+    const threshold = 10;
 
     // auto-hide topbar
     function scroll_callback(scroller) {
-        var previous = scroller.scrollTop;
+        var ignore_scroll = true;
+        var initial;
+        var scroll_timeout;
         return function () {
             window.clearTimeout(scroll_timeout);
-            if (scroller.scrollTop === 0) {
+            var current = scroller.scrollTop;
+            if (current <= $topbar.height() || (scroller.scrollHeight - current - scroller.clientHeight) < (scroller.clientHeight / 3)) {
                 $body.removeClass('topbar-folded');
+                ignore_scroll = true;
+                return;
             } else if (ignore_scroll) {
                 // We ignore single jumps
                 ignore_scroll = false;
-            } else if (scroller.scrollTop - previous > 0) {
+                initial = current;
+            } else if (current - initial > threshold) {
                 $body.addClass('topbar-folded');
-            } else {
+                ignore_scroll = true;
+                return;
+            } else if (current - initial < -threshold) {
                 $body.removeClass('topbar-folded');
+                ignore_scroll = true;
+                return;
             }
-            previous = Math.max(scroller.scrollTop, 0);
             scroll_timeout = setTimeout(function() {
                 ignore_scroll = true;
             }, 66);

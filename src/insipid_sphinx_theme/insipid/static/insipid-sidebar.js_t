@@ -148,7 +148,7 @@ $(document).ready(function () {
                 $root.css('--topbar-height', height + 'px');
             }
         });
-        resizeObserver.observe(document.getElementById('topbar-placeholder'));
+        resizeObserver.observe(document.getElementById('topbar'));
     }
 
 {%- if READTHEDOCS|tobool %}

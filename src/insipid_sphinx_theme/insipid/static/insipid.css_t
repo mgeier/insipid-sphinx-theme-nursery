@@ -761,10 +761,15 @@ div.sphinxsidebarwrapper > :last-child {
 }
 
 .sidebar-resize-handle {
+    display: none;
     position: absolute;
     width: 0;
     top: 0;
     bottom: 0;
+}
+
+.js.sidebar-visible .sidebar-resize-handle {
+    display: block;
 }
 
 .sphinxsidebar .sidebar-resize-handle {

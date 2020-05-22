@@ -214,8 +214,8 @@
 
 
 {% block footer %}
-{{ sidebar() }}
 {% block comments %}{% endblock %}
+{{ sidebar() }}
 {% include 'footer.html' %}
 {%- if render_sidebar %}
     <div class="sidebar-resize-handle"></div>

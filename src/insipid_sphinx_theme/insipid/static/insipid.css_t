@@ -1017,7 +1017,7 @@ div.sphinxsidebar .current-page {
 }
 
 .scrolled #titlebar h1 .top {
-    display: unset;
+    display: contents;
 }
 
 /* -- search field in topbar ------------------------------------------------ */

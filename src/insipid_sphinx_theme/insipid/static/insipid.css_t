@@ -834,6 +834,14 @@ div.sphinxsidebar li {
     margin: 0.5em 0;
 }
 
+div.sphinxsidebar li:first-child {
+    margin-top: 0;
+}
+
+div.sphinxsidebar li:last-child {
+    margin-bottom: 0;
+}
+
 div.sphinxsidebar a {
     color: #235388;
 }

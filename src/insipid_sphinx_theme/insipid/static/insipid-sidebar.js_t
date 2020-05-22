@@ -119,22 +119,40 @@ $(document).ready(function () {
         return false;  // Prevent unwanted text selection while resizing
     });
 
+    var ignore_resize = false;
+
     function resize(e) {
-        $root.css('--sidebar-width', (
-        {%- if theme_rightsidebar|tobool %}
-            $(window).width() - e.clientX
-        {%- else %}
-            e.clientX
-        {%- endif %}
-        ) + 'px');
+        if (ignore_resize) { return; }
+        var window_width = $(window).width();
+        var width = {% if theme_rightsidebar|tobool -%}
+            window_width - {% endif %}e.clientX;
+        if (width > window_width) {
+            $root.css('--sidebar-width', window_width + 'px');
+        } else if (width > 10) {
+            $root.css('--sidebar-width', width + 'px');
+        } else {
+            ignore_resize = true;
+            hideSidebar();
+        }
     }
 
     function stopResize(e) {
-        $body.removeClass('sidebar-resizing');
         $(window).off('mousemove', resize);
         $(window).off('mouseup', stopResize);
+        if (ignore_resize) {
+            $root.css('--sidebar-width', '{{ theme_sidebarwidth|todim }}');
+            ignore_resize = false;
+        }
         store('sphinx-sidebar-width', $root.css('--sidebar-width'));
+        $body.removeClass('sidebar-resizing');
     }
+
+    $(window).on('resize', function () {
+        var window_width = $(window).width();
+        if (window_width < $(sidebar).width()) {
+            $root.css('--sidebar-width', window_width + 'px');
+        }
+    });
 
     // This is part of the sidebar code because it only affects the sidebar
     if (window.ResizeObserver) {

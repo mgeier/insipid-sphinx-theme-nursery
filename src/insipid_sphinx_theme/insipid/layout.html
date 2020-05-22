@@ -164,7 +164,7 @@
 {% macro navbar() %}
     <nav class="navbar">
       {%- if prev %}
-      <a class="previous" href="{{ prev.link|e }}" title="{{ _('Previous topic') }}" {{ accesskey('P') }}>
+      <a class="previous" href="{{ prev.link|e }}" aria-label="{{ _('Previous topic') }}" {{ accesskey('P') }}>
         <div class="icon">
           {% include 'icons/arrow-left.svg' %}
         </div>
@@ -177,7 +177,7 @@
       </a>
       {%- endif %}
       {%- if next %}
-      <a class="next" href="{{ next.link|e }}" title="{{ _('Next topic') }}" {{ accesskey('N') }}>
+      <a class="next" href="{{ next.link|e }}" aria-label="{{ _('Next topic') }}" {{ accesskey('N') }}>
         <div class="title">
           <span class="text">
             <span class="direction">{{ _('next') }}</span>

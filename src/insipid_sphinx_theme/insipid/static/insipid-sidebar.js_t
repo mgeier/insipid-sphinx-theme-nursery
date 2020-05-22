@@ -153,13 +153,13 @@ $(document).ready(function () {
     }
 
 {%- if READTHEDOCS|tobool %}
-    if (window.ResizeObserver) {
-        function setResizeObserver() {
-            var badge = document.querySelector('.rst-versions.rst-badge');
-            if (badge === null) {
-                console.log('waiting for readthedocs.org badge');
-                window.requestAnimationFrame(setResizeObserver);
-            } else {
+    function setResizeObserver() {
+        var badge = document.querySelector('.rst-versions.rst-badge');
+        if (badge === null) {
+            console.log('waiting for readthedocs.org badge');
+            window.requestAnimationFrame(setResizeObserver);
+        } else {
+            if (window.ResizeObserver) {
                 const resizeObserver = new ResizeObserver(entries => {
                     for (let entry of entries) {
                         let height;
@@ -172,10 +172,12 @@ $(document).ready(function () {
                     }
                 });
                 resizeObserver.observe(badge);
+            } else {
+                $root.css('--readthedocs-badge-height', badge.offsetHeight + 'px');
             }
-        };
-        window.requestAnimationFrame(setResizeObserver);
-    }
+        }
+    };
+    window.requestAnimationFrame(setResizeObserver);
 {%- endif %}
 
     var $current = $('.sphinxsidebar *:has(> a[href^="#"])');

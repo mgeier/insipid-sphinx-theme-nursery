@@ -750,7 +750,6 @@ div.sphinxsidebarwrapper {
     position: relative;  /* reference for sidebar-resize-handle */
     margin-top: var(--topbar-height);
     padding: 10px 10px;
-    min-height: 100%;
 }
 
 .sidebar-resize-handle {

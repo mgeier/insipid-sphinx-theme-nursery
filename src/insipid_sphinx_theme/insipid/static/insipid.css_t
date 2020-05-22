@@ -752,6 +752,14 @@ div.sphinxsidebarwrapper {
     padding: 10px 10px;
 }
 
+div.sphinxsidebarwrapper > :first-child {
+    margin-top: 0;
+}
+
+div.sphinxsidebarwrapper > :last-child {
+    margin-bottom: 0;
+}
+
 .sidebar-resize-handle {
     position: absolute;
     width: 0;

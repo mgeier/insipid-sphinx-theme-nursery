@@ -143,6 +143,14 @@ https://docutils.sourceforge.io/docs/ref/rst/directives.html#parsed-literal
 .. [*] Having ``literal text`` within more literal text
     probably doesn't make a lot of sense.
 
+.. parsed-literal::
+
+    Code block with nothing special
+
+.. warning::
+
+   Syntax highlighting (including providing a background color)
+   is sometimes broken, see https://github.com/sphinx-doc/sphinx/issues/2167.
 
 Doctest Blocks
 --------------

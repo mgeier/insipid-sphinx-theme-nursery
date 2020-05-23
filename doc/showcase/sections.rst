@@ -82,6 +82,7 @@ Nested ``toctree``
 .. toctree::
 
     nested document
+    An External URL <https://www.sphinx-doc.org/>
 
 
 Another Top-Level Section

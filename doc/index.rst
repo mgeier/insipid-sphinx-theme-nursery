@@ -12,6 +12,8 @@
     configuration
     customization
 
+    Git Repository <https://github.com/mgeier/insipid-sphinx-theme/>
+
 ----
 
 .. toctree::

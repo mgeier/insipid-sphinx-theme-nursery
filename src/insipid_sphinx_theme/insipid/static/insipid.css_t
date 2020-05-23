@@ -1,5 +1,3 @@
-@import 'basic.css';
-
 /* -- variables ------------------------------------------------------------- */
 
 {% set sidebar_side = 'right' if theme_rightsidebar|tobool else 'left' %}

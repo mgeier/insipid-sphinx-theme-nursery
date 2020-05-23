@@ -579,10 +579,6 @@ table.citation {
     border-left: unset;
     margin-left: unset;
 }
-
-td.label {
-    background-color: #f5f5f5;
-}
 {% endif %}
 
 /* -- navbar ---------------------------------------------------------------- */

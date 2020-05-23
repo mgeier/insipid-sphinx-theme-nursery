@@ -507,8 +507,10 @@ div.admonition ol {
     /*margin-bottom: 5px;*/
 }
 
-/* More specific selector to override previous defintions */
-div.body div.admonition dl > dt {
+/* More specific selectors to override previous defintions */
+div.body div.admonition dl > dt,
+div.body div.topic dl > dt,
+div.body div.sidebar dl > dt {
     padding: unset;
     background-color: unset;
     font-weight: unset;

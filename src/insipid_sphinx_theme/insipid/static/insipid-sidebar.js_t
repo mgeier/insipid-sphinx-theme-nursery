@@ -6,6 +6,8 @@ $(document).ready(function () {
     var sidebar = document.querySelector('.sphinxsidebar');
     var $sidebar_toggle = $('#sidebar-toggle');
 
+    $body.removeClass('sidebar-resizing');
+
     function store(key, value) {
         try {
             localStorage.setItem(key, value);

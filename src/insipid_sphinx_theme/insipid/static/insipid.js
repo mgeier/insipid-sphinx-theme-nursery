@@ -6,8 +6,6 @@ $(document).ready(function () {
 
     var $body = $(document.body);
 
-    $body.removeClass('loading');
-
     var $topbar = $('#topbar');
 
     const threshold = 10;

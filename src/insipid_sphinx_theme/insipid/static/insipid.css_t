@@ -1,10 +1,5 @@
 @import 'basic.css';
 
-.loading {
-    /* Disable transitions during page load */
-    transition: none !important;
-}
-
 /* -- variables ------------------------------------------------------------- */
 
 {% set sidebar_side = 'right' if theme_rightsidebar|tobool else 'left' %}

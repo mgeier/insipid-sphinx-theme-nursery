@@ -924,6 +924,10 @@ div.sphinxsidebar .current-page:not(.logo) {
     background-color: #fff;
 }
 
+div.sphinxsidebar .current-page li:not(.current-page) {
+    background-color: #f5f5f5;
+}
+
 div.sphinxsidebar .current-page {
     transition: background-color {{ theme_sidebar_transition }};
 }

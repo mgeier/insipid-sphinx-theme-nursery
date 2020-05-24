@@ -1,6 +1,13 @@
 Configuration
 =============
 
+There is only a single required setting in your ``conf.py``:
+
+.. code-block:: python
+
+    html_theme = 'insipid'
+
+
 Theme Settings
 --------------
 
@@ -8,6 +15,7 @@ Theme Settings
 
 .. code-block:: python
     :caption: A simple ``conf.py``
+    :name: conf-py-simple
 
     html_theme = 'insipid'
     html_theme_options = {
@@ -16,7 +24,7 @@ Theme Settings
         'navbar_top': False,
     }
 
-You can also have a look at the :download:`conf.py` of this documentation.
+You can also have a look at the `example`_ below.
 
 
 ``insipid`` Settings
@@ -124,12 +132,12 @@ TODO: some default values are overwritten
 Default Values
 ^^^^^^^^^^^^^^
 
-For default values, see
-:download:`theme.conf <../src/insipid_sphinx_theme/insipid/theme.conf>`:
+For default values, see:
 
 .. literalinclude:: ../src/insipid_sphinx_theme/insipid/theme.conf
     :name: theme-conf
-    :caption: ``insipid/theme.conf``
+    :caption: :download:`insipid/theme.conf <../src/insipid_sphinx_theme/insipid/theme.conf>`
+    :linenos:
     :language: ini
 
 
@@ -171,3 +179,16 @@ Sphinx Settings
 .. confval:: html_theme_options
 
     :confval:`sphinx:html_theme_options`
+
+
+Example
+-------
+
+You can look at the :download:`conf.py` file of this very documentation:
+
+.. literalinclude:: conf.py
+    :name: conf-py
+    :caption: :download:`conf.py` of the *insipid* docs
+    :linenos:
+    :language: python
+    :end-before: Get version information from Git

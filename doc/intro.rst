@@ -60,9 +60,6 @@ support for *all* Sphinx features
     If you find something that isn't supported (or not shown in the docs),
     please let us know!
 
-support for RTD
-    https://readthedocs.org/
-
 back to the ``basic``\s
     This theme is based on Sphinx's ``basic`` theme
     and only adds some hand-written HTML, CSS and JavaScript
@@ -77,3 +74,21 @@ back to the ``basic``\s
     .. _Jinja2: https://palletsprojects.com/p/jinja/
     .. _Font Awesome: https://fontawesome.com/
     .. _jQuery: https://jquery.com/
+
+
+Features
+--------
+
+Trying not to disable existing Sphinx features.
+
+auto-hiding topbar
+    maximize (vertical) screen space, scroll to top, link to parent
+
+keyboard navigation
+    left/right arrow keys, P/N/U/I/S/M
+
+fullscreen mode
+    reset when switching pages; "install" on home screen as fullscreen web app
+
+support for RTD
+    https://readthedocs.org/; badge; Bitbucket/Github/GitLab links

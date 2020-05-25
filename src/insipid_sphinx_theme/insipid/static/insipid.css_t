@@ -911,6 +911,7 @@ div.sphinxsidebar li.toctree-l10 {
     padding-left: 200px;
 }
 
+.no-js div.sphinxsidebar li.current,
 div.sphinxsidebar .current-page:not(.logo) {
     background-color: #fff;
 }

@@ -19,6 +19,7 @@ https://docutils.sourceforge.io/docs/user/rst/demo.html
 https://sphinx-themes.org/
 
 - pydata_sphinx_theme_
+- sphinx_book_theme_
 - sphinx_material_
 - sphinx_rtd_theme_
 - sphinx_typlog_theme_
@@ -26,6 +27,8 @@ https://sphinx-themes.org/
 
 .. _pydata_sphinx_theme: https://pydata-sphinx-theme.readthedocs.io/en/latest/
     demo/
+.. _sphinx_book_theme: https://sphinx-book-theme.readthedocs.io/en/latest/
+    reference/
 .. _sphinx_material: https://bashtage.github.io/sphinx-material/specimen.html
 .. _sphinx_rtd_theme: https://sphinx-rtd-theme.readthedocs.io/en/stable/
     demo/structure.html

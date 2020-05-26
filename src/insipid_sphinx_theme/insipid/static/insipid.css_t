@@ -846,22 +846,14 @@ div.sphinxsidebar code {
     padding: 0;
 }
 
-div.sphinxsidebar li {
-    /*position: relative;*/
-}
-
 div.sphinxsidebar h3,
-div.sphinxsidebar li[class^="toctree-"] {
+div.sphinxsidebar li {
     margin-right: -10px;
     padding-right: 10px;
 }
 
-div.sphinxsidebar h3 {
-    margin-left: -20px;
-    padding-left: 20px;
-}
-
-div.sphinxsidebar li.toctree-l1 {
+div.sphinxsidebar h3,
+div.sphinxsidebar li {
     margin-left: -20px;
     padding-left: 20px;
 }

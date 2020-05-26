@@ -61,7 +61,6 @@ html_sidebars = {
        'globaltoc.html',
        'separator.html',
        'indices.html',
-       'ethical-ad.html',
    ],
    'showcase/no-sidebar': [],  # To demonstrate a page without a sidebar
 }

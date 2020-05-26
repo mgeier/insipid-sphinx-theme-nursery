@@ -35,9 +35,15 @@
 {% set parent = namespace(parent) %}
 {% set parent.title = stripsectionnumber(parent.title) %}
 {# Dummy assignment to be able to call append() #}
-{% set _ = new_parents.append(parent) %}
+{% set _dummy = new_parents.append(parent) %}
 {% endfor %}
 {% set parents = new_parents %}
+{% endif %}
+
+
+{% if sidebars and 'ethical-ad.html' not in sidebars %}
+{# Dummy assignment to be able to call append() #}
+{% set _dummy = sidebars.append('ethical-ad.html') %}
 {% endif %}
 
 

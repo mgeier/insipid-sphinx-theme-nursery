@@ -924,6 +924,11 @@ div.sphinxsidebar .current-page {
     transition: background-color {{ theme_sidebar_transition }};
 }
 
+div.sphinxsidebar input {
+    border-color: #ccc;
+    font-family: unset;
+}
+
 /* -- topbar ---------------------------------------------------------------- */
 
 #topbar-placeholder {
@@ -1051,16 +1056,12 @@ div.sphinxsidebar .current-page {
     color: #333;
 }
 
-#topbar #searchbox button {
-    /*margin: 8px;*/
-}
-
 #topbar #searchbox p.highlight-link {
     text-align: center;
     margin: 8px;
 }
 
-#topbar #searchbox p.highlight-link a {
+#searchbox p.highlight-link a {
     padding: 0 4px;
     background-color: #fbe54e;
 }

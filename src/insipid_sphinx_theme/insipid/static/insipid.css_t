@@ -125,6 +125,15 @@ div.body h6 {
     line-height: 1.2;
 }
 
+div.body h1 strong,
+div.body h2 strong,
+div.body h3 strong,
+div.body h4 strong,
+div.body h5 strong,
+div.body h6 strong {
+    font-weight: 700;
+}
+
 div.body h1 { font-size: 200%; }
 div.body h1 { font-size: 2em; }
 div.body h2 { font-size: 160%; }

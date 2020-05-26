@@ -51,6 +51,18 @@ boring
     providing a maximum of screen real estate for
     and a minimum of distraction from your content.
 
+accessible
+    *Help needed!*
+    There are some ``aria-label``\s here and there,
+    but the accessibility could certainly be improved in many places.
+
+mobile-friendly
+    This theme should work fine on mobile devices.
+    It isn't strictly *mobile-first* though,
+    because there is a special sidebar behavior for narrow screens.
+    Considerable care has been taken to make sure all the screen space is
+    available for content and not obstructed by ornamental junk.
+
 configurable
     The default settings should be perfectly fine for most people.
     But doesn't everyone sometimes like to be special?
@@ -58,18 +70,6 @@ configurable
     but thanks to Sphinx's great flexibility,
     you can fine-tune and individualize virtually every aspect of the theme,
     see :doc:`customization` for details.
-
-mobile-friendly
-    This theme should work fine on mobile devices.
-    It isn't strictly *mobile-first* though,
-    because there is a special sidebar behavior for narrow screens.
-    Considerable care has been taken to make sure the full screen space is
-    available for content and not obstructed by ornamental junk.
-
-accessible
-    *Help needed!*
-    There are some ``aria-label``\s here and there,
-    but the accessibility could be certainly improved in many places.
 
 support for right-to-left languages
     *Help needed!*

@@ -1,5 +1,3 @@
-# -- One required setting -------------------------------------------------
-
 html_theme = 'insipid'
 
 # -- Recommended changes of Sphinx defaults -------------------------------
@@ -19,10 +17,16 @@ html_copy_source = False
 # Style of syntax highlighting
 #pygments_style = 'monokai'
 
+# -- Language settings ----------------------------------------------------
+
+#language = 'es'
+
+# Date format used in footer. Use empty string for default.
+#html_last_updated_fmt = '%Y-%m-%d'
+
 # -- Page footer ----------------------------------------------------------
 
 html_show_copyright = False
-#html_last_updated_fmt = '%Y-%m-%d'
 #html_show_sphinx = False
 #html_show_sourcelink = False
 #html_sourcelink_suffix = ''
@@ -56,7 +60,7 @@ html_theme_options = {
 
 html_sidebars = {
    '**': [
-       'github-badge.html',
+       'github-badge.html',  # Custom template, see _templates/
        #'searchbox.html',
        'globaltoc.html',
        'separator.html',
@@ -64,6 +68,9 @@ html_sidebars = {
    ],
    'showcase/no-sidebar': [],  # To demonstrate a page without a sidebar
 }
+
+#html_static_path = ['_static']
+templates_path = ['_templates']
 
 # -- Project information --------------------------------------------------
 
@@ -106,15 +113,10 @@ todo_link_only = True
 
 # -- ??? ------------------------------------------------------------------
 
-#html_static_path = ['_static']
-templates_path = ['_templates']
-
 # Since Sphinx version 2.0, 'index' is the default:
 master_doc = 'index'
 
 numfig = True
-
-#language = 'es'
 
 # -- Get version information from Git -------------------------------------
 

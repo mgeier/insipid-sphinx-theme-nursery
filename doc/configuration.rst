@@ -38,7 +38,7 @@ All available theme options are listed in the following sections.
 
     Set to ``False`` if you want the body text to be left-aligned.
 
-    If :theme-option:`body_max_width` is ``None``, this will have no effect.
+    If :theme-option:`body_max_width` is ``None``, this has no effect.
 
 .. theme-option:: breadcrumbs
 
@@ -57,6 +57,8 @@ All available theme options are listed in the following sections.
 .. theme-option:: rightsidebar
 
     Set to ``True`` if you want to move the sidebar from the left to the right.
+
+    .. seealso:: :theme-option:`nosidebar`, :confval:`html_sidebars`
 
 .. theme-option:: show_insipid
 
@@ -124,6 +126,8 @@ TODO: some default values are overwritten
 .. theme-option:: nosidebar
 
     Set to ``True`` to completely disable the sidebar.
+
+    .. seealso:: :theme-option:`rightsidebar`, :confval:`html_sidebars`
 
 .. theme-option:: sidebarwidth
 

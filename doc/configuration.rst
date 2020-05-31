@@ -11,7 +11,10 @@ There is only a single required setting in your ``conf.py``:
 Theme Settings
 --------------
 
-:confval:`html_theme_options`
+The insipid theme has many configuration parameters
+which can be specified with :confval:`html_theme_options`
+in your ``conf.py``,
+for example like this:
 
 .. code-block:: python
     :caption: A simple ``conf.py``
@@ -21,10 +24,11 @@ Theme Settings
     html_theme_options = {
         'body_centered': False,
         'breadcrumbs': True,
-        'navbar_top': False,
     }
 
 You can also have a look at the `example`_ below.
+
+All available theme options are listed in the following sections.
 
 
 ``insipid`` Settings
@@ -38,19 +42,13 @@ You can also have a look at the `example`_ below.
 
 .. theme-option:: breadcrumbs
 
-    Set to ``True`` to show breadcrumb navigation at the top of each page.
+    Set to ``True`` to show breadcrumb navigation
+    (including a "home" button)
+    at the top of each page.
 
 .. theme-option:: left_buttons
 
     List of templates to use on the left side of the title bar.
-
-.. theme-option:: navbar_top
-
-    Set to ``False`` to disable previous/back links at the top of the page
-
-.. theme-option:: navbar_bottom
-
-    Set to ``False`` to disable previous/back links at the bottom of the page
 
 .. theme-option:: right_buttons
 
@@ -94,13 +92,19 @@ TODO: some default values are overwritten
 
 .. theme-option:: body_max_width
     
-    Maximal width of the body text (in pixels or any CSS unit).
+    Maximal width of the main document text (in pixels or any CSS unit).
     Set it to ``None`` for unlimited width.
 
 .. theme-option:: body_min_width
 
     When the body text is narrower than this value (in pixels or any CSS unit),
-    e.g. on a smartphone, it will be covered by sidebar.
+    e.g. on a small mobile device,
+    it will be (partially) covered by the sidebar.
+
+    .. warning::
+
+        To avoid problems on Chrome and derived browsers,
+        this value should have the same unit as :theme-option:`sidebarwidth`.
 
 .. theme-option:: globaltoc_collapse
 
@@ -125,8 +129,10 @@ TODO: some default values are overwritten
 
     Width of the sidebar (in pixels or any CSS unit).
 
+    .. warning::
 
-.. todo:: body_min_width doesn't count padding, body_max_width does
+        To avoid problems on Chrome and derived browsers,
+        this value should have the same unit as :theme-option:`body_min_width`.
 
 
 Default Values

@@ -168,8 +168,8 @@
 {%- endblock %}
 
 
-{% macro navbar() %}
-    <nav class="navbar">
+{% macro insipid_relbar() %}
+    <nav class="relbar">
       {%- if prev %}
       <a class="previous" href="{{ prev.link|e }}" aria-label="{{ _('Previous topic') }}" {{ accesskey('P') }}>
         <div class="icon">
@@ -201,9 +201,7 @@
 
 
 {% block relbar1 %}
-{%- if theme_navbar_top|tobool %}
-{{ navbar() }}
-{%- endif %}
+{{ insipid_relbar() }}
 {%- endblock %}
 
 
@@ -214,9 +212,7 @@
 
 
 {% block relbar2 %}
-{%- if theme_navbar_bottom|tobool %}
-{{ navbar() }}
-{%- endif %}
+{{ insipid_relbar() }}
 {%- endblock %}
 
 

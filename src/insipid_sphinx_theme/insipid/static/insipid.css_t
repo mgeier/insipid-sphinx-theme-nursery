@@ -57,7 +57,7 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-div.body, .navbar, div.footer {
+div.body, .relbar, div.footer {
     position: relative;  /* To be able to hide nav-icon */
 }
 
@@ -585,19 +585,19 @@ table.citation {
 }
 {% endif %}
 
-/* -- navbar ---------------------------------------------------------------- */
+/* -- relbar ---------------------------------------------------------------- */
 
 /* TODO: combine with topbar/titlebar? */
-.navbar {
+.relbar {
     color: #ccc;
     background-color: #fff;
 }
 
-.navbar {
+.relbar {
     padding: 10px;
 }
 
-.navbar > a {
+.relbar > a {
     box-sizing: border-box;
     width: 50%;
     padding: 10px;
@@ -608,35 +608,35 @@ table.citation {
     text-decoration: none;
 }
 
-.navbar > a:hover {
+.relbar > a:hover {
     color: #333;
 }
 
-.navbar > a:hover .direction {
+.relbar > a:hover .direction {
     color: #ccc;
 }
 
-.navbar > a.previous {
+.relbar > a.previous {
     float: left;
 }
 
-.navbar > a.next {
+.relbar > a.next {
     float: right;
     text-align: right;
 }
 
-.navbar .icon {
+.relbar .icon {
 }
 
-.navbar .previous .icon {
+.relbar .previous .icon {
     margin-right: 1em;
 }
 
-.navbar .next .icon {
+.rerelr .next .icon {
     margin-left: 1em;
 }
 
-.navbar .title {
+.relbar .title {
     position: relative;
     flex: 1;
     text-overflow: ellipsis;
@@ -647,11 +647,11 @@ table.citation {
     font-weight: 200;
 }
 
-.navbar .title .text {
+.relbar .title .text {
     line-height: 2em;
 }
 
-.navbar .title .text .direction {
+.relbar .title .text .direction {
     position: absolute;
     right: 0;
     left: 0;
@@ -986,7 +986,8 @@ div.sphinxsidebar input {
 }
 
 #titlebar svg,
-.navbar svg,
+.relbar svg,
+.related svg,
 .crumbs svg {
   /*display: inline-block;*/
   width: 1em;

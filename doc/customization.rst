@@ -16,6 +16,10 @@ Custom Templates
 
 :confval:`templates_path`
 
+.. todo::
+
+   relbar1, relbar2, ...
+
 
 Derive Your Own Theme
 ---------------------

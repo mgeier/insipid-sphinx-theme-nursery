@@ -34,6 +34,8 @@ All available theme options are listed in the following sections.
 ``insipid`` Settings
 ^^^^^^^^^^^^^^^^^^^^
 
+The following settings are provided by the ``insipid`` theme.
+
 .. theme-option:: body_centered
 
     Set to ``False`` if you want the body text to be left-aligned.
@@ -50,9 +52,41 @@ All available theme options are listed in the following sections.
 
     List of templates to use on the left side of the title bar.
 
+    You can use one of the built-in templates (like 
+    ``fullscreen-button.html``,
+    ``pdf-button.html``,
+    ``repo-button.html``,
+    ``search-button.html``).
+
+    You can also create your own template file located in your
+    :confval:`templates_path`.
+    It's best to use an ``<a>`` or ``<button>`` element.
+    You can include other templates, most notably icons.
+    For example, a "home" button could be made by creating a file
+    ``home-button.html`` with this content:
+
+    .. code-block:: htmldjango
+
+        <a href="{{ pathto(master_doc) }}" title="{{ docstitle|e }}">
+          {% include 'icons/home.svg' %}
+        </a>
+
+    ... and adding the file name to :confval:`html_theme_options`
+    like this:
+
+    .. code-block:: python
+
+        html_theme_options = {
+            'left_buttons': [
+                'home-button.html',
+            ],
+        }
+
 .. theme-option:: right_buttons
 
     List of templates to use on the right side of the title bar.
+
+    .. seealso:: :theme-option:`left_buttons`
 
 .. theme-option:: rightsidebar
 
@@ -63,11 +97,11 @@ All available theme options are listed in the following sections.
 .. theme-option:: show_insipid
 
     Set to ``False`` to hide the "Insipid Theme" link in the footer.
-    If :confval:`html_show_sphinx` is ``False``, this has no effect.
 
 .. theme-option:: sidebar_transition
 
-    CSS animation for showing/hiding the sidebar.
+    Duration (and optional timing function) of the CSS transition effect
+    for showing/hiding the sidebar.
 
 .. theme-option:: strip_section_numbers
 
@@ -77,19 +111,19 @@ All available theme options are listed in the following sections.
 
 .. theme-option:: topbar_transition
 
-    CSS animation for showing/hiding the title bar.
+    Duration (and optional timing function) of the CSS transition effect
+    for showing/hiding the title bar.
 
 
 ``basic`` Settings
 ^^^^^^^^^^^^^^^^^^
 
-Settings inherited from the ``basic`` theme (like most Sphinx themes)
+The following settings are inherited from the basic__ theme
+(therefore, most Sphinx themes have them),
+but for some of the options, the `default values`_ have been changed.
 
-:ref:`builtin-themes`
-
-https://github.com/sphinx-doc/sphinx/blob/master/sphinx/themes/basic/theme.conf
-
-TODO: some default values are overwritten
+__ https://github.com/sphinx-doc/sphinx/blob/master/
+    sphinx/themes/basic/theme.conf
 
 
 .. theme-option:: body_max_width
@@ -111,17 +145,17 @@ TODO: some default values are overwritten
 .. theme-option:: globaltoc_collapse
 
     If ``True`` (the default), only the current section of the table of contents
-    (TOC) is expanded.
+    (TOC) in the sidebar is expanded.
     Set to ``False`` to expand everything.
 
 .. theme-option:: globaltoc_includehidden
 
     If ``True``, include sections from :rst:dir:`sphinx:toctree` directives
-    with the ``:hidden:`` flag.
+    with the ``:hidden:`` flag in the table of contents (TOC) in the sidebar.
 
 .. theme-option:: navigation_with_keys
 
-    Use left and right arrow keys to turn pages.
+    If ``True``, the left and right arrow keys can be used to turn pages.
 
 .. theme-option:: nosidebar
 
@@ -132,6 +166,12 @@ TODO: some default values are overwritten
 .. theme-option:: sidebarwidth
 
     Width of the sidebar (in pixels or any CSS unit).
+
+    .. note::
+
+        Whenever the sidebar is resized,
+        its new width is stored in the browser's "local storage".
+        Therefore, a changed ``sidebarwidth`` might not be immediately visible.
 
     .. warning::
 
@@ -185,6 +225,9 @@ Sphinx Settings
 .. confval:: html_sidebars
 
     :confval:`sphinx:html_sidebars`
+
+    .. seealso:: Theme options :theme-option:`rightsidebar` and
+        :theme-option:`nosidebar`
 
 .. confval:: html_theme_options
 

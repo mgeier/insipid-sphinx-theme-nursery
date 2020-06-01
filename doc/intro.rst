@@ -14,9 +14,13 @@ MDN_,
 and many others.
 
 If you don't like this theme, no problem,
-you can find a large list of freely available Sphinx themes at
+Sphinx has several :ref:`builtin-themes` to choose from and
+you can find a large list of freely available third-party Sphinx themes at
 https://sphinx-themes.org/.
+You can also search for Sphinx themes on PyPI__ or Github__.
 
+__ https://pypi.org/search/?c=Framework+::+Sphinx+::+Theme
+__ https://github.com/search?q=sphinx+theme
 
 .. _Sphinx: https://www.sphinx-doc.org/
 .. _mdBook: https://rust-lang.github.io/mdBook/
@@ -98,13 +102,15 @@ back to the ``basic``\s
     Plus a few SVG icons from `Font Awesome`_
     (embedded in the HTML files -- no external assets).
     No external JavaScript framework is used
-    (except for jQuery_, which is already part of the ``basic`` theme),
+    (except for jQuery_ and underscore.js_,
+    which are already part of the ``basic`` theme),
     and no extension-specific Python code is ever executed
     (you can check the source code of :func:`insipid_sphinx_theme.setup`).
 
     .. _Jinja2: https://palletsprojects.com/p/jinja/
     .. _Font Awesome: https://fontawesome.com/
     .. _jQuery: https://jquery.com/
+    .. _underscore.js: https://underscorejs.org/
 
 
 Features
@@ -118,6 +124,13 @@ auto-hiding topbar
 resizable sidebar
     In addition to toggling its visibility,
     the width of the sidebar can also be interactively changed by users.
+
+    The new width (and whether the sidebar is visible or not)
+    is stored in the browser's "local storage",
+    which means it will be remembered for the next visit.
+
+    The default with can be configured with the theme option
+    :theme-option:`sidebarwidth`.
 
 keyboard navigation
     left/right arrow keys, P/N/U/I/S/M

@@ -41,10 +41,7 @@ html_theme_options = {
     #'globaltoc_collapse': False,
     #'globaltoc_includehidden': True,
     #'left_buttons': [
-    #    'home-button.html',
     #],
-    #'navbar_top': False,
-    #'navbar_bottom': False,
     #'navigation_with_keys': False,
     #'nosidebar': True,
     #'right_buttons': [
@@ -53,7 +50,7 @@ html_theme_options = {
     #'rightsidebar': True,
     #'show_insipid': False,
     #'sidebar_transition': '1s ease-out',
-    #'sidebarwidth': 300,
+    #'sidebarwidth': '10rem',
     #'strip_section_numbers': False,
     #'topbar_transition': '1.5s ease-out',
 }

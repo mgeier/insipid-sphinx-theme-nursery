@@ -115,6 +115,8 @@ The following settings are provided by the ``insipid`` theme.
     for showing/hiding the title bar.
 
 
+.. _basic settings:
+
 ``basic`` Settings
 ^^^^^^^^^^^^^^^^^^
 
@@ -156,6 +158,15 @@ __ https://github.com/sphinx-doc/sphinx/blob/master/
 .. theme-option:: navigation_with_keys
 
     If ``True``, the left and right arrow keys can be used to turn pages.
+
+    .. note::
+        This is disabled by default in the ``basic`` theme
+        (and therefore in most other themes as well),
+        for reasons given in Sphinx PR `#2064`__.
+
+        __ https://github.com/sphinx-doc/sphinx/pull/2064
+
+        When using the ``insipid`` theme, however, this is enabled by default.
 
 .. theme-option:: nosidebar
 
@@ -232,6 +243,10 @@ Sphinx Settings
 .. confval:: html_theme_options
 
     :confval:`sphinx:html_theme_options`
+
+.. confval:: language
+
+    :confval:`sphinx:language`
 
 
 Example

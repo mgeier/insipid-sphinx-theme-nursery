@@ -47,7 +47,7 @@ boring
     It shouldn't be outshined by some flashy theme.
     The theme is supposed to stay in the background and out of the way.
 
-    This theme uses only very few fonts,
+    This theme uses only very few (and only locally available) fonts,
     very few (and quite dull) colors
     and just a handful of simple symbols.
 
@@ -71,7 +71,7 @@ configurable
     The default settings should be perfectly fine for most people.
     But doesn't everyone sometimes like to be special?
     Many features can be switched on and off (see :doc:`configuration`),
-    but thanks to Sphinx's great flexibility,
+    and thanks to Sphinx's great flexibility,
     you can fine-tune and individualize virtually every aspect of the theme,
     see :doc:`customization` for details.
 
@@ -116,10 +116,25 @@ back to the ``basic``\s
 Features
 --------
 
-Trying not to disable existing Sphinx features.
+First of all, the `insipid` theme tries to not disable any features
+that Sphinx (and its `basic` theme, see :ref:`basic settings`) already has.
+
+Here's a little selection of features, some of them provided by Sphinx itself,
+some added by the `insipid` theme:
 
 auto-hiding topbar
-    maximize (vertical) screen space, scroll to top, link to parent
+    The goal is to maximize (vertical) screen space and to get out of the way.
+    Therefore, the topbar disappears when scrolling down.
+    When scrolling up,
+    or when hovering over (or touching) the top part of the screen,
+    it re-appears.
+
+    The topbar contains some useful icons
+    (see :theme-option:`left_buttons` and :theme-option:`right_buttons`)
+    as well as the title of the current page.
+    When clicking on said title, the page is scrolled to the top
+    and the title of the parent document (or the main title) is displayed.
+    Clicking on that brings you to the parent document.
 
 resizable sidebar
     In addition to toggling its visibility,
@@ -130,13 +145,42 @@ resizable sidebar
     which means it will be remembered for the next visit.
 
     The default with can be configured with the theme option
-    :theme-option:`sidebarwidth`.
+    :theme-option:`sidebarwidth`,
+    the content of the sidebar can be configured with :confval:`html_sidebars`.
 
 keyboard navigation
-    left/right arrow keys, P/N/U/I/S/M
+    This is one of the features that's provided by Sphinx,
+    but many third-party themes have inadvertently disabled it.
+
+    You can switch between pages using the left and right arrow keys.
+    This feature can be disabled with :theme-option:`navigation_with_keys`.
+    
+    In addition to the left/right arrow keys,
+    several key combinations are provided using the ``accesskey`` HTML feature.
+    The way to use these keyboard shortcuts depends on the browser
+    and its platform, typically involving holding the :kbd:`Alt` key,
+    often combined with the :kbd:`Shift` or the :kbd:`Control` key.
+    For details, see e.g. MDN__.
+
+    __ https://developer.mozilla.org/en-US/docs/
+        Web/HTML/Global_attributes/accesskey
+
+    The following access keys are available in many Sphinx themes:
+    :kbd:`N` for the *next* page;
+    :kbd:`P` for the *previous* page;
+    :kbd:`U` for *up* (to the parent page);
+    :kbd:`I` for the *index*.
+    In addition to these, the ``insipid`` theme provides
+    :kbd:`S` to show/hide the *search* box and
+    :kbd:`M` for showing/hiding the sidebar (i.e. the *menu*).
 
 fullscreen mode
-    reset when switching pages; "install" on home screen as fullscreen web app
+    When supported by the browser
+    (and when not overridden with :theme-option:`right_buttons`),
+    the topbar contains an icon for switching into (and out of)
+    fullscreen mode.
+
+    Navigating to another page will typically exit fullscreen mode.
 
 translatable UI
     All strings used in the user interface (including ``aria-label``\s)
@@ -144,5 +188,17 @@ translatable UI
     they will be automatically replaced by their translations
     when a supported :confval:`language` setting is used.
 
-support for RTD
-    https://readthedocs.org/; badge; Bitbucket/Github/GitLab links
+support for https://readthedocs.org/
+    The RTD "badge" (for selecting versions, languages etc.)
+    is incorporated into the bottom of the ``insipid`` sidebar
+    (instead of floating around in the bottom right corner of the page).
+   
+    Furthermore, a link to the connected Bitbucket/Github/GitLab repository
+    is automatically displayed in the topbar.
+    This can be disabled by overriding :theme-option:`right_buttons`.
+
+    Finally, if :confval:`html_copy_source` is set to ``False``,
+    a "show source" link to the appropriate version of the page source
+    on Bitbucket/Github/GitLab is shown in the footer of each page.
+    The link can be disabled by setting
+    :confval:`html_show_sourcelink` to False.

@@ -632,7 +632,7 @@ table.citation {
     margin-right: 1em;
 }
 
-.rerelr .next .icon {
+.relbar .next .icon {
     margin-left: 1em;
 }
 

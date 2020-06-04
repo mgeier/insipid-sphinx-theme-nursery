@@ -2,6 +2,7 @@ html_theme = 'insipid'
 
 # -- Recommended changes of Sphinx defaults -------------------------------
 
+# Set to empty string to disable permalinks
 html_add_permalinks = '\N{SECTION SIGN}'
 
 # -- Recommended settings for readthedocs.org -----------------------------
@@ -29,6 +30,8 @@ html_copy_source = False
 html_show_copyright = False
 #html_show_sphinx = False
 #html_show_sourcelink = False
+
+# Only relevant when html_copy_source is True
 #html_sourcelink_suffix = ''
 
 # -- Theme configuration --------------------------------------------------
@@ -74,16 +77,17 @@ templates_path = ['_templates']
 project = 'insipid-sphinx-theme'
 #html_title = 'Insipid Sphinx Theme'
 html_short_title = 'insipid'
-html_logo = 'showcase/insipid.png'
 #copyright = '<insert year and copyright holder>'
 
 #version = '???'
 #release = '???'
 
+html_logo = 'showcase/insipid.png'
+html_favicon = 'favicon.ico'
+
 # -- ??? ------------------------------------------------------------------
 
 html_secnumber_suffix = '\N{FIGURE SPACE}'
-html_favicon = 'favicon.ico'
 #smartquotes = False
 
 html_baseurl = 'https://insipid-sphinx-theme-nursery.readthedocs.io/'

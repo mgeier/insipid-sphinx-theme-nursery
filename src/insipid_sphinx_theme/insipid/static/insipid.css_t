@@ -7,30 +7,56 @@
     --topbar-height: 3rem;
 }
 
-/* -- Fix Firefox buttons --------------------------------------------------- */
-
-button::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-button:-moz-focusring {
-  outline: 1px dotted;
-}
-
 /* -- page layout ----------------------------------------------------------- */
 
-html, body {
-    /*padding: 0;*/
-    /*margin: 0;*/
+html {
+    height: 100%;  /* necessary for flex-grow */
 }
+
+body {
+    position: relative;  /* reference for sidebar-resize-handle */
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;  /* necessary for flex-grow */
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+div.body, .relbar, div.footer {
+    position: relative;  /* to be able to hide nav-icon */
+}
+
+div.document {
+    flex-grow: 1;  /* to keep the footer at the bottom (on very short pages) */
+}
+
+div.body {
+    padding: 20px;
+    min-width: unset;  /* body_min_width is handled with media queries */
+    overflow-x: auto;
+{% if theme_body_centered|tobool %}
+    margin-left: auto;
+    margin-right: auto;
+{% endif  %}
+    line-height: 1.618;
+    background-color: #fff;  /* to be able to hide nav-icon */
+}
+
+.js * {
+    scroll-margin-top: var(--topbar-height);
+    scroll-snap-margin-top: var(--topbar-height);  /* Safari */
+}
+
+/* -- scrollbars ------------------------------------------------------------ */
 
 ::-webkit-scrollbar {
     background: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
     background: #ccc;
 }
+
 html {
     scrollbar-color: #ccc transparent;
 }
@@ -43,47 +69,13 @@ div.body * {
     scrollbar-width: thin;
 }
 
-html {
-    height: 100%;  /* necessary for flex-grow */
+div.sphinxsidebar::-webkit-scrollbar {
+    width: 5px;
+    background: #f5f5f5;
 }
 
-body {
-    position: relative;  /* reference for sidebar-resize-handle */
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;  /* necessary for flex-grow */
-    margin: 0;
-
-    font-family: 'Open Sans', sans-serif;
-}
-
-div.body, .relbar, div.footer {
-    position: relative;  /* To be able to hide nav-icon */
-}
-
-div.document {
-    flex-grow: 1;  /* To keep the footer at the bottom (on very short pages) */
-}
-
-div.body {
-    padding: 20px;
-    /* Override basic.css, min width is handled with media queries */
-    min-width: unset;
-    /* Avoid horizontally scrolling <body> */
-    overflow-x: auto;
-{% if theme_body_centered|tobool %}
-    margin-left: auto;
-    margin-right: auto;
-{% endif  %}
-
-    line-height: 1.618;
-    /* To be able to hide nav-icon */
-    background-color: #fff;
-}
-
-.js * {
-    scroll-margin-top: var(--topbar-height);
-    scroll-snap-margin-top: var(--topbar-height);  /* Safari */
+div.sphinxsidebar {
+    scrollbar-width: thin;
 }
 
 /* -- body styles ----------------------------------------------------------- */
@@ -93,13 +85,8 @@ strong {
 }
 
 div.body .section {
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
-}
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+    /*margin-top: 2.5rem;*/
+    /*margin-bottom: 2.5rem;*/
 }
 
 div.body h1,
@@ -119,10 +106,10 @@ div.body h3,
 div.body h4,
 div.body h5,
 div.body h6 {
-    margin-top: 0;
-    margin-bottom: 0.5em;
+    /*margin-top: 0;*/
+    /*margin-bottom: 0.5em;*/
     font-weight: 600;
-    line-height: 1.2;
+    /*line-height: 1.2;*/
 }
 
 div.body h1 strong,
@@ -134,6 +121,7 @@ div.body h6 strong {
     font-weight: 700;
 }
 
+/*
 div.body h1 { font-size: 200%; }
 div.body h1 { font-size: 2em; }
 div.body h2 { font-size: 160%; }
@@ -144,6 +132,7 @@ div.body h4 { font-size: 120%; }
 div.body h4 { font-size: 1.25em; }
 div.body h5 { font-size: 110%; }
 div.body h6 { font-size: 100%; }
+*/
 
 a.headerlink {
     padding: 0 4px 0 4px;
@@ -154,21 +143,20 @@ a.headerlink {
 .toctree-wrapper .caption,
 p.rubric {
     margin-top: 30px;
-    /*font-weight: bold;*/
     font-weight: 600;
 }
 
 blockquote {
     clear: both;
-    padding: 0 20px;
     margin: 10px 0;
     border: 1px solid #0001;
     border-left-width: 6px;
+    padding: 0 20px;
 }
 
 blockquote.pull-quote p:not(.attribution),
 blockquote.epigraph p:not(.attribution) {
-    font-size: 135%;
+    font-size: 130%;
     font-style: italic;
     color: #666;
 }
@@ -179,6 +167,10 @@ blockquote:not(.pull-quote):not(.epigraph) p.attribution {
 
 blockquote p.attribution {
     text-align: end;
+}
+
+blockquote, div.figure {
+    overflow-x: auto;
 }
 
 div.body dl > dt,
@@ -218,7 +210,7 @@ strong:target {
 }
 
 dl > dt.label {
-    clear: left;
+    /*clear: left;*/
 }
 
 hr.docutils {
@@ -228,9 +220,10 @@ hr.docutils {
 
 ol, ul {
     padding-left: 1.2em;
-    line-height: 1.7;
+    /*line-height: 1.7;*/
 }
 
+/*
 li > p:first-child {
     margin-top: revert;
 }
@@ -238,6 +231,7 @@ li > p:first-child {
 li > p:last-child {
     margin-bottom: revert;
 }
+*/
 
 .toctree-wrapper ul,
 .contents ul {
@@ -250,7 +244,6 @@ li > p:last-child {
 }
 
 dl.citation > dt {
-    /*font-weight: bold;*/
     font-weight: 600;
 }
 
@@ -294,18 +287,11 @@ code, pre, kbd, samp {
     font-family: 'DejaVu Sans Mono', Menlo, monospace;
 }
 
-/* disable Pygments background */
-div.highlight {
-    /*background: unset;*/
-}
-
 pre {
     padding: 7px;
 
     line-height: normal;
     font-size: 0.875em;
-    /*font-size: 1em;*/
-    /*background-color: #f5f5f5;*/
 }
 
 code, code.xref, a code, div.admonition dl > dt code,
@@ -332,61 +318,20 @@ div.code-block-caption {
     font-size: unset;
 }
 
+/*
 div.document div.literal-block-wrapper {
     padding: unset;
     margin-top: .8em;
     margin-bottom: .8em;
 }
+*/
 
 /* highlighted line (:emphasize-lines:) */
 .highlight .hll {
-    display: block;
+    /*display: block;*/
     padding: 0 0.5em;
     margin: 0 -0.5em;
-
-    background-color: #ffc;
-}
-
-/* NB: .highlighttable is used for code blocks with line numbers */
-
-table.highlighttable {
-    display: block;
-    /*margin-left: unset;*/
-    margin: 1em 0;
-}
-
-div.code-block-caption + div > table.highlighttable {
-    margin-top: 0;
-}
-
-table.highlighttable tbody {
-    display: block;
-}
-
-table.highlighttable tr {
-    display: flex;
-}
-
-table.highlighttable td {
-    padding: 0;
-}
-
-table.highlighttable td.linenos {
-    user-select: none;
-}
-
-table.highlighttable td.linenos pre {
-    padding: 7px;
-}
-
-table.highlighttable pre {
-    /*margin: 0;*/
-    margin: unset;
-}
-
-table.highlighttable .code {
-    flex: 1;
-    overflow: hidden;
+    /*background-color: #ffc;*/
 }
 
 kbd.docutils {
@@ -402,21 +347,14 @@ kbd {
 
 /* -- admonitions ----------------------------------------------------------- */
 
+/*
 div.admonition, div.topic, div.sidebar, pre, div[class|="highlight"] {
     clear: both;
 }
+*/
 
-div.admonition, div.topic, div.sidebar, blockquote, div.figure {
-    overflow-x: auto;
-}
-
-div.admonition,
-div.topic,
-div.sidebar {
-    margin-top: 10px;
-    margin-bottom: 10px;
+div.topic, div.sidebar {
     border: none;
-    padding: 7px;
 }
 
 div.sidebar {
@@ -438,14 +376,15 @@ div.sidebar > p.sidebar-title + * {
     margin-top: 0;
 }
 
+/*
 div.admonition > *:last-child,
 div.topic > *:last-child,
 div.sidebar > *:last-child {
     margin-bottom: 0;
 }
+*/
 
 div.admonition {
-    /*color: #666;*/
     background-color: #e7f2fa;
 }
 
@@ -496,19 +435,6 @@ p.sidebar-subtitle {
     font-style: italic;
 }
 
-div.admonition > p.admonition-title + p,
-div.topic > p.topic-title + p,
-div.sidebar > p.sidebar-title + p {
-    /*display: inline;*/
-}
-
-div.admonition p,
-div.admonition pre,
-div.admonition ul,
-div.admonition ol {
-    /*margin-bottom: 5px;*/
-}
-
 /* More specific selectors to override previous defintions */
 div.body div.admonition dl > dt,
 div.body div.topic dl > dt,
@@ -518,7 +444,7 @@ div.body div.sidebar dl > dt {
     font-weight: unset;
 }
 
-/* -- tables ---------------------------------------------------------------- */
+/* -- tables and lists ------------------------------------------------------ */
 
 table.docutils {
     border-collapse: separate;
@@ -527,11 +453,11 @@ table.docutils {
 
 table.docutils th {
     font-weight: normal;
-    /*background-color: #f5f5f5;*/
     background-color: rgba(27,31,35,.05);
     border-bottom: 2px solid #333;
 }
 
+/*
 th > ul:first-child, td > ul:first-child,
 th > ol:first-child, td > ol:first-child {
     margin-top: 0px;
@@ -541,13 +467,10 @@ th > ul:last-child, td > ul:last-child,
 th > ol:last-child, td > ol:last-child {
     margin-bottom: 0px;
 }
+*/
 
 dl {
-    margin: 10px 0;
-}
-
-dt {
-    /*font-weight: bold;*/
+    margin: 1em 0;
 }
 
 dl.glossary > dt {
@@ -661,7 +584,7 @@ table.citation {
     line-height: 0.5em;
 }
 
-/* -- relbar ---------------------------------------------------------------- */
+/* -- breadcrumbs ----------------------------------------------------------- */
 
 nav.crumbs {
     color: #ccc;
@@ -681,21 +604,11 @@ nav.crumbs a:visited {
     color: #1565c0;
 }
 
-nav.rellinks {
-}
-
-/*
-nav.rellinks li+li:before {
-    content: "|";
-}
-*/
-
 /* -- footer ---------------------------------------------------------------- */
 
 div.footer {
     padding: 9px 0 9px 0;
     border-top: #eee solid 1px;
-
     text-align: center;
     font-size: 75%;
     color: #333;
@@ -723,15 +636,6 @@ div.sphinxsidebar {
 
     color: #333;
     background-color: #f5f5f5;
-}
-
-div.sphinxsidebar::-webkit-scrollbar {
-    width: 5px;
-    background: #f5f5f5;
-}
-
-div.sphinxsidebar {
-    scrollbar-width: thin;
 }
 
 body.sidebar-visible {
@@ -1214,6 +1118,17 @@ div.viewcode-block:target {
     .js #fullscreen .disable {
         display: unset;
     }
+}
+
+/* -- Fix Firefox buttons --------------------------------------------------- */
+
+button::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring {
+  outline: 1px dotted;
 }
 
 {#-

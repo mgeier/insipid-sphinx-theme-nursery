@@ -31,11 +31,11 @@ setup(
     long_description=open('README.rst').read(),
     license='BSD-2-Clause',
     keywords=''.split(),
-    url='',
+    url='https://insipid-sphinx-theme.readthedocs.io/',
     project_urls={
-        'Documentation': '',
-        'Source Code': '',
-        'Bug Tracker': '',
+        'Documentation': 'https://insipid-sphinx-theme.readthedocs.io/',
+        'Source Code': 'https://github.com/mgeier/insipid-sphinx-theme/',
+        'Bug Tracker': 'https://github.com/mgeier/insipid-sphinx-theme/issues',
     },
     platforms='any',
     classifiers=[

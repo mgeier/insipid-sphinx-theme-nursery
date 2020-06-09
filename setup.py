@@ -22,6 +22,9 @@ setup(
         'insipid/icons/*.svg',
     ]},
     python_requires='>=3.6',
+    install_requires=[
+        'sphinx>=3.1',
+    ],
     author='Matthias Geier',
     author_email='Matthias.Geier@gmail.com',
     description='An insipid Sphinx theme',

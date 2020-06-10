@@ -185,7 +185,7 @@ dl.field-list > dt {
 
 div.body dl > dt:not(.label),
 dl.field-list > dt {
-    padding: 3px 7px;
+    padding: 1px 6px;
 }
 
 div.body dl > dt.label:target,

@@ -316,6 +316,11 @@ code.descname {
     font-size: unset;
 }
 
+.sig-paren,
+.optional {
+    line-height: 0;
+}
+
 div.code-block-caption {
     text-align: center;
     font-size: unset;

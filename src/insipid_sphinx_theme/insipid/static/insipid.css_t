@@ -1,6 +1,6 @@
 /* -- variables ------------------------------------------------------------- */
 
-{% set sidebar_side = 'right' if theme_rightsidebar|tobool else 'left' %}
+{%- set sidebar_side = 'right' if theme_rightsidebar|tobool else 'left' %}
 
 :root {
     --sidebar-width: {{ theme_sidebarwidth|todim }};
@@ -682,6 +682,8 @@ div.sphinxsidebarwrapper > :last-child {
 
 .js.sidebar-visible .sidebar-resize-handle {
     display: block;
+    cursor: col-resize;
+    width: 10px;
 }
 
 .sphinxsidebar .sidebar-resize-handle {
@@ -694,11 +696,6 @@ div.sphinxsidebarwrapper > :last-child {
 
 .js.sidebar-visible > .sidebar-resize-handle {
     {{ sidebar_side }}: 0;
-}
-
-.js .sidebar-resize-handle {
-    cursor: col-resize;
-    width: 10px;
 }
 
 .js.sidebar-hidden .sphinxsidebar {
@@ -901,11 +898,9 @@ div.sphinxsidebar input {
 .relbar svg,
 .related svg,
 .crumbs svg {
-  /*display: inline-block;*/
   width: 1em;
   height: 1em;
   vertical-align: middle;
-  /*margin: 0;*/
   fill: currentColor;
 }
 
@@ -1128,7 +1123,7 @@ div.viewcode-block:target {
     }
 }
 
-/* -- Fix Firefox buttons --------------------------------------------------- */
+/* -- fix Firefox buttons --------------------------------------------------- */
 
 button::-moz-focus-inner {
   border-style: none;

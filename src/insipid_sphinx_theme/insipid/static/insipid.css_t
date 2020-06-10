@@ -307,10 +307,13 @@ div.body dl > dt code {
     padding: unset;
 }
 
-code.descname,
 code.xref,
 a code {
     font-weight: unset;
+}
+
+code.descname {
+    font-size: unset;
 }
 
 div.code-block-caption {

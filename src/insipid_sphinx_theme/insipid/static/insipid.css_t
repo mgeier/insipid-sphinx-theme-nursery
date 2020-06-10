@@ -9,26 +9,16 @@
 
 /* -- page layout ----------------------------------------------------------- */
 
-html {
-    height: 100%;  /* necessary for flex-grow */
-}
-
 body {
     position: relative;  /* reference for sidebar-resize-handle */
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;  /* necessary for flex-grow */
     margin: 0;
     font-family: 'Open Sans', sans-serif;
 }
 
-div.body, .relbar, div.footer {
-    position: relative;  /* to be able to hide nav-icon */
-}
-
-div.document {
-    flex-grow: 1;  /* to keep the footer at the bottom (on very short pages) */
-}
+/* keep the footer at the bottom (on very short pages) */
+html { height: 100%; }
+body { min-height: 100%; display: flex; flex-direction: column; }
+div.document { flex-grow: 1; }
 
 div.body {
     padding: 20px;
@@ -84,36 +74,39 @@ strong {
     font-weight: 600;
 }
 
-div.body .section {
-    /*margin-top: 2.5rem;*/
-    /*margin-bottom: 2.5rem;*/
-}
-
-div.body h1,
-div.body h2,
-div.body h3,
-div.body h4,
-div.body h5,
-div.body h6,
-.toctree-wrapper .caption,
-p.rubric {
-    color: #333;
-}
-
 div.body h1,
 div.body h2,
 div.body h3,
 div.body h4,
 div.body h5,
 div.body h6 {
-    /*margin-top: 0;*/
-    /*margin-bottom: 0.5em;*/
+    margin-top: 3rem;
+    margin-bottom: 1rem;
     font-weight: 600;
-    /*line-height: 1.2;*/
+    line-height: 1.15;
+}
+
+div.body h1,
+div.body h2 {
+    font-weight: normal;
+}
+
+div.body h3,
+div.body h4,
+div.body h5,
+div.body h6 {
+    font-weight: 600;
+}
+
+div.body h6 {
+    font-weight: bold;
 }
 
 div.body h1 strong,
-div.body h2 strong,
+div.body h2 strong {
+    font-weight: 600;
+}
+
 div.body h3 strong,
 div.body h4 strong,
 div.body h5 strong,
@@ -121,29 +114,24 @@ div.body h6 strong {
     font-weight: 700;
 }
 
-/*
-div.body h1 { font-size: 200%; }
-div.body h1 { font-size: 2em; }
-div.body h2 { font-size: 160%; }
-div.body h2 { font-size: 1.75em; }
-div.body h3 { font-size: 140%; }
-div.body h3 { font-size: 1.5em; }
-div.body h4 { font-size: 120%; }
-div.body h4 { font-size: 1.25em; }
-div.body h5 { font-size: 110%; }
-div.body h6 { font-size: 100%; }
-*/
+div.body h1 { font-size: 2.7em; }
+div.body h2 { font-size: 2.2em; }
+div.body h3 { font-size: 1.75em; }
+div.body h4 { font-size: 1.45em; }
+div.body h5 { font-size: 1.2em; }
+div.body h6 { font-size: 1em }
 
 a.headerlink {
-    padding: 0 4px 0 4px;
+    padding: 0 4px;
     font-size: 1rem;
     font-weight: normal;
 }
 
 .toctree-wrapper .caption,
 p.rubric {
-    margin-top: 30px;
-    font-weight: 600;
+    margin-top: 1.5em;
+    /*font-weight: 600;*/
+    font-weight: bold;
 }
 
 blockquote {
@@ -978,6 +966,10 @@ div.sphinxsidebar input {
 
 {% if theme_body_max_width != None %}
 /* -- navigation icons ------------------------------------------------------ */
+
+div.body, .relbar, div.footer {
+    position: relative;  /* to be able to hide nav-icon */
+}
 
 .nav-icon svg {
     position: absolute;

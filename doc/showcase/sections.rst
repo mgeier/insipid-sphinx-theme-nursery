@@ -51,21 +51,35 @@ Rubric
 
 https://docutils.sourceforge.io/docs/ref/rst/directives.html#rubric
 
+Some text.
+
 .. rubric:: Title of the Rubric
 
 Some text.
 
 .. note::
 
+    Some text.
+
     .. rubric:: Rubric in admonition
+
+    Some text.
 
 .. topic:: Topic
 
+    Some text.
+
     .. rubric:: Rubric in topic
+
+    Some text.
 
 .. sidebar:: Sidebar
 
+    Some text.
+
     .. rubric:: Rubric in sidebar
+
+    Some text.
 
 
 (Local) Table of Contents

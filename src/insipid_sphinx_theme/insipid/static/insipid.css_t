@@ -31,7 +31,7 @@ div.body {
     line-height: 1.618;
 }
 
-.js * {
+body.js * {
     scroll-margin-top: var(--topbar-height);
     scroll-snap-margin-top: var(--topbar-height);  /* Safari */
 }
@@ -546,7 +546,7 @@ body.js:not(.sidebar-resizing) {
     transition: margin-{{ sidebar_side }} {{ theme_sidebar_transition }};
 }
 
-.js:not(.sidebar-resizing) .sphinxsidebar {
+body.js:not(.sidebar-resizing) .sphinxsidebar {
     transition: {{ sidebar_side }} {{ theme_sidebar_transition }};
 }
 
@@ -572,7 +572,7 @@ div.sphinxsidebarwrapper > :last-child {
     bottom: 0;
 }
 
-.js.sidebar-visible .sidebar-resize-handle {
+body.js.sidebar-visible .sidebar-resize-handle {
     display: block;
     cursor: col-resize;
     width: 10px;
@@ -586,11 +586,11 @@ div.sphinxsidebarwrapper > :last-child {
     {%- endif %}
 }
 
-.js.sidebar-visible > .sidebar-resize-handle {
+body.js.sidebar-visible > .sidebar-resize-handle {
     {{ sidebar_side }}: 0;
 }
 
-.js.sidebar-hidden .sphinxsidebar {
+body.js.sidebar-hidden .sphinxsidebar {
     {{ sidebar_side }}: calc(0px - var(--sidebar-width));
 }
 
@@ -742,17 +742,17 @@ div.sphinxsidebar input {
     z-index: 123;
 }
 
-.js #topbar-placeholder {
+body.js #topbar-placeholder {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
 }
 
-.sidebar-visible #topbar-placeholder {
+body.sidebar-visible #topbar-placeholder {
     margin-{{ sidebar_side }}: calc(0px - var(--sidebar-width));
 }
 
-.js:not(.sidebar-resizing) #topbar-placeholder {
+body.js:not(.sidebar-resizing) #topbar-placeholder {
     transition: margin-{{ sidebar_side }} {{ theme_sidebar_transition }};
 }
 
@@ -817,11 +817,11 @@ div.sphinxsidebar input {
     text-decoration: none;
 }
 
-.js.topbar-folded #topbar-placeholder:not(:hover) #topbar {
+body.js.topbar-folded #topbar-placeholder:not(:hover) #topbar {
     transform: translateY(-100%);
 }
 
-.js #topbar {
+body.js #topbar {
     transition: transform {{ theme_topbar_transition }};
 }
 
@@ -926,22 +926,22 @@ div.body, .relbar, div.footer {
 }
 
 {%- if theme_rightsidebar|tobool %}
-.sidebar-visible .nav-icon {
+body.sidebar-visible .nav-icon {
     right: var(--sidebar-width);
 }
 
 {%- if not theme_body_centered|tobool %}
-.js:not(.sidebar-resizing) .nav-icon.previous,
+body.js:not(.sidebar-resizing) .nav-icon.previous,
 {%- endif %}
-.js:not(.sidebar-resizing) .nav-icon.next {
+body.js:not(.sidebar-resizing) .nav-icon.next {
     transition: right {{ theme_sidebar_transition }};
 }
 {%- elif theme_body_centered|tobool %}
-.sidebar-visible .nav-icon.previous {
+body.sidebar-visible .nav-icon.previous {
     left: var(--sidebar-width);
 }
 
-.js:not(.sidebar-resizing) .nav-icon.previous {
+body.js:not(.sidebar-resizing) .nav-icon.previous {
     transition: left {{ theme_sidebar_transition }};
 }
 {%- endif %}
@@ -969,7 +969,7 @@ div.viewcode-block:target {
         margin-{{ sidebar_side }}: 0;
     }
 
-    .sidebar-visible #topbar-placeholder {
+    body.sidebar-visible #topbar-placeholder {
         margin-{{ sidebar_side }}: 0;
     }
 
@@ -977,7 +977,7 @@ div.viewcode-block:target {
         overflow: hidden;
     }
 
-    .js #overlay {
+    body.js #overlay {
         position: fixed;
         top: 0;
         left: 0;
@@ -990,7 +990,7 @@ div.viewcode-block:target {
         z-index: 42;
     }
 
-    .js.sidebar-visible #overlay {
+    body.js.sidebar-visible #overlay {
         visibility: visible;
         opacity: 1;
         transition: opacity {{ theme_sidebar_transition }};
@@ -1002,11 +1002,11 @@ div.viewcode-block:target {
         width: unset;
     }
 
-    .js.sidebar-visible #titlebar h1 .parent {
+    body.js.sidebar-visible #titlebar h1 .parent {
         display: unset;
     }
 
-    .js.sidebar-visible #titlebar h1 .top {
+    body.js.sidebar-visible #titlebar h1 .top {
         display: none;
     }
 }
@@ -1015,16 +1015,16 @@ body:not(.js) #fullscreen {
     display: none;
 }
 
-.js #fullscreen .disable {
+body.js #fullscreen .disable {
     display: none;
 }
 
 @media all and (display-mode: fullscreen) {
-    .js #fullscreen .enable {
+    body.js #fullscreen .enable {
         display: none;
     }
 
-    .js #fullscreen .disable {
+    body.js #fullscreen .disable {
         display: unset;
     }
 }

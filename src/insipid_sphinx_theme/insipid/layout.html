@@ -73,7 +73,7 @@
 
 
 {% block body_tag %}
-  <body class="{% if render_sidebar %} sidebar-visible{% endif %}">
+  <body{% if render_sidebar %} class="sidebar-visible"{% endif %}>
 {%- endblock %}
 
 

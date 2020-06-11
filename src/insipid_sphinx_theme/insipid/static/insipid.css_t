@@ -533,15 +533,9 @@ div.sphinxsidebar {
     float: unset;
     margin-left: unset;  /* override basic.css */
     z-index: 99;
-
-    /*
-    font-size: 0.875em;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior-y: contain;
-    */
-
     color: #333;
     background-color: #f5f5f5;
+    overscroll-behavior: contain;
 }
 
 body.sidebar-visible {
@@ -559,7 +553,7 @@ body.js:not(.sidebar-resizing) {
 div.sphinxsidebarwrapper {
     position: relative;  /* reference for sidebar-resize-handle */
     margin-top: var(--topbar-height);
-    padding: 10px 10px;
+    padding: 10px;
 }
 
 div.sphinxsidebarwrapper > :first-child {
@@ -585,11 +579,11 @@ div.sphinxsidebarwrapper > :last-child {
 }
 
 .sphinxsidebar .sidebar-resize-handle {
-    {% if theme_rightsidebar|tobool %}
+    {%- if theme_rightsidebar|tobool %}
     left: 0;
-    {% else %}
+    {%- else %}
     right: 0;
-    {% endif %}
+    {%- endif %}
 }
 
 .js.sidebar-visible > .sidebar-resize-handle {
@@ -607,29 +601,33 @@ div.sphinxsidebar img {
 div.sphinxsidebar h3 {
     font-size: 1.4em;
     font-weight: normal;
-    margin: 0;
-    padding: 0;
-}
-
-div.sphinxsidebar h3 a {
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 div.sphinxsidebar h4 {
     font-size: 1.3em;
     font-weight: normal;
-    margin: 5px 0 0 0;
-    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 div.sphinxsidebar p.caption {
     text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
-div.sphinxsidebar p {
+div.sphinxsidebar p.caption + ul {
+    margin-top: 0;
 }
 
 div.sphinxsidebar p.topless {
-    margin: 5px 10px 10px 10px;
+    margin: 10px;
+}
+
+div.sphinxsidebar p.topless {
+    margin-top: 0;
 }
 
 div.sphinxsidebar ul {
@@ -637,24 +635,23 @@ div.sphinxsidebar ul {
     margin-left: 10px;
 }
 
+div.sphinxsidebar h3 + ul,
+div.sphinxsidebar h4 + ul {
+    margin-top: -5px;
+}
+
 div.sphinxsidebar li {
-    margin: 0.5em 0;
+    padding-top: 0.25em;
 }
 
-div.sphinxsidebar li:first-child {
-    margin-top: 0;
-}
-
-div.sphinxsidebar li:last-child {
-    margin-bottom: 0;
+.sphinxsidebar li > a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.25em;
 }
 
 div.sphinxsidebar a {
     color: #235388;
-}
-
-div.sphinxsidebar ul ul {
-    list-style-type: none;
 }
 
 div.sphinxsidebar code {
@@ -663,12 +660,14 @@ div.sphinxsidebar code {
 }
 
 div.sphinxsidebar h3,
+div.sphinxsidebar h4,
 div.sphinxsidebar li {
     margin-right: -10px;
     padding-right: 10px;
 }
 
 div.sphinxsidebar h3,
+div.sphinxsidebar h4,
 div.sphinxsidebar li {
     margin-left: -20px;
     padding-left: 20px;

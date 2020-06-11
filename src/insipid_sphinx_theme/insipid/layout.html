@@ -73,7 +73,7 @@
 
 
 {% block body_tag %}
-  <body class="no-js{% if render_sidebar %} sidebar-visible{% endif %}">
+  <body class="{% if render_sidebar %} sidebar-visible{% endif %}">
 {%- endblock %}
 
 
@@ -81,7 +81,6 @@
     <script type="text/javascript">
         (function() {
             var $body = $(document.body);
-            $body.removeClass('no-js');
             $body.addClass('js');
 {%- if render_sidebar %}
             $body.addClass('sidebar-resizing');  // avoid transitions on load

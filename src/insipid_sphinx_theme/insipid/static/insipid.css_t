@@ -718,7 +718,7 @@ div.sphinxsidebar li.toctree-l10 {
     padding-left: 200px;
 }
 
-.no-js div.sphinxsidebar li.current,
+body:not(.js) div.sphinxsidebar li.current,
 div.sphinxsidebar .current-page:not(.logo) {
     background-color: #fff;
 }
@@ -825,8 +825,8 @@ div.sphinxsidebar input {
     transition: transform {{ theme_topbar_transition }};
 }
 
-.no-js #sidebar-toggle,
-.no-js #search-toggle {
+body:not(.js) #sidebar-toggle,
+body:not(.js) #search-toggle {
     display: none;
 }
 
@@ -996,7 +996,7 @@ div.viewcode-block:target {
         transition: opacity {{ theme_sidebar_transition }};
     }
 
-    .no-js .sphinxsidebar {
+    body:not(.js) .sphinxsidebar {
         position: relative;
         top: unset;
         width: unset;
@@ -1011,7 +1011,7 @@ div.viewcode-block:target {
     }
 }
 
-.no-js #fullscreen {
+body:not(.js) #fullscreen {
     display: none;
 }
 

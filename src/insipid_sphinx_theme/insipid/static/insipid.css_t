@@ -29,7 +29,6 @@ div.body {
     margin-right: auto;
 {% endif  %}
     line-height: 1.618;
-    background-color: #fff;  /* to be able to hide nav-icon */
 }
 
 .js * {
@@ -184,10 +183,6 @@ strong:target {
     background-color: #ffc;
 }
 
-dl > dt.label {
-    /*clear: left;*/
-}
-
 hr.docutils {
     border: 0;
     border-top: solid 1px #ccc;
@@ -195,18 +190,7 @@ hr.docutils {
 
 ol, ul {
     padding-left: 1.2em;
-    /*line-height: 1.7;*/
 }
-
-/*
-li > p:first-child {
-    margin-top: revert;
-}
-
-li > p:last-child {
-    margin-bottom: revert;
-}
-*/
 
 .toctree-wrapper ul,
 .contents ul {
@@ -264,7 +248,6 @@ code, pre, kbd, samp {
 
 pre {
     padding: 7px;
-
     line-height: normal;
     font-size: 0.875em;
 }
@@ -301,20 +284,10 @@ div.code-block-caption {
     font-size: unset;
 }
 
-/*
-div.document div.literal-block-wrapper {
-    padding: unset;
-    margin-top: .8em;
-    margin-bottom: .8em;
-}
-*/
-
 /* highlighted line (:emphasize-lines:) */
 .highlight .hll {
-    /*display: block;*/
     padding: 0 0.5em;
     margin: 0 -0.5em;
-    /*background-color: #ffc;*/
 }
 
 kbd.docutils {
@@ -324,24 +297,14 @@ kbd.docutils {
     border-radius: 3px;
 }
 
-kbd {
-    /*font-weight: normal;*/
-}
-
 /* -- admonitions ----------------------------------------------------------- */
-
-/*
-div.admonition, div.topic, div.sidebar, pre, div[class|="highlight"] {
-    clear: both;
-}
-*/
 
 div.topic, div.sidebar {
     border: none;
 }
 
 div.sidebar {
-    margin-top: 0;
+    /*margin-top: 0;*/
 }
 
 div.admonition > p.admonition-title,
@@ -358,14 +321,6 @@ div.topic > p.topic-title + *,
 div.sidebar > p.sidebar-title + * {
     margin-top: 0;
 }
-
-/*
-div.admonition > *:last-child,
-div.topic > *:last-child,
-div.sidebar > *:last-child {
-    margin-bottom: 0;
-}
-*/
 
 div.admonition {
     background-color: #e7f2fa;
@@ -440,18 +395,6 @@ table.docutils th {
     border-bottom: 2px solid #333;
 }
 
-/*
-th > ul:first-child, td > ul:first-child,
-th > ol:first-child, td > ol:first-child {
-    margin-top: 0px;
-}
-
-th > ul:last-child, td > ul:last-child,
-th > ol:last-child, td > ol:last-child {
-    margin-bottom: 0px;
-}
-*/
-
 dl {
     margin: 1em 0;
 }
@@ -477,6 +420,7 @@ dl.field-list > dt::after {
     content: unset;
 }
 
+dd,
 dl.field-list > dd {
     padding-left: 0;
     margin-top: 3px;
@@ -493,12 +437,6 @@ table.citation {
 
 /* -- relbar ---------------------------------------------------------------- */
 
-/* TODO: combine with topbar/titlebar? */
-.relbar {
-    color: #ccc;
-    background-color: #fff;
-}
-
 .relbar {
     padding: 10px;
 }
@@ -509,17 +447,8 @@ table.citation {
     padding: 10px;
     display: flex;
     align-items: center;
-
     color: inherit;
     text-decoration: none;
-}
-
-.relbar > a:hover {
-    color: #333;
-}
-
-.relbar > a:hover .direction {
-    color: #ccc;
 }
 
 .relbar > a.previous {
@@ -529,9 +458,6 @@ table.citation {
 .relbar > a.next {
     float: right;
     text-align: right;
-}
-
-.relbar .icon {
 }
 
 .relbar .previous .icon {
@@ -548,7 +474,6 @@ table.citation {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-
     font-size: 1.5em;
     font-weight: 200;
 }
@@ -562,7 +487,6 @@ table.citation {
     right: 0;
     left: 0;
     top: 0;
-
     font-size: 50%;
     line-height: 0.5em;
 }
@@ -595,7 +519,6 @@ div.footer {
     text-align: center;
     font-size: 75%;
     color: #333;
-    background-color: #fff;
 }
 
 /* -- sidebar --------------------------------------------------------------- */
@@ -841,12 +764,15 @@ div.sphinxsidebar input {
 
 #topbar,
 #titlebar a,
-#titlebar a:visited {
+#titlebar a:visited,
+.relbar,
+.relbar > a:hover .direction {
     color: #ccc;
 }
 
 #topbar button:hover,
-#titlebar a:hover {
+#titlebar a:hover,
+.relbar a:hover {
     color: #333;
 }
 
@@ -954,8 +880,10 @@ div.sphinxsidebar input {
 {% if theme_body_max_width != None %}
 /* -- navigation icons ------------------------------------------------------ */
 
+/* hide nav-icon */
 div.body, .relbar, div.footer {
-    position: relative;  /* to be able to hide nav-icon */
+    position: relative;
+    background-color: #fff;
 }
 
 .nav-icon svg {

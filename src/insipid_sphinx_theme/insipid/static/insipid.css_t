@@ -83,30 +83,16 @@ div.body h6 {
     margin-top: 3rem;
     margin-bottom: 1rem;
     font-weight: 600;
-    line-height: 1.15;
+    line-height: 1.35;
 }
 
-div.body h1,
-div.body h2 {
-    font-weight: normal;
-}
-
-div.body h3,
-div.body h4,
 div.body h5,
-div.body h6 {
-    font-weight: 600;
-}
-
 div.body h6 {
     font-weight: bold;
 }
 
 div.body h1 strong,
-div.body h2 strong {
-    font-weight: 600;
-}
-
+div.body h2 strong,
 div.body h3 strong,
 div.body h4 strong,
 div.body h5 strong,
@@ -114,12 +100,12 @@ div.body h6 strong {
     font-weight: 700;
 }
 
-div.body h1 { font-size: 2.7em; }
-div.body h2 { font-size: 2.2em; }
-div.body h3 { font-size: 1.75em; }
-div.body h4 { font-size: 1.45em; }
-div.body h5 { font-size: 1.2em; }
-div.body h6 { font-size: 1em }
+div.body h1 { font-size: 2em; }
+div.body h2 { font-size: 1.7em; }
+div.body h3 { font-size: 1.4em; }
+div.body h4 { font-size: 1.2em; }
+div.body h5 { font-size: 1em; }
+div.body h6 { font-size: 0.9em }
 
 a.headerlink {
     padding: 0 4px;

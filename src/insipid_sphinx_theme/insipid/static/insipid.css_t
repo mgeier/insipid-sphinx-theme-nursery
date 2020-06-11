@@ -79,7 +79,9 @@ div.body h2,
 div.body h3,
 div.body h4,
 div.body h5,
-div.body h6 {
+div.body h6,
+.toctree-wrapper .caption,
+p.rubric {
     margin-top: 1.3em;
     margin-bottom: 1rem;
     font-weight: 600;
@@ -107,17 +109,16 @@ div.body h4 { font-size: 1.2em; }
 div.body h5 { font-size: 1em; }
 div.body h6 { font-size: 0.9em }
 
+.toctree-wrapper .caption,
+p.rubric {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
 a.headerlink {
     padding: 0 4px;
     font-size: 1rem;
     font-weight: normal;
-}
-
-.toctree-wrapper .caption,
-p.rubric {
-    margin-top: 1.5em;
-    /*font-weight: 600;*/
-    font-weight: bold;
 }
 
 blockquote {

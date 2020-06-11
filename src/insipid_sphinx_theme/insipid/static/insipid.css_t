@@ -879,7 +879,7 @@ div.sphinxsidebar input {
 {% if theme_body_max_width != None %}
 /* -- navigation icons ------------------------------------------------------ */
 
-/* hide nav-icon */
+/* cover nav-icon */
 div.body, .relbar, div.footer {
     position: relative;
     background-color: #fff;
@@ -898,11 +898,9 @@ div.body, .relbar, div.footer {
 .nav-icon {
     position: fixed;
     right: 0;
-    /* TODO: use --page-padding for horizontal margin? */
     margin: {% if theme_body_centered|tobool %}-2em{% else %}0{% endif %} 1em;
     width: 4em;
     height: 4em;
-
     color: #f5f5f5;
 }
 
@@ -917,36 +915,38 @@ div.body, .relbar, div.footer {
 
 .nav-icon.previous {
     bottom: 50vh;
-{% if theme_body_centered|tobool %}
+{%- if theme_body_centered|tobool %}
     left: 0;
     right: unset;
-{% endif %}
+{%- endif %}
 }
 
 .nav-icon.next {
     top: 50vh;
 }
 
-{% if theme_rightsidebar|tobool %}
+{%- if theme_rightsidebar|tobool %}
 .sidebar-visible .nav-icon {
     right: var(--sidebar-width);
 }
-{% if not theme_body_centered|tobool %}
+
+{%- if not theme_body_centered|tobool %}
 .js:not(.sidebar-resizing) .nav-icon.previous,
-{% endif %}
+{%- endif %}
 .js:not(.sidebar-resizing) .nav-icon.next {
     transition: right {{ theme_sidebar_transition }};
 }
-{% elif theme_body_centered|tobool %}
+{%- elif theme_body_centered|tobool %}
 .sidebar-visible .nav-icon.previous {
     left: var(--sidebar-width);
 }
+
 .js:not(.sidebar-resizing) .nav-icon.previous {
     transition: left {{ theme_sidebar_transition }};
 }
-{% endif %}
+{%- endif %}
 
-{% endif %}
+{%- endif %}
 
 /* -- sphinx.ext.viewcode --------------------------------------------------- */
 

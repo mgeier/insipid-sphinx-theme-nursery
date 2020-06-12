@@ -641,13 +641,16 @@ div.sphinxsidebar h4 + ul {
 }
 
 div.sphinxsidebar li {
-    padding-top: 0.25em;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
 }
 
-.sphinxsidebar li > a::after {
-    content: '';
-    display: block;
-    padding-bottom: 0.25em;
+div.sphinxsidebar li li:first-child {
+    margin-top: 0.4em;
+}
+
+div.sphinxsidebar li li:last-child {
+    margin-bottom: -0.4em;
 }
 
 div.sphinxsidebar a {

@@ -1,12 +1,24 @@
 Customization
 =============
 
+If you want to go beyond :doc:`configuration`, you've come to the right page!
+
+
 Custom CSS files
 ----------------
 
-...
+Adding your own CSS files is very easy.
+Just add their file names to :confval:`html_css_files`
+and make sure they are living in a directory
+that's part of :confval:`html_static_path`.
 
-:confval:`html_css_files`
+For example, if the path to your CSS file is :file:`_static/funky.css`
+(relative to your :file:`conf.py`), you can use something like this:
+
+.. code-block:: python
+
+    html_css_files = ['funky.css']
+    html_static_path = ['_static']
 
 
 Custom Templates
@@ -16,9 +28,23 @@ Custom Templates
 
 :confval:`templates_path`
 
+.. code-block:: python
+
+    templates_path = ['_templates']
+
+New templates ...
+
+:confval:`html_sidebars`
+:theme-option:`left_buttons`
+:theme-option:`right_buttons`
+
+Modify existing templates ...
+
 .. todo::
 
    relbar1, relbar2, ...
+
+See also :doc:`templating`.
 
 
 Derive Your Own Theme
@@ -30,7 +56,7 @@ Derive Your Own Theme
 
 .. code-block:: ini
     :name: derived-theme-conf
-    :caption: Starting point for your own ``theme.conf``
+    :caption: Starting point for your own :file:`theme.conf`
 
     [theme]
     inherit = insipid

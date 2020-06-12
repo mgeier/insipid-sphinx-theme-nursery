@@ -1,7 +1,7 @@
 Configuration
 =============
 
-There is only a single required setting in your ``conf.py``:
+There is only a single required setting in your :file:`conf.py`:
 
 .. code-block:: python
 
@@ -13,11 +13,11 @@ Theme Settings
 
 The insipid theme has many configuration parameters
 which can be specified with :confval:`html_theme_options`
-in your ``conf.py``,
+in your :file:`conf.py`,
 for example like this:
 
 .. code-block:: python
-    :caption: A simple ``conf.py``
+    :caption: A simple :file:`conf.py`
     :name: conf-py-simple
 
     html_theme = 'insipid'
@@ -53,21 +53,23 @@ The following settings are provided by the ``insipid`` theme.
     List of templates to use on the left side of the title bar.
 
     You can use one of the built-in templates (like 
-    ``fullscreen-button.html``,
-    ``pdf-button.html``,
-    ``repo-button.html``,
-    ``search-button.html``).
+    :file:`fullscreen-button.html`,
+    :file:`pdf-button.html`,
+    :file:`repo-button.html`,
+    :file:`search-button.html`).
 
     You can also create your own template file located in your
     :confval:`templates_path`.
-    It's best to use an ``<a>`` or ``<button>`` element.
+    It's best to use ``<a>`` or ``<button>`` elements.
     You can include other templates, most notably icons.
+
     For example, a "home" button could be made by creating a file
-    ``home-button.html`` with this content:
+    named :file:`_templates/home-button.html`
+    (relative to your :file:`conf.py`) with this content:
 
-    .. code-block:: htmldjango
+    .. code-block:: html+jinja
 
-        <a href="{{ pathto(master_doc) }}" title="{{ docstitle|e }}">
+        <a href="{{ pathto('index') }}" title="{{ docstitle|e }}">
           {% include 'icons/home.svg' %}
         </a>
 
@@ -81,6 +83,9 @@ The following settings are provided by the ``insipid`` theme.
                 'home-button.html',
             ],
         }
+        templates_path = ['_templates']
+
+    For help creating your own templates, see :doc:`templating`.
 
 .. theme-option:: right_buttons
 

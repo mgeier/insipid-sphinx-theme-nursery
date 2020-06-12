@@ -17,7 +17,7 @@ Installation and Usage
     If you want to upgrade an existing installation, you can add the
     ``--upgrade`` flag.
 
-#.  Edit the ``conf.py`` file
+#.  Edit the :file:`conf.py` file
     (just create an empty file if it doesn't exist yet,
     or use :doc:`man/sphinx-quickstart`) and add/edit the line:
 
@@ -25,9 +25,10 @@ Installation and Usage
  
         html_theme = 'insipid'
 
-#.  Make sure your source files are in the same directory as your ``conf.py``.
+#.  Make sure your source files are
+    in the same directory as your :file:`conf.py`.
     If you don't have any source files yet,
-    you can start with a simple ``index.rst``:
+    you can start with a simple :file:`index.rst`:
 
     .. code-block:: rst
 
@@ -44,7 +45,8 @@ Installation and Usage
 
         python3 -m sphinx <source-dir> <build-dir>
 
-    ... where ``<source-dir>`` is the directory that contains your ``conf.py``,
+    ... where ``<source-dir>`` is the directory
+    that contains your :file:`conf.py`,
     and ``<build-dir>`` is the place where the generated HTML files
     should be written to.
     For example, the full command could look something like this::
@@ -72,7 +74,7 @@ possibilities (:doc:`customization`) available.
 
     For example, you could include the insipid-sphinx-theme_ repository
     as a Git submodule in your own repository and point to that submodule
-    in your ``conf.py``:
+    in your :file:`conf.py`:
 
     .. code-block:: python
 

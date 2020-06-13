@@ -60,7 +60,7 @@ The following settings are provided by the ``insipid`` theme.
 
     You can also create your own template file located in your
     :confval:`templates_path`.
-    It's best to use ``<a>`` or ``<button>`` elements.
+    It's best to use ``<a>`` or ``<button type="button">`` elements.
     You can include other templates, most notably icons.
 
     For example, a "home" button could be made by creating a file

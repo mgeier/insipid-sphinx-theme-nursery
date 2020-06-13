@@ -11,7 +11,7 @@ There is only a single required setting in your :file:`conf.py`:
 Theme Settings
 --------------
 
-The insipid theme has many configuration parameters
+The ``insipid`` theme has many configuration parameters
 which can be specified with :confval:`html_theme_options`
 in your :file:`conf.py`,
 for example like this:
@@ -35,6 +35,7 @@ All available theme options are listed in the following sections.
 ^^^^^^^^^^^^^^^^^^^^
 
 The following settings are provided by the ``insipid`` theme.
+See below for `default values`_.
 
 .. theme-option:: body_centered
 
@@ -50,18 +51,62 @@ The following settings are provided by the ``insipid`` theme.
 
 .. theme-option:: left_buttons
 
-    List of templates to use on the left side of the title bar.
+    List of templates to show on the left side of the title bar.
 
-    You can use one of the built-in templates (like 
-    :file:`fullscreen-button.html`,
-    :file:`pdf-button.html`,
-    :file:`repo-button.html`,
-    :file:`search-button.html`).
+    You can use one of the built-in templates:
+
+    :file:`search-button.html`
+        A button to show/hide the search field.
+
+        .. note::
+
+            This is only shown if :confval:`html_sidebars`
+            does *not* contain ``'searchbox.html'``.
+
+    :file:`fullscreen-button.html`
+        A button to switch to fullscreen mode (and back again).
+
+        .. note::
+
+            This will only be shown if fullscreen mode is available.
+
+    :file:`repo-button.html`
+        A Bitbucket/Gitlab/Github logo linking to the associated repository.
+
+        If your docs are hosted on https://readthedocs.org/
+        this should work automagically.
+        If not, you'll have to provide some information
+        via :confval:`html_context`::
+
+            html_context = {
+                'display_gitlab': True,
+                'gitlab_user': 'myuser',
+                'gitlab_repo': 'myrepo',
+            }
+
+        Replace ``gitlab`` with ``bitbucket`` or ``github``
+        if the repository containing your source files is
+        hosted on Bitbucket or Github, respectively.
+
+    :file:`pdf-button.html`
+        A link to the PDF version of your docs.
+
+        If your docs are hosted on https://readthedocs.org/
+        (and if you've enabled PDF builds)
+        this should work automagically.
+        If not, you'll have to provide the URL to the PDF file
+        via :confval:`html_context`::
+
+            html_context = {
+                'downloads': [
+                    ('pdf', 'https://example.org/my-docs.pdf'),
+                ],
+            }
 
     You can also create your own template file located in your
     :confval:`templates_path`.
     It's best to use ``<a>`` or ``<button type="button">`` elements.
-    You can include other templates, most notably icons.
+    You can ``include`` other templates, most notably icons.
 
     For example, a "home" button could be made by creating a file
     named :file:`_templates/home-button.html`
@@ -89,7 +134,7 @@ The following settings are provided by the ``insipid`` theme.
 
 .. theme-option:: right_buttons
 
-    List of templates to use on the right side of the title bar.
+    List of templates to show on the right side of the title bar.
 
     .. seealso:: :theme-option:`left_buttons`
 
@@ -248,8 +293,8 @@ Sphinx Settings
 
             html_context = {
                 'display_gitlab': True,
-                'gitlab_repo': 'myrepo',
                 'gitlab_user': 'myuser',
+                'gitlab_repo': 'myrepo',
                 'conf_py_path': '/path/to/doc/',
                 'commit': '123abc',
             }

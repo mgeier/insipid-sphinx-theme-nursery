@@ -786,7 +786,7 @@ body.js:not(.sidebar-resizing) #topbar-placeholder {
 }
 
 #titlebar .buttons > *,
-#topbar #searchform button {
+#search-form button {
     padding: 8px;
     margin: 0;
 }

@@ -61,23 +61,22 @@ $(document).ready(function () {
         $(document).scroll();
     }
 
-
     // show search
-    var $form = $('#searchform');
-    var $icon = $('#search-button');
-    $icon.on('click', function () {
+    var $search_form = $('#search-form');
+    var $search_button = $('#search-button');
+    $search_button.on('click', function () {
         try {
             // https://readthedocs-sphinx-search.readthedocs.io/
             showSearchModal();
             return;
         } catch(e) {}
-        if ($form.is(':hidden')) {
-            $form.show();
-            $icon.attr('aria-expanded', 'true');
-            $('#searchbar').focus();
+        if ($search_form.is(':hidden')) {
+            $search_form.show();
+            $search_button.attr('aria-expanded', 'true');
+            $search_form.find('input').focus();
         } else {
-            $form.hide();
-            $icon.attr('aria-expanded', 'false');
+            $search_form.hide();
+            $search_button.attr('aria-expanded', 'false');
         }
     });
 

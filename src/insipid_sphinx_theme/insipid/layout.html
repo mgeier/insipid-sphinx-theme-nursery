@@ -131,16 +131,9 @@
           </div>
         </div>
 {%- if pagename != "search" and 'searchbox.html' not in sidebars %}
-                {#-
-                <div id="search-wrapper" class="hidden">
-                    <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
-                    </form>
-                </div>
-                #}
         <div id="searchbox" role="search">
-          <form id="searchform" class="search" style="display: none" action="{{ pathto('search') }}" method="get">
-            <input type="search" id="searchbar" name="q" placeholder="{{ _('Search') + ' ...' }}" />
+          <form id="search-form" class="search" style="display: none" action="{{ pathto('search') }}" method="get">
+            <input type="search" name="q" placeholder="{{ _('Search') + ' ...' }}" />
             <button>{{ _('Go') }}</button>
           </form>
         </div>

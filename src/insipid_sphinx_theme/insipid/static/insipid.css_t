@@ -513,7 +513,7 @@ nav.crumbs a:visited {
 
 /* -- footer ---------------------------------------------------------------- */
 
-div.footer {
+footer {
     padding: 9px 0 9px 0;
     border-top: #eee solid 1px;
     text-align: center;
@@ -883,7 +883,7 @@ body.scrolled #titlebar .top {
 /* -- navigation icons ------------------------------------------------------ */
 
 /* cover nav-icon */
-div.body, .relbar, div.footer {
+div.body, .relbar, footer {
     position: relative;
     background-color: #fff;
 }

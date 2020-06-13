@@ -16,11 +16,11 @@ $(document).ready(function () {
     }
 
     $sidebar_toggle.on('click', function () {
-        if ($body.hasClass('sidebar-hidden')) {
-            showSidebar();
-        } else if ($body.hasClass('sidebar-visible')) {
+        if ($body.hasClass('sidebar-visible')) {
             $sidebar_toggle.blur();
             hideSidebar();
+        } else {
+            showSidebar();
         }
     });
 
@@ -31,7 +31,6 @@ $(document).ready(function () {
     });
 
     function showSidebar() {
-        $body.removeClass('sidebar-hidden');
         $body.addClass('sidebar-visible');
         /*
         Array.from(sidebarLinks).forEach(function (link) {
@@ -49,7 +48,6 @@ $(document).ready(function () {
 
     function hideSidebar() {
         $body.removeClass('sidebar-visible');
-        $body.addClass('sidebar-hidden');
         /*
         Array.from(sidebarLinks).forEach(function (link) {
             link.setAttribute('tabIndex', -1);
@@ -102,7 +100,7 @@ $(document).ready(function () {
             {%- else %}
             if (x_diff > 0) {
             {%- endif %}
-                if ($body.hasClass('sidebar-hidden')) {
+                if (!$body.hasClass('sidebar-visible')) {
                     showSidebar();
                 }
             } else {

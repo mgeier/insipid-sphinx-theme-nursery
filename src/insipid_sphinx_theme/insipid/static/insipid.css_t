@@ -590,7 +590,7 @@ body.js.sidebar-visible > .sidebar-resize-handle {
     {{ sidebar_side }}: 0;
 }
 
-body.js.sidebar-hidden .sphinxsidebar {
+body.js:not(.sidebar-visible) .sphinxsidebar {
     {{ sidebar_side }}: calc(0px - var(--sidebar-width));
 }
 

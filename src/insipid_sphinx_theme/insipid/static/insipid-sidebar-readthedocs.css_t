@@ -15,7 +15,7 @@ div.sphinxsidebar {
     max-width: unset;
 }
 
-body.js.sidebar-hidden .injected .rst-versions.rst-badge {
+body.js:not(.sidebar-visible) .injected .rst-versions.rst-badge {
     {{ sidebar_side }}: calc(0px - var(--sidebar-width));
 }
 
@@ -31,7 +31,7 @@ body.js.sidebar-hidden .injected .rst-versions.rst-badge {
     width: 100%;
 }
 
-body.sidebar-hidden .ethical-fixedfooter {
+body:not(.sidebar-visible) .ethical-fixedfooter {
     left: 0;
     right: 0;
     width: unset;

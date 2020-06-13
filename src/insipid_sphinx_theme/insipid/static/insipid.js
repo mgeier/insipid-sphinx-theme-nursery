@@ -61,6 +61,10 @@ $(document).ready(function () {
         $(document).scroll();
     }
 
+    $topbar.on('click', '.top', function () {
+        $(document.scrollingElement).animate({scrollTop: 0}, 400).focus();
+    });
+
     // show search
     var $search_form = $('#search-form');
     var $search_button = $('#search-button');
@@ -82,7 +86,7 @@ $(document).ready(function () {
 
     if (document.fullscreenEnabled) {
         var $fullscreen = $('#fullscreen');
-        $fullscreen.click(function() {
+        $fullscreen.on('click', function() {
             if (!document.fullscreenElement) {
                 document.documentElement.requestFullscreen();
             } else {

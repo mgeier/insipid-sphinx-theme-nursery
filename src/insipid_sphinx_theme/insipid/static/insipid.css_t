@@ -833,7 +833,7 @@ body:not(.js) #search-button {
     display: none;
 }
 
-#titlebar h1 {
+#titlebar .title {
     font-weight: 200;
     font-size: 2rem;
     text-align: center;
@@ -844,12 +844,12 @@ body:not(.js) #search-button {
     text-overflow: ellipsis;
 }
 
-#titlebar h1 .top,
-.scrolled #titlebar h1 .parent {
+#titlebar .top,
+body.scrolled #titlebar .parent {
     display: none;
 }
 
-.scrolled #titlebar h1 .top {
+body.scrolled #titlebar .top {
     display: contents;
 }
 
@@ -1005,11 +1005,11 @@ div.viewcode-block:target {
         width: unset;
     }
 
-    body.js.sidebar-visible #titlebar h1 .parent {
+    body.js.sidebar-visible #titlebar .parent {
         display: unset;
     }
 
-    body.js.sidebar-visible #titlebar h1 .top {
+    body.js.sidebar-visible #titlebar .top {
         display: none;
     }
 }

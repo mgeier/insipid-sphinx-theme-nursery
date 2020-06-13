@@ -99,7 +99,7 @@
 {%- endif %}
         })();
     </script>
-    <div id="topbar-placeholder">
+    <header id="topbar-placeholder">
       <div id="topbar">
         <div id="titlebar">
           <div class="buttons">
@@ -110,7 +110,7 @@
 {%- include buttontemplate %}
 {%- endfor %}
           </div>
-          <h1>
+          <div class="title">
             {%- if parents %}
             <a class="parent" href="{{ parents[-1].link|e }}" {{ accesskey('U') }}>{{ parents[-1].title }}</a>
             {%- elif pagename == master_doc %}
@@ -119,8 +119,8 @@
             {%- else %}
             <a class="parent" href="{{ pathto(master_doc)|e }}" {{ accesskey('U') }}>{{ docstitle|e }}</a>
             {%- endif %}
-            <button class="top" type="button" onclick="$(document.scrollingElement).animate({scrollTop: 0}, 400).focus()">{{ title }}</button>
-          </h1>
+            <button class="top" type="button">{{ title }}</button>
+          </div>
           <div class="buttons">
 {%- for buttontemplate in theme_right_buttons %}
 {%- include buttontemplate %}
@@ -139,7 +139,7 @@
         </div>
 {%- endif %}
       </div>
-    </div>
+    </header>
 {#- TODO: config option to disable the nav buttons? #}
 {%- if theme_body_max_width != None %}
     <nav>

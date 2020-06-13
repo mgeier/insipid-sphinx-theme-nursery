@@ -865,7 +865,7 @@ body.scrolled #titlebar .parent {
 }
 
 body.scrolled #titlebar .top {
-    display: contents;
+    display: inline-block;
 }
 
 /* -- search field in topbar ------------------------------------------------ */

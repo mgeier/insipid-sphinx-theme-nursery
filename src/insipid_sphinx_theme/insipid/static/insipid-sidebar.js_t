@@ -4,16 +4,19 @@ $(document).ready(function () {
     var $body = $(document.body);
     var $overlay = $('#overlay');
     var $sidebar = $('.sphinxsidebar').first();
-    $sidebar.attr('id', 'sphinxsidebar');  // for aria-controls
+    var $sidebar_tabbable = $sidebar.find(':input, a[href], area[href], iframe');
     var $sidebar_button = $('#sidebar-button');
 
     $body.removeClass('sidebar-resizing');
+
+    $sidebar.attr('id', 'sphinxsidebar');  // for aria-controls
 
     function updateSidebarAttributesVisible() {
         $sidebar_button.attr('title', "{{ _('Collapse sidebar') }}");
         $sidebar_button.attr('aria-label', "{{ _('Collapse sidebar') }}");
         $sidebar_button.attr('aria-expanded', true);
         $sidebar.attr('aria-hidden', false);
+        $sidebar_tabbable.attr('tabindex', 0);
     }
 
     function updateSidebarAttributesHidden() {
@@ -21,19 +24,15 @@ $(document).ready(function () {
         $sidebar_button.attr('aria-label', "{{ _('Expand sidebar') }}");
         $sidebar_button.attr('aria-expanded', false);
         $sidebar.attr('aria-hidden', true);
+        $sidebar_tabbable.attr('tabindex', -1);
     }
 
+    $sidebar.attr('tabindex', -1);
     if ($body.hasClass('sidebar-visible')) {
         updateSidebarAttributesVisible();
     } else {
         updateSidebarAttributesHidden();
     }
-
-    /*
-    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
-        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
-    });
-    */
 
     function store(key, value) {
         try {
@@ -44,11 +43,6 @@ $(document).ready(function () {
 
     function showSidebar() {
         $body.addClass('sidebar-visible');
-        /*
-        Array.from(sidebarLinks).forEach(function (link) {
-            link.setAttribute('tabIndex', 0);
-        });
-        */
         updateSidebarAttributesVisible();
         store('sphinx-sidebar', 'visible');
         $body.removeClass('topbar-folded');
@@ -58,11 +52,6 @@ $(document).ready(function () {
 
     function hideSidebar() {
         $body.removeClass('sidebar-visible');
-        /*
-        Array.from(sidebarLinks).forEach(function (link) {
-            link.setAttribute('tabIndex', -1);
-        });
-        */
         updateSidebarAttributesHidden();
         store('sphinx-sidebar', 'hidden');
         if (document.scrollingElement.scrollTop === 0) {

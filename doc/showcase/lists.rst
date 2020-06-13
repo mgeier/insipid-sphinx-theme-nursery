@@ -159,17 +159,17 @@ term with ``code`` and **bold**
 
 .. admonition:: Admonition
 
-    term
+    term with ``code`` and **bold**
         in admonition
 
 .. topic:: Topic
 
-    term
+    term with ``code`` and **bold**
         in topic
 
 .. sidebar:: Sidebar
 
-    term
+    term with ``code`` and **bold**
         in sidebar
 
 
@@ -205,6 +205,9 @@ Example link: :term:`source directory` (term will be highlighted).
         term in admonition
             definition
 
+        term in admonition with ``code`` and **bold**
+            definition
+
 link: :term:`term in admonition`
 
 .. topic:: Topic
@@ -213,12 +216,18 @@ link: :term:`term in admonition`
         term in topic
             definition
 
+        term in topic with ``code`` and **bold**
+            definition
+
 link: :term:`term in topic`
 
 .. sidebar:: Sidebar
 
     .. glossary::
         term in sidebar
+            definition
+
+        term in sidebar with ``code`` and **bold**
             definition
 
 link: :term:`term in sidebar`

@@ -84,20 +84,19 @@
             $body.addClass('js');
 {%- if render_sidebar %}
             $body.addClass('sidebar-resizing');  // avoid transitions on load
+            $body.removeClass('sidebar-visible');
+            $body.addClass('sidebar-hidden');
             try {
                 var sidebar = localStorage.getItem('sphinx-sidebar');
-                if (sidebar === 'hidden') {
-                    $body.removeClass('sidebar-visible');
-                    $body.addClass('sidebar-hidden');
+                if (sidebar === 'visible') {
+                    $body.removeClass('sidebar-hidden');
+                    $body.addClass('sidebar-visible');
                 }
                 var sidebar_width = localStorage.getItem('sphinx-sidebar-width');
                 if (sidebar_width) {
                     $(':root').css('--sidebar-width', sidebar_width);
                 }
-            } catch(e) {
-                $body.removeClass('sidebar-visible');
-                $body.addClass('sidebar-hidden');
-            }
+            } catch(e) {}
 {%- endif %}
         })();
     </script>

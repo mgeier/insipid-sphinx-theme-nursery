@@ -828,8 +828,8 @@ body.js #topbar {
     transition: transform {{ theme_topbar_transition }};
 }
 
-body:not(.js) #sidebar-toggle,
-body:not(.js) #search-toggle {
+body:not(.js) #sidebar-button,
+body:not(.js) #search-button {
     display: none;
 }
 

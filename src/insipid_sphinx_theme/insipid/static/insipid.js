@@ -64,7 +64,7 @@ $(document).ready(function () {
 
     // show search
     var $form = $('#searchform');
-    var $icon = $('#search-toggle');
+    var $icon = $('#search-button');
     $icon.on('click', function () {
         try {
             // https://readthedocs-sphinx-search.readthedocs.io/

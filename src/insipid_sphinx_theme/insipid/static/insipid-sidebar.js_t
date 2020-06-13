@@ -5,21 +5,21 @@ $(document).ready(function () {
     var $overlay = $('#overlay');
     var $sidebar = $('.sphinxsidebar').first();
     $sidebar.attr('id', 'sphinxsidebar');  // for aria-controls
-    var $sidebar_toggle = $('#sidebar-toggle');
+    var $sidebar_button = $('#sidebar-button');
 
     $body.removeClass('sidebar-resizing');
 
     function updateSidebarAttributesVisible() {
-        $sidebar_toggle.attr('title', "{{ _('Collapse sidebar') }}");
-        $sidebar_toggle.attr('aria-label', "{{ _('Collapse sidebar') }}");
-        $sidebar_toggle.attr('aria-expanded', true);
+        $sidebar_button.attr('title', "{{ _('Collapse sidebar') }}");
+        $sidebar_button.attr('aria-label', "{{ _('Collapse sidebar') }}");
+        $sidebar_button.attr('aria-expanded', true);
         $sidebar.attr('aria-hidden', false);
     }
 
     function updateSidebarAttributesHidden() {
-        $sidebar_toggle.attr('title', "{{ _('Expand sidebar') }}");
-        $sidebar_toggle.attr('aria-label', "{{ _('Expand sidebar') }}");
-        $sidebar_toggle.attr('aria-expanded', false);
+        $sidebar_button.attr('title', "{{ _('Expand sidebar') }}");
+        $sidebar_button.attr('aria-label', "{{ _('Expand sidebar') }}");
+        $sidebar_button.attr('aria-expanded', false);
         $sidebar.attr('aria-hidden', true);
     }
 
@@ -72,9 +72,9 @@ $(document).ready(function () {
         document.scrollingElement.blur();
     }
 
-    $sidebar_toggle.on('click', function () {
+    $sidebar_button.on('click', function () {
         if ($body.hasClass('sidebar-visible')) {
-            $sidebar_toggle.blur();
+            $sidebar_button.blur();
             hideSidebar();
         } else {
             showSidebar();

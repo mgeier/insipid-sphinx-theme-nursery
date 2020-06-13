@@ -210,33 +210,57 @@ For default values, see:
 Sphinx Settings
 ---------------
 
-.. confval:: html_context
-
-    :confval:`sphinx:html_context`
-
 .. confval:: html_copy_source
 
-    :confval:`sphinx:html_copy_source`
+    When :confval:`sphinx:html_copy_source` is ``True``
+    (which is the default),
+    all source files are copied to the HTML output directory
+    (into the :file:`_sources` sub-directory).
+    The string given by :confval:`html_sourcelink_suffix`
+    is appended to each file name.
+
+    .. note::
+
+        This has to be set to ``False`` in order to show links
+        to the source files on Bitbucket/Gitlab/Github,
+        see :confval:`html_show_sourcelink`.
 
 .. confval:: html_show_sourcelink
 
-    :confval:`sphinx:html_show_sourcelink`
+    When :confval:`sphinx:html_show_sourcelink` is ``True``
+    (which is the default),
+    a link to the source file of each page is shown in the footer.
 
-    Bitbucket/Gitlab/Github support if :confval:`html_copy_source` is ``False``.
+    Traditionally, those links point to copies of the source files
+    (when :confval:`html_copy_source` has its default value ``True``).
 
-    Should work automatically on https://readthedocs.org/.
+    However, when :confval:`html_copy_source` is ``False``,
+    the ``insipid`` theme (via the :file:`show-source.html` template)
+    will show links to the appropriate version of the source files on
+    Bitbucket/Gitlab/Github.
 
-    For manual use:
+    .. note::
 
-    ::
+        This should work automagically if your docs are hosted
+        on https://readthedocs.org/.
+        If not, you have to manually provide the necessary information
+        via :confval:`html_context`::
 
-        html_context = {
-            'display_gitlab': True,
-            'gitlab_repo': 'myrepo',
-            'gitlab_user': 'myuser',
-            'conf_py_path': '/path/to/doc/',
-            'commit': '123abc',
-        }
+            html_context = {
+                'display_gitlab': True,
+                'gitlab_repo': 'myrepo',
+                'gitlab_user': 'myuser',
+                'conf_py_path': '/path/to/doc/',
+                'commit': '123abc',
+            }
+
+        The example above shows settings for Gitlab.
+        Replace ``gitlab`` with ``bitbucket`` or ``github``
+        if the repository containing your source files is
+        hosted on Bitbucket or Github, respectively.
+
+        The ``commit`` value should contain the hash (or tag name)
+        of the commit which was used to create the docs.
 
 .. confval:: html_sidebars
 

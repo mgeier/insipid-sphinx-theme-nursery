@@ -219,18 +219,7 @@
 {% include 'footer.html' %}
 {%- if render_sidebar %}
     <div class="sidebar-resize-handle"></div>
-    <label id="overlay"></label>
-    <!-- TODO: provide a re-usable function for this in .js file? -->
-    <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-    <script type="text/javascript">
-        document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
-        document.querySelector('.sphinxsidebar').setAttribute('aria-hidden', sidebar !== 'visible');
-        /*
-        Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
-            link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
-        });
-        */
-    </script>
+    <div id="overlay"></div>
 {%- endif %}
 {%- endblock %}
 

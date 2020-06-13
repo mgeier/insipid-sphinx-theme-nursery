@@ -85,16 +85,16 @@ $(document).ready(function () {
     });
 
     if (document.fullscreenEnabled) {
-        var $fullscreen = $('#fullscreen');
-        $fullscreen.on('click', function() {
+        var $fullscreen_button = $('#fullscreen-button');
+        $fullscreen_button.on('click', function() {
             if (!document.fullscreenElement) {
                 document.documentElement.requestFullscreen();
             } else {
                 document.exitFullscreen();
             }
-            $fullscreen.blur();
+            $fullscreen_button.blur();
         });
     } else {
-        $('#fullscreen').remove();
+        $('#fullscreen-button').remove();
     }
 });

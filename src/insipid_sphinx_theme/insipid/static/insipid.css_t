@@ -1014,20 +1014,20 @@ div.viewcode-block:target {
     }
 }
 
-body:not(.js) #fullscreen {
+body:not(.js) #fullscreen-button {
     display: none;
 }
 
-body.js #fullscreen .disable {
+body.js #fullscreen-button .disable {
     display: none;
 }
 
 @media all and (display-mode: fullscreen) {
-    body.js #fullscreen .enable {
+    body.js #fullscreen-button .enable {
         display: none;
     }
 
-    body.js #fullscreen .disable {
+    body.js #fullscreen-button .disable {
         display: unset;
     }
 }

@@ -156,10 +156,15 @@ strong:target {
 div.body dl > dt:target,
 div.body div.admonition dl > dt:target,
 div.body div.topic dl > dt:target,
-div.body div.sidebar dl > dt:target,
+div.body div.sidebar .sidebar-title a:target,
 div.body a:target,
 strong:target {
-    background-color: #ffc;
+    background-color: #fffcc9;
+}
+
+div.body div.sidebar dl > dt:target,
+div.body div.sidebar a:target {
+    background-color: #fffa90;
 }
 
 hr.docutils {
@@ -356,7 +361,8 @@ div.admonition.seealso {
     /*background-color: #fffabe;*/
     /*background-color: #fffec2;*/
     /*background-color: #fffecb;*/
-    background-color: #ffffdd;
+    /*background-color: #ffffdd;*/
+    background-color: #fffcc9;
 }
 
 div.sidebar > p.sidebar-title,
@@ -366,7 +372,8 @@ div.admonition.seealso > p.admonition-title {
     /*background-color: #fff679;*/
     /*background-color: #fffe81;*/
     /*background-color: #fffe96;*/
-    background-color: #fcffba;
+    /*background-color: #fcffba;*/
+    background-color: #fffa90;
 }
 
 p.sidebar-subtitle {
@@ -409,7 +416,7 @@ dl.field-list > dt {
     display: table;
 }
 
-div.body dl > dt:not(.label),
+div.body dt:not(.label),
 dl.field-list > dt {
     margin-top: 1em;
     padding: 1px 6px;
@@ -997,7 +1004,7 @@ div.viewcode-block:target {
     margin: -0.5em;
     padding: 0.5em;
 
-    background-color: #ffc;
+    background-color: #fffcc9;
 }
 
 /* -- media queries --------------------------------------------------------- */

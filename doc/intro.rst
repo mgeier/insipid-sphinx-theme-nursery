@@ -6,7 +6,6 @@ This Sphinx_ theme was very much inspired by (i.o.w. ripped off of) mdBook_.
 Some further ideas were stolen from the Sphinx themes
 sphinx_typlog_theme_ (https://readthedocs.org/ badge),
 sphinx_material_ (previous/next arrows in navbar),
-sphinx_rtd_theme_ (admonitions),
 sphinx_book_theme_ (fullscreen button),
 as well as websites like
 Github_,
@@ -26,7 +25,6 @@ __ https://github.com/search?q=sphinx+theme
 .. _mdBook: https://rust-lang.github.io/mdBook/
 .. _sphinx_typlog_theme: https://sphinx-typlog-theme.readthedocs.io/
 .. _sphinx_material: https://bashtage.github.io/sphinx-material/
-.. _sphinx_rtd_theme: https://sphinx-rtd-theme.readthedocs.io/
 .. _sphinx_book_theme: https://sphinx-book-theme.readthedocs.io/
 .. _Github: https://github.com/
 .. _MDN: https://developer.mozilla.org/en-US/docs/Web

@@ -303,12 +303,18 @@ div.sidebar > p.sidebar-title + * {
 }
 
 div.admonition {
-    background-color: #e7f2fa;
+    /*background-color: #e7f2fa;*/
+    /*background-color: #c2dbf6;*/
+    /*background-color: #acc5df;*/
+    background-color: #bed7f2;
 }
 
 div.admonition > p.admonition-title {
     color: #fff;
-    background-color: #60add5;
+    /*background-color: #60add5;*/
+    /*background-color: #7db8ec;*/
+    /*background-color: #4f8ebe;*/
+    background-color: #75b1e4;
 }
 
 div.admonition.attention,
@@ -316,7 +322,9 @@ div.admonition.caution,
 div.admonition.danger,
 div.admonition.error,
 div.admonition.warning {
-    background-color: #fff2db;
+    /*background-color: #fff2db;*/
+    /*background-color: #fda;*/
+    background-color: #fbdfc4;
 }
 
 div.admonition.attention > p.admonition-title,
@@ -324,7 +332,9 @@ div.admonition.caution > p.admonition-title,
 div.admonition.danger > p.admonition-title,
 div.admonition.error > p.admonition-title,
 div.admonition.warning > p.admonition-title {
-    background-color: #f0b37e;
+    /*background-color: #f0b37e;*/
+    /*background-color: #fbbc77;*/
+    background-color: #f1bf8b;
 }
 
 div.topic {
@@ -340,13 +350,21 @@ div.topic > p.topic-title {
 div.sidebar,
 div.admonition.seealso {
     color: unset;
-    background-color: #ffe;
+    /*background-color: #ffe;*/
+    /*background-color: #fffabe;*/
+    /*background-color: #fffec2;*/
+    /*background-color: #fffecb;*/
+    background-color: #ffffdd;
 }
 
 div.sidebar > p.sidebar-title,
 div.admonition.seealso > p.admonition-title {
     color: #333;
-    background-color: #ffc;
+    /*background-color: #ffc;*/
+    /*background-color: #fff679;*/
+    /*background-color: #fffe81;*/
+    /*background-color: #fffe96;*/
+    background-color: #fcffba;
 }
 
 p.sidebar-subtitle {

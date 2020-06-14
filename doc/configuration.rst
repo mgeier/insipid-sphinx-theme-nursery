@@ -53,9 +53,10 @@ See below for `default values`_.
 
     List of templates to show on the left side of the title bar.
 
-    You can use one of the built-in templates:
+    You can use one of the built-in templates
+    (ending with :file:`-button.html`):
 
-    :file:`search-button.html`
+    :gh-template:`search-button.html`
         A button to show/hide the search field.
 
         .. note::
@@ -63,45 +64,49 @@ See below for `default values`_.
             This is only shown if :confval:`html_sidebars`
             does *not* contain ``'searchbox.html'``.
 
-    :file:`fullscreen-button.html`
+    :gh-template:`fullscreen-button.html`
         A button to switch to fullscreen mode (and back again).
 
         .. note::
 
             This will only be shown if fullscreen mode is available.
 
-    :file:`repo-button.html`
+    :gh-template:`repo-button.html`
         A Bitbucket/Gitlab/Github logo linking to the associated repository.
 
-        If your docs are hosted on https://readthedocs.org/
-        this should work automagically.
-        If not, you'll have to provide some information
-        via :confval:`html_context`::
+        .. note::
 
-            html_context = {
-                'display_gitlab': True,
-                'gitlab_user': 'myuser',
-                'gitlab_repo': 'myrepo',
-            }
+            If your docs are hosted on https://readthedocs.org/
+            this should work automagically.
+            If not, you'll have to provide some information
+            via :confval:`html_context`::
 
-        Replace ``gitlab`` with ``bitbucket`` or ``github``
-        if the repository containing your source files is
-        hosted on Bitbucket or Github, respectively.
+                html_context = {
+                    'display_gitlab': True,
+                    'gitlab_user': 'myuser',
+                    'gitlab_repo': 'myrepo',
+                }
 
-    :file:`pdf-button.html`
+            Replace ``gitlab`` with ``bitbucket`` or ``github``
+            if the repository containing your source files is
+            hosted on Bitbucket or Github, respectively.
+
+    :gh-template:`pdf-button.html`
         A link to the PDF version of your docs.
 
-        If your docs are hosted on https://readthedocs.org/
-        (and if you've enabled PDF builds)
-        this should work automagically.
-        If not, you'll have to provide the URL to the PDF file
-        via :confval:`html_context`::
+        .. note::
 
-            html_context = {
-                'downloads': [
-                    ('pdf', 'https://example.org/my-docs.pdf'),
-                ],
-            }
+            If your docs are hosted on https://readthedocs.org/
+            (and if you've enabled PDF builds)
+            this should work automagically.
+            If not, you'll have to provide the URL to the PDF file
+            via :confval:`html_context`::
+
+                html_context = {
+                    'downloads': [
+                        ('pdf', 'https://example.org/my-docs.pdf'),
+                    ],
+                }
 
     You can also create your own template file located in your
     :confval:`templates_path`.
@@ -247,7 +252,7 @@ For default values, see:
 
 .. literalinclude:: ../src/insipid_sphinx_theme/insipid/theme.conf
     :name: theme-conf
-    :caption: :download:`insipid/theme.conf <../src/insipid_sphinx_theme/insipid/theme.conf>`
+    :caption: :file:`insipid/theme.conf`
     :linenos:
     :language: ini
 
@@ -280,7 +285,7 @@ Sphinx Settings
     (when :confval:`html_copy_source` has its default value ``True``).
 
     However, when :confval:`html_copy_source` is ``False``,
-    the ``insipid`` theme (via the :file:`show-source.html` template)
+    the ``insipid`` theme (via the :gh-template:`show-source.html` template)
     will show links to the appropriate version of the source files on
     Bitbucket/Gitlab/Github.
 
@@ -326,11 +331,11 @@ Sphinx Settings
 Example
 -------
 
-You can look at the :download:`conf.py` file of this very documentation:
+You can look at the :file:`conf.py` file of this very documentation:
 
 .. literalinclude:: conf.py
     :name: conf-py
-    :caption: :download:`conf.py` of the *insipid* docs
+    :caption: :file:`conf.py` of the *insipid* docs
     :linenos:
     :language: python
     :end-before: Get version information from Git

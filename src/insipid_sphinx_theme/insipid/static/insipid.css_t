@@ -123,7 +123,7 @@ a.headerlink {
 blockquote {
     clear: both;
     margin: 10px 0;
-    border: 1px solid #0001;
+    border: 1px solid #0002;
     border-left-width: 6px;
     padding: 0 20px;
 }
@@ -307,6 +307,7 @@ div.admonition {
     /*background-color: #c2dbf6;*/
     /*background-color: #acc5df;*/
     background-color: #bed7f2;
+    /*background-color: #c8e0fb;*/
 }
 
 div.admonition > p.admonition-title {
@@ -315,6 +316,7 @@ div.admonition > p.admonition-title {
     /*background-color: #7db8ec;*/
     /*background-color: #4f8ebe;*/
     background-color: #75b1e4;
+    /*background-color: #8ac3f6;*/
 }
 
 div.admonition.attention,

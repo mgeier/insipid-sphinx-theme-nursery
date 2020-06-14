@@ -52,7 +52,7 @@ https://docutils.sourceforge.io/docs/ref/rst/directives.html#generic-admonition
 
 .. admonition:: Admonition title with :doc:`a link <admonitions>` and ``code``
 
-    Admonition text and ``inline code``.
+    Admonition text with :doc:`a link <admonitions>` and ``code``.
 
 
 .. _topic:

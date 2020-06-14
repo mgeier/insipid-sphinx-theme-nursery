@@ -5,7 +5,7 @@ This Sphinx_ theme was very much inspired by (i.o.w. ripped off of) mdBook_.
 
 Some further ideas were stolen from the Sphinx themes
 sphinx_typlog_theme_ (https://readthedocs.org/ badge),
-sphinx_material_ (previous/next arrows in navbar),
+sphinx_material_ (previous/next arrows in relbar),
 sphinx_book_theme_ (fullscreen button),
 as well as websites like
 Github_,

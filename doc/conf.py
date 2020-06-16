@@ -1,40 +1,35 @@
+# Configuration file for Sphinx,
+# see https://www.sphinx-doc.org/en/master/usage/configuration.html
+
+# -- Recommended settings -----------------------------------------------------
+
 html_theme = 'insipid'
 
-# -- Recommended changes of Sphinx defaults -------------------------------
-
-# Set to empty string to disable permalinks
+# Set to empty string to disable links to sections
 html_add_permalinks = '\N{SECTION SIGN}'
 
-# -- Recommended settings for readthedocs.org -----------------------------
+# -- Recommended settings for readthedocs.org ---------------------------------
 
 # If False, source links to Bitbucket/Github/GitLab are shown
 html_copy_source = False
 
-# -- Settings for source code ---------------------------------------------
+# -- Settings for source code -------------------------------------------------
 
-# Use 'none' when you don't want the default 'python'
+# Use 'none' when you don't want syntax highlighting (default: 'python')
 #highlight_language = 'none'
 
 # Style of syntax highlighting
 #pygments_style = 'monokai'
 
-# -- Language settings ----------------------------------------------------
+# -- Language settings --------------------------------------------------------
 
 #language = 'es'
 
-# Date format used in footer. Use empty string for default.
+# Date format used in footer. Use empty string for (language-specific) default.
+# 'sphinx_last_updated_by_git' extension provides modification dates per page.
 #html_last_updated_fmt = '%Y-%m-%d'
 
-# -- Page footer ----------------------------------------------------------
-
-html_show_copyright = False
-#html_show_sphinx = False
-#html_show_sourcelink = False
-
-# Only relevant when html_copy_source is True
-#html_sourcelink_suffix = ''
-
-# -- Theme configuration --------------------------------------------------
+# -- Theme configuration ------------------------------------------------------
 
 html_theme_options = {
     #'body_centered': False,
@@ -61,7 +56,6 @@ html_theme_options = {
 html_sidebars = {
    '**': [
        'github-badge.html',  # Custom template, see _templates/
-       #'searchbox.html',
        'globaltoc.html',
        'separator.html',
        'indices.html',
@@ -72,31 +66,48 @@ html_sidebars = {
 #html_static_path = ['_static']
 templates_path = ['_templates']
 
-# -- Project information --------------------------------------------------
+# -- Project information ------------------------------------------------------
 
 project = 'insipid-sphinx-theme'
 #html_title = 'Insipid Sphinx Theme'
 html_short_title = 'insipid'
 #copyright = '<insert year and copyright holder>'
-
-#version = '???'
-#release = '???'
+#version = '3.14'
+#release = '3.14.dev2'
 
 html_logo = 'showcase/insipid.png'
 html_favicon = 'favicon.ico'
 
-# -- ??? ------------------------------------------------------------------
-
-html_secnumber_suffix = '\N{FIGURE SPACE}'
-#smartquotes = False
-
 html_baseurl = 'https://insipid-sphinx-theme-nursery.readthedocs.io/'
 
-#html_domain_indices = False
+# -- Page footer --------------------------------------------------------------
+
+html_show_copyright = False
+#html_show_sphinx = False
+#html_show_sourcelink = False
+
+# Only relevant when html_copy_source is True
+#html_sourcelink_suffix = ''
+
+# -- Miscellaneous settings ---------------------------------------------------
+
+# Numbered figures, tables and code-blocks
+numfig = True
+
+html_secnumber_suffix = '\N{FIGURE SPACE}'
+
+#smartquotes = False
+
+# Generate alphabetic index
 #html_use_index = False
+
+# Separate page per starting letter
 #html_split_index = True
 
-# -- Extensions -----------------------------------------------------------
+# Generate domain indices, e.g. Python module index
+#html_domain_indices = False
+
+# -- Sphinx extensions --------------------------------------------------------
 
 extensions = [
     'sphinx.ext.autodoc',
@@ -112,14 +123,7 @@ intersphinx_mapping = {'sphinx': ('https://www.sphinx-doc.org', None)}
 todo_include_todos = True
 todo_link_only = True
 
-# -- ??? ------------------------------------------------------------------
-
-# Since Sphinx version 2.0, 'index' is the default:
-master_doc = 'index'
-
-numfig = True
-
-# -- Get version information from Git -------------------------------------
+# -- Get version information from Git -----------------------------------------
 
 try:
     from subprocess import check_output
@@ -128,7 +132,7 @@ try:
 except Exception:
     release = '<unknown>'
 
-# -- Define custom directives/roles ---------------------------------------
+# -- Define custom directives/roles -------------------------------------------
 
 github_url = 'https://github.com/mgeier/insipid-sphinx-theme-nursery'
 blob_url = github_url + '/blob/' + release
@@ -137,7 +141,6 @@ blob_url = github_url + '/blob/' + release
 def gh_template_role(rolename, rawtext, text, lineno, inliner,
                      options={}, content=()):
     from docutils import nodes, utils
-
     base_url = blob_url + '/src/insipid_sphinx_theme/insipid/%s'
     text = utils.unescape(text)
     full_url = base_url % text

@@ -260,6 +260,11 @@ For default values, see:
 Sphinx Settings
 ---------------
 
+Sphinx has *a lot* of settings --
+see :doc:`sphinx:usage/configuration`.
+Here we only show a small selection of configuration values
+which are relevant for the ``insipid`` theme.
+
 .. confval:: html_copy_source
 
     When :confval:`sphinx:html_copy_source` is ``True``
@@ -315,6 +320,22 @@ Sphinx Settings
 .. confval:: html_sidebars
 
     :confval:`sphinx:html_sidebars`
+
+    :file:`globaltoc.html`,
+    :file:`localtoc.html`,
+    :file:`relations.html`,
+    :file:`searchbox.html`,
+    :file:`sourcelink.html`,
+
+    :gh-template:`indices.html`
+    :gh-template:`separator.html`
+
+    Custom templates,
+    ``<p>``, ``<h3>``, ``<h4>``,
+    ``<ul>`` (containing ``<li>`` elements)
+
+    ``<a class="reference internal" ...>``,
+    ``<a class="reference external" ...>``,
 
     .. seealso:: Theme options :theme-option:`rightsidebar` and
         :theme-option:`nosidebar`

@@ -695,6 +695,10 @@ div.sphinxsidebar li li:last-child {
     margin-bottom: -0.4em;
 }
 
+div.sphinxsidebar ul ul {
+    list-style: unset;
+}
+
 div.sphinxsidebar a {
     color: #235388;
 }

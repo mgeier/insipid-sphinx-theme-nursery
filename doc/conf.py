@@ -96,6 +96,8 @@ numfig = True
 
 html_secnumber_suffix = '\N{FIGURE SPACE}'
 
+#html_compact_lists = False
+
 #smartquotes = False
 
 # Generate alphabetic index

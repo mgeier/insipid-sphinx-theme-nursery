@@ -3,6 +3,11 @@ Lists
 
 https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#lists-and-quote-like-blocks
 
+.. note::
+
+    The configuration value :confval:`html_compact_lists`
+    influences the display of lists!
+
 
 Bullet Lists
 ------------
@@ -26,7 +31,52 @@ https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#bullet-lists
 
 - This is the third item of the main list.
 
-This paragraph is not part of the list.
+A single list item containing a single paragraph:
+
+* A paragraph.
+
+A single list item containing multiple paragraphs:
+
+* A paragraph.
+
+  Another paragraph.
+
+Multiple list items containing a single paragraph each:
+
+* A paragraph.
+
+* Another paragraph.
+
+Multiple list items, some containing multiple paragraphs:
+
+* A paragraph.
+
+* Another paragraph.
+
+  A third paragraph.
+
+Nested lists, each item containing a single paragraph
+and/or a single nested list, each item containing ...
+
+* A paragraph.
+
+* Another paragraph.
+  
+  - A second level paragraph
+
+  - A second level paragraph
+
+An example that doesn't fulfill this rule:
+
+* A paragraph.
+
+* Another paragraph.
+  
+  - A second level paragraph
+
+  - A second level paragraph
+
+  Yet another paragraph.
 
 .. admonition:: Admonition
 
@@ -39,6 +89,36 @@ This paragraph is not part of the list.
 .. sidebar:: Sidebar
 
     * bullet point in sidebar
+
+.. topic:: Compact list in topic
+
+    * A paragraph.
+
+    * Another paragraph.
+
+.. topic:: Non-compact list in topic
+
+    * A paragraph.
+
+    * Another paragraph.
+
+      A third paragraph.
+
+* A list item containing admonitions containing further lists:
+
+  .. admonition:: Compact list in admonition
+
+      * A paragraph.
+
+      * Another paragraph.
+
+  .. admonition:: Non-compact list in admonition
+
+      * A paragraph.
+
+      * Another paragraph.
+
+        A third paragraph.
 
 
 Enumerated Lists
@@ -79,6 +159,21 @@ https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#enumerated-li
    iv. iv
 
    999. More than four
+
+Nested lists, each item containing a single paragraph
+and/or a single nested list, each item containing ...
+
+1. Paragraph.
+
+2. Paragraph.
+
+   a) Second level paragraph
+
+      * Third level paragraph
+
+      * Another third level paragraph
+
+   b) Another second level paragraph
 
 .. admonition:: Admonition
 

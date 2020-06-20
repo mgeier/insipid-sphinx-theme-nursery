@@ -62,11 +62,13 @@ and/or a single nested list, each item containing ...
 
 * Another paragraph.
   
-  - A second level paragraph
+  - A second level paragraph.
 
-  - A second level paragraph
+  - A second level paragraph.
 
-An example that doesn't fulfill this rule:
+* Another first level paragraph.
+
+An example that doesn't fulfill this rule (only the nested sub-list does):
 
 * A paragraph.
 
@@ -174,6 +176,12 @@ and/or a single nested list, each item containing ...
       * Another third level paragraph
 
    b) Another second level paragraph
+
+Successive lists:
+
+1. Paragraph.
+
+A. A paragraph in a new list.
 
 .. admonition:: Admonition
 

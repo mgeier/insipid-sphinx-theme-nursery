@@ -108,7 +108,9 @@ $(document).ready(function () {
     });
 
     $topbar_placeholder.on('touchend', function($event){
-        $topbar_placeholder.addClass('fake-hover');
+        if ($event.originalEvent.changedTouches[0].clientY < $topbar.height()) {
+            $topbar_placeholder.addClass('fake-hover');
+        }
         $event.stopPropagation();
     });
 

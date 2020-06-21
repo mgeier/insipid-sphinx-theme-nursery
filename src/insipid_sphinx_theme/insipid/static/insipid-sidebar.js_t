@@ -63,11 +63,15 @@ $(document).ready(function () {
 
     $sidebar_button.on('click', function () {
         if ($body.hasClass('sidebar-visible')) {
-            $sidebar_button.blur();
             hideSidebar();
         } else {
             showSidebar();
         }
+    });
+
+    $sidebar_button.on('touchend', function ($event) {
+        $('#topbar-placeholder').removeClass('fake-hover');
+        $event.stopPropagation();
     });
 
     $overlay.on('click', function () {

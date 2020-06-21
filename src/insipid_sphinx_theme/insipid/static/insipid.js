@@ -5,8 +5,8 @@ $(document).ready(function () {
     window.onunload = function () {};
 
     var $body = $(document.body);
-
     var $topbar = $('#topbar');
+    var $topbar_placeholder = $('#topbar-placeholder');
 
     const threshold = 10;
 
@@ -93,8 +93,26 @@ $(document).ready(function () {
                 document.exitFullscreen();
             }
             $fullscreen_button.blur();
+            $topbar_placeholder.removeClass('fake-hover');
         });
     } else {
         $('#fullscreen-button').remove();
     }
+
+    $topbar_placeholder.on('mouseenter', function() {
+        $topbar_placeholder.addClass('fake-hover');
+    });
+
+    $topbar_placeholder.on('mouseleave', function() {
+        $topbar_placeholder.removeClass('fake-hover');
+    });
+
+    $topbar_placeholder.on('touchend', function($event){
+        $topbar_placeholder.addClass('fake-hover');
+        $event.stopPropagation();
+    });
+
+    $(window).on('touchend', function(){
+        $topbar_placeholder.removeClass('fake-hover');
+    });
 });

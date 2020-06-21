@@ -866,7 +866,7 @@ body.js:not(.sidebar-resizing) #topbar-placeholder {
     text-decoration: none;
 }
 
-body.js.topbar-folded #topbar-placeholder:not(:hover) #topbar {
+body.js.topbar-folded #topbar-placeholder:not(.fake-hover) #topbar {
     transform: translateY(-100%);
 }
 

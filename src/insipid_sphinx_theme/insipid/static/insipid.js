@@ -114,7 +114,7 @@ $(document).ready(function () {
         $event.stopPropagation();
     });
 
-    $(window).on('touchend', function(){
+    $(window).on('touchmove touchend', function(){
         $topbar_placeholder.removeClass('fake-hover');
     });
 });

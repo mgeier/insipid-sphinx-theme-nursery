@@ -132,15 +132,24 @@ $(document).ready(function () {
     });
 
     $('.sidebar-resize-handle').on('mousedown', function (e) {
-        $(window).on('mousemove', resize);
-        $(window).on('mouseup', stopResize);
+        $(window).on('mousemove', resize_mouse);
+        $(window).on('mouseup', stop_resize_mouse);
+        $body.addClass('sidebar-resizing');
+        return false;  // Prevent unwanted text selection while resizing
+    });
+
+    $('.sidebar-resize-handle').on('touchstart', function (e) {
+        e = e.originalEvent;
+        if (e.touches.length > 1) { return; }
+        $(window).on('touchmove', resize_touch);
+        $(window).on('touchend', stop_resize_touch);
         $body.addClass('sidebar-resizing');
         return false;  // Prevent unwanted text selection while resizing
     });
 
     var ignore_resize = false;
 
-    function resize(e) {
+    function resize_base(e) {
         if (ignore_resize) { return; }
         var window_width = $(window).width();
         var width = {% if theme_rightsidebar|tobool -%}
@@ -155,15 +164,39 @@ $(document).ready(function () {
         }
     }
 
-    function stopResize(e) {
-        $(window).off('mousemove', resize);
-        $(window).off('mouseup', stopResize);
+    function resize_mouse(e) {
+        resize_base(e.originalEvent);
+    }
+
+    function resize_touch(e) {
+        e = e.originalEvent;
+        if (e.touches.length > 1) { return; }
+        resize_base(e.touches[0]);
+    }
+
+    function stop_resize_base() {
         if (ignore_resize) {
             $root.css('--sidebar-width', '{{ theme_sidebarwidth|todim }}');
             ignore_resize = false;
         }
         store('sphinx-sidebar-width', $root.css('--sidebar-width'));
         $body.removeClass('sidebar-resizing');
+    }
+
+    function stop_resize_mouse(e) {
+        $(window).off('mousemove', resize_mouse);
+        $(window).off('mouseup', stop_resize_mouse);
+        stop_resize_base();
+    }
+
+    function stop_resize_touch(e) {
+        e = e.originalEvent;
+        if (e.touches.length > 0 || e.changedTouches.length > 1) {
+            return;
+        }
+        $(window).off('touchmove', resize_touch);
+        $(window).off('touchend', stop_resize_touch);
+        stop_resize_base();
     }
 
     $(window).on('resize', function () {

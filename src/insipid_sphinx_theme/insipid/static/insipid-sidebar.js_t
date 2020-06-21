@@ -122,6 +122,9 @@ $(document).ready(function () {
             } else {
                 if ($body.hasClass('sidebar-visible')) {
                     hideSidebar();
+                    if (document.scrollingElement.scrollTop !== 0) {
+                        $body.addClass('topbar-folded');
+                    }
                 }
             }
         }

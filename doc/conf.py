@@ -34,7 +34,6 @@ html_copy_source = False
 html_theme_options = {
     #'body_centered': False,
     #'body_max_width': None,
-    #'body_min_width': 0,
     #'breadcrumbs': True,
     #'globaltoc_collapse': False,
     #'globaltoc_includehidden': True,
@@ -47,6 +46,7 @@ html_theme_options = {
     #],
     #'rightsidebar': True,
     #'show_insipid': False,
+    #'sidebar_overlay_width': None,
     #'sidebar_transition': '1s ease-out',
     #'sidebarwidth': '10rem',
     #'strip_section_numbers': False,

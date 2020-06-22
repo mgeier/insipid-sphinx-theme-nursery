@@ -153,6 +153,13 @@ See below for `default values`_.
 
     Set to ``False`` to hide the "Insipid Theme" link in the footer.
 
+.. theme-option:: sidebar_overlay_width
+
+    When the browser window is narrower than this value
+    (in pixels or any CSS unit) -- e.g. on a small mobile device --
+    the sidebar will (partially) cover the main text.
+    Set to ``None`` to disable.
+
 .. theme-option:: sidebar_transition
 
     Duration (and optional timing function) of the CSS transition effect
@@ -190,14 +197,7 @@ __ https://github.com/sphinx-doc/sphinx/blob/master/
 
 .. theme-option:: body_min_width
 
-    When the body text is narrower than this value (in pixels or any CSS unit),
-    e.g. on a small mobile device,
-    it will be (partially) covered by the sidebar.
-
-    .. warning::
-
-        To avoid problems on Chrome and derived browsers,
-        this value should have the same unit as :theme-option:`sidebarwidth`.
+    Minimal width of the main document text (in pixels or any CSS unit).
 
 .. theme-option:: globaltoc_collapse
 
@@ -238,11 +238,6 @@ __ https://github.com/sphinx-doc/sphinx/blob/master/
         Whenever the sidebar is resized,
         its new width is stored in the browser's "local storage".
         Therefore, a changed ``sidebarwidth`` might not be immediately visible.
-
-    .. warning::
-
-        To avoid problems on Chrome and derived browsers,
-        this value should have the same unit as :theme-option:`body_min_width`.
 
 
 Default Values

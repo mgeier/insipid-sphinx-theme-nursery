@@ -86,6 +86,7 @@ p.rubric {
     margin-bottom: 1rem;
     font-weight: 600;
     line-height: 1.35;
+    overflow-wrap: break-word;
 }
 
 div.body h5,
@@ -200,6 +201,7 @@ img {
 a {
     color: #0e84b5;
     text-decoration: none;
+    overflow-wrap: break-word;
 }
 
 a:hover {

@@ -100,7 +100,7 @@ div.body h3 strong,
 div.body h4 strong,
 div.body h5 strong,
 div.body h6 strong {
-    font-weight: 700;
+    font-weight: 800;
 }
 
 div.body h1 { font-size: 2em; }

@@ -832,16 +832,25 @@ body.js:not(.sidebar-resizing) #topbar-placeholder {
     min-height: 3rem;
 }
 
-#titlebar .buttons > *,
-#search-form button {
-    padding: 8px;
-    margin: 0;
-}
-
 #titlebar .buttons {
     display: flex;
     align-items: baseline;
     margin: 0 5px;
+}
+
+#titlebar .buttons > *,
+#topbar button {
+    margin: 0;
+    border: none;
+    padding: 8px;
+    color: inherit;
+    background: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+#titlebar .title button {
+    padding: 0;
 }
 
 #titlebar svg,
@@ -852,15 +861,6 @@ body.js:not(.sidebar-resizing) #topbar-placeholder {
   height: 1em;
   vertical-align: middle;
   fill: currentColor;
-}
-
-#topbar button {
-    border: none;
-    padding: 0;
-    color: inherit;
-    background: none;
-    font: inherit;
-    cursor: pointer;
 }
 
 #topbar a {

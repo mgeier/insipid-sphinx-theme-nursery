@@ -494,6 +494,7 @@ table.citation {
     align-items: center;
     color: inherit;
     text-decoration: none;
+    user-select: none;
 }
 
 .relbar > a.previous {

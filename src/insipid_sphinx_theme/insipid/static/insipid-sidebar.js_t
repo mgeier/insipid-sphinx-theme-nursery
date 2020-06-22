@@ -63,6 +63,7 @@ $(document).ready(function () {
 
     $sidebar_button.on('click', function () {
         if ($body.hasClass('sidebar-visible')) {
+            $sidebar_button.blur();
             hideSidebar();
         } else {
             showSidebar();

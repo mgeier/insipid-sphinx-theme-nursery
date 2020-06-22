@@ -96,6 +96,12 @@
                 }
             } catch(e) {
             }
+{%- if pagename == "search" %}
+            // hide sidebar on narrow screen
+            if ($body.css('overflow') === 'hidden') {
+                $body.removeClass('sidebar-visible');
+            }
+{%- endif %}
 {%- endif %}
         })();
     </script>

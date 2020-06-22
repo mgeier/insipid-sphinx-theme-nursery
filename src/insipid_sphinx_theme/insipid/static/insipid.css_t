@@ -284,9 +284,8 @@ div.code-block-caption {
 
 kbd.docutils {
     padding: 0.2em;
-    color: #fff;
-    background-color: #333;
     border-radius: 3px;
+    border: 1px solid #333;
 }
 
 /* -- admonitions ----------------------------------------------------------- */

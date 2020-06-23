@@ -80,6 +80,24 @@ An example that doesn't fulfill this rule (only the nested sub-list does):
 
   Yet another paragraph.
 
+Compact lists can be manually forced by using the ``compact`` class:
+
+.. rst-class:: compact
+
+* A paragraph.
+
+* Another paragraph.
+
+  A third paragraph.
+
+Non-compact lists can be manually forced by using the ``open`` class:
+
+.. rst-class:: open
+
+* A paragraph.
+
+* Another paragraph.
+
 .. admonition:: Admonition
 
     * bullet point in admonition

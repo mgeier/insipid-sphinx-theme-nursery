@@ -56,6 +56,8 @@ $(document).ready(function () {
         store('sphinx-sidebar', 'hidden');
         if (document.scrollingElement.scrollTop < $('#topbar').height()) {
             $body.removeClass('topbar-folded');
+        } else {
+            $body.addClass('topbar-folded');
         }
         document.scrollingElement.focus({preventScroll: true});
         document.scrollingElement.blur();
@@ -123,9 +125,6 @@ $(document).ready(function () {
             } else {
                 if ($body.hasClass('sidebar-visible')) {
                     hideSidebar();
-                    if (document.scrollingElement.scrollTop > $('#topbar').height()) {
-                        $body.addClass('topbar-folded');
-                    }
                 }
             }
         }

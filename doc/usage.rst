@@ -69,7 +69,7 @@ possibilities (:doc:`customization`) available.
     (because the insipid theme is just a theme
     and not a full-blown Sphinx extension).
     If you don't want to install the package,
-    you have to instead use :confval:`html_theme_path`
+    you can instead use :confval:`html_theme_path`
     to tell Sphinx where the directory containing the ``insipid`` directory is.
 
     For example, you could include the insipid-sphinx-theme_ repository

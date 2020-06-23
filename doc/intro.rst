@@ -14,7 +14,7 @@ and many others.
 
 If you don't like this theme, no problem,
 Sphinx has several :ref:`builtin-themes` to choose from and
-you can find a large list of freely available third-party Sphinx themes at
+you can find a large list of third-party Sphinx themes at
 https://sphinx-themes.org/.
 You can also search for Sphinx themes on PyPI__ or Github__.
 
@@ -34,8 +34,8 @@ Goals
 -----
 
 The following list has been driving the development of this theme.
-Those are the *goals*, but that doesn't mean that any of them has been reached
-(to a sufficient degree) yet.
+Those are the *goals*, but that doesn't necessarily mean that any of them has
+been reached (to a sufficient degree) yet.
 
 If you have suggestions how to come closer to these goals,
 please open an issue at https://github.com/mgeier/insipid-sphinx-theme/issues/.
@@ -80,10 +80,10 @@ support for right-to-left languages
 
 optional JavaScript
     Some features (like hiding/resizing navigational tools, search,
-    fullscreen mode) require JavaScript.
+    fullscreen button) require JavaScript.
     However, if JavaScript is disabled,
-    all content should still be perfectly readable and the navigation on and
-    between pages should still work reasonably well.
+    all content should still be perfectly readable and the navigation within
+    and between pages should still work reasonably well.
 
 support for *all* Sphinx features
     The largest part of this documentation
@@ -114,11 +114,11 @@ back to the ``basic``\s
 Features
 --------
 
-First of all, the `insipid` theme tries to not disable any features
-that Sphinx (and its `basic` theme, see :ref:`basic settings`) already has.
+First of all, the ``insipid`` theme tries to not disable any features
+that Sphinx (and its ``basic`` theme, see :ref:`basic settings`) already has.
 
 Here's a little selection of features, some of them provided by Sphinx itself,
-some added by the `insipid` theme:
+some added by the ``insipid`` theme:
 
 auto-hiding topbar
     The goal is to maximize (vertical) screen space and to get out of the way.
@@ -137,7 +137,6 @@ auto-hiding topbar
 resizable sidebar
     In addition to toggling its visibility,
     the width of the sidebar can also be interactively changed by users.
-
     The new width (and whether the sidebar is visible or not)
     is stored in the browser's "local storage",
     which means it will be remembered for the next visit.
@@ -146,9 +145,12 @@ resizable sidebar
     :theme-option:`sidebarwidth`,
     the content of the sidebar can be configured with :confval:`html_sidebars`.
 
+    On devices with a touchscreen,
+    the sidebar can be opened and closed with a swipe right/left gesture.
+
 keyboard navigation
     This is one of the features that's provided by Sphinx,
-    but many third-party themes have inadvertently disabled it.
+    but several third-party themes have inadvertently disabled it.
 
     You can switch between pages using the left and right arrow keys.
     This feature can be disabled with :theme-option:`navigation_with_keys`.
@@ -169,7 +171,7 @@ keyboard navigation
     :kbd:`U` for *up* (to the parent page);
     :kbd:`I` for the *index*.
     In addition to these, the ``insipid`` theme provides
-    :kbd:`S` to show/hide the *search* box and
+    :kbd:`S` to show/hide the *search* field and
     :kbd:`M` for showing/hiding the sidebar (i.e. the *menu*).
 
 fullscreen mode

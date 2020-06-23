@@ -15,7 +15,7 @@ html_copy_source = False
 
 # -- Settings for source code -------------------------------------------------
 
-# Use 'none' when you don't want syntax highlighting (default: 'python')
+# Language used for syntax highlighting (default: 'python')
 #highlight_language = 'none'
 
 # Style of syntax highlighting
@@ -120,7 +120,7 @@ extensions = [
     'sphinx_last_updated_by_git',
 ]
 
-intersphinx_mapping = {'sphinx': ('https://www.sphinx-doc.org', None)}
+intersphinx_mapping = {'sphinx': ('https://www.sphinx-doc.org/', None)}
 
 todo_include_todos = True
 todo_link_only = True

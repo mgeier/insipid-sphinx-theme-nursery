@@ -314,34 +314,42 @@ which are relevant for the ``insipid`` theme.
 
 .. confval:: html_sidebars
 
-    :confval:`sphinx:html_sidebars`
+    The content of the sidebar consists of the :confval:`html_logo`
+    (if specified), followed by a list of templates that can be customized
+    with :confval:`sphinx:html_sidebars`.
 
+    You can choose from templates provided by the ``basic`` theme,
+    like
     :file:`globaltoc.html`,
     :file:`localtoc.html`,
     :file:`relations.html`,
-    :file:`searchbox.html`,
-    :file:`sourcelink.html`,
+    :file:`searchbox.html` and
+    :file:`sourcelink.html`.
 
-    :gh-template:`indices.html`
-    :gh-template:`separator.html`
+    You can also select templates provided by the ``insipid`` theme:
+    :gh-template:`indices.html` and
+    :gh-template:`separator.html`.
 
-    Custom templates,
-    ``<p>``, ``<h3>``, ``<h4>``,
-    ``<ul>`` (containing ``<li>`` elements)
-
-    ``<a class="reference internal" ...>``,
-    ``<a class="reference external" ...>``,
+    Finally, you can create your own custom templates.
+    It's best to use ``<h3>``, ``<h4>`` and ``<p class="caption">`` elements
+    as well as "normal" ``<p>`` and ``<ul>`` (containing ``<li>`` elements which
+    themselves typically contain ``<a href="...">`` links).
+    To distinguish between internal and external links, you can use
+    ``<a class="reference internal" ...>`` and
+    ``<a class="reference external" ...>``, respectively.
 
     .. seealso:: Theme options :theme-option:`rightsidebar` and
         :theme-option:`nosidebar`
 
 .. confval:: html_theme_options
 
-    :confval:`sphinx:html_theme_options`
+    The value :confval:`sphinx:html_theme_options` contains all custom
+    `theme settings`_.
 
 .. confval:: language
 
-    :confval:`sphinx:language`
+    When a supported :confval:`sphinx:language` is chosen, all UI strings will
+    be translated accordingly.
 
 
 Example

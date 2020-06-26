@@ -24,7 +24,7 @@ For example, if the path to your CSS file is :file:`_static/funky.css`
 Custom JavaScript Files
 -----------------------
 
-Similarly, you can also add JavaScript files located in the
+Similarly, you can add JavaScript files located in the
 :confval:`html_static_path` by adding their paths
 (again, relative to :file:`conf.py`) to :confval:`html_js_files`.
 

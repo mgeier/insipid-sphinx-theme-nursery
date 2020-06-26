@@ -91,6 +91,28 @@ Text after second ``sidebar`` directive.
 
     --Anonymous
 
+.. sidebar:: Another Sidebar
+
+    Text.
+
+.. note::
+
+    Note after ``sidebar``.
+
+.. sidebar:: Yet Another Sidebar
+
+    Text.
+
+.. topic:: Topic after ``sidebar``.
+
+    Text.
+
+.. sidebar:: And Another Sidebar
+
+    Text.
+
+.. seealso:: ``seealso`` after ``sidebar``
+
 
 Admonition-like Constructs
 --------------------------

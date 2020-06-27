@@ -283,7 +283,7 @@ div.code-block-caption {
 }
 
 kbd.docutils {
-    padding: 0.2em;
+    padding: 0.15em;
     border-radius: 3px;
     border: 1px solid #333;
 }

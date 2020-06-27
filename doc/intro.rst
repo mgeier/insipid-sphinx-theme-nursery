@@ -16,7 +16,7 @@ If you don't like this theme, no problem,
 Sphinx has several :ref:`builtin-themes` to choose from and
 you can find a large list of third-party Sphinx themes at
 https://sphinx-themes.org/.
-You can also search for Sphinx themes on PyPI__ or Github__.
+You can also search for Sphinx themes on PyPI__ and Github__.
 
 __ https://pypi.org/search/?c=Framework+::+Sphinx+::+Theme
 __ https://github.com/search?q=sphinx+theme
@@ -38,7 +38,8 @@ Those are the *goals*, but that doesn't necessarily mean that any of them has
 been reached (to a sufficient degree) yet.
 
 If you have suggestions how to come closer to these goals,
-please open an issue at https://github.com/mgeier/insipid-sphinx-theme/issues/.
+please create an issue or -- even better! -- a pull request
+at https://github.com/mgeier/insipid-sphinx-theme/.
 
 boring
     The most important thing is your content.
@@ -59,9 +60,7 @@ accessible
     but the accessibility could certainly be improved in many places.
 
 mobile-friendly
-    This theme should work fine on mobile devices.
-    It isn't strictly *mobile-first* though,
-    because there is a special sidebar behavior for narrow screens.
+    This theme should work well on (reasonably modern) mobile devices.
     Considerable care has been taken to make sure all the screen space is
     available for content and not obstructed by ornamental junk.
 
@@ -94,7 +93,7 @@ support for *all* Sphinx features
     please let us know!
 
 back to the ``basic``\s
-    This theme is based on Sphinx's ``basic`` theme
+    This theme is derived from Sphinx's ``basic`` theme
     and only adds some hand-written HTML, CSS and JavaScript
     (sprinkled with a pinch of Jinja2_ markup).
     Plus a few SVG icons from `Font Awesome`_
@@ -131,7 +130,7 @@ auto-hiding topbar
     (see :theme-option:`left_buttons` and :theme-option:`right_buttons`)
     as well as the title of the current page.
     When clicking on said title, the page is scrolled to the top
-    and the title of the parent document (or the main title) is displayed.
+    and the title of the parent document is displayed.
     Clicking on that brings you to the parent document.
 
 resizable sidebar
@@ -141,12 +140,13 @@ resizable sidebar
     is stored in the browser's "local storage",
     which means it will be remembered for the next visit.
 
-    The default with can be configured with the theme option
+    The default width can be configured with the theme option
     :theme-option:`sidebarwidth`,
-    the content of the sidebar can be configured with :confval:`html_sidebars`.
+    the content of the sidebar can be configured with
+    :confval:`html_sidebars` (and :confval:`html_logo`).
 
     On devices with a touchscreen,
-    the sidebar can be opened and closed with a swipe right/left gesture.
+    the sidebar can be opened/closed with a swipe right/left gesture.
 
 keyboard navigation
     This is one of the features that's provided by Sphinx,
@@ -158,7 +158,7 @@ keyboard navigation
     In addition to the left/right arrow keys,
     several key combinations are provided using the ``accesskey`` HTML feature.
     The way to use these keyboard shortcuts depends on the browser
-    and its platform, typically involving holding the :kbd:`Alt` key,
+    and the operating system, typically involving holding the :kbd:`Alt` key,
     often combined with the :kbd:`Shift` or the :kbd:`Control` key.
     For details, see e.g. MDN__.
 

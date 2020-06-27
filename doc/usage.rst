@@ -10,8 +10,9 @@ Installation and Usage
         python3 -m pip install insipid-sphinx-theme --user
 
     If the command ``python3`` isn't available, you can try ``python`` instead.
-    If you want to install it for all users (assuming you have the necessary
-    rights), you can drop the ``--user`` flag.
+    If you want to install the theme for all users
+    (assuming you have the necessary rights),
+    you can drop the ``--user`` flag.
     If you are using a virtual environment, you might also have to drop the
     ``--user`` flag.
     If you want to upgrade an existing installation, you can add the
@@ -66,7 +67,7 @@ possibilities (:doc:`customization`) available.
     because this way Sphinx can find it easily
     and you don't have to worry about where the theme's files are stored.
     However, the package installation is not strictly necessary
-    (because the insipid theme is just a theme
+    (because the ``insipid`` theme is just a theme
     and not a full-blown Sphinx extension).
     If you don't want to install the package,
     you can instead use :confval:`html_theme_path`

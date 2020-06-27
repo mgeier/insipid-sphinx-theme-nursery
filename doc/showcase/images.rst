@@ -70,6 +70,32 @@ Some more text. Some more text.
         :align: left
 
 
+.. image:: insipid.png
+    :alt: left-aligned image
+    :align: left
+    :scale: 50%
+
+.. note::
+
+    Note after left-aligned image.
+
+.. image:: insipid.png
+    :alt: left-aligned image
+    :align: left
+    :scale: 50%
+
+.. topic:: Topic title
+
+    Topic after left-aligned image.
+
+Left-aligned image before a new section:
+
+.. image:: insipid.png
+    :alt: left-aligned image
+    :align: left
+    :scale: 50%
+
+
 Scaled Image
 ------------
 

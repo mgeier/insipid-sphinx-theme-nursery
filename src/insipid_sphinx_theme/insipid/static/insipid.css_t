@@ -378,6 +378,10 @@ div.admonition.seealso > p.admonition-title {
     background-color: #fffa90;
 }
 
+div.admonition.seealso {
+    clear: both;
+}
+
 p.sidebar-subtitle {
     font-style: italic;
 }

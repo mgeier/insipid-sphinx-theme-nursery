@@ -1,7 +1,8 @@
 Configuration
 =============
 
-There is only a single required setting in your :file:`conf.py`:
+If you want to use the ``insipid`` theme,
+only a single setting is required in your :file:`conf.py`:
 
 .. code-block:: python
 
@@ -47,7 +48,8 @@ See below for `default values`_.
 
     Set to ``True`` to show breadcrumb navigation
     (including a "home" button)
-    at the top of each page.
+    at the top of each page
+    (via the :gh-template:`page.html` template).
 
 .. theme-option:: left_buttons
 
@@ -108,7 +110,7 @@ See below for `default values`_.
                     ],
                 }
 
-    You can also create your own template file located in your
+    You can also create your own template file(s) located in your
     :confval:`templates_path`.
     It's best to use ``<a>`` or ``<button type="button">`` elements.
     You can ``include`` other templates, most notably icons.
@@ -209,6 +211,7 @@ __ https://github.com/sphinx-doc/sphinx/blob/master/
 
     If ``True``, include sections from :rst:dir:`sphinx:toctree` directives
     with the ``:hidden:`` flag in the table of contents (TOC) in the sidebar.
+    By default, hidden sections are not included.
 
 .. theme-option:: navigation_with_keys
 
@@ -315,8 +318,8 @@ which are relevant for the ``insipid`` theme.
 .. confval:: html_sidebars
 
     The content of the sidebar consists of the :confval:`html_logo`
-    (if specified), followed by a list of templates that can be customized
-    with :confval:`sphinx:html_sidebars`.
+    (if specified), followed by the list of templates in
+    :confval:`sphinx:html_sidebars`.
 
     You can choose from templates provided by the ``basic`` theme,
     like
@@ -332,8 +335,9 @@ which are relevant for the ``insipid`` theme.
 
     Finally, you can create your own custom templates.
     It's best to use ``<h3>``, ``<h4>`` and ``<p class="caption">`` elements
-    as well as "normal" ``<p>`` and ``<ul>`` (containing ``<li>`` elements which
-    themselves typically contain ``<a href="...">`` links).
+    for titles, as well as "normal" ``<p>`` and ``<ul>``
+    (containing ``<li>`` elements which themselves typically
+    contain ``<a href="...">`` links).
     To distinguish between internal and external links, you can use
     ``<a class="reference internal" ...>`` and
     ``<a class="reference external" ...>``, respectively.
@@ -359,7 +363,7 @@ You can look at the :file:`conf.py` file of this very documentation:
 
 .. literalinclude:: conf.py
     :name: conf-py
-    :caption: :file:`conf.py` of the *insipid* docs
+    :caption: :file:`conf.py` of the ``insipid`` docs
     :linenos:
     :language: python
     :end-before: Get version information from Git

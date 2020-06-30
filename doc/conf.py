@@ -120,7 +120,9 @@ extensions = [
     'sphinx_last_updated_by_git',
 ]
 
-intersphinx_mapping = {'sphinx': ('https://www.sphinx-doc.org/', None)}
+intersphinx_mapping = {
+    'sphinx': ('https://www.sphinx-doc.org/', None),
+}
 
 todo_include_todos = True
 todo_link_only = True

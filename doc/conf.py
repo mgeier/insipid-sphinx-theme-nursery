@@ -8,6 +8,8 @@ html_theme = 'insipid'
 # Set to empty string to disable links to sections
 html_add_permalinks = '\N{SECTION SIGN}'
 
+nitpicky = True
+
 # -- Recommended settings for readthedocs.org ---------------------------------
 
 # If False, source links to Bitbucket/Github/GitLab are shown
@@ -120,6 +122,7 @@ extensions = [
 ]
 
 intersphinx_mapping = {
+    'python': ('https://docs.python.org/3/', None),
     'sphinx': ('https://www.sphinx-doc.org/', None),
 }
 

@@ -259,7 +259,7 @@ Sphinx Settings
 ---------------
 
 Sphinx has *a lot* of settings --
-see :doc:`sphinx:usage/configuration`.
+read :doc:`the docs <sphinx:usage/configuration>`!
 Here we only show a small selection of configuration values
 which are relevant for the ``insipid`` theme.
 

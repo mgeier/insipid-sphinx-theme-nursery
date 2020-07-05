@@ -4,15 +4,16 @@ Showcases
 This Documentation
 ------------------
 
-The documentation pages you are just reading are meant to be a showcase for how
-certain Sphinx features look with this insipid theme.
+The documentation pages you are reading right now
+are meant to be a showcase for how
+certain Sphinx features look with the ``insipid`` theme.
 
 The following pages try to show all HTML constucts that can be created with
 Sphinx.
 
 
-Other Showcases
----------------
+Further Showcases
+-----------------
 
 https://docutils.sourceforge.io/docs/user/rst/demo.html
 

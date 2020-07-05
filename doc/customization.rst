@@ -25,8 +25,7 @@ Custom JavaScript Files
 -----------------------
 
 Similarly, you can add JavaScript files located in the
-:confval:`html_static_path` by adding their paths
-(again, relative to :file:`conf.py`) to :confval:`html_js_files`.
+:confval:`html_static_path` by adding their paths to :confval:`html_js_files`.
 
 The JavaScript frameworks jQuery_ and underscore.js_ are available
 (using ``$`` and ``$u``, respectively).
@@ -117,9 +116,33 @@ use the ``include`` tag, e.g.:
 Derive Your Own Theme
 ---------------------
 
-:doc:`theming`
+If you want to re-use your custom templates in multiple Sphinx projects,
+you can create your own theme derived from the ``insipid`` theme
+(you can of course also derive from any other theme, if you prefer!).
 
-...
+For all the details, have a look at :doc:`theming`.
+Here, we'll just give a quick summary.
+
+You should create a directory named after your theme,
+containing all your custom templates.
+
+.. note::
+
+    You'll have to change your templates from using
+
+    .. code-block:: html+jinja
+
+        {% extends "!layout.html" %}
+
+    to using
+
+    .. code-block:: html+jinja
+
+        {% extends "insipid/layout.html" %}
+
+In the same directory,
+you'll also have to create a file named :file:`theme.conf`
+with a content similar to this:
 
 .. code-block:: ini
     :name: derived-theme-conf
@@ -142,4 +165,58 @@ Derive Your Own Theme
 
     # and so on and so on ...
 
-.. todo:: describe CSS file, import insipid.css?
+Everything except ``inherit`` is optional
+(and even that can be set to ``none``
+if you insist on not deriving from any theme).
+
+You should also create a sub-directory named :file:`static`
+containing your main CSS file (and probably additional CSS files)
+and any custom JavaScript files you want to use.
+Write the name of your main CSS file to the ``stylesheet`` field in your
+:file:`theme.conf`.
+Remove the ``stylesheet`` field if you don't want to use your own CSS file.
+
+By default, the CSS file :file:`insipid.css` will *not* be included,
+but :file:`basic.css` and :file:`insipid-sidebar-readthedocs.css`
+will be included.
+
+To include :file:`insipid.css`, add this to your :file:`layout.html` template:
+
+.. code-block:: html+jinja
+
+    {% extends "insipid/layout.html" %}
+
+    {% block css %}
+        <link rel="stylesheet" href="{{ pathto('_static/insipid.css', 1) }}" type="text/css" />
+    {{ super() }}
+    {% endblock %}
+
+Similarly, you can add further custom CSS files, if you want.
+
+.. note::
+
+    You *could* alternatively use  this in your CSS file:
+
+    .. code-block:: css
+
+        @import 'insipid.css';
+
+    But this will increase the load time of the HTML pages!
+
+If you want to use custom JavaScript files,
+store them in the :file:`static` sub-directory and add something like this
+to your :file:`layout.html` template:
+
+.. code-block:: html+jinja
+
+    {% block scripts %}
+    {{ super() }}
+        <script defer src="{{ pathto('_static/insipid.js', 1) }}"></script>
+    {% endblock %}
+
+If you want your JavaScript code to be available during page load,
+drop the ``defer`` flag.
+
+For more information and inspiration,
+have a look at the ``insipid`` theme's sources
+and at the aforementioned :doc:`theming` page.

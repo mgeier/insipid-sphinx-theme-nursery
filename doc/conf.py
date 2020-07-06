@@ -76,7 +76,7 @@ html_short_title = 'insipid'
 #release = '3.14.dev2'
 
 html_logo = 'showcase/insipid.png'
-html_favicon = '_static/favicon.ico'
+html_favicon = '_static/favicon.svg'
 
 html_baseurl = 'https://insipid-sphinx-theme-nursery.readthedocs.io/'
 

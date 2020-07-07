@@ -188,6 +188,12 @@ ol, ul {
     padding-left: unset;
 }
 
+.toctree-wrapper li,
+.contents li {
+    margin-top: 0.5em;
+    line-height: normal;
+}
+
 dl.citation > dt {
     font-weight: 600;
 }

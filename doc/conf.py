@@ -138,13 +138,12 @@ except Exception:
 
 # -- Define custom directives/roles -------------------------------------------
 
-github_url = 'https://github.com/mgeier/insipid-sphinx-theme-nursery'
-blob_url = github_url + '/blob/' + release
-
 
 def gh_template_role(rolename, rawtext, text, lineno, inliner,
                      options={}, content=()):
     from docutils import nodes, utils
+    github_url = 'https://github.com/mgeier/insipid-sphinx-theme-nursery'
+    blob_url = github_url + '/blob/' + release
     base_url = blob_url + '/src/insipid_sphinx_theme/insipid/%s'
     text = utils.unescape(text)
     full_url = base_url % text

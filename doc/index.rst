@@ -21,7 +21,7 @@
     :numbered:
 
     showcase/index
-    showcase/text-formatting
+    showcase/basic-formatting
     showcase/images
     showcase/code-blocks
     showcase/admonitions

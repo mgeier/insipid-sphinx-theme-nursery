@@ -1,5 +1,5 @@
-Text Formatting
-===============
+Basic Formatting
+================
 
 Paragraphs
 ----------
@@ -71,7 +71,7 @@ https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#hyperlin
 
 Internal_ link, external_ link.
 
-.. _internal: `Text Formatting`_
+.. _internal: `Inline Markup`_
 .. _external: https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html
 
 Other page: :doc:`code-blocks`.
@@ -80,10 +80,9 @@ Some file: :download:`insipid.png`.
 
 Math equation: :eq:`euler`.
 
+
 Footnotes
 ---------
-
-.. todo:: Move footnotes and citations to separate page
 
 https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#footnotes
 

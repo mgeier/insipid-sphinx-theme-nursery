@@ -175,7 +175,7 @@ hr.docutils {
 }
 
 ol, ul {
-    padding-left: 30px;
+    padding-left: 1.2em;
 }
 
 .toctree-wrapper ul,

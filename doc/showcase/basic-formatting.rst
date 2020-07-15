@@ -153,7 +153,7 @@ command: :command:`rm` --
 dfn: :dfn:`term` --
 file: :file:`name.{ext}` --
 guilabel: :guilabel:`&Cancel` --
-kbd: :kbd:`Control` - :kbd:`x` :kbd:`Control` - :kbd:`f` --
+kbd: :kbd:`Control` + :kbd:`x` :kbd:`Control` + :kbd:`f` --
 mailheader: :mailheader:`Content-Type` --
 makevar: :makevar:`AM_CFLAGS` --
 manpage: :manpage:`ls(1)`, :manpage:`man` --

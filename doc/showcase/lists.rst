@@ -98,6 +98,11 @@ Non-compact lists can be manually forced by using the ``open`` class:
 
 * Another paragraph.
 
+Definition term
+    * bullet point in definition
+
+    Normal paragraph in definition.
+
 .. admonition:: Admonition
 
     * bullet point in admonition

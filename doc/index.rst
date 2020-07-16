@@ -36,6 +36,6 @@
 
 ----
 
-:ref:`General Index <genindex>`
+:ref:`genindex`
 
 :ref:`py-modindex`

@@ -27,7 +27,7 @@ html_copy_source = False
 
 # Date format used in footer. Use empty string for (language-specific) default.
 # 'sphinx_last_updated_by_git' extension provides modification dates per page.
-#html_last_updated_fmt = '%Y-%m-%d'
+#html_last_updated_fmt = '%Y-%m-%d %H:%M:%S %Z'
 
 # -- Theme configuration ------------------------------------------------------
 

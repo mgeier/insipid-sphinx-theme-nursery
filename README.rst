@@ -3,15 +3,15 @@ An Insipid Sphinx_ Theme
 
 .. _Sphinx: https://www.sphinx-doc.org/
 
-Quick Start:
+Quick Start
     #. Install the Python package ``insipid-sphinx-theme``
     #. Add ``html_theme = 'insipid'`` to your ``conf.py``
     #. Run Sphinx!
 
-Online documentation (and example of use):
+Online documentation (and example of use)
     https://insipid-sphinx-theme.readthedocs.io/
 
-Source code repository (and issue tracker):
+Source code repository (and issue tracker)
     https://github.com/mgeier/insipid-sphinx-theme/
 
 License

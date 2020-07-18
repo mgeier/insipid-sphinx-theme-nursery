@@ -84,12 +84,25 @@ by creating your own file named :file:`layout.html`:
 The ``relbar1`` and ``relbar2`` blocks are used to overwrite
 the previous/next links at the top and bottom of each page, respectively.
 
+Use ``{{ super() }}`` to include the contents of the original block.
+Otherwise, the contents are overwritten.
+
 If you don't use the ``extends`` tag,
 you can completely replace a given template.
 By leaving the file empty, you can disable a template.
 
-Use ``{{ super() }}`` to include the contents of the original block.
-Otherwise, the contents are overwritten.
+For example, if the setting :confval:`copyright` is not flexible enough
+(because it inserts a "copyright" symbol which may not be desired),
+one could create a customized note by replacing the existing template
+:gh-template:`copyright.html`:
+
+.. code-block:: html+jinja
+    :name: copyright-html
+    :caption: :file:`_templates/copyright.html`
+
+    Dedicated to the public domain with
+    <a href="https://creativecommons.org/publicdomain/zero/1.0/"
+       class="reference external">CC0 1.0</a>.
 
 For further information, see :doc:`templating`.
 

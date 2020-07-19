@@ -141,17 +141,19 @@ containing all your custom templates.
 
 .. note::
 
-    You'll have to change your templates from using
+    .. compound::
 
-    .. code-block:: html+jinja
+        You'll have to change your templates from using
 
-        {% extends "!layout.html" %}
+        .. code-block:: html+jinja
 
-    to using
+            {% extends "!layout.html" %}
 
-    .. code-block:: html+jinja
+        to using
 
-        {% extends "insipid/layout.html" %}
+        .. code-block:: html+jinja
+
+            {% extends "insipid/layout.html" %}
 
 In the same directory,
 you'll also have to create a file named :file:`theme.conf`

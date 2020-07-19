@@ -38,13 +38,32 @@ https://docutils.sourceforge.io/docs/ref/rst/directives.html#compound-paragraph
 
 .. compound::
 
-   The :command:`rm` command is very dangerous.  If you are logged
-   in as root and enter ::
+    The code ::
 
-       cd /
-       rm -rf *
+        print('Hello, world!')
 
-   you will erase the entire contents of your file system.
+    will show a message.
+
+
+.. admonition:: Compound paragraph in admonition
+
+    .. compound::
+
+        The code ::
+
+            print('Hello, world!')
+
+        will show a message.
+
+.. topic:: Compound paragraph in topic
+
+    .. compound::
+
+        The code ::
+
+            print('Hello, world!')
+
+        will show a message.
 
 
 Line Blocks

@@ -202,6 +202,19 @@ img {
     max-width: unset;
 }
 
+.compound {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.compound-first {
+    margin-top: 0;
+}
+
+.compound-last {
+    margin-bottom: 0;
+}
+
 /* -- hyperlink styles ------------------------------------------------------ */
 
 a {

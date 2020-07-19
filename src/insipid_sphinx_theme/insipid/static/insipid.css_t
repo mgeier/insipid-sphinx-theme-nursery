@@ -209,9 +209,15 @@ img {
 
 .compound-first {
     margin-top: 0;
+    margin-bottom: 0.5em;
 }
 
+.compound-middle {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
 .compound-last {
+    margin-top: 0.5em;
     margin-bottom: 0;
 }
 

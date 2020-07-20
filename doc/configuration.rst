@@ -209,7 +209,7 @@ __ https://github.com/sphinx-doc/sphinx/blob/master/
 
 .. theme-option:: globaltoc_includehidden
 
-    If ``True``, include sections from :rst:dir:`sphinx:toctree` directives
+    If ``True``, include sections from :rst:dir:`toctree` directives
     with the ``:hidden:`` flag in the table of contents (TOC) in the sidebar.
     By default, hidden sections are not included.
 

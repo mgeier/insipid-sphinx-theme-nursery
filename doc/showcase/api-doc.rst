@@ -319,7 +319,7 @@ https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#the-res
 
     Bar description.
 
-.. rst:directive:: toctree
+.. rst:directive:: my-toctree
 
     Directive.
 

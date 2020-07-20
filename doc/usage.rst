@@ -39,7 +39,7 @@ Installation and Usage
         Hello, world!
 
     At some point, you'll probably want to have more than one page.
-    You can use the :rst:dir:`sphinx:toctree` directive
+    You can use the :rst:dir:`toctree` directive
     to include additional pages.
 
 #.  Run Sphinx, e.g. by using::

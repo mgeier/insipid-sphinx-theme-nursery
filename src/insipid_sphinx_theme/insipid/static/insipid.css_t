@@ -123,7 +123,7 @@ a.headerlink {
 }
 
 blockquote {
-    clear: both;
+    clear: left;
     margin: 10px 0;
     border: 1px solid #0002;
     border-left-width: 6px;
@@ -145,7 +145,7 @@ blockquote p.attribution {
     text-align: end;
 }
 
-blockquote, div.figure {
+div.figure {
     overflow-x: auto;
 }
 

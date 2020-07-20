@@ -128,8 +128,6 @@ No language:
 
 See also *[source]* link in :mod:`insipid_sphinx_theme`.
 
-.. todo:: Link directly to module source code?
-
 
 ``parsed-literal`` Directive
 ----------------------------

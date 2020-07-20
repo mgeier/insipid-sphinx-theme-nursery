@@ -32,7 +32,6 @@
     showcase/api-doc
     showcase/sections
     showcase/no-sidebar
-    showcase/todo-list
 
 ----
 

@@ -115,7 +115,6 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
-    'sphinx.ext.todo',
     'sphinx.ext.viewcode',
     'sphinx_last_updated_by_git',
 ]
@@ -123,9 +122,6 @@ extensions = [
 intersphinx_mapping = {
     'sphinx': ('https://www.sphinx-doc.org/', None),
 }
-
-todo_include_todos = True
-todo_link_only = True
 
 # -- Get version information from Git -----------------------------------------
 

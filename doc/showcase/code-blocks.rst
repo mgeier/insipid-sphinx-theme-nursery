@@ -155,12 +155,8 @@ Doctest Blocks
 
 https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#doctest-blocks
 
-This is an ordinary paragraph.
-
 >>> print('this is a Doctest block')
 this is a Doctest block
-
-This is another ordinary paragraph.
 
 
 Nesting

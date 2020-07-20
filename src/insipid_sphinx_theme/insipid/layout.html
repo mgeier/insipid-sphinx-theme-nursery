@@ -125,7 +125,7 @@
             {%- else %}
             <a class="parent" href="{{ pathto(master_doc)|e }}" {{ accesskey('U') }}>{{ docstitle|e }}</a>
             {%- endif %}
-            <button class="top" type="button">{{ title }}</button>
+            <a class="top" href="#">{{ title }}</a>
           </div>
           <div class="buttons">
 {%- for buttontemplate in theme_right_buttons %}

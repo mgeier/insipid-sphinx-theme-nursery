@@ -334,6 +334,10 @@ div.sidebar > p.sidebar-title + * {
     margin-top: 0;
 }
 
+div.admonition > :first-child:not(.admonition-title) {
+    margin-top: 0;
+}
+
 div.admonition {
     /*background-color: #e7f2fa;*/
     /*background-color: #c2dbf6;*/

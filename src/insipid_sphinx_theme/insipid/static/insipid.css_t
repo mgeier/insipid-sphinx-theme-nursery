@@ -24,7 +24,6 @@ div.document { flex-grow: 1; }
 div.body {
     padding: 20px;
     min-width: unset;  /* body_min_width is applied to <body> */
-    overflow-x: auto;
 {% if theme_body_centered|tobool %}
     margin-left: auto;
     margin-right: auto;

@@ -489,6 +489,19 @@ dl.field-list > dd:not(:last-child) {
     margin-bottom: 1em;
 }
 
+div.body dl.class > dt:not(:target),
+div.body dl.type > dt:not(:target),
+div.body dl.concept > dt:not(:target),
+div.body dl.enum > dt:not(:target),
+div.body dl.enum-class > dt:not(:target),
+div.body dl.union > dt:not(:target) {
+    background-color: #bed7f2;
+}
+
+div.body dl.exception > dt:not(:target) {
+    background-color: #fbdfc4;
+}
+
 /* -- relbar ---------------------------------------------------------------- */
 
 .relbar {

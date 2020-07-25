@@ -111,7 +111,7 @@ div.body h6 { font-size: 0.9em }
 
 .toctree-wrapper .caption,
 p.rubric {
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: bold;
 }
 

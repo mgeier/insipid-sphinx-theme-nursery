@@ -736,6 +736,7 @@ div.sphinxsidebar code {
 
 div.sphinxsidebar h3,
 div.sphinxsidebar h4,
+div.sphinxsidebar p,
 div.sphinxsidebar li {
     margin-right: -10px;
     padding-right: 10px;
@@ -743,6 +744,7 @@ div.sphinxsidebar li {
 
 div.sphinxsidebar h3,
 div.sphinxsidebar h4,
+div.sphinxsidebar p,
 div.sphinxsidebar li {
     margin-left: -20px;
     padding-left: 20px;
@@ -879,6 +881,7 @@ body.js:not(.sidebar-resizing) #topbar-placeholder {
 }
 
 #titlebar svg,
+.insipid-icon svg,
 .relbar svg,
 .related svg,
 .crumbs svg {

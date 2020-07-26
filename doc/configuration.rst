@@ -329,7 +329,8 @@ which are relevant for the ``insipid`` theme.
     :file:`searchbox.html` and
     :file:`sourcelink.html`.
 
-    You can also select templates provided by the ``insipid`` theme:
+    You can also select templates from the ``insipid`` theme:
+    :gh-template:`home.html`,
     :gh-template:`indices.html` and
     :gh-template:`separator.html`.
 

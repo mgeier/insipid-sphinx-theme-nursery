@@ -1,7 +1,10 @@
-An Insipid Sphinx_ Theme
-========================
+Nursery For An Insipid Sphinx_ Theme
+====================================
 
 .. _Sphinx: https://www.sphinx-doc.org/
+
+**Note:**
+This has been moved to https://github.com/mgeier/insipid-sphinx-theme/!
 
 Quick Start
     #. Install the Python package ``insipid-sphinx-theme``

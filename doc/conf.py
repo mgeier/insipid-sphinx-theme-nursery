@@ -78,8 +78,6 @@ html_short_title = 'insipid'
 html_logo = 'showcase/insipid.png'
 html_favicon = '_static/favicon.svg'
 
-html_baseurl = 'https://insipid-sphinx-theme-nursery.readthedocs.io/'
-
 # -- Page footer --------------------------------------------------------------
 
 html_show_copyright = False
